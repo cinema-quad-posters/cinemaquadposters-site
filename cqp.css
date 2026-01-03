@@ -1,0 +1,533 @@
+/* ==============================
+   GLOBAL
+   ============================== */
+
+body {
+    background: #000;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ==============================
+   NAVBAR GRID LAYOUT
+   ============================== */
+
+.navbar-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+/* LEFT */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+/* CENTER */
+.navbar-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Search group width control */
+.navbar-search-group {
+    max-width: 900px;
+}
+
+/* RIGHT */
+
+.navbar-link {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar-link:hover {
+    color: #ffffff;
+}
+
+
+/* ==============================
+   CART ICON + BADGE
+   ============================== */
+
+.cart-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding-right: 22px; /* MUST exceed badge width + offset */
+}
+
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: 0px;
+    background: #fbbd00;
+    color: #000;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Badge animation */
+@keyframes badgePop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+.cart-badge.animate {
+    animation: badgePop 0.3s ease-out;
+}
+
+/* ==============================
+   POSTER GRID
+   ============================== */
+
+.poster-card {
+    background: #212529; /* same grey as header & footer */
+    border-radius: 4px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    max-width: 360px;     /* prevents over-scaling */
+    margin: 0 auto;
+    margin-bottom: 6px;
+    padding: 12px; /* was 10px */
+}
+
+.poster-card img {
+    display: block;
+    max-width: 100%;
+    width: auto;         /* do not upscale */
+    height: auto;
+    margin: 0 auto 6px;
+    outline: 1px solid rgba(255,255,255,0.12);
+    transition: transform 0.15s ease-out, outline-color 0.15s ease-out;
+}
+
+.poster-card:hover img {
+    transform: translateY(-3px);
+    outline-color: rgba(255,255,255,0.4);
+}
+
+.poster-card .card-body {
+    padding: 0;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Title + price on one line */
+
+.poster-label {
+    display: block;
+    text-align: center;
+    line-height: 1.25;
+    max-height: calc(1.25em * 2); /* 2 lines */
+    overflow: hidden;
+}
+
+.poster-label .card-title,
+.poster-label .price {
+    display: inline;
+    font-size: 0.72rem;
+}
+
+.poster-label .card-title {
+    font-weight: 500;
+    color: #ccc;
+}
+
+.poster-label .price {
+    font-weight: 600;
+    color: #fbbd00;
+    white-space: nowrap; /* price never splits */
+}
+
+.poster-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+.poster-specs li {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+
+.poster-specs strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+@media (max-width: 576px) {
+    .poster-card {
+        padding: 14px;
+    }
+
+    .poster-card .card-body {
+        margin-bottom: 20px;
+    }
+}
+
+/* keep the dropdowns visually tight and fast */
+
+.dropdown-menu {
+    border: 1px solid #333;
+}
+
+.dropdown-menu label {
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.btn-outline-light {
+    --bs-btn-color: #ccc;
+    --bs-btn-border-color: #444;
+}
+
+.btn-outline-light:hover {
+    background: #111;
+    color: #fff;
+}
+
+
+/* ==============================
+   SEARCH BAR (PILL STYLE)
+   ============================== */
+
+.search-pill {
+    width: 420px;
+    min-width: 240px;
+    max-width: 420px;
+
+    border-radius: 999px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    background-color: #111;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+.search-pill::placeholder {
+    color: #aaa;
+}
+
+.search-pill:focus {
+    border-color: #fbbd00;
+    box-shadow: none;
+}
+
+/* Mobile: let it grow full width */
+@media (max-width: 576px) {
+    .search-pill {
+        width: 100%;
+        max-width: none;
+    }
+}
+.navbar-search-group .btn {
+    font-size: 0.75rem;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.site-footer {
+    border-top: 1px solid #2a2a2a;
+    background: #212529; /* same grey as header */
+    font-size: 0.7rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: #aaa;
+    font-size: 0.9rem !important;
+}
+
+.footer-links a:hover {
+    color: #fbbd00;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    height: 22px;
+    opacity: 0.85;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .footer-left {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+/* ==============================
+   LONG-FORM CONTENT (TERMS / FAQ)
+   ============================== */
+
+.legal-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #cfcfcf;
+}
+
+.legal-content h1 {
+    font-size: 1.4rem;
+    color: #fbbd00;
+    font-weight: 600;
+    letter-spacing: 0.00em;
+    margin-bottom: 1.8rem;
+}
+
+.legal-content h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.00em;
+    color: #fbbd00;
+    margin-top: 2.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.legal-content p {
+    margin-bottom: 0.85rem;
+}
+
+.legal-content strong {
+    color: #fff;
+}
+
+/* subtle divider rhythm */
+.legal-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 1rem 0;
+}
+
+/* ==============================
+   FAQ / ACCORDION STYLING (FIXED DIVIDER)
+   ============================== */
+
+.accordion {
+    --bs-accordion-border-width: 0;
+    --bs-accordion-border-color: transparent;
+}
+
+.accordion-item {
+    background: #212529;
+    border: none !important;
+}
+
+.accordion-header {
+    border: none;
+}
+
+/* Question button */
+.accordion-button {
+    background: #212529 !important;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    padding: 1rem 1.25rem;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* SOLID yellow divider — no bleed-through */
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    position: relative;
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: invert(1);
+}
+
+/* This is the divider itself */
+.accordion-button:not(.collapsed)::before {
+    content: "";
+    position: absolute;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 0;
+    height: 1px;
+    background: #fbbd00;
+}
+
+/* Answer panel */
+.accordion-body {
+    background: #212529;
+    color: #cfcfcf;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 1rem 1.25rem 1.25rem;
+    border: none !important;
+}
+
+/* Remove any residual focus/active effects */
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+
+
+
+
+/* ============
+   CART CONTENT
+   ============ */
+
+.cart-item {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cart-title {
+    font-size: 0.75rem;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-price {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fbbd00;
+    white-space: nowrap;
+}
+
+.cart-remove {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.75rem;
+}
+
+.cart-thumb {
+    width: 48px;
+    height: auto;
+    margin-right: 12px;
+    outline: 1px solid rgba(255,255,255,0.15);
+    flex-shrink: 0;
+}
+
+.cart-thumb-link {
+    display: inline-block;
+}
+
+.cart-thumb-link:hover .cart-thumb {
+    outline-color: rgba(255,255,255,0.4);
+}
+
+
+/* ==============================================
+prevents selection/copy only on high-res elements
+============================================== */
+
+#mainImg,
+#modalImage,
+.modal-thumb {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+
+/* ========
+ Sale Badge
+======== */
+
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ca0000;
+    color: #fbbd00;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.sale-info {
+    background: #ca0000;
+    color: #fbbd00;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+/* ===============================
+Overrides Snipcart's default style
+=============================== */
+
+
+#snipcart {
+  --color-default: #FFFFFF !important; /* White text */
+  --color-default-shade: #CCCCCC !important; /* Light gray for subtle elements */
+  --bgColor-default: #212529 !important; /* Dark grey background */
+  --bgColor-alt: #212529 !important;
+  --bgColor-modal: #212529 !important;
+  --bgColor-modalVeil: rgba(0,0,0,0.8) !important;
+  --color-primary: #FBBD00 !important; /* Yellow accents */
+  --color-primary-shade: #E0A800 !important; /* Darker yellow for hover */
+  --color-danger: #CA0000 !important; /* Red for errors/sale badges */
+  --border-radius: 4px !important; /* Matches your poster cards */
+  --font-family: inherit !important; /* Use your site's font */
+  --color-link: #FBBD00 !important; /* Yellow for links like "View detailed cart" */
+  --color-link-hover: #E0A800 !important;
+  --color-link-active: #E0A800 !important;
+  --color-link-focus: #E0A800 !important;
+  --color-inputLabel: #FFFFFF !important; /* White for form labels like "Full name", "Email" */
+  --bgColor-buttonPrimary: #FBBD00 !important; /* Yellow background for primary buttons like checkout/place order */
+  --color-buttonPrimary: #000000 !important; /* Black text on primary buttons */
+  --borderColor-buttonPrimary: transparent !important; /* No border on primary buttons */
+  --bgColor-buttonPrimary-hover: #E0A800 !important; /* Darker yellow on hover */
+  --color-buttonPrimary-hover: #000000 !important;
+  --borderColor-buttonPrimary-hover: transparent !important;
+}

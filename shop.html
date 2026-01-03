@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Original British Cinema Quad Posters for Sale – Cinema Quad Posters</title>
+    <meta name="description" content="Browse and buy authentic original British quad movie posters from classics to modern reissues.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="cqp.css">
+
+    <link rel="preload" href="inventory.json" as="fetch" crossorigin>
+</head>
+
+<body class="bg-black text-white">
+
+<!-- NAVBAR -->
+<nav class="navbar bg-dark navbar-dark sticky-top px-3">
+    <div class="container-fluid navbar-grid">
+
+        <!-- LEFT: Logo -->
+        <div class="navbar-left">
+            <a class="navbar-brand" href="shop.html">
+                <img src="img/logo_2023.png"
+                     alt="Cinema Quad Posters"
+                     style="height:40px;">
+            </a>
+        </div>
+
+        <!-- CENTER: Search + Filters -->
+        <div class="navbar-center">
+            <div class="navbar-search-group d-flex align-items-center gap-2">
+
+                <!-- Search -->
+                <input id="searchInput"
+                       class="form-control form-control-sm search-pill"
+                       placeholder="Search posters…">
+
+                <!-- Browse -->
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown">
+                        Browse
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-dark p-3" style="min-width:220px">
+                        <label class="small text-muted mb-1">Decade</label>
+                        <select id="decadeFilter" class="form-select form-select-sm mb-2">
+                            <option value="">All Decades</option>
+                        </select>
+
+                        <label class="small text-muted mb-1">Genre</label>
+                        <select id="genreFilter" class="form-select form-select-sm">
+                            <option value="">All Genres</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Sort -->
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-light dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown">
+                        Sort
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-dark p-2">
+                        <select id="sortBy" class="form-select form-select-sm">
+                            <option value="title">A–Z</option>
+                            <option value="year-desc">Newest Release</option>
+                            <option value="year-asc">Oldest Release</option>
+                            <option value="price-asc">Price Low–High</option>
+                            <option value="price-desc">Price High–Low</option>
+                            <option value="recent-desc">Recently Added</option>
+                            <option value="director">Director A–Z</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT: Shop + Cart -->
+        <div class="navbar-right">
+            <a class="navbar-link active" href="shop.html">Shop</a>
+            <a class="nav-link cart-link" href="cart.html">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCount" class="cart-badge">0</span>
+            </a>
+        </div>
+
+
+    </div>
+</nav>
+
+
+
+<!-- GRID -->
+<div class="container mt-3">
+    <div id="results"
+         class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    </div>
+</div>
+
+
+<!-- SCRIPT -->
+<script>
+let posters = [];
+let uniqueDecades = [];
+let uniqueGenres = [];
+let uniqueDirectors = [];
+
+// Pagination variables
+let itemsPerPage = 40;
+let currentOffset = 0;
+let filteredPosters = [];
+let isLoadingMore = false;
+
+/* Load inventory and populate dynamic options */
+fetch('inventory.json')
+    .then(r => r.json())
+    .then(data => {
+        posters = data;
+
+        // Collect unique decades
+        const decadesSet = new Set();
+        posters.forEach(p => {
+            if (p['originally released']) {
+                const decade = Math.floor(p['originally released'] / 10) * 10 + 's';
+                decadesSet.add(decade);
+            }
+        });
+        uniqueDecades = Array.from(decadesSet).sort();
+
+        // Collect unique genres
+        const genresSet = new Set();
+        posters.forEach(p => {
+            if (Array.isArray(p.genre)) {
+                p.genre.forEach(g => genresSet.add(g));
+            } else if (p.genre) {
+                genresSet.add(p.genre);
+            }
+        });
+        uniqueGenres = Array.from(genresSet).sort();
+
+        // Collect unique directors
+        const directorsSet = new Set();
+        posters.forEach(p => {
+            if (p.director) directorsSet.add(p.director);
+        });
+        uniqueDirectors = Array.from(directorsSet).sort();
+
+        // Populate decade options
+        const decadeSelect = document.getElementById('decadeFilter');
+        decadeSelect.innerHTML = '<option value="">All Decades</option>';
+        uniqueDecades.forEach(d => {
+            decadeSelect.innerHTML += `<option value="${d}">${d}</option>`;
+        });
+
+        // Populate genre options
+        const genreSelect = document.getElementById('genreFilter');
+        genreSelect.innerHTML = '<option value="">All Genres</option>';
+        uniqueGenres.forEach(g => {
+            genreSelect.innerHTML += `<option value="${g}">${g}</option>`;
+        });
+
+        // Populate director options if you have it (optional)
+        // ...
+
+        render(true); // Initial render
+        setupInfiniteScroll();
+    })
+    .catch(error => {
+        console.error('Error loading inventory:', error);
+        document.getElementById('results').innerHTML = '<p class="text-center text-muted mt-4">Error loading posters. Please try again later.</p>';
+    });
+
+/* Debounce for search */
+function debounce(func, delay) {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => func(...args), delay);
+    };
+}
+
+/* Render function */
+function render(resetOffset = true) {
+    const searchInput = document.getElementById('searchInput');
+    const decadeFilter = document.getElementById('decadeFilter');
+    const genreFilter = document.getElementById('genreFilter');
+    const sortBy = document.getElementById('sortBy');
+
+    const search = (searchInput ? searchInput.value.toLowerCase().trim() : '').split(/\s+/).filter(word => word.length > 0);
+    const decade = decadeFilter ? decadeFilter.value : '';
+    const genre = genreFilter ? genreFilter.value : '';
+    const sort = sortBy ? sortBy.value : 'title';
+
+    const r = document.getElementById('results');
+    if (resetOffset) {
+        r.innerHTML = '';
+        currentOffset = 0;
+        isLoadingMore = false;
+    }
+
+    filteredPosters = posters.filter(p => {
+        if (decade) {
+            const year = p['originally released'] || 0;
+            const pDecade = Math.floor(year / 10) * 10 + 's';
+            if (pDecade !== decade) return false;
+        }
+
+        if (genre) {
+            const pGenres = Array.isArray(p.genre) ? p.genre.join(' ').toLowerCase() : (p.genre || '').toLowerCase();
+            if (!pGenres.includes(genre.toLowerCase())) return false;
+        }
+
+        if (search.length > 0) {
+            const searchable = [
+                p.title || '',
+                p.director || '',
+                Array.isArray(p.actors) ? p.actors.join(' ') : '',
+                Array.isArray(p.genre) ? p.genre.join(' ') : (p.genre || ''),
+                p['originally released'] ? String(p['originally released']) : '',
+                p.variant || '',
+                p.description || '',
+                Array.isArray(p.tags) ? p.tags.join(' ') : ''
+            ].join(' ').toLowerCase();
+
+            return search.every(word => searchable.includes(word));
+        }
+
+        return true;
+    });
+
+    filteredPosters.sort((a, b) => {
+        if (sort === 'title') return (a.sort_title || a.title || '').localeCompare(b.sort_title || b.title || '');
+        if (sort === 'year-desc') return (b['originally released'] || 0) - (a['originally released'] || 0);
+        if (sort === 'year-asc') return (a['originally released'] || 0) - (b['originally released'] || 0);
+        if (sort === 'price-asc') return a.price - b.price;
+        if (sort === 'price-desc') return b.price - a.price;
+        if (sort === 'recent-desc') {
+            return new Date(b.purchase_date || '1900-01-01') - new Date(a.purchase_date || '1900-01-01');
+        }
+        if (sort === 'director') return (a.director || '').localeCompare(b.director || '');
+        return 0;
+    });
+
+    const batch = filteredPosters.slice(currentOffset, currentOffset + itemsPerPage);
+    if (!batch.length && currentOffset === 0) {
+        r.innerHTML = '<p class="text-center text-muted mt-4">No matching posters found.</p>';
+        return;
+    }
+
+    batch.forEach(x => {
+        r.innerHTML += `
+            <div class="col">
+                <div class="card poster-card">
+                    <a href="poster.html?id=${encodeURIComponent(x.thumbnail)}">
+                        <div style="position: relative;">
+                            <img src="${x.thumbnail}" alt="${x.title} original British quad poster">
+                            ${x.on_sale ? '<span class="sale-badge">SALE</span>' : ''}
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <div class="poster-label">
+                            <span class="card-title">${x.title}</span>
+                            <span class="price">£${x.price.toFixed(2)}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+    });
+
+    currentOffset += batch.length;
+    isLoadingMore = false;
+
+    if (currentOffset < filteredPosters.length) {
+        addSentinel();
+    }
+}
+
+// Function to add sentinel for infinite scroll
+function addSentinel() {
+    const r = document.getElementById('results');
+    const sentinel = document.createElement('div');
+    sentinel.id = 'sentinel';
+    sentinel.style.height = '1px';
+    r.appendChild(sentinel);
+
+    const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && !isLoadingMore) {
+            isLoadingMore = true;
+            observer.disconnect();
+            document.getElementById('sentinel')?.remove();
+            render(false);
+        }
+    }, { rootMargin: '200px' });
+
+    observer.observe(sentinel);
+}
+
+// Setup infinite scroll
+function setupInfiniteScroll() {
+    // Initial sentinel handled in render
+}
+
+/* Event listeners */
+const inputs = ['searchInput', 'decadeFilter', 'genreFilter', 'sortBy'];
+inputs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+        el.addEventListener('input', () => {
+            if (id === 'searchInput') {
+                debounce(() => render(true), 300)();
+            } else {
+                render(true);
+            }
+        });
+    }
+});
+
+/* Cart count */
+function updateCartCount(animate = false) {
+    const badge = document.getElementById('cartCount');
+    if (badge && typeof Snipcart !== 'undefined') {
+        const count = Snipcart.store.getState().cart.items.length;
+        badge.textContent = count;
+        if (animate) {
+            badge.classList.add('animate');
+            setTimeout(() => badge.classList.remove('animate'), 300);
+        }
+    }
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- FOOTER -->
+<footer class="site-footer mt-5">
+    <div class="container py-4">
+        <div class="row gy-3 align-items-center">
+
+            <div class="col-md-4 footer-left">
+                <a href="shop.html">
+                    <img src="img/logo.png"
+                         alt="Cinema Quad Posters"
+                         class="footer-logo">
+                </a>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <ul class="footer-links justify-content-center mb-1">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+                <p class="small mb-0" style="color: #aaa;">    
+                    © <span id="year"></span> Cinema Quad Posters
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script src="cqp.js"></script>
+
+</body>
+</html>

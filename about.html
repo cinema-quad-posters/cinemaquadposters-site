@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About – Cinema Quad Posters</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="cqp.css">
+
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css" />
+<link rel="preconnect" href="https://cdn.snipcart.com" />
+<link rel="preconnect" href="https://app.snipcart.com" />
+
+</head>
+
+<body class="bg-black text-white">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top px-3">
+    <div class="container-fluid">
+        <a href="shop.html" class="me-4">
+            <img src="img/logo_2023.png"
+                 alt="Cinema Quad Posters"
+                 style="height:40px;">
+        </a>
+
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="shop.html">Shop</a>
+            <a class="nav-link cart-link" href="cart.html">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCount" class="cart-badge">0</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9 legal-content">
+
+            <h1>About Cinema Quad Posters</h1>
+
+            <p>
+                Cinema Quad Posters specialises in <strong>carefully selected original British cinema quad posters</strong> -
+                produced exclusively for UK cinema exhibition and never sold through retail outlets. Because of their limited 
+                print runs, distinctive landscape format, and often unique artwork,
+                British quads have become increasingly sought after by collectors worldwide.
+            </p>
+
+            <div class="legal-divider"></div>
+
+            <h5>What we look for</h5>
+
+            <p>
+                We focus on posters that are in the best possible condition for their age.
+                Modern quad posters that are heavily creased, badly damaged, or poorly stored are not acquired.
+                Where possible, posters are photographed in high resolution and described honestly,
+                allowing collectors to assess condition clearly before purchasing.
+            </p>
+
+            <p>
+                Pricing is set to be comparable with — or lower than — other established quad poster dealers,
+                while recognising that some posters are naturally more desirable than others.
+                That variation is part of the pleasure of collecting, shaped by individual taste as much as rarity.
+            </p>
+
+            <div class="legal-divider"></div>
+
+            <h5>What is a British cinema quad poster?</h5>
+
+            <p>
+                The British cinema quad (quadruple crown) poster has been the UK standard since the late 1930s.
+                Measuring 30 × 40 inches and printed in landscape format,
+                quads differ significantly from their US one-sheet counterparts. Because of this unique orientation, 
+                artwork for imported American films often had to be redesigned
+                or completely re-commissioned for the UK market.
+                This led to alternative artwork — frequently more imaginative and visually striking than the original US designs —
+                and has made many British quads highly collectible.
+            </p>
+
+            <p>
+                Up until the mid-1980s, quad posters were typically machine-folded
+                and printed on heavier matte paper stock.
+                From the early 1990s onwards, most modern quads have been printed double-sided on gloss paper,
+                designed for display in illuminated cinema lightboxes.
+            </p>
+
+            <div class="legal-divider"></div>
+
+            <h5>Modern releases & reissues</h5>
+
+            <p>
+                While contemporary releases rarely commission alternative UK artwork,
+                distributors such as Park Circus and the BFI have helped reinvigorate the quad poster format
+                by reissuing classic films with newly designed artwork for theatrical screenings. 
+                These modern quads, while visually striking, are often more delicate and harder to restore
+                than their earlier counterparts — something we take into account when selecting stock.
+            </p>
+
+            <div class="legal-divider"></div>
+
+            <h5>A simpler website, built with care</h5>
+
+            <p>
+                In January 2026, we launched a completely new website, rebuilt and designed from the ground up with a deliberate focus on clarity and speed, making it
+                <strong>faster, simpler, and more intuitive</strong> to use - particularly on mobile devices.
+                The new design has been kept intentionally minimal to allow pages to load quickly, images to display clearly,
+                and the browsing experience to remain calm and distraction-free.
+            </p>
+
+            <p>
+                Many poster images have been photographed at higher resolution,
+                and over time we will continue to re-photograph older listings where improved detail is needed.
+                The site will continue to evolve, but always with the same priority:
+                a clean, reliable, and enjoyable way to discover and collect British cinema quad posters.
+                If you ever notice an error or inconsistency, please let us know —
+                the site is very much a living project.
+            </p>
+
+            <div class="legal-divider"></div>
+
+            <h5>Questions?</h5>
+
+            <p>
+                If you have any questions about a specific poster, condition, or ordering,
+                please don’t hesitate to get in touch:
+            </p>
+
+            <p><strong>cinemaquadposters@gmail.com</strong></p>
+
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer mt-5">
+    <div class="container py-4">
+        <div class="row gy-3 align-items-center">
+
+            <div class="col-md-4 footer-left">
+                <a href="shop.html">
+                    <img src="img/logo.png"
+                         alt="Cinema Quad Posters"
+                         class="footer-logo">
+                </a>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <ul class="footer-links justify-content-center mb-1">
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+                <p class="small mb-0" style="color: #aaa;">    
+                    © <span id="year"></span> Cinema Quad Posters
+                </p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+const badge = document.getElementById('cartCount');
+if (badge) badge.textContent = cart.length;
+</script>
+
+<div hidden id="snipcart" data-api-key="ZDg0OTM5MDAtNjRjOC00YTkzLTlmNTUtMTMyMDExNGEyYTE4NjM5MDIxMTk0MDM3NTMzOTE4" data-config-modal-style="side"></div>
+<script async src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
+
+<script src="cqp.js"></script>
+
+</body>
+</html>

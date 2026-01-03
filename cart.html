@@ -1,0 +1,106 @@
+<!-- cart.html (updated) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart – Cinema Quad Posters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="cqp.css">
+</head>
+<body class="bg-black text-white">
+    <!-- Navbar (as before, without Snipcart) -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top px-3">
+        <div class="container-fluid">
+            <a href="shop.html" class="me-4">
+                <img src="img/logo_2023.png" alt="Cinema Quad Posters" style="height:40px;">
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="shop.html">Shop</a>
+                <a class="nav-link cart-link" href="cart.html">
+                    <i class="bi bi-cart3"></i>
+                    <span id="cartCount" class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2>Your Cart</h2>
+        <div id="cartItems" class="list-group"></div>
+        <div class="cart-summary mt-4 text-end">
+            <strong>Total:</strong> <span id="cartTotal" class="text-warning fw-bold">£0.00</span>
+        </div>
+        <button id="checkoutBtn" class="btn btn-warning btn-lg mt-3 text-dark fw-bold" disabled>Checkout</button>
+    </div>
+
+    <!-- Footer (as before) -->
+
+    <script>
+    function renderCart() {
+        const cartItemsEl = document.getElementById('cartItems');
+        const cartTotalEl = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        const cart = getCart();
+
+        cartItemsEl.innerHTML = '';
+        if (!cart.length) {
+            cartItemsEl.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
+            cartTotalEl.textContent = '£0.00';
+            checkoutBtn.disabled = true;
+            return;
+        }
+
+        let total = 0;
+        cart.forEach(item => {
+            total += item.price;
+            const itemEl = document.createElement('div');
+            itemEl.className = 'cart-item list-group-item bg-dark border-0';
+            itemEl.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <img src="${item.thumbnail}" alt="${item.title}" class="cart-thumb me-3">
+                        <span class="cart-title">${item.title}</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="cart-price me-3">£${item.price.toFixed(2)}</span>
+                        <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart('${item.id}'); renderCart();">Remove</button>
+                    </div>
+                </div>
+            `;
+            cartItemsEl.appendChild(itemEl);
+        });
+
+        cartTotalEl.textContent = `£${total.toFixed(2)}`;
+        checkoutBtn.disabled = false;
+    }
+
+    document.addEventListener('DOMContentLoaded', renderCart);
+
+    document.getElementById('checkoutBtn').addEventListener('click', async () => {
+        const cart = getCart();
+        if (!cart.length) return;
+
+        // Send to serverless function to create Stripe session
+        try {
+            const response = await fetch('/.netlify/functions/create-checkout', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ items: cart }) // Send cart items (product_id, price)
+            });
+            const { sessionId } = await response.json();
+            const stripe = Stripe('pk_test_...'); // Your Stripe PUBLISHABLE key
+            stripe.redirectToCheckout({ sessionId });
+        } catch (error) {
+            alert('Error starting checkout: ' + error.message);
+        }
+    });
+    </script>
+
+    <script src="https://js.stripe.com/v3/"></script> <!-- Add Stripe JS for redirect -->
+
+    <script src="cqp.js"></script>   <!-- Link to cqp.js-->
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "stripe": "^20.1.0"
+  }
+}
