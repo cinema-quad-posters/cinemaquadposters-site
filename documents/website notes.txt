@@ -54,7 +54,7 @@ I put the client-side cart logic javascript code in a separate cqp.js file and l
 
 
 
-
+git remote add origin https://github.com/cinema-quad-posters/cinemaquadposters-site.git
 
 
 
