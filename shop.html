@@ -185,85 +185,75 @@ function debounce(func, delay) {
 }
 
 /* Render function */
-function render(resetOffset = true) {
-    const searchInput = document.getElementById('searchInput');
-    const decadeFilter = document.getElementById('decadeFilter');
-    const genreFilter = document.getElementById('genreFilter');
-    const sortBy = document.getElementById('sortBy');
-
-    const search = (searchInput ? searchInput.value.toLowerCase().trim() : '').split(/\s+/).filter(word => word.length > 0);
-    const decade = decadeFilter ? decadeFilter.value : '';
-    const genre = genreFilter ? genreFilter.value : '';
-    const sort = sortBy ? sortBy.value : 'title';
-
+function render(reset = true) {
     const r = document.getElementById('results');
-    if (resetOffset) {
-        r.innerHTML = '';
+    if (reset) {
         currentOffset = 0;
-        isLoadingMore = false;
+        r.innerHTML = '';
     }
 
-    filteredPosters = posters.filter(p => {
-        if (decade) {
-            const year = p['originally released'] || 0;
-            const pDecade = Math.floor(year / 10) * 10 + 's';
-            if (pDecade !== decade) return false;
-        }
+    let filteredPosters = posters;
 
-        if (genre) {
-            const pGenres = Array.isArray(p.genre) ? p.genre.join(' ').toLowerCase() : (p.genre || '').toLowerCase();
-            if (!pGenres.includes(genre.toLowerCase())) return false;
-        }
+    // Search
+    const search = document.getElementById('searchInput')?.value.toLowerCase();
+    if (search) {
+        filteredPosters = filteredPosters.filter(p =>
+            p.title.toLowerCase().includes(search) ||
+            p.director?.toLowerCase().includes(search) ||
+            p.actors?.some(a => a.toLowerCase().includes(search)) ||
+            p.genre?.some(g => g.toLowerCase().includes(search))
+        );
+    }
 
-        if (search.length > 0) {
-            const searchable = [
-                p.title || '',
-                p.director || '',
-                Array.isArray(p.actors) ? p.actors.join(' ') : '',
-                Array.isArray(p.genre) ? p.genre.join(' ') : (p.genre || ''),
-                p['originally released'] ? String(p['originally released']) : '',
-                p.variant || '',
-                p.description || '',
-                Array.isArray(p.tags) ? p.tags.join(' ') : ''
-            ].join(' ').toLowerCase();
+    // Decade
+    const decade = document.getElementById('decadeFilter')?.value;
+    if (decade) {
+        filteredPosters = filteredPosters.filter(p => p['originally released'] && Math.floor(p['originally released'] / 10) * 10 == decade);
+    }
 
-            return search.every(word => searchable.includes(word));
-        }
+    // Genre
+    const genre = document.getElementById('genreFilter')?.value;
+    if (genre) {
+        filteredPosters = filteredPosters.filter(p => p.genre?.includes(genre));
+    }
 
-        return true;
-    });
-
+    // Sort
+    const sortBy = document.getElementById('sortBy')?.value || 'title';
     filteredPosters.sort((a, b) => {
-        if (sort === 'title') return (a.sort_title || a.title || '').localeCompare(b.sort_title || b.title || '');
-        if (sort === 'year-desc') return (b['originally released'] || 0) - (a['originally released'] || 0);
-        if (sort === 'year-asc') return (a['originally released'] || 0) - (b['originally released'] || 0);
-        if (sort === 'price-asc') return a.price - b.price;
-        if (sort === 'price-desc') return b.price - a.price;
-        if (sort === 'recent-desc') {
-            return new Date(b.purchase_date || '1900-01-01') - new Date(a.purchase_date || '1900-01-01');
-        }
-        if (sort === 'director') return (a.director || '').localeCompare(b.director || '');
+        if (sortBy === 'title') return a.sort_title.localeCompare(b.sort_title);
+        if (sortBy === 'year-desc') return (b['originally released'] || 0) - (a['originally released'] || 0);
+        if (sortBy === 'year-asc') return (a['originally released'] || 0) - (b['originally released'] || 0);
+        if (sortBy === 'price-asc') return a.price - b.price;
+        if (sortBy === 'price-desc') return b.price - a.price;
+        if (sortBy === 'recent-desc') return new Date(b.purchase_date || 0) - new Date(a.purchase_date || 0);
+        if (sortBy === 'director') return a.director.localeCompare(b.director);
         return 0;
     });
 
-    const batch = filteredPosters.slice(currentOffset, currentOffset + itemsPerPage);
-    if (!batch.length && currentOffset === 0) {
-        r.innerHTML = '<p class="text-center text-muted mt-4">No matching posters found.</p>';
-        return;
-    }
+    const batch = filteredPosters.slice(currentOffset, currentOffset + BATCH_SIZE);
 
-const slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
-return `
-    <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
-        <a href="static-posters/${slug}.html" class="poster-card position-relative">
-            ${x.on_sale ? '<span class="sale-badge">SALE</span>' : ''}
-            <img src="${x.thumbnail}" alt="${x.title} poster" loading="lazy">
-            <div class="poster-label">
-                <h5 class="card-title">${x.title}</h5>
-                <span class="price">£${x.price.toFixed(2)}</span>
-            </div>
-        </a>
-    </div>`;
+    let html = '';
+    try {
+        html = batch.map(x => {
+            if (!x || !x.title) throw new Error('Invalid poster data');
+            const slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+            return `
+                <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
+                    <a href="static-posters/${slug}.html" class="poster-card position-relative">
+                        ${x.on_sale ? '<span class="sale-badge">SALE</span>' : ''}
+                        <img src="${x.thumbnail}" alt="${x.title} poster" loading="lazy">
+                        <div class="poster-label">
+                            <h5 class="card-title">${x.title}</h5>
+                            <span class="price">£${x.price.toFixed(2)}</span>
+                        </div>
+                    </a>
+                </div>`;
+        }).join('');
+    } catch (e) {
+        console.error('Render map error:', e);
+        html = '<p class="text-muted">Error rendering posters - check console for details.</p>';
+    }
+    r.innerHTML += html;
 
     currentOffset += batch.length;
     isLoadingMore = false;
@@ -366,22 +356,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 <script src="cqp.js"></script>
 
-<script>
-// LocalStorage cart add (simple array, no Snipcart—button position preserved)
-const addToCartBtn = document.getElementById('addToCart');
-addToCartBtn.addEventListener('click', () => {
-  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-  if (!cart.some(item => item.id === poster.product_id)) {
-    cart.push({ id: poster.product_id, title: poster.title, price: poster.price, thumbnail: poster.thumbnail });
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${poster.title} added!`); // Or Bootstrap toast for polish
-    updateCartBadge(true); // Animate badge (from cqp.js)
-  } else {
-    alert(`${poster.title} is already in cart!`);
-  }
-});
-updateCartBadge(); // Initial load
-</script>
 
 </body>
 </html>
