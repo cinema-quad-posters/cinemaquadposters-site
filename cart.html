@@ -78,24 +78,29 @@
 
     document.addEventListener('DOMContentLoaded', renderCart);
 
-    document.getElementById('checkoutBtn').addEventListener('click', async () => {
-        const cart = getCart();
-        if (!cart.length) return;
+    document.addEventListener('DOMContentLoaded', () => {
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    if (checkoutBtn) {
+        checkoutBtn.addEventListener('click', async () => {
+            const cart = getCart();
+            if (!cart.length) return;
 
-        // Send to serverless function to create Stripe session
-        try {
-            const response = await fetch('/.netlify/functions/create-checkout', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ items: cart }) // Send cart items (product_id, price)
-            });
-            const { sessionId } = await response.json();
-            const stripe = Stripe('pk_test_...'); // Your Stripe PUBLISHABLE key
-            stripe.redirectToCheckout({ sessionId });
-        } catch (error) {
-            alert('Error starting checkout: ' + error.message);
-        }
-    });
+            // Send to serverless function to create Stripe session
+            try {
+                const response = await fetch('/.netlify/functions/create-checkout', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ items: cart }) // Send cart items (product_id, price)
+                });
+                const { sessionId } = await response.json();
+                const stripe = Stripe('pk_test_...'); // Your Stripe PUBLISHABLE key
+                stripe.redirectToCheckout({ sessionId });
+            } catch (error) {
+                alert('Error starting checkout: ' + error.message);
+            }
+        });
+    }
+});
     </script>
 
     <script src="https://js.stripe.com/v3/"></script> <!-- Add Stripe JS for redirect -->
