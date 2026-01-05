@@ -1,8 +1,10 @@
-export default async (req, context) => {
-    console.log('Function invoked with body:', req.body);
+export default async (req) => {
+    console.log('Function invoked');
     try {
-        if (!req.body) throw new Error('No body provided');
-        const { items } = JSON.parse(req.body);
+        const bodyText = await req.text(); // Read stream to string
+        console.log('Body text:', bodyText);
+        if (!bodyText) throw new Error('No body provided');
+        const { items } = JSON.parse(bodyText); // Now parse string
         if (!Array.isArray(items) || items.length === 0) throw new Error('Invalid or empty items array');
         console.log('Parsed items:', items);
         const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
@@ -24,9 +26,15 @@ export default async (req, context) => {
             cancel_url: 'https://cinema-quad-posters-site.netlify.app/cart.html',
         });
         console.log('Session created:', session.id);
-        return { statusCode: 200, body: JSON.stringify({ sessionId: session.id }) };
+        return new Response(JSON.stringify({ sessionId: session.id }), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' }
+        });
     } catch (error) {
         console.error('Function error:', error.message);
-        return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
+        return new Response(JSON.stringify({ error: error.message }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+        });
     }
 };
