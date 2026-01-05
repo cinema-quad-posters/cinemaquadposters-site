@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Poster – Cinema Quad Posters</title>
-
-<meta name="description" content="Original British quad posters for classic films.">
-<!-- We'll make this dynamic in JS -->
+<title>Poster – Cinema Quad Posters</title> <!-- Placeholder: build.js will replace this with e.g., "ABBA - THE MOVIE (1977) – Original British Quad Poster – Cinema Quad Posters" -->
+<meta name="description" content="Original British quad posters for classic films."> <!-- Placeholder: build.js will replace with poster-specific summary -->
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -117,36 +115,33 @@
     text-align: center;
 }
 
-.modal-img-container {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    max-height: 80vh;
-    width: auto;
-    cursor: default;
-}
-
-#modalImage.zoom-active {
-    cursor: grab;
-    transition: transform 0.1s ease-out;
-}
-
-#modalImage.zoom-active:active {
-    cursor: grabbing;
-}
-
-#modalImage {
+ /* Anti-download: Disable selection/dragging on high-res elements */
+#mainImg,
+#modalImage,
+.modal-thumbs img {
     user-select: none;
-    -webkit-user-drag: none;
     -webkit-user-select: none;
-    pointer-events: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none; /* Blocks drags; re-enable for interactive thumbs below */
+}
+
+.modal-thumbs img {
+    pointer-events: auto; /* Allows clicks on thumbs for switching images */
 }
 </style>
 
 
-        <title>$ {esc(p.title)} ( $2014) – Original British Quad Poster – Cinema Quad Posters</title>
+        <title>GUARDIANS OF THE GALAXY (2014) – Original British Quad Poster – Cinema Quad Posters</title>
         <meta name="description" content="James Gunn&#039;s near perfect 2014 instant classic Guardians Of the Galaxy, starring Chris Pratt, Vin Diesel, Bradley Cooper and the wonderful Zoe Saldana.... Buy this collectible cinema poster.">
-    <script>const posterData = {"title":"GUARDIANS OF THE GALAXY","variant":null,"originally released":2014,"director":"James Gunn","actors":["Chris Pratt","Vin Diesel","Bradley Cooper","Zoe Saldana"],"genre":["sci-fi","action","adventure","romance","comedy"],"condition":"Excellent, rolled.","poster_type":"quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/guardians-of-the-galaxy-quad-poster.jpg","hires":"posters/guardians-of-the-galaxy-quad-poster-1.jpg","price":59.99,"film_summary":"James Gunn's near perfect 2014 instant classic Guardians Of the Galaxy, starring Chris Pratt, Vin Diesel, Bradley Cooper and the wonderful Zoe Saldana.","poster_notes":"This bold classic style sci-fi fantasy film poster is already increasingly hard to find (despite its huge theatrical release) and is testament of its popularity. This original has some kinking across the top half of the poster.","tags":null,"gallery":["posters/guardians-of-the-galaxy-quad-poster-sale.jpg"],"sort_title":"GUARDIANS OF THE GALAXY","on_sale":false,"purchase_date":"","payment_link":"https://buy.stripe.com/test_7sY4gyemA2Xk5YoaMecjS1z","product_id":"prod_TiiN23Ae5shmwp"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"GUARDIANS OF THE GALAXY","description":"James Gunn&#039;s near perfect 2014 instant classic Guardians Of the Galaxy, starring Chris Pratt, Vin Diesel, Bradley Cooper and the wonderful Zoe Saldana.","image":"posters-thumb/guardians-of-the-galaxy-quad-poster.jpg","offers":{"@type":"Offer","price":59.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    
+    <meta property="og:title" content="GUARDIANS OF THE GALAXY (2014) – Original British Quad Poster – Cinema Quad Posters">
+    <meta property="og:description" content="James Gunn&#039;s near perfect 2014 instant classic Guardians Of the Galaxy, starring Chris Pratt, Vin Diesel, Bradley Cooper and the wonderful Zoe Saldana.... Buy this collectible cinema poster.">
+    <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/guardians-of-the-galaxy-quad-poster.jpg">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/guardians-of-the-galaxy.html">
+    <script>const posterData = {"title":"GUARDIANS OF THE GALAXY","variant":null,"originally released":2014,"director":"James Gunn","actors":["Chris Pratt","Vin Diesel","Bradley Cooper","Zoe Saldana"],"genre":["sci-fi","action","adventure","romance","comedy"],"condition":"Excellent, rolled.","poster_type":"quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/guardians-of-the-galaxy-quad-poster.jpg","hires":"posters/guardians-of-the-galaxy-quad-poster-1.jpg","price":59.99,"film_summary":"James Gunn's near perfect 2014 instant classic Guardians Of the Galaxy, starring Chris Pratt, Vin Diesel, Bradley Cooper and the wonderful Zoe Saldana.","poster_notes":"This bold classic style sci-fi fantasy film poster is already increasingly hard to find (despite its huge theatrical release) and is testament of its popularity. This original has some kinking across the top half of the poster.","tags":null,"gallery":["posters/guardians-of-the-galaxy-quad-poster-sale.jpg"],"sort_title":"GUARDIANS OF THE GALAXY","on_sale":false,"purchase_date":"","payment_link":"https://buy.stripe.com/test_7sY4gyemA2Xk5YoaMecjS1z","product_id":"prod_TiiN23Ae5shmwp"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"GUARDIANS OF THE GALAXY","description":"James Gunn&#039;s near perfect 2014 instant classic Guardians Of the Galaxy, starring Chris Pratt, Vin Diesel, Bradley Cooper and the wonderful Zoe Saldana.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/guardians-of-the-galaxy-quad-poster.jpg","offers":{"@type":"Offer","price":59.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -159,8 +154,7 @@
         </a>
         <div class="navbar-nav ms-auto">
             <a class="nav-link" href="shop.html">Shop</a>
-            <a class="navbar-link active" href="shop.html">Shop</a>
-            <a class="nav-link cart-link" href="cart.html">
+            <a href="cart.html" class="nav-link cart-link">
             <i class="bi bi-cart3"></i>
             <span id="cartCount" class="cart-badge">0</span>
             </a>
@@ -275,114 +269,117 @@ const modalImgContainer = modalImg.parentElement;
 const zoomBtn = document.getElementById('zoomToggle');
 const fsBtn = document.getElementById('fullscreenToggle');
 const modalThumbs = document.querySelector('.modal-thumbs');
-window.addEventListener('load', () => {
-const params = new URLSearchParams(location.search);
-const id = decodeURIComponent(params.get('id') || '');
-fetch('inventory.json')
-        .then(r => r.json())
-        .then(data => {
-const poster = data.find(p => p.thumbnail === id);
-if (!poster) {
-document.getElementById('posterContent').innerHTML = '<p>Poster not found.</p>';
-return;
-            }
-// Add JSON-LD for SEO
+
+// On load, use embedded posterData
+const poster = posterData; // Embedded from build.js
+
+if (!poster || !poster.title) {
+    document.getElementById('posterContent').innerHTML = '<p>Error loading poster.</p>';
+    throw new Error('Poster data missing');
+}
+
+// Add JSON-LD for SEO (already embedded, but redundant here if in head—keep for completeness)
 const jsonLd = {
-"@context": "https://schema.org",
-"@type": "Product",
-"name": esc(poster.title),
-"description": esc(poster.film_summary),
-"image": poster.thumbnail,
-"offers": {
-"@type": "Offer",
-"price": poster.price,
-"priceCurrency": "GBP",
-"itemCondition": "https://schema.org/UsedCondition",
-"availability": "https://schema.org/InStock"
-                }
-            };
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": esc(poster.title),
+    "description": esc(poster.film_summary),
+    "image": poster.thumbnail,
+    "offers": {
+        "@type": "Offer",
+        "price": poster.price,
+        "priceCurrency": "GBP",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": "https://schema.org/InStock"
+    }
+};
 const script = document.createElement('script');
 script.type = 'application/ld+json';
 script.text = JSON.stringify(jsonLd);
 document.head.appendChild(script);
-// Set dynamic title and meta for SEO
+
+// Set dynamic title and meta for SEO (already in head via build.js, but ensure)
 document.title = `${esc(poster.title)} (${poster['originally released'] || 'N/A'}) – Original British Quad Poster – Cinema Quad Posters`;
 const metaDesc = document.querySelector('meta[name="description"]');
 if (metaDesc) {
-metaDesc.content = esc(poster.film_summary.slice(0, 160)) + '... Buy this collectible quad poster.';
-            }
+    metaDesc.content = esc(poster.film_summary.slice(0, 160)) + '... Buy this collectible quad poster.';
+}
+
 images = [poster.hires, ...(poster.gallery || [])];
 document.getElementById('posterContent').innerHTML = `
-                <div class="row">
-                    <div class="col-md-6 mb-4 mb-md-0">
-                        <div class="poster-viewer">
-                            <img id="mainImg" src="${images[0]}" alt="${esc(poster.title)} original British quad poster" class="img-fluid" draggable="false" ondragstart="return false;" oncontextmenu="return false;">
-${images.length > 1 ? `
-                                <button class="nav-arrow left" onclick="prevImage()"><i class="bi bi-chevron-left"></i></button>
-                                <button class="nav-arrow right" onclick="nextImage()"><i class="bi bi-chevron-right"></i></button>
-                            ` : ''}
-                            <button class="enlarge-btn" onclick="openLightbox(0)"><i class="bi bi-arrows-angle-expand"></i></button>
-                        </div>
-${images.length > 1 ? `
-                            <div class="dot-indicators">
-${images.map((_, i) => `<div class="dot ${i === 0 ? 'active' : ''}" onclick="selectImage(${i})"></div>`).join('')}
-                            </div>
-                        ` : ''}
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="mb-3">${esc(poster.title)}</h1>
-                        <p class="text-muted mb-4">${poster['originally released'] ? `Originally released: ${poster['originally released']}` : ''}${poster.variant ? ` (${esc(poster.variant)})` : ''}</p>
-                        <p>${esc(poster.film_summary)}</p>
-                        <ul class="poster-specs mb-4">
-                            <li><strong>Director:</strong> ${esc(poster.director || 'N/A')}</li>
-                            <li><strong>Actors:</strong> ${poster.actors ? poster.actors.map(esc).join(', ') : 'N/A'}</li>
-                            <li><strong>Genre:</strong> ${poster.genre ? (Array.isArray(poster.genre) ? poster.genre.join(', ') : poster.genre) : 'N/A'}</li>
-                            <li><strong>Condition:</strong> ${esc(poster.condition || 'N/A')}</li>
-                            <li><strong>Size:</strong> ${esc(poster.poster_size || '30 x 40 inches')}</li>
-                        </ul>
-                        <p class="mb-4">${esc(poster.poster_notes || '')}</p>
-                        <div class="d-flex align-items-center mb-4">
-                            <span class="price fw-bold fs-4">£${poster.price.toFixed(2)}</span>
-${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
-                        </div>
-                        <button id="addToCartBtn" class="btn btn-warning text-dark fw-bold">Add to Cart £${poster.price.toFixed(2)}</button>
-                    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div class="poster-viewer">
+                <img id="mainImg" src="${images[0]}" alt="${esc(poster.title)} original British quad poster" class="img-fluid" draggable="false" ondragstart="return false;" oncontextmenu="return false;">
+                ${images.length > 1 ? `
+                    <button class="nav-arrow left" onclick="prevImage()"><i class="bi bi-chevron-left"></i></button>
+                    <button class="nav-arrow right" onclick="nextImage()"><i class="bi bi-chevron-right"></i></button>
+                ` : ''}
+                <button class="enlarge-btn" onclick="openLightbox(0)"><i class="bi bi-arrows-angle-expand"></i></button>
+            </div>
+            ${images.length > 1 ? `
+                <div class="dot-indicators">
+                    ${images.map((_, i) => `<div class="dot ${i === 0 ? 'active' : ''}" onclick="selectImage(${i})"></div>`).join('')}
                 </div>
-            `;
+            ` : ''}
+        </div>
+        <div class="col-md-6">
+            <h1 class="mb-3">${esc(poster.title)}</h1>
+            <p class="text-muted mb-4">${poster['originally released'] ? `Originally released: ${poster['originally released']}` : ''}${poster.variant ? ` (${esc(poster.variant)})` : ''}</p>
+            <p>${esc(poster.film_summary)}</p>
+            <ul class="poster-specs mb-4">
+                <li><strong>Director:</strong> ${esc(poster.director || 'N/A')}</li>
+                <li><strong>Actors:</strong> ${poster.actors ? poster.actors.map(esc).join(', ') : 'N/A'}</li>
+                <li><strong>Genre:</strong> ${poster.genre ? (Array.isArray(poster.genre) ? poster.genre.join(', ') : poster.genre) : 'N/A'}</li>
+                <li><strong>Condition:</strong> ${esc(poster.condition || 'N/A')}</li>
+                <li><strong>Size:</strong> ${esc(poster.poster_size || '30 x 40 inches')}</li>
+            </ul>
+            <p class="mb-4">${esc(poster.poster_notes || '')}</p>
+            <div class="d-flex align-items-center mb-4">
+                <span class="price fw-bold fs-4">£${poster.price.toFixed(2)}</span>
+                ${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
+            </div>
+            <button id="addToCart" class="btn btn-warning text-dark fw-bold">Add to Cart £${poster.price.toFixed(2)}</button>
+        </div>
+    </div>
+`;
+
 // Normalize genres for related (stub for now)
 const posterGenres = Array.isArray(poster.genre) ? poster.genre : (poster.genre ? [poster.genre] : []);
 // Related posters - Stub as [] (pre-compute in future if wanted)
 const related = []; // Adjust in build.js to embed 4 related items based on genre/tags
 if (related.length) {
-document.getElementById('relatedSection').innerHTML = `
-                    <h5 class="mb-3">You may also like</h5>
-                    <div class="row g-3">
-${related.map(x => `
-                            <div class="col-6 col-md-3">
-                                <a href="poster.html?id=${encodeURIComponent(x.thumbnail)}" class="related-item">
-                                    <img src="${x.thumbnail}" alt="${esc(x.title)}" class="img-fluid mb-1">
-                                    <div class="title text-muted small">${esc(x.title)}</div>
-                                </a>
-                            </div>
-                        `).join('')}
-                    </div>
-                `;
-            }
-        document.getElementById('addToCartBtn').addEventListener('click', () => {
-            addToCart({
-                id: poster.product_id, // Use Stripe product_id as unique key
-                title: poster.title,
-                price: poster.price,
-                thumbnail: poster.thumbnail
-            });
-            updateCartBadge(true); // Animate
-        });
-        })
-        .catch(error => {
-console.error('Error:', error);
-document.getElementById('posterContent').innerHTML = '<p>Error loading poster.</p>';
-        });
+    const slugs = related.map(x => {
+        return x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    });
+    document.getElementById('relatedSection').innerHTML = `
+        <h5 class="mb-3">You may also like</h5>
+        <div class="row g-3">
+            ${related.map((x, idx) => `
+                <div class="col-6 col-md-3">
+                    <a href="static-posters/${slugs[idx]}.html" class="related-item">
+                        <img src="${x.thumbnail}" alt="${esc(x.title)}" class="img-fluid mb-1">
+                        <div class="title text-muted small">${esc(x.title)}</div>
+                    </a>
+                </div>
+            `).join('')}
+        </div>
+    `;
+} else {
+    document.getElementById('relatedSection').style.display = 'none';
+}
+
+// Setup addToCart listener
+document.getElementById('addToCart').addEventListener('click', () => {
+    addToCart({
+        id: poster.product_id, // Use Stripe product_id as unique key
+        title: poster.title,
+        price: poster.price,
+        thumbnail: poster.thumbnail
+    });
+    updateCartBadge(true); // Animate
 });
+
 // SLIDESHOW FUNCTIONS
 function prevImage() {
 currentIndex = (currentIndex - 1 + images.length) % images.length;
@@ -507,6 +504,19 @@ document.fullscreenElement ? document.exitFullscreen() : document.documentElemen
 ===================================================== */
 modal._element.addEventListener('hidden.bs.modal', resetZoom);
 
+// Anti-download protections: Prevent right-click/drag on viewer images
+document.addEventListener('contextmenu', e => {
+    if (e.target.tagName === 'IMG' && (e.target.id === 'mainImg' || e.target.id === 'modalImage' || e.target.classList.contains('modal-thumb'))) {
+        e.preventDefault(); // Blocks context menu (right-click "Save Image")
+    }
+});
+
+const protectedImages = document.querySelectorAll('#mainImg, #modalImage, .modal-thumbs img');
+protectedImages.forEach(img => {
+    img.draggable = false;
+    img.addEventListener('dragstart', e => e.preventDefault()); // Blocks drag-to-save
+});
+
 </script>
 
 
@@ -545,6 +555,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 <script src="cqp.js"></script>
+
+<script>
+// LocalStorage cart add (simple array, no Snipcart)
+const addToCartBtn = document.getElementById('addToCart');
+addToCartBtn.addEventListener('click', () => {
+    addToCart({ id: posterData.product_id, title: posterData.title, price: posterData.price, thumbnail: posterData.thumbnail });
+});
+updateCartBadge(); // Initial load
+</script>
 
 </body>
 </html>

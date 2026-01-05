@@ -81,9 +81,9 @@
         </div>
 
         <!-- RIGHT: Shop + Cart -->
-        <div class="navbar-right">
-            <a class="navbar-link active" href="shop.html">Shop</a>
-            <a class="nav-link cart-link" href="cart.html">
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="shop.html">Shop</a>
+            <a href="cart.html" class="nav-link cart-link">
             <i class="bi bi-cart3"></i>
             <span id="cartCount" class="cart-badge">0</span>
             </a>
@@ -252,25 +252,18 @@ function render(resetOffset = true) {
         return;
     }
 
-    batch.forEach(x => {
-        r.innerHTML += `
-            <div class="col">
-                <div class="card poster-card">
-                    <a href="poster.html?id=${encodeURIComponent(x.thumbnail)}">
-                        <div style="position: relative;">
-                            <img src="${x.thumbnail}" alt="${x.title} original British quad poster">
-                            ${x.on_sale ? '<span class="sale-badge">SALE</span>' : ''}
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <div class="poster-label">
-                            <span class="card-title">${x.title}</span>
-                            <span class="price">£${x.price.toFixed(2)}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-    });
+const slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+return `
+    <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
+        <a href="static-posters/${slug}.html" class="poster-card position-relative">
+            ${x.on_sale ? '<span class="sale-badge">SALE</span>' : ''}
+            <img src="${x.thumbnail}" alt="${x.title} poster" loading="lazy">
+            <div class="poster-label">
+                <h5 class="card-title">${x.title}</h5>
+                <span class="price">£${x.price.toFixed(2)}</span>
+            </div>
+        </a>
+    </div>`;
 
     currentOffset += batch.length;
     isLoadingMore = false;
@@ -372,6 +365,23 @@ document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 <script src="cqp.js"></script>
+
+<script>
+// LocalStorage cart add (simple array, no Snipcart—button position preserved)
+const addToCartBtn = document.getElementById('addToCart');
+addToCartBtn.addEventListener('click', () => {
+  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  if (!cart.some(item => item.id === poster.product_id)) {
+    cart.push({ id: poster.product_id, title: poster.title, price: poster.price, thumbnail: poster.thumbnail });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${poster.title} added!`); // Or Bootstrap toast for polish
+    updateCartBadge(true); // Animate badge (from cqp.js)
+  } else {
+    alert(`${poster.title} is already in cart!`);
+  }
+});
+updateCartBadge(); // Initial load
+</script>
 
 </body>
 </html>

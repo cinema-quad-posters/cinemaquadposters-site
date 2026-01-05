@@ -1,6 +1,11 @@
-// Utility to get/set cart (array of {id: string, title: string, price: number, thumbnail: string})
+// Utility to get/set cart (array of {id, title, price, thumbnail})
 function getCart() {
-    return JSON.parse(localStorage.getItem('cart') || '[]');
+    try {
+        return JSON.parse(localStorage.getItem('cart') || '[]');
+    } catch (e) {
+        console.error('Cart parse error:', e);
+        return [];
+    }
 }
 
 function setCart(cart) {
@@ -10,11 +15,11 @@ function setCart(cart) {
 
 function addToCart(item) {
     const cart = getCart();
-    // Check if already in cart (simple: no quantity, assume one per item)
     if (!cart.some(c => c.id === item.id)) {
-        cart.push(item);
+        cart.push({ id: item.id, title: item.title, price: item.price, thumbnail: item.thumbnail });
         setCart(cart);
-        alert(`${item.title} added to cart!`); // Or use a toast/modal
+        alert(`${item.title} added to cart!`);
+        updateCartBadge(true); // Animate on add
     } else {
         alert(`${item.title} is already in your cart.`);
     }
@@ -24,8 +29,10 @@ function removeFromCart(id) {
     let cart = getCart();
     cart = cart.filter(item => item.id !== id);
     setCart(cart);
+    updateCartBadge(); // Update without animation on remove
 }
 
+// Shared badge update (fast, no duplication)
 function updateCartBadge(animate = false) {
     const badge = document.getElementById('cartCount');
     if (badge) {
@@ -38,5 +45,5 @@ function updateCartBadge(animate = false) {
     }
 }
 
-// Initial badge update on page load
-document.addEventListener('DOMContentLoaded', updateCartBadge);
+// Initial load
+document.addEventListener('DOMContentLoaded', () => updateCartBadge());

@@ -28,7 +28,7 @@
 
         <div class="navbar-nav ms-auto">
             <a class="nav-link" href="shop.html">Shop</a>
-            <a class="nav-link cart-link" href="cart.html">
+            <a href="cart.html" class="nav-link cart-link">
             <i class="bi bi-cart3"></i>
             <span id="cartCount" class="cart-badge">0</span>
             </a>
@@ -172,10 +172,24 @@ const badge = document.getElementById('cartCount');
 if (badge) badge.textContent = cart.length;
 </script>
 
-<div hidden id="snipcart" data-api-key="ZDg0OTM5MDAtNjRjOC00YTkzLTlmNTUtMTMyMDExNGEyYTE4NjM5MDIxMTk0MDM3NTMzOTE4" data-config-modal-style="side"></div>
-<script async src="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.js"></script>
-
 <script src="cqp.js"></script>
+
+<script>
+// LocalStorage cart add (simple array, no Snipcart—button position preserved)
+const addToCartBtn = document.getElementById('addToCart');
+addToCartBtn.addEventListener('click', () => {
+  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  if (!cart.some(item => item.id === poster.product_id)) {
+    cart.push({ id: poster.product_id, title: poster.title, price: poster.price, thumbnail: poster.thumbnail });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${poster.title} added!`); // Or Bootstrap toast for polish
+    updateCartBadge(true); // Animate badge (from cqp.js)
+  } else {
+    alert(`${poster.title} is already in cart!`);
+  }
+});
+updateCartBadge(); // Initial load
+</script>
 
 </body>
 </html>

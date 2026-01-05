@@ -1,6 +1,0 @@
-# Add CSP Header to allow external styles and scripts from trusted sources
-Header set Content-Security-Policy "default-src 'self'; 
-                                   style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.snipcart.com;
-                                   script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdn.snipcart.com https://js.stripe.com;
-                                   img-src 'self' https://cdn.snipcart.com https://cdn.jsdelivr.net https://www.stripe.com;
-                                   font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com;"

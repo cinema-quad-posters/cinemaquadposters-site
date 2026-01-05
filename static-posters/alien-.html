@@ -143,10 +143,7 @@
 }
 </style>
 
-
-        <title>$ {esc(p.title)} ( $1992) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch cinema quad poster for David Fincher&#039;s dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles... Buy this collectible cinema poster.">
-    <script>const posterData = {"title":"ALIEN³","variant":null,"originally released":1992,"director":"David Fincher","actors":["Sigourney Weaver","Charles S. Dutton","Charles Dance","Brian Glover","Ralph Brown","Paul McGann","Lance Henriksen"],"genre":["action","horror","sci-fi"],"condition":"Near mint rolled condition","poster_type":"quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/alien-3-quad-poster.jpg","hires":"posters/alien-3-quad-poster.jpg","price":79.99,"film_summary":"British 30 x 40 inch cinema quad poster for David Fincher's dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover, Ralph Brown, Paul McGann, Danny Webb and Lance Henriksen.","poster_notes":"Unlike most versions of this poster that were printed on modern gloss paper, this one has been printed on traditional quad paper stock of the pre-90's.","tags":["rolled"],"gallery":["posters/alien-3-quad-poster.jpg"],"sort_title":"ALIEN 3","on_sale":false,"purchase_date":"","payment_link":"https://buy.stripe.com/test_7sY7sKfqE0PcgD22fIcjS03","product_id":"prod_TiiMZQhsTarL2d"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"ALIEN³","description":"British 30 x 40 inch cinema quad poster for David Fincher&#039;s dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover, Ralph Brown, Paul McGann, Danny Webb and Lance Henriksen.","image":"posters-thumb/alien-3-quad-poster.jpg","offers":{"@type":"Offer","price":79.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+</head>
 
 <body class="bg-black text-white">
 
@@ -159,8 +156,7 @@
         </a>
         <div class="navbar-nav ms-auto">
             <a class="nav-link" href="shop.html">Shop</a>
-            <a class="navbar-link active" href="shop.html">Shop</a>
-            <a class="nav-link cart-link" href="cart.html">
+            <a href="cart.html" class="nav-link cart-link">
             <i class="bi bi-cart3"></i>
             <span id="cartCount" class="cart-badge">0</span>
             </a>
@@ -342,10 +338,10 @@ ${images.map((_, i) => `<div class="dot ${i === 0 ? 'active' : ''}" onclick="sel
                         </ul>
                         <p class="mb-4">${esc(poster.poster_notes || '')}</p>
                         <div class="d-flex align-items-center mb-4">
-                            <span class="price fw-bold fs-4">£${poster.price.toFixed(2)}</span>
-${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
+                        <span class="price fw-bold fs-4">£${poster.price.toFixed(2)}</span>
+                        ${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
                         </div>
-                        <button id="addToCartBtn" class="btn btn-warning text-dark fw-bold">Add to Cart £${poster.price.toFixed(2)}</button>
+                        <button id="addToCart" class="btn btn-warning text-dark fw-bold">Add to Cart £${poster.price.toFixed(2)}</button>
                     </div>
                 </div>
             `;
@@ -545,6 +541,23 @@ document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 <script src="cqp.js"></script>
+
+<script>
+// LocalStorage cart add (simple array, no Snipcart—button position preserved)
+const addToCartBtn = document.getElementById('addToCart');
+addToCartBtn.addEventListener('click', () => {
+  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  if (!cart.some(item => item.id === poster.product_id)) {
+    cart.push({ id: poster.product_id, title: poster.title, price: poster.price, thumbnail: poster.thumbnail });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${poster.title} added!`); // Or Bootstrap toast for polish
+    updateCartBadge(true); // Animate badge (from cqp.js)
+  } else {
+    alert(`${poster.title} is already in cart!`);
+  }
+});
+updateCartBadge(); // Initial load
+</script>
 
 </body>
 </html>

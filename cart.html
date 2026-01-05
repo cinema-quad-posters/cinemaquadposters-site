@@ -102,5 +102,22 @@
 
     <script src="cqp.js"></script>   <!-- Link to cqp.js-->
 
+    <script>
+// LocalStorage cart add (simple array, no Snipcart—button position preserved)
+const addToCartBtn = document.getElementById('addToCart');
+addToCartBtn.addEventListener('click', () => {
+  let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  if (!cart.some(item => item.id === poster.product_id)) {
+    cart.push({ id: poster.product_id, title: poster.title, price: poster.price, thumbnail: poster.thumbnail });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${poster.title} added!`); // Or Bootstrap toast for polish
+    updateCartBadge(true); // Animate badge (from cqp.js)
+  } else {
+    alert(`${poster.title} is already in cart!`);
+  }
+});
+updateCartBadge(); // Initial load
+</script>
+
 </body>
 </html>
