@@ -229,7 +229,8 @@ function render(reset = true) {
         if (sortBy === 'director') return a.director.localeCompare(b.director);
         return 0;
     });
-
+    
+    const BATCH_SIZE = 12; // Adjust for grid batch size (e.g., 12-24 for performance)
     const batch = filteredPosters.slice(currentOffset, currentOffset + BATCH_SIZE);
 
     let html = '';
