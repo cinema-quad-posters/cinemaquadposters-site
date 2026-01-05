@@ -1,12 +1,11 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-
-exports.handler = async ({ body }) => {
-    console.log('Function invoked with body:', body);
+export default async (req, context) => {
+    console.log('Function invoked with body:', req.body);
     try {
-        if (!body) throw new Error('No body provided');
-        const { items } = JSON.parse(body);
+        if (!req.body) throw new Error('No body provided');
+        const { items } = JSON.parse(req.body);
         if (!Array.isArray(items) || items.length === 0) throw new Error('Invalid or empty items array');
         console.log('Parsed items:', items);
+        const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             line_items: items.map(item => {
