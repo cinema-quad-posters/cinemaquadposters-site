@@ -229,7 +229,7 @@ function render(reset = true) {
         if (sortBy === 'director') return a.director.localeCompare(b.director);
         return 0;
     });
-    
+
     const BATCH_SIZE = 12; // Adjust for grid batch size (e.g., 12-24 for performance)
     const batch = filteredPosters.slice(currentOffset, currentOffset + BATCH_SIZE);
 
@@ -239,10 +239,10 @@ function render(reset = true) {
             if (!x || !x.title) throw new Error('Invalid poster data');
             const slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
             return `
-                <div class="col-6 col-sm-4 col-md-3 col-xl-2 mb-4">
+                <div class="col-6 col-sm-4 col-md-3 mb-4">
                     <a href="static-posters/${slug}.html" class="poster-card position-relative">
                         ${x.on_sale ? '<span class="sale-badge">SALE</span>' : ''}
-                        <img src="${x.thumbnail}" alt="${x.title} poster" loading="lazy">
+                        <img src="${x.thumbnail}" alt="${x.title} poster" loading="lazy" style="max-width: 100%; height: auto;">
                         <div class="poster-label">
                             <h5 class="card-title">${x.title}</h5>
                             <span class="price">£${x.price.toFixed(2)}</span>

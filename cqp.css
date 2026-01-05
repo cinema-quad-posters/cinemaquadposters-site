@@ -99,10 +99,8 @@ a {
     background: #212529; /* same grey as header & footer */
     border-radius: 4px;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
-    max-width: 360px;     /* prevents over-scaling */
-    margin: 0 auto;
-    margin-bottom: 6px;
-    padding: 12px; /* was 10px */
+    margin: 0 auto 12px;
+    padding: 16px; /* Increased for fuller grey frame */
 }
 
 .poster-card img {
