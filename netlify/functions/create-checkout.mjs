@@ -1,13 +1,14 @@
 export default async (req) => {
     console.log('Function invoked');
     try {
-        const bodyText = await req.text(); // Read stream to string
+        const bodyText = await req.text(); // Read stream
         console.log('Body text:', bodyText);
         if (!bodyText) throw new Error('No body provided');
-        const { items } = JSON.parse(bodyText); // Now parse string
+        const { items } = JSON.parse(bodyText);
         if (!Array.isArray(items) || items.length === 0) throw new Error('Invalid or empty items array');
         console.log('Parsed items:', items);
-        const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+        const Stripe = (await import('stripe')).default;
+        const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],
             line_items: items.map(item => {
