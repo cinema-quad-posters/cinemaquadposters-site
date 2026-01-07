@@ -101,7 +101,7 @@ a {
     transition: transform 0.15s ease, box-shadow 0.15s ease;
     margin-bottom: 16px;
     width: 100%;
-    min-height: 200px; /* Minimum height to prevent collapse */
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -114,7 +114,7 @@ a {
     height: auto;
     aspect-ratio: 4 / 3; /* Forces poster-like ratio (adjust if needed) to prevent tall frames */
     object-fit: cover; /* Crops if needed to fill frame without distortion */
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     outline: 1px solid rgba(255,255,255,0.12);
     transition: transform 0.15s ease-out, outline-color 0.15s ease-out;
 }
