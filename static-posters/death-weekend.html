@@ -10,6 +10,16 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 <link rel="stylesheet" href="/cqp.css">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DCT6EGE8PB');
+</script>
+
 <style>
 .poster-viewer {
     position: relative;
@@ -347,27 +357,30 @@ ${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
 // Normalize genres for related (stub for now)
 const posterGenres = Array.isArray(poster.genre) ? poster.genre : (poster.genre ? [poster.genre] : []);
 // Related posters - Stub as [] (pre-compute in future if wanted)
-const related = []; // Adjust in build.js to embed 4 related items based on genre/tags
-if (related.length) {
-    const slugs = related.map(x => {
-        return x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
-    });
-    document.getElementById('relatedSection').innerHTML = `
-        <h5 class="mb-3">You may also like</h5>
-        <div class="row g-3">
-            ${related.map((x, idx) => `
-                <div class="col-6 col-md-3">
-                    <a href="static-posters/${slugs[idx]}.html" class="related-item">
-                        <img src="${x.thumbnail}" alt="${esc(x.title)}" class="img-fluid mb-1">
-                        <div class="title text-muted small">${esc(x.title)}</div>
-                    </a>
+fetch('/inventory.json')
+    .then(response => response.json())
+    .then(data => {
+        const related = data.filter(p => p.genre && poster.genre && p.genre.some(g => poster.genre.includes(g)) && p.product_id !== poster.product_id).sort(() => 0.5 - Math.random()).slice(0, 4);
+        if (related.length) {
+            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            document.getElementById('relatedSection').innerHTML = `
+                <h5 class="mb-3">You may also like</h5>
+                <div class="row g-3">
+${related.map((x, idx) => `
+                    <div class="col-6 col-md-3">
+                        <a href="/static-posters/${slugs[idx]}.html" class="related-item">
+                            <img src="/${x.thumbnail}" alt="${esc(x.title)}" class="img-fluid mb-1">
+                            <div class="title text-muted small">${esc(x.title)}</div>
+                        </a>
+                    </div>
+                `).join('')}
                 </div>
-            `).join('')}
-        </div>
-    `;
-} else {
-    document.getElementById('relatedSection').style.display = 'none';
-}
+            `;
+        } else {
+            document.getElementById('relatedSection').style.display = 'none';
+        }
+    })
+    .catch(e => console.error('Related fetch error:', e));
 
 // Setup addToCart listener
 document.getElementById('addToCart').addEventListener('click', () => {
@@ -383,12 +396,12 @@ document.getElementById('addToCart').addEventListener('click', () => {
 // SLIDESHOW FUNCTIONS
 function prevImage() {
 currentIndex = (currentIndex - 1 + images.length) % images.length;
-document.getElementById('mainImg').src = images[currentIndex];
+document.getElementById('mainImg').src = '/' + images[currentIndex];
 updateDots();
 }
 function nextImage() {
 currentIndex = (currentIndex + 1) % images.length;
-document.getElementById('mainImg').src = images[currentIndex];
+document.getElementById('mainImg').src = '/' + images[currentIndex];
 updateDots();
 }
 function selectImage(i) {
@@ -428,9 +441,15 @@ modalImgContainer.addEventListener('wheel', wheelZoom);
 /* =====================================================
    ZOOM / PAN FUNCTIONS
 ===================================================== */
-zoomBtn.addEventListener('click', () => {
-isZoomActive ? disableZoom() : enableZoom();
-});
+zoomBtn.addEventListener('click', toggleZoom);
+
+function toggleZoom() {
+    if (isZoomActive) {
+        disableZoom();
+    } else {
+        enableZoom();
+    }
+}
 function enableZoom() {
 isZoomActive = true;
 scale = 2;

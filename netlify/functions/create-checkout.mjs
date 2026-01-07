@@ -1,41 +1,46 @@
-export default async (req) => {
-    console.log('Function invoked');
-    try {
-        const bodyText = await req.text(); // Read stream
-        console.log('Body text:', bodyText);
-        if (!bodyText) throw new Error('No body provided');
-        const { items } = JSON.parse(bodyText);
-        if (!Array.isArray(items) || items.length === 0) throw new Error('Invalid or empty items array');
-        console.log('Parsed items:', items);
-        const Stripe = (await import('stripe')).default;
-        const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
-        const session = await stripe.checkout.sessions.create({
-            payment_method_types: ['card'],
-            line_items: items.map(item => {
-                if (typeof item.price !== 'number' || item.price <= 0) throw new Error('Invalid price');
-                return {
-                    price_data: {
-                        currency: 'gbp',
-                        product_data: { name: item.name },
-                        unit_amount: item.price,
-                    },
-                    quantity: item.quantity || 1,
-                };
-            }),
-            mode: 'payment',
-            success_url: 'https://cinema-quad-posters-site.netlify.app/thank-you.html',
-            cancel_url: 'https://cinema-quad-posters-site.netlify.app/cart.html',
-        });
-        console.log('Session created:', session.id);
-        return new Response(JSON.stringify({ sessionId: session.id }), {
-            status: 200,
-            headers: { 'Content-Type': 'application/json' }
-        });
-    } catch (error) {
-        console.error('Function error:', error.message);
-        return new Response(JSON.stringify({ error: error.message }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' }
-        });
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
+exports.handler = async (event) => {
+  try {
+    if (event.httpMethod !== 'POST') {
+      return { statusCode: 405, body: 'Method Not Allowed' };
     }
+
+    const { items } = JSON.parse(event.body);
+
+    // Basic validation: Ensure items is array, each has id/price/quantity=1
+    if (!Array.isArray(items) || items.length === 0) {
+      return { statusCode: 400, body: 'Invalid items' };
+    }
+    items.forEach(item => {
+      if (!item.id || typeof item.price !== 'number' || item.price <= 0) {
+        throw new Error('Invalid item data');
+      }
+    });
+
+    const lineItems = items.map(item => ({
+      price_data: {
+        currency: 'gbp',
+        product_data: { name: item.title },
+        unit_amount: Math.round(item.price * 100), // Convert to pence
+      },
+      quantity: 1,
+    }));
+
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: lineItems,
+      mode: 'payment',
+      success_url: 'https://cinema-quad-posters-site.netlify.app/thank-you.html', // Replace with your actual Netlify URL
+      cancel_url: 'https://cinema-quad-posters-site.netlify.app/cart.html', // Replace with your actual Netlify URL
+    });
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ sessionId: session.id }),
+    };
+  } catch (error) {
+    console.error(error);
+    return { statusCode: 500, body: error.message };
+  }
 };
