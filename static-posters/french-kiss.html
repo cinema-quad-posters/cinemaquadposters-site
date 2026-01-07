@@ -11,12 +11,11 @@
 <link rel="stylesheet" href="/cqp.css">
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCT6EGE8PB"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-DCT6EGE8PB');
 </script>
 
@@ -24,6 +23,7 @@
 .poster-viewer {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 .poster-viewer:hover .nav-arrow,
@@ -124,7 +124,7 @@
     text-align: center;
 }
 
- /* Anti-download: Disable selection/dragging on high-res elements */
+/* Anti-download: Disable selection/dragging on high-res elements */
 #mainImg,
 #modalImage,
 .modal-thumbs img {
@@ -133,11 +133,11 @@
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-drag: none;
-    pointer-events: none; /* Blocks drags; re-enable for interactive thumbs below */
+    pointer-events: none;
 }
 
 .modal-thumbs img {
-    pointer-events: auto; /* Allows clicks on thumbs for switching images */
+    pointer-events: auto;
 }
 </style>
 
@@ -159,7 +159,6 @@ This movie poster is in mint rolled condition.... Buy this collectible cinema po
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top px-3">
     <div class="container-fluid">
-        <!-- Logo -->
         <a href="/shop.html" class="me-4">
             <img src="/img/logo_2023.png" alt="Cinema Quad Posters" style="height:40px;">
         </a>
@@ -180,7 +179,6 @@ This movie poster is in mint rolled condition.... Buy this collectible cinema po
     <div id="relatedSection" class="mt-5"></div>
 </div>
 
-
 <!-- FULLSCREEN MODAL -->
 <div class="modal fade" id="lightboxModal" tabindex="-1">
 <div class="modal-dialog modal-fullscreen">
@@ -194,23 +192,16 @@ This movie poster is in mint rolled condition.... Buy this collectible cinema po
 <div class="d-flex justify-content-center gap-2 modal-thumbs"></div>
 
 <div class="position-absolute top-0 end-0 m-3 d-flex gap-2">
-    <!-- Zoom toggle -->
     <button class="btn btn-dark btn-sm" id="zoomToggle" title="Toggle zoom">
         <i class="bi bi-zoom-in"></i>
     </button>
-    <!-- Toggle fullscreen -->
-    <button class="btn btn-dark btn-sm"
-            id="fullscreenToggle"
-            title="Toggle fullscreen">
+    <button class="btn btn-dark btn-sm" id="fullscreenToggle" title="Toggle fullscreen">
         <i class="bi bi-arrows-fullscreen"></i>
     </button>
-
-    <!-- Close -->
     <button class="btn btn-dark btn-sm" data-bs-dismiss="modal" title="Close">
         <i class="bi bi-x-lg"></i>
     </button>
 </div>
-
 
 </div>
 </div>
@@ -220,45 +211,23 @@ This movie poster is in mint rolled condition.... Buy this collectible cinema po
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Utility to get/set cart (array of {id: string, title: string, price: number, thumbnail: string})
-function getCart() {
-    return JSON.parse(localStorage.getItem('cart') || '[]');
-}
+// Embedded poster data from build.js
+const poster = posterData;
 
-function setCart(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartBadge();
-}
+let images = [];
+let currentIndex = 0;
+let isZoomActive = false;
+let posX = 0, posY = 0;
+let scale = 1;
+let isDragging = false;
+let lastX = 0, lastY = 0;
 
-function addToCart(item) {
-    const cart = getCart();
-    // Check if already in cart (simple: no quantity, assume one per item)
-    if (!cart.some(c => c.id === item.id)) {
-        cart.push(item);
-        setCart(cart);
-        alert(`${item.title} added to cart!`); // Or use a toast/modal
-    } else {
-        alert(`${item.title} is already in your cart.`);
-    }
-}
-
-function removeFromCart(id) {
-    let cart = getCart();
-    cart = cart.filter(item => item.id !== id);
-    setCart(cart);
-}
-
-function updateCartBadge(animate = false) {
-    const badge = document.getElementById('cartCount');
-    if (badge) {
-        const count = getCart().length;
-        badge.textContent = count;
-        if (animate && count > 0) {
-            badge.classList.add('animate');
-            setTimeout(() => badge.classList.remove('animate'), 300);
-        }
-    }
-}
+const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+const modalImg = document.getElementById('modalImage');
+const modalImgContainer = modalImg.parentElement;
+const zoomBtn = document.getElementById('zoomToggle');
+const fsBtn = document.getElementById('fullscreenToggle');
+const modalThumbs = document.querySelector('.modal-thumbs');
 
 function esc(str) {
     return (str || '').replace(/&/g, '&amp;')
@@ -267,292 +236,206 @@ function esc(str) {
                       .replace(/"/g, '&quot;')
                       .replace(/'/g, '&#039;');
 }
-let images = [];
-let currentIndex = 0;
-let isZoomActive = false;
-let posX = 0, posY = 0;
-let scale = 1;
-let isDragging = false;
-let lastX = 0, lastY = 0;
-const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
-const modalImg = document.getElementById('modalImage');
-const modalImgContainer = modalImg.parentElement;
-const zoomBtn = document.getElementById('zoomToggle');
-const fsBtn = document.getElementById('fullscreenToggle');
-const modalThumbs = document.querySelector('.modal-thumbs');
 
-// On load, use embedded posterData
-const poster = posterData; // Embedded from build.js
-
-if (!poster || !poster.title) {
-    document.getElementById('posterContent').innerHTML = '<p>Error loading poster.</p>';
-    throw new Error('Poster data missing');
-}
-
-// Add JSON-LD for SEO (already embedded, but redundant here if in head—keep for completeness)
-const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": esc(poster.title),
-    "description": esc(poster.film_summary),
-    "image": poster.thumbnail,
-    "offers": {
-        "@type": "Offer",
-        "price": poster.price,
-        "priceCurrency": "GBP",
-        "itemCondition": "https://schema.org/UsedCondition",
-        "availability": "https://schema.org/InStock"
-    }
-};
-const script = document.createElement('script');
-script.type = 'application/ld+json';
-script.text = JSON.stringify(jsonLd);
-document.head.appendChild(script);
-
-// Set dynamic title and meta for SEO (already in head via build.js, but ensure)
-document.title = `${esc(poster.title)} (${poster['originally released'] || 'N/A'}) – Original British Quad Poster – Cinema Quad Posters`;
-const metaDesc = document.querySelector('meta[name="description"]');
-if (metaDesc) {
-    metaDesc.content = esc(poster.film_summary.slice(0, 160)) + '... Buy this collectible quad poster.';
-}
-
+// Render main poster content
 images = [poster.hires, ...(poster.gallery || [])];
+
 document.getElementById('posterContent').innerHTML = `
     <div class="row">
         <div class="col-md-6 mb-4 mb-md-0">
             <div class="poster-viewer">
                 <img id="mainImg" src="/${images[0]}" alt="${esc(poster.title)} original British quad poster" class="img-fluid" draggable="false" ondragstart="return false;" oncontextmenu="return false;">
-${images.length > 1 ? `
+                ${images.length > 1 ? `
                     <button class="nav-arrow left" onclick="prevImage()"><i class="bi bi-chevron-left"></i></button>
                     <button class="nav-arrow right" onclick="nextImage()"><i class="bi bi-chevron-right"></i></button>
                 ` : ''}
-                <button class="enlarge-btn" onclick="openLightbox(0)"><i class="bi bi-arrows-angle-expand"></i></button>
+                <button class="enlarge-btn" onclick="openLightbox(currentIndex)"><i class="bi bi-arrows-angle-expand"></i></button>
             </div>
-${images.length > 1 ? `
+            ${images.length > 1 ? `
                 <div class="dot-indicators">
-${images.map((_, i) => `<div class="dot ${i === 0 ? 'active' : ''}" onclick="selectImage(${i})"></div>`).join('')}
+                    ${images.map((_, i) => `<div class="dot ${i === 0 ? 'active' : ''}" onclick="selectImage(${i})"></div>`).join('')}
                 </div>
             ` : ''}
         </div>
         <div class="col-md-6">
             <h1 class="mb-3">${esc(poster.title)}</h1>
-            <p class="text-muted mb-4">${poster['originally released'] ? `Originally released: ${poster['originally released']}` : ''}${poster.variant ? ` (${esc(poster.variant)})` : ''}</p>
-            <p>${esc(poster.film_summary)}</p>
-            <ul class="poster-specs mb-4">
-                <li><strong>Director:</strong> ${esc(poster.director || 'N/A')}</li>
-                <li><strong>Actors:</strong> ${poster.actors ? poster.actors.map(esc).join(', ') : 'N/A'}</li>
-                <li><strong>Genre:</strong> ${poster.genre ? (Array.isArray(poster.genre) ? poster.genre.join(', ') : poster.genre) : 'N/A'}</li>
-                <li><strong>Condition:</strong> ${esc(poster.condition || 'N/A')}</li>
-                <li><strong>Size:</strong> ${esc(poster.poster_size || '30 x 40 inches')}</li>
-            </ul>
+            <p class="text-muted mb-1">Originally released: ${poster['originally released'] || 'N/A'}</p>
+            ${poster.variant ? `<p class="text-muted mb-1">Variant: ${esc(poster.variant)}</p>` : ''}
+            <p class="text-muted mb-1">Condition: ${esc(poster.condition || 'N/A')}</p>
+            <p class="text-muted mb-4">Genre: ${Array.isArray(poster.genre) ? poster.genre.join(', ') : (poster.genre || 'N/A')}</p>
+            
+            <p class="mb-4">${esc(poster.film_summary)}</p>
             <p class="mb-4">${esc(poster.poster_notes || '')}</p>
+            
             <div class="d-flex align-items-center mb-4">
                 <span class="price fw-bold fs-4">£${poster.price.toFixed(2)}</span>
-${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
+                ${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
             </div>
-            <button id="addToCart" class="btn btn-warning text-dark fw-bold">Add to Cart £${poster.price.toFixed(2)}</button>
+            
+            <button id="addToCart" class="btn btn-warning text-dark fw-bold">Add to Cart</button>
         </div>
     </div>
 `;
 
-// Normalize genres for related (stub for now)
-const posterGenres = Array.isArray(poster.genre) ? poster.genre : (poster.genre ? [poster.genre] : []);
-// Related posters - Stub as [] (pre-compute in future if wanted)
+// Click anywhere on the main image (or enlarge button) opens the modal at current index
+document.getElementById('mainImg').addEventListener('click', () => openLightbox(currentIndex));
+
+// Related posters – fixed genre handling
 fetch('/inventory.json')
-    .then(response => response.json())
+    .then(r => r.json())
     .then(data => {
-        const related = data.filter(p => p.genre && poster.genre && p.genre.some(g => poster.genre.includes(g)) && p.product_id !== poster.product_id).sort(() => 0.5 - Math.random()).slice(0, 4);
+        const posterGenres = Array.isArray(poster.genre) ? poster.genre.map(g => g.toLowerCase()) : 
+                             (poster.genre ? [poster.genre.toLowerCase()] : []);
+        
+        const related = data.filter(p => {
+            const pGenres = Array.isArray(p.genre) ? p.genre.map(g => g.toLowerCase()) : 
+                            (p.genre ? [p.genre.toLowerCase()] : []);
+            return pGenres.some(g => posterGenres.includes(g)) && p.product_id !== poster.product_id;
+        })
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 4);
+
         if (related.length) {
             const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
             document.getElementById('relatedSection').innerHTML = `
-                <h5 class="mb-3">You may also like</h5>
+                <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">
-${related.map((x, idx) => `
-                    <div class="col-6 col-md-3">
-                        <a href="/static-posters/${slugs[idx]}.html" class="related-item">
-                            <img src="/${x.thumbnail}" alt="${esc(x.title)}" class="img-fluid mb-1">
-                            <div class="title text-muted small">${esc(x.title)}</div>
-                        </a>
-                    </div>
-                `).join('')}
+                    ${related.map((x, i) => `
+                        <div class="col-6 col-md-3">
+                            <a href="/static-posters/${slugs[i]}.html" class="related-item d-block">
+                                <img src="/${x.thumbnail}" alt="${esc(x.title)}" class="img-fluid mb-1">
+                                <div class="title text-muted small">${esc(x.title)}</div>
+                            </a>
+                        </div>
+                    `).join('')}
                 </div>
             `;
-        } else {
-            document.getElementById('relatedSection').style.display = 'none';
         }
     })
     .catch(e => console.error('Related fetch error:', e));
 
-// Setup addToCart listener
+// Add to cart – uses cqp.js (no alerts, no duplicate code)
 document.getElementById('addToCart').addEventListener('click', () => {
     addToCart({
-        id: poster.product_id, // Use Stripe product_id as unique key
+        id: poster.product_id,
         title: poster.title,
         price: poster.price,
         thumbnail: poster.thumbnail
     });
-    updateCartBadge(true); // Animate
+    updateCartBadge(true);
 });
 
-// SLIDESHOW FUNCTIONS
+// Slideshow functions
 function prevImage() {
-currentIndex = (currentIndex - 1 + images.length) % images.length;
-document.getElementById('mainImg').src = '/' + images[currentIndex];
-updateDots();
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById('mainImg').src = '/' + images[currentIndex];
+    updateDots();
 }
 function nextImage() {
-currentIndex = (currentIndex + 1) % images.length;
-document.getElementById('mainImg').src = '/' + images[currentIndex];
-updateDots();
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('mainImg').src = '/' + images[currentIndex];
+    updateDots();
 }
 function selectImage(i) {
-currentIndex = i;
-document.getElementById('mainImg').src = images[currentIndex];
-updateDots();
+    currentIndex = i;
+    document.getElementById('mainImg').src = '/' + images[currentIndex];
+    updateDots();
 }
 function updateDots() {
-const dots = document.querySelectorAll('.dot');
-dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+    document.querySelectorAll('.dot').forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
 }
+
 function openLightbox(i) {
-currentIndex = i;
-modalImg.src = images[currentIndex];
-modalThumbs.innerHTML = images.map((img, j) => `
-        <img src="${img}" class="${j === currentIndex ? 'active' : ''}" onclick="selectModalImage(${j})">
+    currentIndex = i;
+    modalImg.src = '/' + images[currentIndex];
+    modalThumbs.innerHTML = images.map((img, j) => `
+        <img src="/${img}" class="${j === currentIndex ? 'active' : ''}" onclick="selectModalImage(${j})">
     `).join('');
-resetZoom();
-modal.show();
+    resetZoom();
+    modal.show();
 }
 function selectModalImage(i) {
-currentIndex = i;
-modalImg.src = images[currentIndex];
-const thumbs = modalThumbs.querySelectorAll('img');
-thumbs.forEach((thumb, j) => thumb.classList.toggle('active', j === i));
-resetZoom();
+    currentIndex = i;
+    modalImg.src = '/' + images[currentIndex];
+    modalThumbs.querySelectorAll('img').forEach((thumb, j) => thumb.classList.toggle('active', j === i));
+    resetZoom();
 }
-// Attach zoom/pan events on modal show (fixes not functioning)
-modal._element.addEventListener('shown.bs.modal', () => {
-zoomBtn.addEventListener('click', toggleZoom);
-modalImgContainer.addEventListener('mousedown', startDrag);
-modalImgContainer.addEventListener('mousemove', drag);
-modalImgContainer.addEventListener('mouseup', endDrag);
-modalImgContainer.addEventListener('mouseleave', endDrag);
-modalImgContainer.addEventListener('wheel', wheelZoom);
-});
-/* =====================================================
-   ZOOM / PAN FUNCTIONS
-===================================================== */
-zoomBtn.addEventListener('click', toggleZoom);
 
+// Zoom / pan
 function toggleZoom() {
-    if (isZoomActive) {
-        disableZoom();
-    } else {
-        enableZoom();
-    }
-}
-function enableZoom() {
-isZoomActive = true;
-scale = 2;
-posX = 0;
-posY = 0;
-modalImgContainer.classList.add('zoom-active');
-modalImg.classList.add('zoom-active');
-updateTransform();
-zoomBtn.innerHTML = '<i class="bi bi-zoom-out"></i>';
-}
-function disableZoom() {
-isZoomActive = false;
-scale = 1;
-posX = 0;
-posY = 0;
-modalImgContainer.classList.remove('zoom-active');
-modalImg.classList.remove('zoom-active');
-updateTransform();
-zoomBtn.innerHTML = '<i class="bi bi-zoom-in"></i>';
+    isZoomActive = !isZoomActive;
+    scale = isZoomActive ? 2 : 1;
+    posX = posY = 0;
+    modalImgContainer.classList.toggle('zoom-active', isZoomActive);
+    modalImg.classList.toggle('zoom-active', isZoomActive);
+    updateTransform();
+    zoomBtn.innerHTML = isZoomActive ? '<i class="bi bi-zoom-out"></i>' : '<i class="bi bi-zoom-in"></i>';
 }
 function resetZoom() {
-disableZoom();
+    if (isZoomActive) toggleZoom();
 }
 function updateTransform() {
-modalImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+    modalImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
 }
-/* =====================================================
-   DRAG TO PAN
-===================================================== */
+
+// Drag to pan
 modalImgContainer.addEventListener('pointerdown', e => {
-if (!isZoomActive) return;
-modalImgContainer.setPointerCapture(e.pointerId);
-isDragging = true;
-lastX = e.clientX - posX;
-lastY = e.clientY - posY;
-modalImgContainer.style.cursor = 'grabbing';
+    if (!isZoomActive) return;
+    modalImgContainer.setPointerCapture(e.pointerId);
+    isDragging = true;
+    lastX = e.clientX - posX;
+    lastY = e.clientY - posY;
+    modalImgContainer.style.cursor = 'grabbing';
 });
 modalImgContainer.addEventListener('pointermove', e => {
-if (!isDragging) return;
-posX = e.clientX - lastX;
-posY = e.clientY - lastY;
-clampPosition();
-updateTransform();
+    if (!isDragging) return;
+    posX = e.clientX - lastX;
+    posY = e.clientY - lastY;
+    clampPosition();
+    updateTransform();
 });
-modalImgContainer.addEventListener('pointerup', () => {
-isDragging = false;
-modalImgContainer.style.cursor = isZoomActive ? 'grab' : 'default';
-});
-modalImgContainer.addEventListener('pointerleave', () => {
-isDragging = false;
-});
-/* =====================================================
-   CLAMP IMAGE TO CONTAINER
-===================================================== */
+modalImgContainer.addEventListener('pointerup', () => { isDragging = false; modalImgContainer.style.cursor = isZoomActive ? 'grab' : 'default'; });
+modalImgContainer.addEventListener('pointerleave', () => { isDragging = false; });
+
+// Clamp
 function clampPosition() {
-const imgRect = modalImg.getBoundingClientRect();
-const boxRect = modalImgContainer.getBoundingClientRect();
-const maxX = Math.max(0, (imgRect.width - boxRect.width) / 2);
-const maxY = Math.max(0, (imgRect.height - boxRect.height) / 2);
-posX = Math.max(-maxX, Math.min(maxX, posX));
-posY = Math.max(-maxY, Math.min(maxY, posY));
+    const imgRect = modalImg.getBoundingClientRect();
+    const boxRect = modalImgContainer.getBoundingClientRect();
+    const maxX = Math.max(0, (imgRect.width - boxRect.width) / 2);
+    const maxY = Math.max(0, (imgRect.height - boxRect.height) / 2);
+    posX = Math.max(-maxX, Math.min(maxX, posX));
+    posY = Math.max(-maxY, Math.min(maxY, posY));
 }
-/* =====================================================
-   FULLSCREEN TOGGLE
-===================================================== */
+
+// Fullscreen
 fsBtn.addEventListener('click', () => {
-document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
+    document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
 });
-/* =====================================================
-   CLEANUP ON MODAL CLOSE
-===================================================== */
+
+// Cleanup
 modal._element.addEventListener('hidden.bs.modal', resetZoom);
 
-// Anti-download protections: Prevent right-click/drag on viewer images
+// Anti-download
 document.addEventListener('contextmenu', e => {
-    if (e.target.tagName === 'IMG' && (e.target.id === 'mainImg' || e.target.id === 'modalImage' || e.target.classList.contains('modal-thumb'))) {
-        e.preventDefault(); // Blocks context menu (right-click "Save Image")
+    if (e.target.tagName === 'IMG' && (e.target.id === 'mainImg' || e.target.id === 'modalImage' || e.target.closest('.modal-thumbs'))) {
+        e.preventDefault();
     }
 });
-
-const protectedImages = document.querySelectorAll('#mainImg, #modalImage, .modal-thumbs img');
-protectedImages.forEach(img => {
+document.querySelectorAll('#mainImg, #modalImage, .modal-thumbs img').forEach(img => {
     img.draggable = false;
-    img.addEventListener('dragstart', e => e.preventDefault()); // Blocks drag-to-save
+    img.addEventListener('dragstart', e => e.preventDefault());
 });
-
 </script>
-
 
 <!-- FOOTER -->
 <footer class="site-footer mt-5">
     <div class="container py-4">
         <div class="row gy-3 align-items-center">
-
             <div class="col-md-4 footer-left">
                 <a href="/shop.html">
-                    <img src="/img/logo.png"
-                        alt="Cinema Quad Posters"
-                        class="footer-logo">
+                    <img src="/img/logo.png" alt="Cinema Quad Posters" class="footer-logo">
                 </a>
             </div>
-
             <div class="col-md-4 text-center">
                 <ul class="footer-links justify-content-center mb-1">
                     <li><a href="/shop.html">Shop</a></li>
@@ -564,26 +447,15 @@ protectedImages.forEach(img => {
                     © <span id="year"></span> Cinema Quad Posters
                 </p>
             </div>
-
         </div>
     </div>
 </footer>
-
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 <script src="/cqp.js"></script>
-
-<script>
-// LocalStorage cart add (simple array, no Snipcart)
-const addToCartBtn = document.getElementById('addToCart');
-addToCartBtn.addEventListener('click', () => {
-    addToCart({ id: posterData.product_id, title: posterData.title, price: posterData.price, thumbnail: posterData.thumbnail });
-});
-updateCartBadge(); // Initial load
-</script>
 
 </body>
 </html>

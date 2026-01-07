@@ -18,11 +18,8 @@ function addToCart(item) {
     if (!cart.some(c => c.id === item.id)) {
         cart.push({ id: item.id, title: item.title, price: item.price, thumbnail: item.thumbnail });
         setCart(cart);
-        alert(`${item.title} added to cart!`);
         updateCartBadge(true); // Animate on add
-    } else {
-        alert(`${item.title} is already in your cart.`);
-    }
+    } // No alert for already in cart
 }
 
 function removeFromCart(id) {
