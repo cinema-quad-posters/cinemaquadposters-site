@@ -99,16 +99,22 @@ a {
     background: #212529; /* same grey as header & footer */
     border-radius: 4px;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
-    margin: 0 auto 12px;
-    padding: 16px; /* Increased for fuller grey frame */
+    margin-bottom: 16px;
+    width: 100%;
+    min-height: 200px; /* Minimum height to prevent collapse */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .poster-card img {
     display: block;
     max-width: 100%;
-    width: auto;         /* do not upscale */
+    width: 100%;
     height: auto;
-    margin: 0 auto 6px;
+    aspect-ratio: 4 / 3; /* Forces poster-like ratio (adjust if needed) to prevent tall frames */
+    object-fit: cover; /* Crops if needed to fill frame without distortion */
+    margin-bottom: 8px;
     outline: 1px solid rgba(255,255,255,0.12);
     transition: transform 0.15s ease-out, outline-color 0.15s ease-out;
 }
@@ -497,35 +503,4 @@ prevents selection/copy only on high-res elements
     border-radius: 4px;
     display: inline-block;
     margin-left: 10px;
-}
-
-
-/* ===============================
-Overrides Snipcart's default style
-=============================== */
-
-
-#snipcart {
-  --color-default: #FFFFFF !important; /* White text */
-  --color-default-shade: #CCCCCC !important; /* Light gray for subtle elements */
-  --bgColor-default: #212529 !important; /* Dark grey background */
-  --bgColor-alt: #212529 !important;
-  --bgColor-modal: #212529 !important;
-  --bgColor-modalVeil: rgba(0,0,0,0.8) !important;
-  --color-primary: #FBBD00 !important; /* Yellow accents */
-  --color-primary-shade: #E0A800 !important; /* Darker yellow for hover */
-  --color-danger: #CA0000 !important; /* Red for errors/sale badges */
-  --border-radius: 4px !important; /* Matches your poster cards */
-  --font-family: inherit !important; /* Use your site's font */
-  --color-link: #FBBD00 !important; /* Yellow for links like "View detailed cart" */
-  --color-link-hover: #E0A800 !important;
-  --color-link-active: #E0A800 !important;
-  --color-link-focus: #E0A800 !important;
-  --color-inputLabel: #FFFFFF !important; /* White for form labels like "Full name", "Email" */
-  --bgColor-buttonPrimary: #FBBD00 !important; /* Yellow background for primary buttons like checkout/place order */
-  --color-buttonPrimary: #000000 !important; /* Black text on primary buttons */
-  --borderColor-buttonPrimary: transparent !important; /* No border on primary buttons */
-  --bgColor-buttonPrimary-hover: #E0A800 !important; /* Darker yellow on hover */
-  --color-buttonPrimary-hover: #000000 !important;
-  --borderColor-buttonPrimary-hover: transparent !important;
 }

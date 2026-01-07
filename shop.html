@@ -98,7 +98,7 @@
 <!-- GRID -->
 <div class="container mt-3">
     <div id="results"
-         class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+         class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
     </div>
 </div>
 
@@ -239,7 +239,7 @@ function render(reset = true) {
             if (!x || !x.title) throw new Error('Invalid poster data');
             const slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
             return `
-                <div class="col-6 col-sm-4 col-md-3 mb-4">
+                <div class="col mb-3">
                     <a href="static-posters/${slug}.html" class="poster-card position-relative">
                         ${x.on_sale ? '<span class="sale-badge">SALE</span>' : ''}
                         <img src="${x.thumbnail}" alt="${x.title} poster" loading="lazy" style="max-width: 100%; height: auto;">
