@@ -90,10 +90,11 @@
     document.addEventListener('DOMContentLoaded', renderCart);
 
 document.addEventListener('DOMContentLoaded', () => {
+    renderCart();
     const checkoutBtn = document.getElementById('checkoutBtn');
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', async () => {
-            playClickSound(); // If sound added
+            playClickSound();
             const cart = getCart();
             if (!cart.length) return;
 
@@ -109,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 const { sessionId } = await response.json();
-                const stripe = Stripe('pk_test_yourkey'); // Actual key
+                const stripe = Stripe('pk_test_51QJ0s3LF3AYj5l3kv0XhW8i6u8n5Q1n2xJ9z9h9W0n4cK9i8e6e9w7n5'); // Replace with your ACTUAL test publishable key from Stripe dashboard
                 const { error } = await stripe.redirectToCheckout({ sessionId });
                 if (error) {
                     alert('Stripe error: ' + error.message);
@@ -126,11 +127,26 @@ document.addEventListener('DOMContentLoaded', () => {
 function playClickSound() {
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     const oscillator = audioCtx.createOscillator();
-    oscillator.type = 'sine';
-    oscillator.frequency.setValueAtTime(800, audioCtx.currentTime); // Subtle tone
-    oscillator.connect(audioCtx.destination);
+
+    // Option 1: Short 'pop' (satisfying, like button press) - Recommended
+    oscillator.type = 'square';
+    oscillator.frequency.setValueAtTime(200, audioCtx.currentTime);
     oscillator.start();
-    setTimeout(() => oscillator.stop(), 100); // Short duration
+    setTimeout(() => oscillator.stop(), 50);
+
+    // Option 2: Soft 'tick' (like mechanical switch)
+    // oscillator.type = 'sine';
+    // oscillator.frequency.setValueAtTime(1200, audioCtx.currentTime);
+    // oscillator.start();
+    // setTimeout(() => oscillator.stop(), 80);
+
+    // Option 3: Gentle 'chime' (subtle success tone)
+    // oscillator.type = 'triangle';
+    // oscillator.frequency.setValueAtTime(600, audioCtx.currentTime);
+    // oscillator.start();
+    // setTimeout(() => oscillator.stop(), 150);
+
+    oscillator.connect(audioCtx.destination);
 }
     </script>
 
