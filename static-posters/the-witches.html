@@ -200,7 +200,7 @@
 </div>
 
 <!-- FULLSCREEN MODAL -->
-<div class="modal fade" id="lightboxModal" tabindex="-1">
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-modal="true">
 <div class="modal-dialog modal-fullscreen">
 <div class="modal-content bg-black">
 <div class="modal-body text-center">
@@ -343,28 +343,6 @@ document.getElementById('addToCart').addEventListener('click', () => {
     updateCartBadge(true);
 });
 
-// Simple click sound using Web Audio API
-function playClickSound() {
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const oscillator = audioCtx.createOscillator();
-    oscillator.type = 'sine';
-    oscillator.frequency.setValueAtTime(800, audioCtx.currentTime); // Subtle tone
-    oscillator.connect(audioCtx.destination);
-    oscillator.start();
-    setTimeout(() => oscillator.stop(), 100); // Short duration
-}
-
-// Add to cart – uses cqp.js (no alerts, no duplicate code)
-document.getElementById('addToCart').addEventListener('click', () => {
-    playClickSound(); // Play sound on click
-    addToCart({
-        id: poster.product_id,
-        title: poster.title,
-        price: poster.price,
-        thumbnail: poster.thumbnail
-    });
-    updateCartBadge(true);
-});
 
 // Slideshow functions
 function prevImage() {
