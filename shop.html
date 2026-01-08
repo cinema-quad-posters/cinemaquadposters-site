@@ -227,7 +227,10 @@ function render(reset = true) {
     // Genre
     const genreVal = document.getElementById('genreFilter')?.value;
     if (genreVal) {
-        filteredPosters = filteredPosters.filter(p => p.genre && (Array.isArray(p.genre) ? p.genre.includes(genreVal) : p.genre === genreVal));
+        filteredPosters = filteredPosters.filter(p => {
+            const genres = Array.isArray(p.genre) ? p.genre : (p.genre ? [p.genre] : []);
+            return genres.includes(genreVal);
+        });
     }
 
     // Sort
