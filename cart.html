@@ -87,10 +87,8 @@
         checkoutBtn.disabled = false;
     }
 
-    document.addEventListener('DOMContentLoaded', renderCart);
-
 document.addEventListener('DOMContentLoaded', () => {
-    renderCart();
+    renderCart(); // Render cart first
     const checkoutBtn = document.getElementById('checkoutBtn');
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', async () => {
