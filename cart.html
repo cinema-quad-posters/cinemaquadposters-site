@@ -91,33 +91,32 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart(); // Render first to enable button if cart not empty
     const checkoutBtn = document.getElementById('checkoutBtn');
     if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', async () => {
-            playClickSound();
-            const cart = getCart();
-            if (!cart.length) return;
+checkoutBtn.addEventListener('click', async () => {
+    const cart = getCart();
+    if (!cart.length) return;
 
-            try {
-                const response = await fetch('/.netlify/functions/create-checkout', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ items: cart })
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-
-                const { sessionId } = await response.json();
-                const stripe = Stripe('pk_test_51SfRLFAn4nVEPNCVyKvmhA3AaumwXY5tUbI1JtFgWyUCgBrIFmyr7YxrbUsMhRiesKDdDknZufIkhOnlTYqH8lA600BRBjoPdv'); // Your test publishable key—double-check in Stripe dashboard
-                const { error } = await stripe.redirectToCheckout({ sessionId });
-                if (error) {
-                    alert('Stripe error: ' + error.message);
-                }
-            } catch (error) {
-                console.error('Checkout error:', error);
-                alert('Error starting checkout: ' + error.message);
-            }
+    try {
+        const response = await fetch('/.netlify/functions/create-checkout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ items: cart })
         });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const { sessionId } = await response.json();
+        const stripe = Stripe('pk_test_51SfRLFAn4nVEPNCVyKvmhA3AaumwXY5tUbI1JtFgWyUCgBrIFmyr7YxrbUsMhRiesKDdDknZufIkhOnlTYqH8lA600BRBjoPdv'); // Replace with your ACTUAL test publishable key from Stripe dashboard
+        const { error } = await stripe.redirectToCheckout({ sessionId });
+        if (error) {
+            alert('Stripe error: ' + error.message);
+        }
+    } catch (error) {
+        console.error('Checkout error:', error);
+        alert('Error starting checkout: ' + error.message);
+    }
+});
     }
 });
 
