@@ -128,12 +128,15 @@
 #mainImg,
 #modalImage,
 .modal-thumbs img {
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -webkit-user-drag: none;
-    pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+#mainImg {
+  pointer-events: auto; /* Allow clicks */
 }
 
 .modal-thumbs img {
@@ -148,14 +151,13 @@
 
 .category-label {
     color: #aaa; /* Light grey like footer */
-    font-weight: bold;
 }
 .category-value {
     color: #fff; /* White for values */
 }
 
 .poster-details p {
-    font-size: 0.9rem; /* Smaller than film_summary/poster_notes */
+    font-size: 0.85rem; /* Even smaller */
 }
 
 </style>
@@ -351,10 +353,16 @@ function playClickSound() {
     setTimeout(() => oscillator.stop(), 100); // Short duration
 }
 
-// Add sound to Add to Cart
-addToCartBtn.addEventListener('click', () => {
-    playClickSound();
-    // Existing addToCart code...
+// Add to cart – uses cqp.js (no alerts, no duplicate code)
+document.getElementById('addToCart').addEventListener('click', () => {
+    playClickSound(); // Play sound on click
+    addToCart({
+        id: poster.product_id,
+        title: poster.title,
+        price: poster.price,
+        thumbnail: poster.thumbnail
+    });
+    updateCartBadge(true);
 });
 
 // Slideshow functions
@@ -451,10 +459,10 @@ fsBtn.addEventListener('click', () => {
 // Re-attach zoom on fullscreen change
 document.addEventListener('fullscreenchange', () => {
     if (document.fullscreenElement) {
-        // Re-bind zoom toggle in fullscreen
-        fsZoomToggle = document.getElementById('zoomToggle'); // Assuming id='zoomToggle' for magnify icon
-        if (fsZoomToggle) {
-            fsZoomToggle.addEventListener('click', toggleZoom); // Assuming toggleZoom is your zoom func
+        const zoomToggle = document.getElementById('zoomToggle');
+        if (zoomToggle) {
+            zoomToggle.addEventListener('click', toggleZoom);
+            zoomToggle.style.pointerEvents = 'auto';
         }
     }
 });
