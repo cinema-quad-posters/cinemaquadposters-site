@@ -477,21 +477,21 @@ prevents selection/copy only on high-res elements
 }
 
 #mainImg {
-    outline: 1px solid rgba(255,255,255,0.12);
+    outline: 1px solid rgba(255,255,255,0.3); /* Light grey */
     transition: outline-color 0.15s ease-out;
 }
 
 #mainImg:hover {
-    outline-color: rgba(255,255,255,0.4);
+    outline-color: #fff; /* White on hover */
 }
 
 .related-item img {
-    outline: 1px solid rgba(255,255,255,0.12);
+    outline: 1px solid rgba(255,255,255,0.3); /* Light grey */
     transition: outline-color 0.15s ease-out, transform 0.25s ease, opacity 0.25s ease;
 }
 
 .related-item:hover img {
-    outline-color: rgba(255,255,255,0.4);
+    outline-color: #fff; /* White on hover */
     transform: scale(1.05);
     opacity: 0.85;
 }

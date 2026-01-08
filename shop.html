@@ -208,12 +208,14 @@ function render(reset = true) {
     // Search
     const search = document.getElementById('searchInput')?.value.toLowerCase();
     if (search) {
-        filteredPosters = filteredPosters.filter(p =>
-            p.title.toLowerCase().includes(search) ||
-            p.director?.toLowerCase().includes(search) ||
-            p.actors?.some(a => a.toLowerCase().includes(search)) ||
-            p.genre?.some(g => g.toLowerCase().includes(search))
-        );
+        filteredPosters = filteredPosters.filter(p => {
+            const actors = Array.isArray(p.actors) ? p.actors : (p.actors ? [p.actors] : []);
+            const genres = Array.isArray(p.genre) ? p.genre : (p.genre ? [p.genre] : []);
+            return p.title.toLowerCase().includes(search) ||
+                (p.director?.toLowerCase().includes(search) || false) ||
+                actors.some(a => a.toLowerCase().includes(search)) ||
+                genres.some(g => g.toLowerCase().includes(search));
+        });
     }
 
     // Decade

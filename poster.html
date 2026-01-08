@@ -153,6 +153,11 @@
 .category-value {
     color: #fff; /* White for values */
 }
+
+.poster-details p {
+    font-size: 0.9rem; /* Smaller than film_summary/poster_notes */
+}
+
 </style>
 
 </head>
@@ -262,10 +267,12 @@ document.getElementById('posterContent').innerHTML = `
         </div>
         <div class="col-md-6">
             <h1 class="mb-3">${esc(poster.title)}</h1>
-            <p class="text-muted mb-1"><span class="category-label">Originally released:</span> <span class="category-value">${poster['originally released'] || 'N/A'}</span></p>
-        ${poster.variant ? `<p class="text-muted mb-1"><span class="category-label">Variant:</span> <span class="category-value">${esc(poster.variant)}</span></p>` : ''}
-            <p class="text-muted mb-1"><span class="category-label">Condition:</span> <span class="category-value">${esc(poster.condition || 'N/A')}</span></p>
-            <p class="text-muted mb-4"><span class="category-label">Genre:</span> <span class="category-value">${Array.isArray(poster.genre) ? poster.genre.join(', ') : (poster.genre || 'N/A')}</span></p>
+            <div class="poster-details">
+                <p class="text-muted mb-1"><span class="category-label">Originally released:</span> <span class="category-value">${poster['originally released'] || 'N/A'}</span></p>
+            ${poster.variant ? `<p class="text-muted mb-1"><span class="category-label">Variant:</span> <span class="category-value">${esc(poster.variant)}</span></p>` : ''}
+                <p class="text-muted mb-1"><span class="category-label">Condition:</span> <span class="category-value">${esc(poster.condition || 'N/A')}</span></p>
+                <p class="text-muted mb-4"><span class="category-label">Genre:</span> <span class="category-value">${Array.isArray(poster.genre) ? poster.genre.join(', ') : (poster.genre || 'N/A')}</span></p>
+            </div>
             <p class="mb-4">${esc(poster.film_summary)}</p>
             <p class="mb-4">${esc(poster.poster_notes || '')}</p>
             <div class="d-flex align-items-center mb-4">
@@ -322,6 +329,23 @@ document.getElementById('addToCart').addEventListener('click', () => {
         thumbnail: poster.thumbnail
     });
     updateCartBadge(true);
+});
+
+// Simple click sound using Web Audio API
+function playClickSound() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(800, audioCtx.currentTime); // Subtle tone
+    oscillator.connect(audioCtx.destination);
+    oscillator.start();
+    setTimeout(() => oscillator.stop(), 100); // Short duration
+}
+
+// Add sound to Add to Cart
+addToCartBtn.addEventListener('click', () => {
+    playClickSound();
+    // Existing addToCart code...
 });
 
 // Slideshow functions
@@ -408,7 +432,22 @@ function clampPosition() {
 
 // Fullscreen
 fsBtn.addEventListener('click', () => {
-    document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.documentElement.requestFullscreen();
+    }
+});
+
+// Re-attach zoom on fullscreen change
+document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement) {
+        // Re-bind zoom toggle in fullscreen
+        fsZoomToggle = document.getElementById('zoomToggle'); // Assuming id='zoomToggle' for magnify icon
+        if (fsZoomToggle) {
+            fsZoomToggle.addEventListener('click', toggleZoom); // Assuming toggleZoom is your zoom func
+        }
+    }
 });
 
 // Cleanup

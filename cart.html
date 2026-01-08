@@ -92,35 +92,44 @@
     document.addEventListener('DOMContentLoaded', () => {
     const checkoutBtn = document.getElementById('checkoutBtn');
     if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', async () => {
-            const cart = getCart();
-            if (!cart.length) return;
-
-            // Send to serverless function to create Stripe session
-try {
-    const response = await fetch('/.netlify/functions/create-checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items: cart }) // Send cart items (product_id, price)
-    });
-
-    if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const { sessionId } = await response.json();
-    const stripe = Stripe('pk_test_51SfRLFAn4nVEPNCVyKvmhA3AaumwXY5tUbI1JtFgWyUCgBrIFmyr7YxrbUsMhRiesKDdDknZufIkhOnlTYqH8lA600BRBjoPdv'); // Replace with your Stripe PUBLISHABLE key
-    const { error } = await stripe.redirectToCheckout({ sessionId });
-    if (error) {
-        alert('Stripe error: ' + error.message);
-    }
-} catch (error) {
-    console.error('Checkout error:', error);
-    alert('Error starting checkout: ' + error.message);
-}
+        ccheckoutBtn.addEventListener('click', async () => {
+    playClickSound(); // Play sound on click
+    const cart = getCart();
+    if (!cart.length) return;
+    // Send to serverless function to create Stripe session
+    try {
+        const response = await fetch('/.netlify/functions/create-checkout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ items: cart }) // Send cart items (product_id, price)
         });
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const { sessionId } = await response.json();
+        const stripe = Stripe('pk_test_51SfRLFAn4nVEPNCVyKvmhA3AaumwXY5tUbI1JtFgWyUCgBrIFmyr7YxrbUsMhRiesKDdDknZufIkhOnlTYqH8lA600BRBjoPdv'); // Replace with your Stripe PUBLISHABLE key
+        const { error } = await stripe.redirectToCheckout({ sessionId });
+        if (error) {
+            alert('Stripe error: ' + error.message);
+        }
+    } catch (error) {
+        console.error('Checkout error:', error);
+        alert('Error starting checkout: ' + error.message);
     }
 });
+    }
+});
+
+// Simple click sound using Web Audio API
+function playClickSound() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(800, audioCtx.currentTime); // Subtle tone
+    oscillator.connect(audioCtx.destination);
+    oscillator.start();
+    setTimeout(() => oscillator.stop(), 100); // Short duration
+}
     </script>
 
     <script src="https://js.stripe.com/v3/"></script> <!-- Add Stripe JS for redirect -->
