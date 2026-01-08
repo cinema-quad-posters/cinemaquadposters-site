@@ -303,6 +303,15 @@ function setupInfiniteScroll() {
 }
 
 /* Event listeners */
+// Define debounce if not already
+function debounce(func, delay) {
+    let timeout;
+    return function() {
+        clearTimeout(timeout);
+        timeout = setTimeout(func, delay);
+    };
+}
+
 const inputs = ['searchInput', 'decadeFilter', 'genreFilter', 'sortBy'];
 inputs.forEach(id => {
     const el = document.getElementById(id);

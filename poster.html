@@ -139,6 +139,20 @@
 .modal-thumbs img {
     pointer-events: auto;
 }
+
+#addToCart:active {
+    background-color: #e0a800; /* Darker yellow on press */
+    transform: scale(0.98); /* Slight shrink for click feel */
+    transition: transform 0.1s ease;
+}
+
+.category-label {
+    color: #aaa; /* Light grey like footer */
+    font-weight: bold;
+}
+.category-value {
+    color: #fff; /* White for values */
+}
 </style>
 
 </head>
@@ -248,22 +262,18 @@ document.getElementById('posterContent').innerHTML = `
         </div>
         <div class="col-md-6">
             <h1 class="mb-3">${esc(poster.title)}</h1>
-            <p class="text-muted mb-1">Originally released: ${poster['originally released'] || 'N/A'}</p>
-            ${poster.variant ? `<p class="text-muted mb-1">Variant: ${esc(poster.variant)}</p>` : ''}
-            <p class="text-muted mb-1">Condition: ${esc(poster.condition || 'N/A')}</p>
-            <p class="text-muted mb-4">Genre: ${Array.isArray(poster.genre) ? poster.genre.join(', ') : (poster.genre || 'N/A')}</p>
-            
+            <p class="text-muted mb-1"><span class="category-label">Originally released:</span> <span class="category-value">${poster['originally released'] || 'N/A'}</span></p>
+        ${poster.variant ? `<p class="text-muted mb-1"><span class="category-label">Variant:</span> <span class="category-value">${esc(poster.variant)}</span></p>` : ''}
+            <p class="text-muted mb-1"><span class="category-label">Condition:</span> <span class="category-value">${esc(poster.condition || 'N/A')}</span></p>
+            <p class="text-muted mb-4"><span class="category-label">Genre:</span> <span class="category-value">${Array.isArray(poster.genre) ? poster.genre.join(', ') : (poster.genre || 'N/A')}</span></p>
             <p class="mb-4">${esc(poster.film_summary)}</p>
             <p class="mb-4">${esc(poster.poster_notes || '')}</p>
-            
             <div class="d-flex align-items-center mb-4">
                 <span class="price fw-bold fs-4">£${poster.price.toFixed(2)}</span>
-                ${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
+        ${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
             </div>
-            
             <button id="addToCart" class="btn btn-warning text-dark fw-bold">Add to Cart</button>
         </div>
-    </div>
 `;
 
 // Click anywhere on the main image (or enlarge button) opens the modal at current index
@@ -405,15 +415,31 @@ fsBtn.addEventListener('click', () => {
 modal._element.addEventListener('hidden.bs.modal', resetZoom);
 
 // Anti-download
+// Move this after all click/zoom listeners to avoid interference
 document.addEventListener('contextmenu', e => {
-    if (e.target.tagName === 'IMG' && (e.target.id === 'mainImg' || e.target.id === 'modalImage' || e.target.closest('.modal-thumbs'))) {
+    if (e.target.tagName === 'IMG' && (e.target.id === 'mainImg' || e.target.id === 'modalImage' || e.target.classList.contains('modal-thumb'))) {
         e.preventDefault();
     }
-});
-document.querySelectorAll('#mainImg, #modalImage, .modal-thumbs img').forEach(img => {
+}, { capture: true }); // Capture to ensure but allow bubble
+
+const protectedImages = document.querySelectorAll('#mainImg, #modalImage, .modal-thumbs img');
+protectedImages.forEach(img => {
     img.draggable = false;
     img.addEventListener('dragstart', e => e.preventDefault());
 });
+
+// Ensure mainImg click works
+const mainImg = document.getElementById('mainImg');
+mainImg.style.pointerEvents = 'auto'; // Ensure clickable
+mainImg.addEventListener('click', () => {
+    openLightbox(currentIndex); // Assuming openLightbox is your modal open func
+}, { passive: true });
+
+// For zoom in fullscreen: Assuming #zoomToggle is the icon
+const zoomToggle = document.getElementById('zoomToggle');
+if (zoomToggle) {
+    zoomToggle.style.pointerEvents = 'auto';
+}
 </script>
 
 <!-- FOOTER -->
