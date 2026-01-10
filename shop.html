@@ -344,9 +344,39 @@ function updateCartCount(animate = false) {
     }
 }
 
+// Return to Top Icon
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 100);
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+
+// Save scroll position when leaving leaving shop
+window.addEventListener('beforeunload', () => {
+    localStorage.setItem('shopScrollPosition', window.scrollY);
+});
+
+// Restore scroll on load if coming back
+document.addEventListener('DOMContentLoaded', () => {
+    const savedScroll = localStorage.getItem('shopScrollPosition');
+    if (savedScroll) {
+        window.scrollTo(0, parseInt(savedScroll, 10));
+        localStorage.removeItem('shopScrollPosition'); // Clear after restore
+    }
+});
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="back-to-top" id="backToTop">
+    <i class="bi bi-arrow-up"></i>
+</div>
 
 <!-- FOOTER -->
 <footer class="site-footer mt-5">

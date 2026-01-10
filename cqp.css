@@ -521,6 +521,40 @@ prevents selection/copy only on high-res elements
     margin-left: 10px;
 }
 
+
+/* Return to Top Icon */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =============
+ Poster.html CSS
+============= */
+
+
 .poster-viewer {
     position: relative;
     display: inline-block;
