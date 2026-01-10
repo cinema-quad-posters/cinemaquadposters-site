@@ -16,38 +16,33 @@ a {
    ============================== */
 
 .navbar-grid {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-
 /* LEFT */
 .navbar-left {
     display: flex;
     align-items: center;
 }
-
 /* CENTER */
 .navbar-center {
+    flex-grow: 1;
     display: flex;
     justify-content: center;
-    flex-grow: 1; /* Ensures it takes available space */
 }
-
 /* Search group width control */
 .navbar-search-group {
     max-width: 900px;
+    width: 100%;
 }
-
 /* RIGHT */
-
 .navbar-link {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
 }
-
 .navbar-link:hover {
     color: #ffffff;
 }
@@ -524,4 +519,155 @@ prevents selection/copy only on high-res elements
     border-radius: 4px;
     display: inline-block;
     margin-left: 10px;
+}
+
+.poster-viewer {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.poster-viewer:hover .nav-arrow,
+.poster-viewer:hover .enlarge-btn {
+    opacity: 1;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.nav-arrow.left { left: 10px; }
+.nav-arrow.right { right: 10px; }
+
+.enlarge-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 6px 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.dot-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #666;
+}
+
+.dot.active {
+    background: #fff;
+}
+
+.modal-thumbs img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    transition: opacity 0.2s, border 0.2s;
+}
+
+.modal-thumbs img.active {
+    opacity: 1;
+    border-color: #fff;
+}
+
+.ui-hidden .nav-arrow,
+.ui-hidden .enlarge-btn,
+.ui-hidden .modal-thumbs,
+.ui-hidden #fullscreenToggle,
+.ui-hidden #zoomToggle,
+.ui-hidden .btn-close {
+    opacity: 0 !important;
+    pointer-events: auto;
+    transition: opacity 0.3s;
+    opacity: 0.6 !important;
+}
+
+.related-item img {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.related-item:hover img {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+.related-item .title {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+#relatedSection {
+    text-align: center;
+}
+
+/* Anti-download: Disable selection/dragging on high-res elements */
+#mainImg,
+#modalImage,
+.modal-thumbs img {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+}
+
+#mainImg {
+  pointer-events: auto; /* Allow clicks */
+}
+
+.modal-thumbs img {
+    pointer-events: auto;
+}
+
+.btn-warning {
+    background-color: #fbbd00; /* Base yellow */
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn-warning:hover {
+    background-color: #fce8ac !important; /* Even lighter yellow on hover */
+}
+
+.btn-warning:active {
+    background-color: #8a6801 !important; /* Even darker yellow on click */
+}
+
+.category-label {
+    color: #aaa; /* Light grey like footer */
+}
+.category-value {
+    color: #fff; /* White for values */
+}
+
+.poster-details p {
+    font-size: 0.85rem; /* Even smaller */
+}
+
+#zoomToggle {
+    pointer-events: auto !important; /* Ensure always clickable */
 }
