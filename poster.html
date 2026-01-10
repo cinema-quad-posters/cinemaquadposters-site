@@ -96,30 +96,21 @@ modal._element.addEventListener('shown.bs.modal', () => {
             zoomToggle.addEventListener('click', toggleZoom);
             zoomToggle.style.pointerEvents = 'auto';
         }
-    }, 100); // Short delay for element readiness
+    }, 300); // Increased delay for Bootstrap timing
 });
 
-// Also re-bind on fullscreen change for consistency
-// Bind zoom on modal show and fullscreen for initial and toggle consistency
-modal._element.addEventListener('shown.bs.modal', () => {
+// Use MutationObserver to detect zoomToggle addition if delay insufficient
+const observer = new MutationObserver(() => {
     const zoomToggle = document.getElementById('zoomToggle');
     if (zoomToggle) {
-        zoomToggle.removeEventListener('click', toggleZoom); // Prevent duplicates
+        zoomToggle.removeEventListener('click', toggleZoom);
         zoomToggle.addEventListener('click', toggleZoom);
         zoomToggle.style.pointerEvents = 'auto';
+        observer.disconnect(); // Stop once found
     }
 });
+observer.observe(document.body, { childList: true, subtree: true });
 
-document.addEventListener('fullscreenchange', () => {
-    if (document.fullscreenElement) {
-        const zoomToggle = document.getElementById('zoomToggle');
-        if (zoomToggle) {
-            zoomToggle.removeEventListener('click', toggleZoom); // Prevent duplicates
-            zoomToggle.addEventListener('click', toggleZoom);
-            zoomToggle.style.pointerEvents = 'auto';
-        }
-    }
-});
 const modalImg = document.getElementById('modalImage');
 const modalImgContainer = modalImg.parentElement;
 const zoomBtn = document.getElementById('zoomToggle');
@@ -333,6 +324,7 @@ document.addEventListener('fullscreenchange', () => {
 modal._element.addEventListener('hidden.bs.modal', resetZoom);
 modal._element.addEventListener('hide.bs.modal', () => {
     modal._element.setAttribute('inert', '');
+    document.body.focus(); // Shift focus to body to avoid ARIA conflict
 });
 
 modal._element.addEventListener('shown.bs.modal', () => {
