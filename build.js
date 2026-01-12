@@ -32,10 +32,14 @@ const sitemapUrls = [
 ];
 
 inventory.forEach(p => {
-    // Safe slug from title (e.g., "ABBA - THE MOVIE" -> "abba-the-movie")
-    const slug = p.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    // Safe slug from title + variant (e.g., "Grease" + "40th Anniversary re-release" -> "grease-40th-anniversary-re-release")
+    let slug = p.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (p.variant) {
+    const variantSlug = p.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    slug += `-${variantSlug}`;
+    }
 
-    // Add to sitemap
+    // Add to sitemap (update to use new slug)
     sitemapUrls.push(`<url><loc>https://www.cinemaquadposters.co.uk/static-posters/${slug}.html</loc></url>`);
 
     // Embed poster data as JS var

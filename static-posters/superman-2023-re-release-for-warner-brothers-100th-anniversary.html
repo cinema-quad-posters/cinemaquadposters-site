@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poster – Cinema Quad Posters</title> <!-- Placeholder: build.js will replace this with e.g., "ABBA - THE MOVIE (1977) – Original British Quad Poster – Cinema Quad Posters" -->
+<meta name="description" content="Original British quad posters for classic films."> <!-- Placeholder: build.js will replace with poster-specific summary -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="/cqp.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DCT6EGE8PB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DCT6EGE8PB');
+</script>
+
+
+        <title>SUPERMAN (2023) – Original British Quad Poster – Cinema Quad Posters</title>
+        <meta name="description" content="Richard Donner&#039;s 1978 classic Superman - The Movie  starring Christopher Reeve, Gene Hackman, Margot Kidder and Terence Stamp.... Buy this collectible cinema poster.">
+    
+    <meta property="og:title" content="SUPERMAN (2023) – Original British Quad Poster – Cinema Quad Posters">
+    <meta property="og:description" content="Richard Donner&#039;s 1978 classic Superman - The Movie  starring Christopher Reeve, Gene Hackman, Margot Kidder and Terence Stamp.... Buy this collectible cinema poster.">
+    <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/superman-the-movie-wb100th-rr-quad-poster.jpg">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/superman-2023-re-release-for-warner-brothers-100th-anniversary.html">
+    <script>const posterData = {"title":"SUPERMAN","variant":"2023 re-release for Warner Brothers 100th anniversary","originally released":2023,"director":"Richard Donner","actors":["Christopher Reeve","Gene Hackman","Margot Kidder","Terence Stamp"],"genre":["superhero","family","fantasy","action","adventure"],"condition":"Excellent, rolled.","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/superman-the-movie-wb100th-rr-quad-poster.jpg","hires":"posters/superman-the-movie-wb100th-rr-quad-poster.jpg","price":89.99,"film_summary":"Richard Donner's 1978 classic Superman - The Movie  starring Christopher Reeve, Gene Hackman, Margot Kidder and Terence Stamp.","poster_notes":"This modern dynamic artwork produced for the rerelease of this classic film, to celebrate warner Brother's 100th anniversary, has a row of white kink marks running across the lower half of the poster","tags":["21.68","rolled"],"gallery":["gallery_images/superman-the-movie-wb100th-rr-quad-poster-1.jpg"],"sort_title":"SUPERMAN","on_sale":false,"purchase_date":"2023-06-05","product_id":"prod_TiiPbOrMdQOPTV"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"SUPERMAN","description":"Richard Donner&#039;s 1978 classic Superman - The Movie  starring Christopher Reeve, Gene Hackman, Margot Kidder and Terence Stamp.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/superman-the-movie-wb100th-rr-quad-poster.jpg","offers":{"@type":"Offer","price":89.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+
+<body class="bg-black text-white">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top px-3">
+    <div class="container-fluid">
+        <a href="/shop.html" class="me-4">
+            <img src="/img/logo_2023.png" alt="Cinema Quad Posters" style="height:40px;">
+        </a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="/shop.html">Shop</a>
+            <a href="/cart.html" class="nav-link cart-link">
+                <i class="bi bi-cart3"></i>
+                <span id="cartCount" class="cart-badge">0</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <div id="posterContent"></div>
+
+    <!-- You may also like -->
+    <div id="relatedSection" class="mt-5"></div>
+</div>
+
+<!-- FULLSCREEN MODAL -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-modal="true">
+<div class="modal-dialog modal-fullscreen">
+<div class="modal-content bg-black">
+<div class="modal-body text-center">
+
+<div class="modal-img-container">
+    <img id="modalImage" class="img-fluid" style="max-height:80vh; object-fit:contain;" draggable="false" ondragstart="return false;" oncontextmenu="return false;">
+</div>
+
+<div class="d-flex justify-content-center gap-2 modal-thumbs"></div>
+
+<div class="position-absolute top-0 end-0 m-3 d-flex gap-2">
+    <button class="btn btn-dark btn-sm" id="zoomToggle" title="Toggle zoom">
+        <i class="bi bi-zoom-in"></i>
+    </button>
+    <button class="btn btn-dark btn-sm" id="fullscreenToggle" title="Toggle fullscreen">
+        <i class="bi bi-arrows-fullscreen"></i>
+    </button>
+    <button class="btn btn-dark btn-sm" data-bs-dismiss="modal" title="Close">
+        <i class="bi bi-x-lg"></i>
+    </button>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Embedded poster data from build.js
+const poster = posterData;
+let images = [];
+let currentIndex = 0;
+let isZoomActive = false;
+let posX = 0, posY = 0;
+let scale = 1;
+let isDragging = false;
+let lastX = 0, lastY = 0;
+const modal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+modal._element.addEventListener('shown.bs.modal', () => {
+    setTimeout(() => {
+        const zoomToggle = document.getElementById('zoomToggle');
+        if (zoomToggle) {
+            zoomToggle.removeEventListener('click', toggleZoom); // Prevent duplicates
+            zoomToggle.addEventListener('click', toggleZoom);
+            zoomToggle.style.pointerEvents = 'auto';
+        }
+    }, 300); // Increased delay for Bootstrap timing
+});
+
+// Use MutationObserver to detect zoomToggle addition if delay insufficient
+const observer = new MutationObserver(() => {
+    const zoomToggle = document.getElementById('zoomToggle');
+    if (zoomToggle) {
+        zoomToggle.removeEventListener('click', toggleZoom);
+        zoomToggle.addEventListener('click', toggleZoom);
+        zoomToggle.style.pointerEvents = 'auto';
+        observer.disconnect(); // Stop once found
+    }
+});
+observer.observe(document.body, { childList: true, subtree: true });
+
+const modalImg = document.getElementById('modalImage');
+const modalImgContainer = modalImg.parentElement;
+const zoomBtn = document.getElementById('zoomToggle');
+const fsBtn = document.getElementById('fullscreenToggle');
+const modalThumbs = document.querySelector('.modal-thumbs');
+function esc(str) {
+    return (str || '').replace(/&/g, '&amp;')
+                      .replace(/</g, '&lt;')
+                      .replace(/>/g, '&gt;')
+                      .replace(/"/g, '&quot;')
+                      .replace(/'/g, '&#039;');
+}
+
+// Render main poster content
+images = [poster.hires, ...(poster.gallery || [])];
+
+document.getElementById('posterContent').innerHTML = `
+    <div class="row">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <div class="poster-viewer">
+                <img id="mainImg" src="/${images[0]}" alt="${esc(poster.title)} original British quad poster" class="img-fluid" draggable="false" ondragstart="return false;" oncontextmenu="return false;">
+                ${images.length > 1 ? `
+                    <button class="nav-arrow left" onclick="prevImage()"><i class="bi bi-chevron-left"></i></button>
+                    <button class="nav-arrow right" onclick="nextImage()"><i class="bi bi-chevron-right"></i></button>
+                ` : ''}
+                <button class="enlarge-btn" onclick="openLightbox(currentIndex)"><i class="bi bi-arrows-angle-expand"></i></button>
+            </div>
+            ${images.length > 1 ? `
+                <div class="dot-indicators">
+                    ${images.map((_, i) => `<div class="dot ${i === 0 ? 'active' : ''}" onclick="selectImage(${i})"></div>`).join('')}
+                </div>
+            ` : ''}
+        </div>
+        <div class="col-md-6">
+            <h1 class="mb-3">${esc(poster.title)}</h1>
+            <div class="poster-details">
+                <p class="text-muted mb-1"><span class="category-label">Originally released:</span> <span class="category-value">${poster['originally released'] || 'N/A'}</span></p>
+            ${poster.variant ? `<p class="text-muted mb-1"><span class="category-label">Variant:</span> <span class="category-value">${esc(poster.variant)}</span></p>` : ''}
+                <p class="text-muted mb-1"><span class="category-label">Condition:</span> <span class="category-value">${esc(poster.condition || 'N/A')}</span></p>
+                <p class="text-muted mb-4"><span class="category-label">Genre:</span> <span class="category-value">${Array.isArray(poster.genre) ? poster.genre.join(', ') : (poster.genre || 'N/A')}</span></p>
+            </div>
+            <p class="mb-4">${esc(poster.film_summary)}</p>
+            <p class="mb-4">${esc(poster.poster_notes || '')}</p>
+            <div class="d-flex align-items-center mb-4">
+                <span class="price fw-bold fs-4">£${poster.price.toFixed(2)}</span>
+        ${poster.on_sale ? '<span class="sale-info">SALE</span>' : ''}
+            </div>
+            <button id="addToCart" class="btn btn-warning text-dark fw-bold">Add to Cart</button>
+        </div>
+`;
+
+// Click anywhere on the main image (or enlarge button) opens the modal at current index
+document.getElementById('mainImg').addEventListener('click', () => openLightbox(currentIndex));
+
+// Related posters – fixed genre handling
+fetch('/inventory.json')
+    .then(r => r.json())
+    .then(data => {
+        const posterGenres = Array.isArray(poster.genre) ? poster.genre.map(g => g.toLowerCase()) : 
+                             (poster.genre ? [poster.genre.toLowerCase()] : []);
+        
+        const related = data.filter(p => {
+            const pGenres = Array.isArray(p.genre) ? p.genre.map(g => g.toLowerCase()) : 
+                            (p.genre ? [p.genre.toLowerCase()] : []);
+            return pGenres.some(g => posterGenres.includes(g)) && p.product_id !== poster.product_id;
+        })
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 4);
+
+        if (related.length) {
+            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            document.getElementById('relatedSection').innerHTML = `
+                <h5 class="mb-4">You may also like</h5>
+                <div class="row g-3">
+                    ${related.map((x, i) => `
+                        <div class="col-6 col-md-3">
+                            <a href="/static-posters/${slugs[i]}.html" class="related-item d-block">
+                                <img src="/${x.thumbnail}" alt="${esc(x.title)}" class="img-fluid mb-1">
+                                <div class="title text-muted small">${esc(x.title)}</div>
+                            </a>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+    })
+    .catch(e => console.error('Related fetch error:', e));
+
+// Add to cart – uses cqp.js (no alerts, no duplicate code)
+document.getElementById('addToCart').addEventListener('click', () => {
+    addToCart({
+        id: poster.product_id,
+        title: poster.title,
+        price: poster.price,
+        thumbnail: poster.thumbnail
+    });
+    updateCartBadge(true);
+});
+
+
+// Slideshow functions
+function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById('mainImg').src = '/' + images[currentIndex];
+    updateDots();
+}
+function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById('mainImg').src = '/' + images[currentIndex];
+    updateDots();
+}
+function selectImage(i) {
+    currentIndex = i;
+    document.getElementById('mainImg').src = '/' + images[currentIndex];
+    updateDots();
+}
+function updateDots() {
+    document.querySelectorAll('.dot').forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+}
+
+function openLightbox(i) {
+    currentIndex = i;
+    modalImg.src = '/' + images[currentIndex];
+    modalThumbs.innerHTML = images.map((img, j) => `
+        <img src="/${img}" class="${j === currentIndex ? 'active' : ''}" onclick="selectModalImage(${j})">
+    `).join('');
+    resetZoom();
+    modal.show();
+
+    // Attach zoom listener on modal open
+    const zoomToggle = document.getElementById('zoomToggle');
+    if (zoomToggle) {
+        zoomToggle.addEventListener('click', toggleZoom);
+        zoomToggle.style.pointerEvents = 'auto';
+    }
+}
+function selectModalImage(i) {
+    currentIndex = i;
+    modalImg.src = '/' + images[currentIndex];
+    modalThumbs.querySelectorAll('img').forEach((thumb, j) => thumb.classList.toggle('active', j === i));
+    resetZoom();
+}
+
+// Zoom / pan
+function toggleZoom() {
+    isZoomActive = !isZoomActive;
+    scale = isZoomActive ? 2 : 1;
+    posX = posY = 0;
+    modalImgContainer.classList.toggle('zoom-active', isZoomActive);
+    modalImg.classList.toggle('zoom-active', isZoomActive);
+    updateTransform();
+    zoomBtn.innerHTML = isZoomActive ? '<i class="bi bi-zoom-out"></i>' : '<i class="bi bi-zoom-in"></i>';
+}
+function resetZoom() {
+    if (isZoomActive) toggleZoom();
+}
+function updateTransform() {
+    modalImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+}
+
+// Drag to pan
+modalImgContainer.addEventListener('pointerdown', e => {
+    if (!isZoomActive) return;
+    modalImgContainer.setPointerCapture(e.pointerId);
+    isDragging = true;
+    lastX = e.clientX - posX;
+    lastY = e.clientY - posY;
+    modalImgContainer.style.cursor = 'grabbing';
+});
+modalImgContainer.addEventListener('pointermove', e => {
+    if (!isDragging) return;
+    posX = e.clientX - lastX;
+    posY = e.clientY - lastY;
+    clampPosition();
+    updateTransform();
+});
+modalImgContainer.addEventListener('pointerup', () => { isDragging = false; modalImgContainer.style.cursor = isZoomActive ? 'grab' : 'default'; });
+modalImgContainer.addEventListener('pointerleave', () => { isDragging = false; });
+
+// Clamp
+function clampPosition() {
+    const imgRect = modalImg.getBoundingClientRect();
+    const boxRect = modalImgContainer.getBoundingClientRect();
+    const maxX = Math.max(0, (imgRect.width - boxRect.width) / 2);
+    const maxY = Math.max(0, (imgRect.height - boxRect.height) / 2);
+    posX = Math.max(-maxX, Math.min(maxX, posX));
+    posY = Math.max(-maxY, Math.min(maxY, posY));
+}
+
+// Fullscreen
+fsBtn.addEventListener('click', () => {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        document.documentElement.requestFullscreen();
+    }
+});
+
+// Re-attach zoom on fullscreen change
+document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement) {
+        const zoomToggle = document.getElementById('zoomToggle');
+        if (zoomToggle) {
+            zoomToggle.addEventListener('click', toggleZoom);
+            zoomToggle.style.pointerEvents = 'auto';
+        }
+    }
+});
+
+// Cleanup
+modal._element.addEventListener('hidden.bs.modal', resetZoom);
+modal._element.addEventListener('hide.bs.modal', () => {
+    modal._element.setAttribute('inert', '');
+    document.body.focus(); // Shift focus to body to avoid ARIA conflict
+});
+
+modal._element.addEventListener('shown.bs.modal', () => {
+    modal._element.removeAttribute('inert');
+});
+
+// Anti-download
+// Move this after all click/zoom listeners to avoid interference
+document.addEventListener('contextmenu', e => {
+    if (e.target.tagName === 'IMG' && (e.target.id === 'mainImg' || e.target.id === 'modalImage' || e.target.classList.contains('modal-thumb'))) {
+        e.preventDefault();
+    }
+}, { capture: true }); // Capture to ensure but allow bubble
+
+const protectedImages = document.querySelectorAll('#mainImg, #modalImage, .modal-thumbs img');
+protectedImages.forEach(img => {
+    img.draggable = false;
+    img.addEventListener('dragstart', e => e.preventDefault());
+});
+
+// Ensure mainImg click works
+const mainImg = document.getElementById('mainImg');
+mainImg.style.pointerEvents = 'auto'; // Ensure clickable
+mainImg.addEventListener('click', () => {
+    openLightbox(currentIndex); // Assuming openLightbox is your modal open func
+}, { passive: true });
+
+// For zoom in fullscreen: Assuming #zoomToggle is the icon
+const zoomToggle = document.getElementById('zoomToggle');
+if (zoomToggle) {
+    zoomToggle.style.pointerEvents = 'auto';
+}
+</script>
+
+<!-- FOOTER -->
+<footer class="site-footer mt-5">
+    <div class="container py-4">
+        <div class="row gy-3 align-items-center">
+            <div class="col-md-4 footer-left">
+                <a href="/shop.html">
+                    <img src="/img/logo.png" alt="Cinema Quad Posters" class="footer-logo">
+                </a>
+            </div>
+            <div class="col-md-4 text-center">
+                <ul class="footer-links justify-content-center mb-1">
+                    <li><a href="/shop.html">Shop</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/faq.html">FAQs</a></li>
+                    <li><a href="/terms.html">Terms</a></li>
+                </ul>
+                <p class="small mb-0" style="color: #aaa;">    
+                    © <span id="year"></span> Cinema Quad Posters
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script src="/cqp.js"></script>
+
+</body>
+</html>

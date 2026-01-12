@@ -251,11 +251,15 @@ function render(reset = true) {
     const BATCH_SIZE = 12; // Adjust for grid batch size (e.g., 12-24 for performance)
     const batch = filteredPosters.slice(currentOffset, currentOffset + BATCH_SIZE);
 
-    let html = '';
+let html = '';
     try {
         html = batch.map(x => {
             if (!x || !x.title) throw new Error('Invalid poster data');
-            const slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+            let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+            if (x.variant) {
+                const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+                slug += `-${variantSlug}`;
+            }
             return `
                 <div class="col mb-3">
                     <a href="static-posters/${slug}.html" class="poster-card position-relative">
