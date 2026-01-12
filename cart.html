@@ -1,4 +1,3 @@
-<!-- cart.html (updated) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +39,18 @@
     <div class="container my-5">
         <h2>Your Cart</h2>
         <div id="cartItems" class="list-group"></div>
+        
+        <!-- Shipping Options -->
+        <div class="mt-4">
+            <p class="text-muted">Please choose a postage option before checkout:</p>
+            <select id="shippingOption" class="form-select form-select-lg bg-dark text-white border-secondary">
+                <option value="">Select Postage...</option>
+                <option value="uk">UK Postage (£10.00)</option>
+                <option value="europe">Europe Postage (£20.00)</option>
+                <option value="worldwide">Worldwide Postage (£30.00)</option>
+            </select>
+        </div>
+        
         <div class="cart-summary mt-4 text-end">
             <strong>Total:</strong> <span id="cartTotal" class="text-warning fw-bold">£0.00</span>
         </div>
@@ -49,10 +60,18 @@
     <!-- Footer (as before) -->
 
     <script>
+    // Shipping costs map (adjust as needed)
+    const shippingCosts = {
+        uk: 10.00,
+        europe: 20.00,
+        worldwide: 30.00
+    };
+
     function renderCart() {
         const cartItemsEl = document.getElementById('cartItems');
         const cartTotalEl = document.getElementById('cartTotal');
         const checkoutBtn = document.getElementById('checkoutBtn');
+        const shippingSelect = document.getElementById('shippingOption');
         const cart = getCart();
 
         cartItemsEl.innerHTML = '';
@@ -60,18 +79,21 @@
             cartItemsEl.innerHTML = '<p class="text-muted">Your cart is empty.</p>';
             cartTotalEl.textContent = '£0.00';
             checkoutBtn.disabled = true;
+            shippingSelect.disabled = true; // Disable shipping if cart empty
             return;
         }
 
-        let total = 0;
+        shippingSelect.disabled = false; // Enable shipping if cart has items
+
+        let itemsTotal = 0;
         cart.forEach(item => {
-            total += item.price;
+            itemsTotal += item.price;
             const itemEl = document.createElement('div');
             itemEl.className = 'cart-item list-group-item bg-dark border-0';
             itemEl.innerHTML = `
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center">
-                        <img src="${item.thumbnail}" alt="${item.title}" class="cart-thumb me-3">
+                        <img src="${item.thumbnail}" alt="${item.title}" class="cart-thumb">
                         <span class="cart-title">${item.title}</span>
                     </div>
                     <div class="d-flex align-items-center">
@@ -83,49 +105,61 @@
             cartItemsEl.appendChild(itemEl);
         });
 
+        // Update total with items + shipping
+        const selectedShipping = shippingSelect.value;
+        const shippingCost = selectedShipping ? shippingCosts[selectedShipping] : 0;
+        const total = itemsTotal + shippingCost;
         cartTotalEl.textContent = `£${total.toFixed(2)}`;
-        checkoutBtn.disabled = false;
+
+        // Enable checkout only if shipping selected and cart not empty
+        checkoutBtn.disabled = !selectedShipping;
     }
 
-document.addEventListener('DOMContentLoaded', () => {
-    renderCart(); // Render first to enable button if cart not empty
-    const checkoutBtn = document.getElementById('checkoutBtn');
-    if (checkoutBtn) {
-checkoutBtn.addEventListener('click', async () => {
-    const cart = getCart();
-    if (!cart.length) return;
+    document.addEventListener('DOMContentLoaded', () => {
+        const shippingSelect = document.getElementById('shippingOption');
+        shippingSelect.addEventListener('change', renderCart); // Re-render on shipping change
 
-    try {
-        const response = await fetch('/.netlify/functions/create-checkout', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ items: cart })
-        });
+        renderCart(); // Initial render
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        if (checkoutBtn) {
+            checkoutBtn.addEventListener('click', async () => {
+                const selectedShipping = document.getElementById('shippingOption').value;
+                if (!selectedShipping) {
+                    alert('Please choose a postage option before checkout.');
+                    return;
+                }
+
+                const cart = getCart();
+                if (!cart.length) return;
+
+                try {
+                    const response = await fetch('/.netlify/functions/create-checkout', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ items: cart, shipping: selectedShipping })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+
+                    const { sessionId } = await response.json();
+                    const stripe = Stripe('pk_live_51SfRLFAn4nVEPNCV3ZzFQK4DXMEwONM7QjfQwnBxk8nISMl34qqOzi3kCS0tR9RgIQZSXERJyXSaxUfbIMX3ascV00J3kvpqpK'); // Your live/test publishable key
+                    const { error } = await stripe.redirectToCheckout({ sessionId });
+                    if (error) {
+                        alert('Stripe error: ' + error.message);
+                    }
+                } catch (error) {
+                    console.error('Checkout error:', error);
+                    alert('Error starting checkout: ' + error.message);
+                }
+            });
         }
-
-        const { sessionId } = await response.json();
-        const stripe = Stripe('pk_live_51SfRLFAn4nVEPNCV3ZzFQK4DXMEwONM7QjfQwnBxk8nISMl34qqOzi3kCS0tR9RgIQZSXERJyXSaxUfbIMX3ascV00J3kvpqpK'); // Replace with your ACTUAL test publishable key from Stripe dashboard
-        const { error } = await stripe.redirectToCheckout({ sessionId });
-        if (error) {
-            alert('Stripe error: ' + error.message);
-        }
-    } catch (error) {
-        console.error('Checkout error:', error);
-        alert('Error starting checkout: ' + error.message);
-    }
-});
-    }
-});
-
+    });
     </script>
 
-    <script src="https://js.stripe.com/v3/"></script> <!-- Add Stripe JS for redirect -->
-
-    <script src="cqp.js"></script>   <!-- Link to cqp.js-->
-
-
+    <script src="https://js.stripe.com/v3/"></script> <!-- Stripe JS for redirect -->
+    <script src="cqp.js"></script> <!-- Your shared cart utils -->
 </body>
 </html>

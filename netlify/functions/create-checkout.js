@@ -1,6 +1,8 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+import stripe from 'stripe';
 
-exports.handler = async (event) => {
+const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
+
+export const handler = async (event) => {
   try {
     if (event.httpMethod !== 'POST') {
       return { statusCode: 405, body: 'Method Not Allowed' };
@@ -27,7 +29,7 @@ exports.handler = async (event) => {
       quantity: 1,
     }));
 
-    const session = await stripe.checkout.sessions.create({
+    const session = await stripeClient.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
