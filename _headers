@@ -1,0 +1,8 @@
+/*
+  Content-Security-Policy: default-src 'self'; 
+    script-src 'self' https://js.stripe.com https://www.googletagmanager.com 'unsafe-inline'; 
+    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; 
+    img-src 'self' data: https://*.stripe.com; 
+    frame-src https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com; 
+    connect-src https://api.stripe.com https://www.google-analytics.com;
+    report-uri https://your-report-endpoint.com;  # Optional: For logging violations
