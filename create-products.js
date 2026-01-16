@@ -1,5 +1,4 @@
-const stripe = require('stripe')('sk_test_51SfRLMA2xzKg16uCC1tgb9LQNtDqYAF3w57TaOczAp1CUOez3gn4GHIVKPp5NhS3OUvzwbxzmPdJud6xeoGt2hR100CZqfafmK'); // Replace with your Stripe SECRET key (test mode first!)
-const fs = require('fs');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Uses env var—no hardcoded key!
 
 // Load inventory
 let inventory = JSON.parse(fs.readFileSync('inventory.json', 'utf8'));
