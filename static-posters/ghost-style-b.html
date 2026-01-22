@@ -28,7 +28,7 @@
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/ghost-b-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/ghost-style-b.html">
-    <script>const posterData = {"title":"GHOST","variant":"Style B","originally released":1990,"director":null,"actors":["Patrick Swayze","Demi Moore","Whoopi Goldberg"],"genre":["romance","tragedy","supernatural","thriller"],"condition":" near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/ghost-b-quad-poster.jpg","hires":"posters/ghost-b-quad-poster.jpg","price":34.99,"film_summary":"Jerry Zucker's 1990 romantic, supernatural thriller Ghost, brilliantly written by Bruce Joel Rubin (Jacob's Ladder) starring Patrick Swayze, Demi Moore and Whoopi Goldberg.","poster_notes":"","tags":["1990"],"gallery":["gallery_images/ghost-b-quad-poster-1.jpg","gallery_images/ghost-b-quad-poster-2.jpg"],"sort_title":"GHOST","on_sale":false,"purchase_date":"","product_id":"prod_TiiNmgVua0kx4x"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"GHOST","description":"Jerry Zucker&#039;s 1990 romantic, supernatural thriller Ghost, brilliantly written by Bruce Joel Rubin (Jacob&#039;s Ladder) starring Patrick Swayze, Demi Moore and Whoopi Goldberg.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/ghost-b-quad-poster.jpg","offers":{"@type":"Offer","price":34.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"GHOST","variant":"Style B","originally released":1990,"director":null,"actors":["Patrick Swayze","Demi Moore","Whoopi Goldberg"],"genre":["romance","tragedy","supernatural","thriller"],"condition":" near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/ghost-b-quad-poster.jpg","hires":"posters/ghost-b-quad-poster.jpg","price":74.99,"film_summary":"Jerry Zucker's 1990 romantic, supernatural thriller Ghost, brilliantly written by Bruce Joel Rubin (Jacob's Ladder) starring Patrick Swayze, Demi Moore and Whoopi Goldberg.","poster_notes":"","tags":["1990"],"gallery":["gallery_images/ghost-b-quad-poster-1.jpg","gallery_images/ghost-b-quad-poster-2.jpg"],"sort_title":"GHOST","on_sale":false,"purchase_date":"","product_id":""};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"GHOST","description":"Jerry Zucker&#039;s 1990 romantic, supernatural thriller Ghost, brilliantly written by Bruce Joel Rubin (Jacob&#039;s Ladder) starring Patrick Swayze, Demi Moore and Whoopi Goldberg.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/ghost-b-quad-poster.jpg","offers":{"@type":"Offer","price":74.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

@@ -21,14 +21,14 @@
 
 
         <title>CLOSE ENCOUNTERS OF THE THIRD KIND (1977) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch 40th anniversary cinema quad poster for Steven Spielberg&#039;s 1977 classic  Close Encounters Of The Third Kind starring Richard Dreyfuss, Fran... Buy this collectible cinema poster.">
+        <meta name="description" content="40th anniversary re-release of Steven Spielberg&#039;s 1977 classic Close Encounters Of The Third Kind, starring Richard Dreyfuss, Fran&amp;ccedil;ois Truffaut, Bob Bala... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="CLOSE ENCOUNTERS OF THE THIRD KIND (1977) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch 40th anniversary cinema quad poster for Steven Spielberg&#039;s 1977 classic  Close Encounters Of The Third Kind starring Richard Dreyfuss, Fran&amp;ccedil;ois Truffaut, Bob Balaban and Te... Buy this collectible cinema poster.">
+    <meta property="og:description" content="40th anniversary re-release of Steven Spielberg&#039;s 1977 classic Close Encounters Of The Third Kind, starring Richard Dreyfuss, Fran&amp;ccedil;ois Truffaut, Bob Balaban and Teri Garr.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/close-encounters-of-the-third-kind-40th-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/close-encounters-of-the-third-kind-40th-anniversary-4k-remastered-2017-re-release.html">
-    <script>const posterData = {"title":"CLOSE ENCOUNTERS OF THE THIRD KIND","variant":"40th anniversary 4K remastered 2017 re-release","originally released":1977,"director":"Steven Spielberg","actors":["Richard Dreyfuss","Bob Balaban","Teri Garr"],"genre":["sci-fi"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/close-encounters-of-the-third-kind-40th-quad-poster.jpg","hires":"posters/close-encounters-of-the-third-kind-40th-quad-poster.jpg","price":149.99,"film_summary":"British 30 x 40 inch 40th anniversary cinema quad poster for Steven Spielberg's 1977 classic  Close Encounters Of The Third Kind starring Richard Dreyfuss, Fran&ccedil;ois Truffaut, Bob Balaban and Teri Garr.","poster_notes":"This is an amazing and extremely rare re-release film poster.","tags":["1977","Bob Balaban","Richard Dreyfuss","Steven Spielberg","rolled"],"gallery":["gallery_images/close-encounters-of-the-third-kind-40th-quad-poster-1.jpg","gallery_images/close-encounters-of-the-third-kind-40th-quad-poster-2.jpg"],"sort_title":"CLOSE ENCOUNTERS OF THE THIRD KIND","on_sale":false,"purchase_date":"","product_id":"prod_TiiNjjjyrujuRp"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"CLOSE ENCOUNTERS OF THE THIRD KIND","description":"British 30 x 40 inch 40th anniversary cinema quad poster for Steven Spielberg&#039;s 1977 classic  Close Encounters Of The Third Kind starring Richard Dreyfuss, Fran&amp;ccedil;ois Truffaut, Bob Balaban and Teri Garr.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/close-encounters-of-the-third-kind-40th-quad-poster.jpg","offers":{"@type":"Offer","price":149.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"CLOSE ENCOUNTERS OF THE THIRD KIND","variant":"40th anniversary 4K remastered 2017 re-release","originally released":1977,"director":"Steven Spielberg","actors":["Richard Dreyfuss","Bob Balaban","Teri Garr"],"genre":["sci-fi"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/close-encounters-of-the-third-kind-40th-quad-poster.jpg","hires":"posters/close-encounters-of-the-third-kind-40th-quad-poster.jpg","price":149.99,"film_summary":"40th anniversary re-release of Steven Spielberg's 1977 classic Close Encounters Of The Third Kind, starring Richard Dreyfuss, Fran&ccedil;ois Truffaut, Bob Balaban and Teri Garr.","poster_notes":"This is an amazing and extremely rare re-release film poster.","tags":["1977","Bob Balaban","Richard Dreyfuss","Steven Spielberg","rolled"],"gallery":["gallery_images/close-encounters-of-the-third-kind-40th-quad-poster-1.jpg","gallery_images/close-encounters-of-the-third-kind-40th-quad-poster-2.jpg"],"sort_title":"CLOSE ENCOUNTERS OF THE THIRD KIND","on_sale":false,"purchase_date":"","product_id":"prod_TiiNjjjyrujuRp"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"CLOSE ENCOUNTERS OF THE THIRD KIND","description":"40th anniversary re-release of Steven Spielberg&#039;s 1977 classic Close Encounters Of The Third Kind, starring Richard Dreyfuss, Fran&amp;ccedil;ois Truffaut, Bob Balaban and Teri Garr.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/close-encounters-of-the-third-kind-40th-quad-poster.jpg","offers":{"@type":"Offer","price":149.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

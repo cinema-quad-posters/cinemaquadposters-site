@@ -21,14 +21,14 @@
 
 
         <title>E.T. THE EXTRA TERRESTRIAL (1982) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch quad poster for Steven Spielberg&#039;s 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, ... Buy this collectible cinema poster.">
+        <meta name="description" content="Steven Spielberg&#039;s 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, Dee Wallace-Stone and Peter Coyote.... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="E.T. THE EXTRA TERRESTRIAL (1982) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch quad poster for Steven Spielberg&#039;s 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, Dee Wallace-Stone and Peter Coyote.... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Steven Spielberg&#039;s 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, Dee Wallace-Stone and Peter Coyote.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/e.t.-extra-terrestrial-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/e-t-the-extra-terrestrial.html">
-    <script>const posterData = {"title":"E.T. THE EXTRA TERRESTRIAL","variant":null,"originally released":1982,"director":"Steven Spielberg","actors":["Henry Thomas","Drew Barrymore","Robert Mac","Dee Wallace","Peter Coyote"],"genre":["family","coming-of-age","sci-fi","adventure"],"condition":"near mint, folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/e.t.-extra-terrestrial-quad-poster.jpg","hires":"posters/e.t.-extra-terrestrial-quad-poster.jpg","price":127.99,"film_summary":"British 30 x 40 inch quad poster for Steven Spielberg's 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, Dee Wallace-Stone and Peter Coyote.","poster_notes":"This poster has some tape marks on the corners and a two inch tear on the bottom centre edge.","tags":["26.73"],"gallery":["gallery_images/e.t.-extra-terrestrial-quad-poster-1.jpg","gallery_images/e.t.-extra-terrestrial-quad-poster-2.jpg"],"sort_title":"E.T. THE EXTRA TERRESTRIAL","on_sale":false,"purchase_date":"2018-06-06","product_id":"prod_TiiNmiaWGnCwmo"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"E.T. THE EXTRA TERRESTRIAL","description":"British 30 x 40 inch quad poster for Steven Spielberg&#039;s 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, Dee Wallace-Stone and Peter Coyote.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/e.t.-extra-terrestrial-quad-poster.jpg","offers":{"@type":"Offer","price":127.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"E.T. THE EXTRA TERRESTRIAL","variant":null,"originally released":1982,"director":"Steven Spielberg","actors":["Henry Thomas","Drew Barrymore","Robert Mac","Dee Wallace","Peter Coyote"],"genre":["family","coming-of-age","sci-fi","adventure"],"condition":"near mint, folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/e.t.-extra-terrestrial-quad-poster.jpg","hires":"posters/e.t.-extra-terrestrial-quad-poster.jpg","price":127.99,"film_summary":"Steven Spielberg's 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, Dee Wallace-Stone and Peter Coyote.","poster_notes":"This poster has some tape marks on the corners and a two inch tear on the bottom centre edge.","tags":["26.73"],"gallery":["gallery_images/e.t.-extra-terrestrial-quad-poster-1.jpg","gallery_images/e.t.-extra-terrestrial-quad-poster-2.jpg"],"sort_title":"E.T. THE EXTRA TERRESTRIAL","on_sale":false,"purchase_date":"2018-06-06","product_id":"prod_TiiNmiaWGnCwmo"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"E.T. THE EXTRA TERRESTRIAL","description":"Steven Spielberg&#039;s 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, Dee Wallace-Stone and Peter Coyote.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/e.t.-extra-terrestrial-quad-poster.jpg","offers":{"@type":"Offer","price":127.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

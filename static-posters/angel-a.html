@@ -21,16 +21,14 @@
 
 
         <title>ANGEL-A (2005) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="Luc Besson&#039;s underrated and relatively unknown 2005 fantasy drama Angel-A, starring Jamel Debbouze and Rie Rasmussen.
-This hard to find poster has an amazing bl... Buy this collectible cinema poster.">
+        <meta name="description" content="Luc Besson&#039;s underrated and relatively unknown 2005 fantasy drama Angel-A, starring Jamel Debbouze and Rie Rasmussen.... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="ANGEL-A (2005) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="Luc Besson&#039;s underrated and relatively unknown 2005 fantasy drama Angel-A, starring Jamel Debbouze and Rie Rasmussen.
-This hard to find poster has an amazing black and white image and is in near mint,... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Luc Besson&#039;s underrated and relatively unknown 2005 fantasy drama Angel-A, starring Jamel Debbouze and Rie Rasmussen.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/angel-a.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/angel-a.html">
-    <script>const posterData = {"title":"ANGEL-A","variant":null,"originally released":2005,"director":"Luc Besson","actors":["Jamel Debbouze","Rie Rasmussen"],"genre":["drama","fantasy"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/angel-a.jpg","hires":"posters/angel-a-quad-poster.jpg","price":64.99,"film_summary":"Luc Besson's underrated and relatively unknown 2005 fantasy drama Angel-A, starring Jamel Debbouze and Rie Rasmussen.\nThis hard to find poster has an amazing black and white image and is in near mint, rolled except for some light roll creasing running along the bottom of the poster.","poster_notes":"","tags":["2005","drama","fantasy","Jamel Debbouze","Luc Besson","Rie Rasmussen","rolled"],"gallery":["gallery_images/angel-a-1.jpg","gallery_images/angel-a-2.jpg"],"sort_title":"ANGEL-A","on_sale":false,"purchase_date":"","product_id":"prod_TiiMEWK6C7jVxX"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"ANGEL-A","description":"Luc Besson&#039;s underrated and relatively unknown 2005 fantasy drama Angel-A, starring Jamel Debbouze and Rie Rasmussen.\nThis hard to find poster has an amazing black and white image and is in near mint, rolled except for some light roll creasing running along the bottom of the poster.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/angel-a.jpg","offers":{"@type":"Offer","price":64.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"ANGEL-A","variant":null,"originally released":2005,"director":"Luc Besson","actors":["Jamel Debbouze","Rie Rasmussen"],"genre":["drama","fantasy"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/angel-a.jpg","hires":"posters/angel-a-quad-poster.jpg","price":64.99,"film_summary":"Luc Besson's underrated and relatively unknown 2005 fantasy drama Angel-A, starring Jamel Debbouze and Rie Rasmussen.","poster_notes":"An amazing black and white image. This poster has some light roll creasing running along the bottom of the poster.","tags":["2005"],"gallery":["gallery_images/angel-a-1.jpg","gallery_images/angel-a-2.jpg"],"sort_title":"ANGEL-A","on_sale":false,"purchase_date":"","product_id":"prod_TiiMEWK6C7jVxX"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"ANGEL-A","description":"Luc Besson&#039;s underrated and relatively unknown 2005 fantasy drama Angel-A, starring Jamel Debbouze and Rie Rasmussen.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/angel-a.jpg","offers":{"@type":"Offer","price":64.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -192,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

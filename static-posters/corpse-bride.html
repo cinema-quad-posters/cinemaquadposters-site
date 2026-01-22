@@ -28,7 +28,7 @@
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/corpsebride.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/corpse-bride.html">
-    <script>const posterData = {"title":"CORPSE BRIDE","variant":null,"originally released":2005,"director":"Tim Burton","actors":["Johnny Depp","Helena Bonham","Emily Watson","Tracey Ullman","Paul Whitehouse","Joanna Lumley","Albert Finney"],"genre":["fantasy","adventure","animation","family","horror"],"condition":"near mint rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/corpsebride.jpg","hires":"posters/corpse-bride-quad-poster.jpg","price":44.99,"film_summary":"Tim Burton's brilliantly executed 2005 animation Corpse Bride, starring Johnny Depp, Helena Bonham Carter, Emily Watson, Tracey Ullman, Paul Whitehouse, Joanna Lumley, Albert Finney, Richard E. Grant, Christopher Lee and Jane Horrocks.","poster_notes":"","tags":["2005","animation"],"gallery":["gallery_images/corpse-bride-quad-postere-1.jpg","gallery_images/corpse-bride-quad-postere-2.jpg"],"sort_title":"CORPSE BRIDE","on_sale":false,"purchase_date":"","product_id":"prod_TiiN0db0EH6YpI"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"CORPSE BRIDE","description":"Tim Burton&#039;s brilliantly executed 2005 animation Corpse Bride, starring Johnny Depp, Helena Bonham Carter, Emily Watson, Tracey Ullman, Paul Whitehouse, Joanna Lumley, Albert Finney, Richard E. Grant, Christopher Lee and Jane Horrocks.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/corpsebride.jpg","offers":{"@type":"Offer","price":44.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"CORPSE BRIDE","variant":null,"originally released":2005,"director":"Tim Burton","actors":["Johnny Depp","Helena Bonham","Emily Watson","Tracey Ullman","Paul Whitehouse","Joanna Lumley","Albert Finney"],"genre":["fantasy","adventure","animation","family","horror"],"condition":"near mint rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/corpsebride.jpg","hires":"posters/corpse-bride-quad-poster.jpg","price":44.99,"film_summary":"Tim Burton's brilliantly executed 2005 animation Corpse Bride, starring Johnny Depp, Helena Bonham Carter, Emily Watson, Tracey Ullman, Paul Whitehouse, Joanna Lumley, Albert Finney, Richard E. Grant, Christopher Lee and Jane Horrocks.","poster_notes":"This poster has four small circular stains acros the moon, above/right of the title","tags":["2005","animation"],"gallery":["gallery_images/corpse-bride-quad-postere-1.jpg","gallery_images/corpse-bride-quad-postere-2.jpg"],"sort_title":"CORPSE BRIDE","on_sale":false,"purchase_date":"","product_id":"prod_TiiN0db0EH6YpI"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"CORPSE BRIDE","description":"Tim Burton&#039;s brilliantly executed 2005 animation Corpse Bride, starring Johnny Depp, Helena Bonham Carter, Emily Watson, Tracey Ullman, Paul Whitehouse, Joanna Lumley, Albert Finney, Richard E. Grant, Christopher Lee and Jane Horrocks.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/corpsebride.jpg","offers":{"@type":"Offer","price":44.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

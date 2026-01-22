@@ -21,14 +21,14 @@
 
 
         <title>BATMAN BEGINS (2005) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch cinema quad poster (stylen B) of Christopher Nolan&#039;s intelligently revamped 2005 blockbuster Batman Begins, starring Christian Bale, Michae... Buy this collectible cinema poster.">
+        <meta name="description" content="Christopher Nolan&#039;s intelligently revamped 2005 blockbuster Batman Begins, starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cilli... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="BATMAN BEGINS (2005) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch cinema quad poster (stylen B) of Christopher Nolan&#039;s intelligently revamped 2005 blockbuster Batman Begins, starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Christopher Nolan&#039;s intelligently revamped 2005 blockbuster Batman Begins, starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Rutger Hauer and Morgan Freem... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/batman-begins-b-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/batman-begins-style-b.html">
-    <script>const posterData = {"title":"BATMAN BEGINS","variant":"Style B","originally released":2005,"director":"Christopher Nolan","actors":["Christian Bale","Michael Caine","Liam Neeson","Katie Holmes","Gary Oldman","Cillian Murphy","Rutger Hauer","Morgan Freeman"],"genre":["crime","action","superhero"],"condition":"excellent rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/batman-begins-b-quad-poster.jpg","hires":"posters/batman-begins-b-quad-poster.jpg","price":59.99,"film_summary":"British 30 x 40 inch cinema quad poster (stylen B) of Christopher Nolan's intelligently revamped 2005 blockbuster Batman Begins, starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Rutger Hauer and Morgan Freeman. By far the best poster design of Christopher Nolan's Batman trilogy, this film poster is in excellent rolled with very mibor edge wear.","poster_notes":"","tags":["2005","Christopher Nolan","Christian Bale","Michael Caine","rolled"],"gallery":["gallery_images/batman-begins-b-quad-poster-1.jpg","gallery_images/batman-begins-b-quad-poster-2.jpg"],"sort_title":"BATMAN BEGINS","on_sale":false,"purchase_date":"","product_id":"prod_TiiM2QxmQL4pR9"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BATMAN BEGINS","description":"British 30 x 40 inch cinema quad poster (stylen B) of Christopher Nolan&#039;s intelligently revamped 2005 blockbuster Batman Begins, starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Rutger Hauer and Morgan Freeman. By far the best poster design of Christopher Nolan&#039;s Batman trilogy, this film poster is in excellent rolled with very mibor edge wear.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/batman-begins-b-quad-poster.jpg","offers":{"@type":"Offer","price":59.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"BATMAN BEGINS","variant":"Style B","originally released":2005,"director":"Christopher Nolan","actors":["Christian Bale","Michael Caine","Liam Neeson","Katie Holmes","Gary Oldman","Cillian Murphy","Rutger Hauer","Morgan Freeman"],"genre":["crime","action","superhero"],"condition":"excellent rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/batman-begins-b-quad-poster.jpg","hires":"posters/batman-begins-b-quad-poster.jpg","price":59.99,"film_summary":"Christopher Nolan's intelligently revamped 2005 blockbuster Batman Begins, starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Rutger Hauer and Morgan Freeman.","poster_notes":"By far the best poster design of Christopher Nolan's Batman trilogy. This film poster has minor edge wear.","tags":["2005"],"gallery":["gallery_images/batman-begins-b-quad-poster-1.jpg","gallery_images/batman-begins-b-quad-poster-2.jpg"],"sort_title":"BATMAN BEGINS","on_sale":false,"purchase_date":"","product_id":"prod_TiiM2QxmQL4pR9"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BATMAN BEGINS","description":"Christopher Nolan&#039;s intelligently revamped 2005 blockbuster Batman Begins, starring Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Cillian Murphy, Rutger Hauer and Morgan Freeman.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/batman-begins-b-quad-poster.jpg","offers":{"@type":"Offer","price":59.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

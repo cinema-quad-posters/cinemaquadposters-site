@@ -20,15 +20,15 @@
 </script>
 
 
-        <title>A MATTER OF LIFE AND DEATH (2018) – Original British Quad Poster – Cinema Quad Posters</title>
+        <title>A MATTER OF LIFE AND DEATH (2046) – Original British Quad Poster – Cinema Quad Posters</title>
         <meta name="description" content="2018 re-release of Powell and Pressburger&#039;s magnificent 1946 classic A Matter Of Life And Death, starring David Niven and Kim Hunter.... Buy this collectible cinema poster.">
     
-    <meta property="og:title" content="A MATTER OF LIFE AND DEATH (2018) – Original British Quad Poster – Cinema Quad Posters">
+    <meta property="og:title" content="A MATTER OF LIFE AND DEATH (2046) – Original British Quad Poster – Cinema Quad Posters">
     <meta property="og:description" content="2018 re-release of Powell and Pressburger&#039;s magnificent 1946 classic A Matter Of Life And Death, starring David Niven and Kim Hunter.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/a-matter-of-life-and-death-4k-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/a-matter-of-life-and-death-park-circus-4k-re-release.html">
-    <script>const posterData = {"title":"A MATTER OF LIFE AND DEATH","variant":"Park Circus 4K re-release","originally released":2018,"director":"Powell and Pressburger","actors":["David Niven","Kim Hunter"],"genre":["supernatural","romance","fantasy","war","drama"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/a-matter-of-life-and-death-4k-quad-poster.jpg","hires":"posters/a-matter-of-life-and-death-4k-quad-poster.jpg","price":174.99,"film_summary":"2018 re-release of Powell and Pressburger's magnificent 1946 classic A Matter Of Life And Death, starring David Niven and Kim Hunter.","poster_notes":"This is a truly stunning re-release design","tags":["2018"],"gallery":["gallery_images/a-matter-of-life-and-death-4k-quad-poster-1.jpg","gallery_images/a-matter-of-life-and-death-4k-quad-poster-2.jpg"],"sort_title":"MATTER OF LIFE AND DEATH","on_sale":false,"purchase_date":"","product_id":"prod_TiiOzkyFxXsWt1"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"A MATTER OF LIFE AND DEATH","description":"2018 re-release of Powell and Pressburger&#039;s magnificent 1946 classic A Matter Of Life And Death, starring David Niven and Kim Hunter.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/a-matter-of-life-and-death-4k-quad-poster.jpg","offers":{"@type":"Offer","price":174.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"A MATTER OF LIFE AND DEATH","variant":"Park Circus 4K re-release","originally released":2046,"director":"Powell and Pressburger","actors":["David Niven","Kim Hunter"],"genre":["supernatural","romance","fantasy","war","drama"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/a-matter-of-life-and-death-4k-quad-poster.jpg","hires":"posters/a-matter-of-life-and-death-4k-quad-poster.jpg","price":174.99,"film_summary":"2018 re-release of Powell and Pressburger's magnificent 1946 classic A Matter Of Life And Death, starring David Niven and Kim Hunter.","poster_notes":"This is a truly stunning re-release design","tags":["2018"],"gallery":["gallery_images/a-matter-of-life-and-death-4k-quad-poster-1.jpg","gallery_images/a-matter-of-life-and-death-4k-quad-poster-2.jpg"],"sort_title":"MATTER OF LIFE AND DEATH","on_sale":false,"purchase_date":"","product_id":"prod_TiiOzkyFxXsWt1"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"A MATTER OF LIFE AND DEATH","description":"2018 re-release of Powell and Pressburger&#039;s magnificent 1946 classic A Matter Of Life And Death, starring David Niven and Kim Hunter.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/a-matter-of-life-and-death-4k-quad-poster.jpg","offers":{"@type":"Offer","price":174.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

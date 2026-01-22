@@ -20,15 +20,15 @@
 </script>
 
 
-        <title>THE MATRIX (2019) – Original British Quad Poster – Cinema Quad Posters</title>
+        <title>THE MATRIX (1999) – Original British Quad Poster – Cinema Quad Posters</title>
         <meta name="description" content="2019 re-release of The Wachowski Brothers&#039; 1999 action sci-fi classic The Matrix, starring Keanu Reeves, Laurence Fishburne and Carrie-Anne Moss.... Buy this collectible cinema poster.">
     
-    <meta property="og:title" content="THE MATRIX (2019) – Original British Quad Poster – Cinema Quad Posters">
+    <meta property="og:title" content="THE MATRIX (1999) – Original British Quad Poster – Cinema Quad Posters">
     <meta property="og:description" content="2019 re-release of The Wachowski Brothers&#039; 1999 action sci-fi classic The Matrix, starring Keanu Reeves, Laurence Fishburne and Carrie-Anne Moss.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/the-matrix-20th-r-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/the-matrix-20th-anniversary-re-release.html">
-    <script>const posterData = {"title":"THE MATRIX","variant":"20th anniversary re-release","originally released":2019,"director":null,"actors":["Keanu Reeves","Laurence Fishburne","Anne Moss"],"genre":["dystopian","sci-fi","action","martial arts","adventure"],"condition":"excellent, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/the-matrix-20th-r-quad-poster.jpg","hires":"posters/the-matrix-20th-r-quad-poster.jpg","price":59.99,"film_summary":"2019 re-release of The Wachowski Brothers' 1999 action sci-fi classic The Matrix, starring Keanu Reeves, Laurence Fishburne and Carrie-Anne Moss.","poster_notes":"This modernised (and much better designed) re-release poster has some subtle roll wear.","tags":["35.30"],"gallery":["gallery_images/the-matrix-20th-r-quad-poster-1.jpg","gallery_images/the-matrix-20th-r-quad-poster-2.jpg"],"sort_title":"MATRIX","on_sale":false,"purchase_date":"2021-08-12","product_id":"prod_TiiOqEdINvFPe8"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"THE MATRIX","description":"2019 re-release of The Wachowski Brothers&#039; 1999 action sci-fi classic The Matrix, starring Keanu Reeves, Laurence Fishburne and Carrie-Anne Moss.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/the-matrix-20th-r-quad-poster.jpg","offers":{"@type":"Offer","price":59.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"THE MATRIX","variant":"20th anniversary re-release","originally released":1999,"director":null,"actors":["Keanu Reeves","Laurence Fishburne","Anne Moss"],"genre":["dystopian","sci-fi","action","martial arts","adventure"],"condition":"excellent, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/the-matrix-20th-r-quad-poster.jpg","hires":"posters/the-matrix-20th-r-quad-poster.jpg","price":59.99,"film_summary":"2019 re-release of The Wachowski Brothers' 1999 action sci-fi classic The Matrix, starring Keanu Reeves, Laurence Fishburne and Carrie-Anne Moss.","poster_notes":"This modernised (and much better designed) re-release poster has some subtle roll wear.","tags":["35.30"],"gallery":["gallery_images/the-matrix-20th-r-quad-poster-1.jpg","gallery_images/the-matrix-20th-r-quad-poster-2.jpg"],"sort_title":"MATRIX","on_sale":false,"purchase_date":"2021-08-12","product_id":"prod_TiiOqEdINvFPe8"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"THE MATRIX","description":"2019 re-release of The Wachowski Brothers&#039; 1999 action sci-fi classic The Matrix, starring Keanu Reeves, Laurence Fishburne and Carrie-Anne Moss.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/the-matrix-20th-r-quad-poster.jpg","offers":{"@type":"Offer","price":59.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

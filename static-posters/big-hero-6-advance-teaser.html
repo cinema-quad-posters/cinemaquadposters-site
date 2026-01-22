@@ -21,14 +21,14 @@
 
 
         <title>BIG HERO 6 (2014) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch quad poster for Don Hall and Chris Williams&#039;s 2014 highly entertaining, original and often moving Disney instant classic  Big Hero 6 starri... Buy this collectible cinema poster.">
+        <meta name="description" content="Don Hall and Chris Williams&#039;s 2014 highly entertaining, original and often moving Disney instant classic Big Hero 6, starring Ryan Potter, Scott Adsit and Jamie... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="BIG HERO 6 (2014) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch quad poster for Don Hall and Chris Williams&#039;s 2014 highly entertaining, original and often moving Disney instant classic  Big Hero 6 starring  Ryan Potter, Scott Adsit and Jamie C... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Don Hall and Chris Williams&#039;s 2014 highly entertaining, original and often moving Disney instant classic Big Hero 6, starring Ryan Potter, Scott Adsit and Jamie Chung.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/big-hero-6-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/big-hero-6-advance-teaser.html">
-    <script>const posterData = {"title":"BIG HERO 6","variant":"advance teaser","originally released":2014,"director":"Don Hall and Chris Williams","actors":["Ryan Potter","Scott Adsit","Jamie Chung"],"genre":["comedy","action","superhero","animation","adventure"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/big-hero-6-quad-poster.jpg","hires":"posters/big-hero-6-quad-poster.jpg","price":69.99,"film_summary":"British 30 x 40 inch quad poster for Don Hall and Chris Williams's 2014 highly entertaining, original and often moving Disney instant classic  Big Hero 6 starring  Ryan Potter, Scott Adsit and Jamie Chung.This poster is in near mint, rolled.","poster_notes":"","tags":["2014","Don Hall and Chris Williams","Ryan Potter","Scott Adsit","rolled"],"gallery":["gallery_images/big-hero-6-quad-poster-1.jpg","gallery_images/big-hero-6-quad-poster-2.jpg"],"sort_title":"BIG HERO 6","on_sale":false,"purchase_date":"","product_id":"prod_TiiMEx6C8SzICJ"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BIG HERO 6","description":"British 30 x 40 inch quad poster for Don Hall and Chris Williams&#039;s 2014 highly entertaining, original and often moving Disney instant classic  Big Hero 6 starring  Ryan Potter, Scott Adsit and Jamie Chung.This poster is in near mint, rolled.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/big-hero-6-quad-poster.jpg","offers":{"@type":"Offer","price":69.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"BIG HERO 6","variant":"advance teaser","originally released":2014,"director":"Don Hall and Chris Williams","actors":["Ryan Potter","Scott Adsit","Jamie Chung"],"genre":["comedy","action","superhero","animation","adventure"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/big-hero-6-quad-poster.jpg","hires":"posters/big-hero-6-quad-poster.jpg","price":69.99,"film_summary":"Don Hall and Chris Williams's 2014 highly entertaining, original and often moving Disney instant classic Big Hero 6, starring Ryan Potter, Scott Adsit and Jamie Chung.","poster_notes":"","tags":["2014"],"gallery":["gallery_images/big-hero-6-quad-poster-1.jpg","gallery_images/big-hero-6-quad-poster-2.jpg"],"sort_title":"BIG HERO 6","on_sale":false,"purchase_date":"","product_id":"prod_TiiMEx6C8SzICJ"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BIG HERO 6","description":"Don Hall and Chris Williams&#039;s 2014 highly entertaining, original and often moving Disney instant classic Big Hero 6, starring Ryan Potter, Scott Adsit and Jamie Chung.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/big-hero-6-quad-poster.jpg","offers":{"@type":"Offer","price":69.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

@@ -20,15 +20,15 @@
 </script>
 
 
-        <title>GHOSTBUSTERS (2011) – Original British Quad Poster – Cinema Quad Posters</title>
+        <title>GHOSTBUSTERS (2084) – Original British Quad Poster – Cinema Quad Posters</title>
         <meta name="description" content="Ivan Reitman&#039;s classic 1984 comedy Ghostbusters, starring Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis and Rick Moranis.... Buy this collectible cinema poster.">
     
-    <meta property="og:title" content="GHOSTBUSTERS (2011) – Original British Quad Poster – Cinema Quad Posters">
+    <meta property="og:title" content="GHOSTBUSTERS (2084) – Original British Quad Poster – Cinema Quad Posters">
     <meta property="og:description" content="Ivan Reitman&#039;s classic 1984 comedy Ghostbusters, starring Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis and Rick Moranis.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/ghostbusters-pc-2011-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/ghostbusters-park-circus-2011-re-release.html">
-    <script>const posterData = {"title":"GHOSTBUSTERS","variant":"Park Circus 2011 re-release","originally released":2011,"director":null,"actors":["Bill Murray","Dan Aykroyd","Sigourney Weaver","Harold Ramis","Rick Moranis"],"genre":["family","supernatural","comedy","romance"],"condition":"mint rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/ghostbusters-pc-2011-quad-poster.jpg","hires":"posters/ghostbusters-pc-2011-quad-poster.jpg","price":199.99,"film_summary":"Ivan Reitman's classic 1984 comedy Ghostbusters, starring Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis and Rick Moranis.","poster_notes":"This rare re-release poster perfectly compliments the original teaser.","tags":["2011"],"gallery":["gallery_images/ghostbusters-pc-2011-quad-poster-1.jpg","gallery_images/ghostbusters-pc-2011-quad-poster-2.jpg"],"sort_title":"GHOSTBUSTERS","on_sale":false,"purchase_date":"","product_id":"prod_TiiNOBUIditJt1"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"GHOSTBUSTERS","description":"Ivan Reitman&#039;s classic 1984 comedy Ghostbusters, starring Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis and Rick Moranis.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/ghostbusters-pc-2011-quad-poster.jpg","offers":{"@type":"Offer","price":199.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"GHOSTBUSTERS","variant":"Park Circus 2011 re-release","originally released":2084,"director":null,"actors":["Bill Murray","Dan Aykroyd","Sigourney Weaver","Harold Ramis","Rick Moranis"],"genre":["family","supernatural","comedy","romance"],"condition":"mint rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/ghostbusters-pc-2011-quad-poster.jpg","hires":"posters/ghostbusters-pc-2011-quad-poster.jpg","price":199.99,"film_summary":"Ivan Reitman's classic 1984 comedy Ghostbusters, starring Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis and Rick Moranis.","poster_notes":"This rare re-release poster perfectly compliments the original teaser.","tags":["2011"],"gallery":["gallery_images/ghostbusters-pc-2011-quad-poster-1.jpg","gallery_images/ghostbusters-pc-2011-quad-poster-2.jpg"],"sort_title":"GHOSTBUSTERS","on_sale":false,"purchase_date":"","product_id":"prod_TiiNOBUIditJt1"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"GHOSTBUSTERS","description":"Ivan Reitman&#039;s classic 1984 comedy Ghostbusters, starring Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis and Rick Moranis.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/ghostbusters-pc-2011-quad-poster.jpg","offers":{"@type":"Offer","price":199.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

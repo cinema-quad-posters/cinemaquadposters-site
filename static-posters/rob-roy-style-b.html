@@ -28,7 +28,7 @@
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/rob-roy-a-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/rob-roy-style-b.html">
-    <script>const posterData = {"title":"ROB ROY","variant":"Style B","originally released":1995,"director":"Michael Caton-Jones","actors":["Liam Neeson","Jessica Lange","John Hurt","Tim Roth","Eric Stoltz","Brian Cox"],"genre":["epic","biography","adventure","period drama"],"condition":"excellent, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/rob-roy-a-quad-poster.jpg","hires":"posters/rob-roy-a-quad-poster.jpg","price":19.99,"film_summary":"Michael Caton-Jones' underrated 1995 epic Rob Roy, starring Liam Neeson, Jessica Lange, John Hurt, Tim Roth, Eric Stoltz and Brian Cox.","poster_notes":"This is a far more romantic poster design (than Style A). This poster is missing the top right corner and has some kinking in the white space along the bottom edge.","tags":["1995"],"gallery":["gallery_images/rob-roy-a-quad-poster-1.jpg","gallery_images/rob-roy-a-quad-poster-2.jpg"],"sort_title":"ROB ROY","on_sale":false,"purchase_date":"","product_id":"prod_TiiP3ZGuBoauBR"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"ROB ROY","description":"Michael Caton-Jones&#039; underrated 1995 epic Rob Roy, starring Liam Neeson, Jessica Lange, John Hurt, Tim Roth, Eric Stoltz and Brian Cox.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/rob-roy-a-quad-poster.jpg","offers":{"@type":"Offer","price":19.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"ROB ROY","variant":"Style B","originally released":1995,"director":"Michael Caton-Jones","actors":["Liam Neeson","Jessica Lange","John Hurt","Tim Roth","Eric Stoltz","Brian Cox"],"genre":["epic","biography","adventure","period drama"],"condition":"excellent, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/rob-roy-a-quad-poster.jpg","hires":"posters/rob-roy-a-quad-poster.jpg","price":19.99,"film_summary":"Michael Caton-Jones' underrated 1995 epic Rob Roy, starring Liam Neeson, Jessica Lange, John Hurt, Tim Roth, Eric Stoltz and Brian Cox.","poster_notes":"This is a far more romantic poster design (than Style A). This poster is missing the top right corner and has some kinking in the white space along the bottom edge.","tags":["1995"],"gallery":["gallery_images/rob-roy-a-quad-poster-1.jpg","gallery_images/rob-roy-a-quad-poster-2.jpg"],"sort_title":"ROB ROY","on_sale":true,"purchase_date":"","product_id":"prod_TiiP3ZGuBoauBR"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"ROB ROY","description":"Michael Caton-Jones&#039; underrated 1995 epic Rob Roy, starring Liam Neeson, Jessica Lange, John Hurt, Tim Roth, Eric Stoltz and Brian Cox.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/rob-roy-a-quad-poster.jpg","offers":{"@type":"Offer","price":19.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

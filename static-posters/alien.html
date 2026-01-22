@@ -21,14 +21,14 @@
 
 
         <title>ALIEN³ (1992) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch cinema quad poster for David Fincher&#039;s dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles... Buy this collectible cinema poster.">
+        <meta name="description" content="David Fincher&#039;s dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover, Ral... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="ALIEN³ (1992) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch cinema quad poster for David Fincher&#039;s dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover,... Buy this collectible cinema poster.">
+    <meta property="og:description" content="David Fincher&#039;s dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover, Ralph Brown, Paul McGann, Danny Webb and La... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/alien-3-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/alien.html">
-    <script>const posterData = {"title":"ALIEN³","variant":null,"originally released":1992,"director":"David Fincher","actors":["Sigourney Weaver","Charles S. Dutton","Charles Dance","Brian Glover","Ralph Brown","Paul McGann","Lance Henriksen"],"genre":["action","horror","sci-fi"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/alien-3-quad-poster.jpg","hires":"posters/alien-3-quad-poster.jpg","price":79.99,"film_summary":"British 30 x 40 inch cinema quad poster for David Fincher's dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover, Ralph Brown, Paul McGann, Danny Webb and Lance Henriksen.","poster_notes":"Unlike most versions of this poster that were printed on modern gloss paper, this one has been printed on traditional quad paper stock of the pre-90's.","tags":["rolled"],"gallery":["gallery_images/alien-3-quad-poster-1.jpg","gallery_images/alien-3-quad-poster-2.jpg"],"sort_title":"ALIEN 3","on_sale":false,"purchase_date":"","product_id":"prod_TiiMZQhsTarL2d"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"ALIEN³","description":"British 30 x 40 inch cinema quad poster for David Fincher&#039;s dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover, Ralph Brown, Paul McGann, Danny Webb and Lance Henriksen.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/alien-3-quad-poster.jpg","offers":{"@type":"Offer","price":79.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"ALIEN³","variant":null,"originally released":1992,"director":"David Fincher","actors":["Sigourney Weaver","Charles S. Dutton","Charles Dance","Brian Glover","Ralph Brown","Paul McGann","Lance Henriksen"],"genre":["action","horror","sci-fi"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/alien-3-quad-poster.jpg","hires":"posters/alien-3-quad-poster.jpg","price":79.99,"film_summary":"David Fincher's dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover, Ralph Brown, Paul McGann, Danny Webb and Lance Henriksen.","poster_notes":"Unlike most versions of this poster that were printed on modern gloss paper, this one has been printed on traditional quad paper stock of the pre-90's.","tags":["rolled"],"gallery":["gallery_images/alien-3-quad-poster-1.jpg","gallery_images/alien-3-quad-poster-2.jpg"],"sort_title":"ALIEN 3","on_sale":false,"purchase_date":"","product_id":"prod_TiiMZQhsTarL2d"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"ALIEN³","description":"David Fincher&#039;s dark, atmospheric and highly underrated 1992 feature debut Alien³ starring Sigourney Weaver, Charles S. Dutton, Charles Dance, Brian Glover, Ralph Brown, Paul McGann, Danny Webb and Lance Henriksen.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/alien-3-quad-poster.jpg","offers":{"@type":"Offer","price":79.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

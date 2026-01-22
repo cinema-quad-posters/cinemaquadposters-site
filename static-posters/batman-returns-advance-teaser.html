@@ -21,14 +21,14 @@
 
 
         <title>BATMAN RETURNS (1992) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch cinema quad teaser poster for Tim Burton&#039;s dark 1992 sequel Batman Returns, starring Michael Keaton, Danny Devito and the Michelle Pfeiffer... Buy this collectible cinema poster.">
+        <meta name="description" content="Tim Burton&#039;s dark 1992 sequel Batman Returns, starring Michael Keaton, Danny Devito and the Michelle Pfeiffer.... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="BATMAN RETURNS (1992) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch cinema quad teaser poster for Tim Burton&#039;s dark 1992 sequel Batman Returns, starring Michael Keaton, Danny Devito and the Michelle Pfeiffer. This rare film poster is in near mint,... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Tim Burton&#039;s dark 1992 sequel Batman Returns, starring Michael Keaton, Danny Devito and the Michelle Pfeiffer.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/batman-returns-teaser-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/batman-returns-advance-teaser.html">
-    <script>const posterData = {"title":"BATMAN RETURNS","variant":"advance teaser","originally released":1992,"director":"Tim Burton","actors":["Michael Keaton","Danny Devito","Michelle Pfeiffer"],"genre":["family","time travel","adventure","comedy"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/batman-returns-teaser-quad-poster.jpg","hires":"posters/batman-returns-teaser-quad-poster.jpg","price":74.99,"film_summary":"British 30 x 40 inch cinema quad teaser poster for Tim Burton's dark 1992 sequel Batman Returns, starring Michael Keaton, Danny Devito and the Michelle Pfeiffer. This rare film poster is in near mint, rolled with minor edge wear.","poster_notes":"","tags":["1989","Danny Devito","Michael Keaton","Michelle Pfeiffer","Tim Burton","Teaser","rolled"],"gallery":["gallery_images/batman-returns-teaser-quad-poster-1.jpg","gallery_images/batman-returns-teaser-quad-poster-2.jpg"],"sort_title":"BATMAN RETURNS","on_sale":false,"purchase_date":"","product_id":"prod_TiiMkGgie59uaH"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BATMAN RETURNS","description":"British 30 x 40 inch cinema quad teaser poster for Tim Burton&#039;s dark 1992 sequel Batman Returns, starring Michael Keaton, Danny Devito and the Michelle Pfeiffer. This rare film poster is in near mint, rolled with minor edge wear.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/batman-returns-teaser-quad-poster.jpg","offers":{"@type":"Offer","price":74.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"BATMAN RETURNS","variant":"advance teaser","originally released":1992,"director":"Tim Burton","actors":["Michael Keaton","Danny Devito","Michelle Pfeiffer"],"genre":["family","time travel","adventure","comedy"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/batman-returns-teaser-quad-poster.jpg","hires":"posters/batman-returns-teaser-quad-poster.jpg","price":74.99,"film_summary":"Tim Burton's dark 1992 sequel Batman Returns, starring Michael Keaton, Danny Devito and the Michelle Pfeiffer.","poster_notes":"This rare film poster has minor edge wear.","tags":["1989"],"gallery":["gallery_images/batman-returns-teaser-quad-poster-1.jpg","gallery_images/batman-returns-teaser-quad-poster-2.jpg"],"sort_title":"BATMAN RETURNS","on_sale":false,"purchase_date":"","product_id":"prod_TiiMkGgie59uaH"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BATMAN RETURNS","description":"Tim Burton&#039;s dark 1992 sequel Batman Returns, starring Michael Keaton, Danny Devito and the Michelle Pfeiffer.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/batman-returns-teaser-quad-poster.jpg","offers":{"@type":"Offer","price":74.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

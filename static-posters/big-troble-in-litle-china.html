@@ -21,14 +21,14 @@
 
 
         <title>BIG TROBLE IN LITLE CHINA (1986) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch original cinema quad poster for John Carpenter&#039;s 1986 cult classic  Big Trouble In Little China starring Kurt Russell, Kim Cattrall and Den... Buy this collectible cinema poster.">
+        <meta name="description" content="John Carpenter&#039;s 1986 cult classic Big Trouble In Little China, starring Kurt Russell, Kim Cattrall and Dennis Dun.... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="BIG TROBLE IN LITLE CHINA (1986) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch original cinema quad poster for John Carpenter&#039;s 1986 cult classic  Big Trouble In Little China starring Kurt Russell, Kim Cattrall and Dennis Dun.This exceedingly sought aftter p... Buy this collectible cinema poster.">
+    <meta property="og:description" content="John Carpenter&#039;s 1986 cult classic Big Trouble In Little China, starring Kurt Russell, Kim Cattrall and Dennis Dun.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/big-trouble-in-little-china-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/big-troble-in-litle-china.html">
-    <script>const posterData = {"title":"BIG TROBLE IN LITLE CHINA","variant":null,"originally released":1986,"director":"John Carpenter","actors":["Kurt Russell","Kim Cattrall","Dennis Dun"],"genre":["comedy","action","fantasy","adventure"],"condition":"mint rolled linen backed condition","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/big-trouble-in-little-china-quad-poster.jpg","hires":"posters/big-trouble-in-little-china-quad-poster.jpg","price":1059.99,"film_summary":"British 30 x 40 inch original cinema quad poster for John Carpenter's 1986 cult classic  Big Trouble In Little China starring Kurt Russell, Kim Cattrall and Dennis Dun.This exceedingly sought aftter poster with its spectacular artwork has been linen-backed and is in near mint, rolled.","poster_notes":"","tags":["1986","John Carpenter","Kim Cattrall","Kurt Russell","rolled"],"gallery":["gallery_images/big-trouble-in-little-china-quad-poster-1.jpg","gallery_images/big-trouble-in-little-china-quad-poster-2.jpg"],"sort_title":"BIG TROBLE IN LITLE CHINA","on_sale":false,"purchase_date":"","product_id":"prod_TiiM8cFAACoQeN"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BIG TROBLE IN LITLE CHINA","description":"British 30 x 40 inch original cinema quad poster for John Carpenter&#039;s 1986 cult classic  Big Trouble In Little China starring Kurt Russell, Kim Cattrall and Dennis Dun.This exceedingly sought aftter poster with its spectacular artwork has been linen-backed and is in near mint, rolled.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/big-trouble-in-little-china-quad-poster.jpg","offers":{"@type":"Offer","price":1059.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"BIG TROBLE IN LITLE CHINA","variant":null,"originally released":1986,"director":"John Carpenter","actors":["Kurt Russell","Kim Cattrall","Dennis Dun"],"genre":["comedy","action","fantasy","adventure"],"condition":"mint, rolled, linen backed.","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/big-trouble-in-little-china-quad-poster.jpg","hires":"posters/big-trouble-in-little-china-quad-poster.jpg","price":1059.99,"film_summary":"John Carpenter's 1986 cult classic Big Trouble In Little China, starring Kurt Russell, Kim Cattrall and Dennis Dun.","poster_notes":"This exceedingly sought after poster, with its spectacular artwork has been beautifully linen-backed.","tags":["1986"],"gallery":["gallery_images/big-trouble-in-little-china-quad-poster-1.jpg","gallery_images/big-trouble-in-little-china-quad-poster-2.jpg"],"sort_title":"BIG TROBLE IN LITLE CHINA","on_sale":false,"purchase_date":"","product_id":"prod_TiiM8cFAACoQeN"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BIG TROBLE IN LITLE CHINA","description":"John Carpenter&#039;s 1986 cult classic Big Trouble In Little China, starring Kurt Russell, Kim Cattrall and Dennis Dun.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/big-trouble-in-little-china-quad-poster.jpg","offers":{"@type":"Offer","price":1059.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

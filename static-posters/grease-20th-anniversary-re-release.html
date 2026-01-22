@@ -28,7 +28,7 @@
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/grease-20th-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/grease-20th-anniversary-re-release.html">
-    <script>const posterData = {"title":"GREASE","variant":"20th anniversary re-release","originally released":1978,"director":null,"actors":["John Travolta","Olivia Newton"],"genre":["teen","musical","romance"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/grease-20th-quad-poster.jpg","hires":"posters/grease-20th-quad-poster.jpg","price":34.99,"film_summary":"1998 re-release of the 1978 oscar nominated musical Grease, starring John Travolta & Olivia Newton-John.","poster_notes":"This poster has some minor edge wear.","tags":["1998"],"gallery":["gallery_images/grease-20th-quad-poster-1.jpg","gallery_images/grease-20th-quad-poster-2.jpg"],"sort_title":"GREASE","on_sale":false,"purchase_date":"","product_id":"prod_TiiNpQGaeic8dt"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"GREASE","description":"1998 re-release of the 1978 oscar nominated musical Grease, starring John Travolta &amp; Olivia Newton-John.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/grease-20th-quad-poster.jpg","offers":{"@type":"Offer","price":34.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"GREASE","variant":"20th anniversary re-release","originally released":1978,"director":null,"actors":["John Travolta","Olivia Newton"],"genre":["teen","musical","romance"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/grease-20th-quad-poster.jpg","hires":"posters/grease-20th-quad-poster.jpg","price":44.99,"film_summary":"1998 re-release of the 1978 oscar nominated musical Grease, starring John Travolta & Olivia Newton-John.","poster_notes":"This poster has some minor edge wear.","tags":["1998"],"gallery":["gallery_images/grease-20th-quad-poster-1.jpg","gallery_images/grease-20th-quad-poster-2.jpg"],"sort_title":"GREASE","on_sale":false,"purchase_date":"","product_id":""};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"GREASE","description":"1998 re-release of the 1978 oscar nominated musical Grease, starring John Travolta &amp; Olivia Newton-John.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/grease-20th-quad-poster.jpg","offers":{"@type":"Offer","price":44.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

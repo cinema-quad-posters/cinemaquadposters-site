@@ -20,15 +20,15 @@
 </script>
 
 
-        <title>HEATHERS (2018) – Original British Quad Poster – Cinema Quad Posters</title>
+        <title>HEATHERS (1988) – Original British Quad Poster – Cinema Quad Posters</title>
         <meta name="description" content="2018 re-release of Michael Lehmann&#039;s 1988 black comedy classic Heathers, starring Winona Ryder, Christian Slater and Shannen Doherty.... Buy this collectible cinema poster.">
     
-    <meta property="og:title" content="HEATHERS (2018) – Original British Quad Poster – Cinema Quad Posters">
+    <meta property="og:title" content="HEATHERS (1988) – Original British Quad Poster – Cinema Quad Posters">
     <meta property="og:description" content="2018 re-release of Michael Lehmann&#039;s 1988 black comedy classic Heathers, starring Winona Ryder, Christian Slater and Shannen Doherty.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/heathers-30th-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/heathers-30th-anniversary-re-release.html">
-    <script>const posterData = {"title":"HEATHERS","variant":"30th anniversary re-release","originally released":2018,"director":"Michael Lehmann","actors":["Winona Ryder","Christian Slater","Shannen Doherty"],"genre":["crime","comedy","teen","satire"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/heathers-30th-quad-poster.jpg","hires":"posters/heathers-30th-quad-poster.jpg","price":99.99,"film_summary":"2018 re-release of Michael Lehmann's 1988 black comedy classic Heathers, starring Winona Ryder, Christian Slater and Shannen Doherty.","poster_notes":"This artwork is a stunning re-design for a rare linited re-release poster.","tags":["31.52"],"gallery":["gallery_images/heathers-30th-quad-poster-1.jpg","gallery_images/heathers-30th-quad-poster-2.jpg"],"sort_title":"HEATHERS","on_sale":false,"purchase_date":"2018-08-24","product_id":"prod_TiiOklNvlva2I3"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"HEATHERS","description":"2018 re-release of Michael Lehmann&#039;s 1988 black comedy classic Heathers, starring Winona Ryder, Christian Slater and Shannen Doherty.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/heathers-30th-quad-poster.jpg","offers":{"@type":"Offer","price":99.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"HEATHERS","variant":"30th anniversary re-release","originally released":1988,"director":"Michael Lehmann","actors":["Winona Ryder","Christian Slater","Shannen Doherty"],"genre":["crime","comedy","teen","satire"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/heathers-30th-quad-poster.jpg","hires":"posters/heathers-30th-quad-poster.jpg","price":99.99,"film_summary":"2018 re-release of Michael Lehmann's 1988 black comedy classic Heathers, starring Winona Ryder, Christian Slater and Shannen Doherty.","poster_notes":"This artwork is a stunning re-design for a rare linited re-release poster.","tags":["31.52"],"gallery":["gallery_images/heathers-30th-quad-poster-1.jpg","gallery_images/heathers-30th-quad-poster-2.jpg"],"sort_title":"HEATHERS","on_sale":false,"purchase_date":"2018-08-24","product_id":"prod_TiiOklNvlva2I3"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"HEATHERS","description":"2018 re-release of Michael Lehmann&#039;s 1988 black comedy classic Heathers, starring Winona Ryder, Christian Slater and Shannen Doherty.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/heathers-30th-quad-poster.jpg","offers":{"@type":"Offer","price":99.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

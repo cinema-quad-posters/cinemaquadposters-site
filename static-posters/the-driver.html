@@ -21,14 +21,14 @@
 
 
         <title>THE DRIVER (1978) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch cinema quad poster for Walter Hill&#039;s 1978 cult crime thriller The Driver  starring Ryan O&#039;Neal, Isabelle Adjani and Bruce Dern.... Buy this collectible cinema poster.">
+        <meta name="description" content="Walter Hill&#039;s 1978 cult crime thriller The Driver, starring Ryan O&#039;Neal, Isabelle Adjani and Bruce Dern.... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="THE DRIVER (1978) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch cinema quad poster for Walter Hill&#039;s 1978 cult crime thriller The Driver  starring Ryan O&#039;Neal, Isabelle Adjani and Bruce Dern.... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Walter Hill&#039;s 1978 cult crime thriller The Driver, starring Ryan O&#039;Neal, Isabelle Adjani and Bruce Dern.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/the-driver-4k-r-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/the-driver.html">
-    <script>const posterData = {"title":"THE DRIVER","variant":null,"originally released":1978,"director":"Walter Hill","actors":["Isabelle Adjani","Bruce Dern"],"genre":["action","crime","psychological","thriller"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/the-driver-4k-r-quad-poster.jpg","hires":"posters/the-driver-4k-r-quad-poster.jpg","price":284.99,"film_summary":"British 30 x 40 inch cinema quad poster for Walter Hill's 1978 cult crime thriller The Driver  starring Ryan O'Neal, Isabelle Adjani and Bruce Dern.","poster_notes":"This is a stunning design, for this rare limited rerelease.","tags":["39.95","rolled"],"gallery":["gallery_images/the-driver-4k-r-quad-poster-1.jpg","gallery_images/the-driver-4k-r-quad-poster-2.jpg"],"sort_title":"DRIVER","on_sale":false,"purchase_date":"2023-02-17","product_id":"prod_TiiNaJclyKeaZF"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"THE DRIVER","description":"British 30 x 40 inch cinema quad poster for Walter Hill&#039;s 1978 cult crime thriller The Driver  starring Ryan O&#039;Neal, Isabelle Adjani and Bruce Dern.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/the-driver-4k-r-quad-poster.jpg","offers":{"@type":"Offer","price":284.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"THE DRIVER","variant":null,"originally released":1978,"director":"Walter Hill","actors":["Isabelle Adjani","Bruce Dern"],"genre":["action","crime","psychological","thriller"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/the-driver-4k-r-quad-poster.jpg","hires":"posters/the-driver-4k-r-quad-poster.jpg","price":284.99,"film_summary":"Walter Hill's 1978 cult crime thriller The Driver, starring Ryan O'Neal, Isabelle Adjani and Bruce Dern.","poster_notes":"This is a stunning design, for this rare limited rerelease.","tags":["39.95","rolled"],"gallery":["gallery_images/the-driver-4k-r-quad-poster-1.jpg","gallery_images/the-driver-4k-r-quad-poster-2.jpg"],"sort_title":"DRIVER","on_sale":false,"purchase_date":"2023-02-17","product_id":"prod_TiiNaJclyKeaZF"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"THE DRIVER","description":"Walter Hill&#039;s 1978 cult crime thriller The Driver, starring Ryan O&#039;Neal, Isabelle Adjani and Bruce Dern.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/the-driver-4k-r-quad-poster.jpg","offers":{"@type":"Offer","price":284.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

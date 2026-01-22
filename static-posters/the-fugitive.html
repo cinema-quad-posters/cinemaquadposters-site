@@ -21,14 +21,14 @@
 
 
         <title>THE FUGITIVE (1993) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch original cinema quad poster for Andrew Davis&#039; brilliant 1993 action thriller The Fugitive, based on the 1960&#039;s TV series, starring Harrison... Buy this collectible cinema poster.">
+        <meta name="description" content="Andrew Davis&#039; brilliant 1993 action thriller The Fugitive, based on the 1960&#039;s TV series, starring Harrison Ford and Tommy-Lee Jones.... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="THE FUGITIVE (1993) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch original cinema quad poster for Andrew Davis&#039; brilliant 1993 action thriller The Fugitive, based on the 1960&#039;s TV series, starring Harrison Ford and Tommy-Lee Jones.... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Andrew Davis&#039; brilliant 1993 action thriller The Fugitive, based on the 1960&#039;s TV series, starring Harrison Ford and Tommy-Lee Jones.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/the-fugitive-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/the-fugitive.html">
-    <script>const posterData = {"title":"THE FUGITIVE","variant":null,"originally released":1993,"director":"Andrew Davis","actors":["Harrison Ford","Tommy Lee Jones","Sela Ward"],"genre":["action","crime","mystery","thriller"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/the-fugitive-quad-poster.jpg","hires":"posters/the-fugitive-quad-poster.jpg","price":84.99,"film_summary":"British 30 x 40 inch original cinema quad poster for Andrew Davis' brilliant 1993 action thriller The Fugitive, based on the 1960's TV series, starring Harrison Ford and Tommy-Lee Jones.","poster_notes":"This is still Ford's last decent film by a mile, and the dynamic design is all the more sought after for it.","tags":["17.99"],"gallery":["gallery_images/the-fugitive-quad-poster-1.jpg","gallery_images/the-fugitive-quad-poster-2.jpg"],"sort_title":"FUGITIVE","on_sale":false,"purchase_date":"2019-07-25","product_id":"prod_TiiN3MUwLxqFm0"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"THE FUGITIVE","description":"British 30 x 40 inch original cinema quad poster for Andrew Davis&#039; brilliant 1993 action thriller The Fugitive, based on the 1960&#039;s TV series, starring Harrison Ford and Tommy-Lee Jones.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/the-fugitive-quad-poster.jpg","offers":{"@type":"Offer","price":84.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"THE FUGITIVE","variant":null,"originally released":1993,"director":"Andrew Davis","actors":["Harrison Ford","Tommy Lee Jones","Sela Ward"],"genre":["action","crime","mystery","thriller"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/the-fugitive-quad-poster.jpg","hires":"posters/the-fugitive-quad-poster.jpg","price":84.99,"film_summary":"Andrew Davis' brilliant 1993 action thriller The Fugitive, based on the 1960's TV series, starring Harrison Ford and Tommy-Lee Jones.","poster_notes":"This is still Ford's last decent film by a mile, and the dynamic design is all the more sought after for it.","tags":["17.99"],"gallery":["gallery_images/the-fugitive-quad-poster-1.jpg","gallery_images/the-fugitive-quad-poster-2.jpg"],"sort_title":"FUGITIVE","on_sale":false,"purchase_date":"2019-07-25","product_id":"prod_TiiN3MUwLxqFm0"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"THE FUGITIVE","description":"Andrew Davis&#039; brilliant 1993 action thriller The Fugitive, based on the 1960&#039;s TV series, starring Harrison Ford and Tommy-Lee Jones.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/the-fugitive-quad-poster.jpg","offers":{"@type":"Offer","price":84.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

@@ -21,14 +21,14 @@
 
 
         <title>BLADE RUNNER - THE FINAL CUT (1982) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch re-release cinema quad poster for Ridley Scott&#039;s definitive final cut of his 1982 cult classic Blade Runnerstarring Harrison Ford, Rutger H... Buy this collectible cinema poster.">
+        <meta name="description" content="Final Cut re-release of Ridley Scott&#039;s definitive final cut of his 1982 cult classic Blade Runnerstarring Harrison Ford, Rutger Hauer, Sean Young and Daryl Hann... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="BLADE RUNNER - THE FINAL CUT (1982) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch re-release cinema quad poster for Ridley Scott&#039;s definitive final cut of his 1982 cult classic Blade Runnerstarring Harrison Ford, Rutger Hauer, Sean Young and Daryl HannahThis ex... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Final Cut re-release of Ridley Scott&#039;s definitive final cut of his 1982 cult classic Blade Runnerstarring Harrison Ford, Rutger Hauer, Sean Young and Daryl Hannah.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/blade-runner-fc-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/blade-runner-the-final-cut-2007-final-cut-re-release.html">
-    <script>const posterData = {"title":"BLADE RUNNER - THE FINAL CUT","variant":"2007 final cut re-release","originally released":1982,"director":"Ridley Scott","actors":["Harrison Ford","Rutger Hauer","Sean Young","Daryl Hannah"],"genre":["sci-fi","action","thriller"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/blade-runner-fc-quad-poster.jpg","hires":"posters/blade-runner-final-cut-quad-poster.jpg","price":199.99,"film_summary":"British 30 x 40 inch re-release cinema quad poster for Ridley Scott's definitive final cut of his 1982 cult classic Blade Runnerstarring Harrison Ford, Rutger Hauer, Sean Young and Daryl HannahThis exceptionally rare limited release film poster is in near mint, rolled, except for a small square of tape on each corner and some minor edge wear in places.","poster_notes":"","tags":["1982","Harrison Ford","Ridley Scott","Rutger Hauer","rolled"],"gallery":["gallery_images/blade-runner-final-cut-quad-poster-1.jpg","gallery_images/blade-runner-final-cut-quad-poster-2.jpg"],"sort_title":"BLADE RUNNER - THE FINAL CUT","on_sale":false,"purchase_date":"","product_id":"prod_TiiMY8CurOwo0L"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BLADE RUNNER - THE FINAL CUT","description":"British 30 x 40 inch re-release cinema quad poster for Ridley Scott&#039;s definitive final cut of his 1982 cult classic Blade Runnerstarring Harrison Ford, Rutger Hauer, Sean Young and Daryl HannahThis exceptionally rare limited release film poster is in near mint, rolled, except for a small square of tape on each corner and some minor edge wear in places.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/blade-runner-fc-quad-poster.jpg","offers":{"@type":"Offer","price":199.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"BLADE RUNNER - THE FINAL CUT","variant":"2007 final cut re-release","originally released":1982,"director":"Ridley Scott","actors":["Harrison Ford","Rutger Hauer","Sean Young","Daryl Hannah"],"genre":["sci-fi","action","thriller"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/blade-runner-fc-quad-poster.jpg","hires":"posters/blade-runner-final-cut-quad-poster.jpg","price":199.99,"film_summary":"Final Cut re-release of Ridley Scott's definitive final cut of his 1982 cult classic Blade Runnerstarring Harrison Ford, Rutger Hauer, Sean Young and Daryl Hannah.","poster_notes":"This exceptionally rare limited release film poster has a small square of tape on each corner and some minor edge wear in places.","tags":["1982"],"gallery":["gallery_images/blade-runner-final-cut-quad-poster-1.jpg","gallery_images/blade-runner-final-cut-quad-poster-2.jpg"],"sort_title":"BLADE RUNNER - THE FINAL CUT","on_sale":false,"purchase_date":"","product_id":"prod_TiiMY8CurOwo0L"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BLADE RUNNER - THE FINAL CUT","description":"Final Cut re-release of Ridley Scott&#039;s definitive final cut of his 1982 cult classic Blade Runnerstarring Harrison Ford, Rutger Hauer, Sean Young and Daryl Hannah.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/blade-runner-fc-quad-poster.jpg","offers":{"@type":"Offer","price":199.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

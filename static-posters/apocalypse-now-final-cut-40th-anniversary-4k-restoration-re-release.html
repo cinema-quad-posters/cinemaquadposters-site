@@ -21,14 +21,14 @@
 
 
         <title>APOCALYPSE NOW - FINAL CUT (1979) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch 40th anniversary final cut re-release quad poster for Francis Ford Coppola&#039;s 1979 classic war film Apocalypse Now  starring Marlon Brando, ... Buy this collectible cinema poster.">
+        <meta name="description" content="40th anniversary final cut re-release of Francis Ford Coppola&#039;s 1979 classic war film Apocalypse Now, starring Marlon Brando, Martin Sheen, Robert Duvall, Laure... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="APOCALYPSE NOW - FINAL CUT (1979) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch 40th anniversary final cut re-release quad poster for Francis Ford Coppola&#039;s 1979 classic war film Apocalypse Now  starring Marlon Brando, Martin Sheen, Robert Duvall, Laurence Fi... Buy this collectible cinema poster.">
+    <meta property="og:description" content="40th anniversary final cut re-release of Francis Ford Coppola&#039;s 1979 classic war film Apocalypse Now, starring Marlon Brando, Martin Sheen, Robert Duvall, Laurence Fishburne, Dennis Hopper and Harriso... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/apocalypse-now-final-cut-r-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/apocalypse-now-final-cut-40th-anniversary-4k-restoration-re-release.html">
-    <script>const posterData = {"title":"APOCALYPSE NOW - FINAL CUT","variant":"40th anniversary 4K restoration re-release","originally released":1979,"director":"Francis Ford Coppola","actors":["Marlon Brando","Martin Sheen","Robert Duvall","Laurence Fishburne","Dennis Hopper","Harrison Ford"],"genre":["war","Vietnam","period drama"],"condition":"near mint, condition","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/apocalypse-now-final-cut-r-quad-poster.jpg","hires":"posters/apocalypse-now-final-cut-r-quad-poster.jpg","price":149.99,"film_summary":"British 30 x 40 inch 40th anniversary final cut re-release quad poster for Francis Ford Coppola's 1979 classic war film Apocalypse Now  starring Marlon Brando, Martin Sheen, Robert Duvall, Laurence Fishburne, Dennis Hopper and Harrison Ford.This clever and amazingly stylised poster design stands out from all the many previous re-release posters and is highly sought after. This version is in near mint, condition.","poster_notes":"","tags":["51.54","folded"],"gallery":["gallery_images/apocalypse-now-final-cut-r-quad-poster-1.jpg","gallery_images/apocalypse-now-final-cut-r-quad-poster-2.jpg"],"sort_title":"APOCALYPSE NOW - FINAL CUT","on_sale":false,"purchase_date":"2020-08-18","product_id":"prod_TiiM3Y9CPiSuRo"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"APOCALYPSE NOW - FINAL CUT","description":"British 30 x 40 inch 40th anniversary final cut re-release quad poster for Francis Ford Coppola&#039;s 1979 classic war film Apocalypse Now  starring Marlon Brando, Martin Sheen, Robert Duvall, Laurence Fishburne, Dennis Hopper and Harrison Ford.This clever and amazingly stylised poster design stands out from all the many previous re-release posters and is highly sought after. This version is in near mint, condition.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/apocalypse-now-final-cut-r-quad-poster.jpg","offers":{"@type":"Offer","price":149.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"APOCALYPSE NOW - FINAL CUT","variant":"40th anniversary 4K restoration re-release","originally released":1979,"director":"Francis Ford Coppola","actors":["Marlon Brando","Martin Sheen","Robert Duvall","Laurence Fishburne","Dennis Hopper","Harrison Ford"],"genre":["war","Vietnam","period drama"],"condition":"near mint, condition","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/apocalypse-now-final-cut-r-quad-poster.jpg","hires":"posters/apocalypse-now-final-cut-r-quad-poster.jpg","price":149.99,"film_summary":"40th anniversary final cut re-release of Francis Ford Coppola's 1979 classic war film Apocalypse Now, starring Marlon Brando, Martin Sheen, Robert Duvall, Laurence Fishburne, Dennis Hopper and Harrison Ford.","poster_notes":"This clever, beautifully stylised poster design stands out from all the many previous re-release posters and is highly sought after.","tags":["51.54","folded"],"gallery":["gallery_images/apocalypse-now-final-cut-r-quad-poster-1.jpg","gallery_images/apocalypse-now-final-cut-r-quad-poster-2.jpg"],"sort_title":"APOCALYPSE NOW - FINAL CUT","on_sale":false,"purchase_date":"2020-08-18","product_id":"prod_TiiM3Y9CPiSuRo"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"APOCALYPSE NOW - FINAL CUT","description":"40th anniversary final cut re-release of Francis Ford Coppola&#039;s 1979 classic war film Apocalypse Now, starring Marlon Brando, Martin Sheen, Robert Duvall, Laurence Fishburne, Dennis Hopper and Harrison Ford.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/apocalypse-now-final-cut-r-quad-poster.jpg","offers":{"@type":"Offer","price":149.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

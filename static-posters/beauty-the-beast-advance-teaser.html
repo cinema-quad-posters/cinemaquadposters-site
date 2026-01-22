@@ -20,15 +20,15 @@
 </script>
 
 
-        <title>BEAUTY &amp; THE BEAST (1986) – Original British Quad Poster – Cinema Quad Posters</title>
+        <title>BEAUTY &amp; THE BEAST (1990) – Original British Quad Poster – Cinema Quad Posters</title>
         <meta name="description" content="Gary Trousdale and Kirk Wise&#039;s beautiful 1991 Disney classic Beauty and the Beast, starring Paige O&#039;Hara, Robby Benson and Jesse Corti.... Buy this collectible cinema poster.">
     
-    <meta property="og:title" content="BEAUTY &amp; THE BEAST (1986) – Original British Quad Poster – Cinema Quad Posters">
+    <meta property="og:title" content="BEAUTY &amp; THE BEAST (1990) – Original British Quad Poster – Cinema Quad Posters">
     <meta property="og:description" content="Gary Trousdale and Kirk Wise&#039;s beautiful 1991 Disney classic Beauty and the Beast, starring Paige O&#039;Hara, Robby Benson and Jesse Corti.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/beauty-and-the-beast-a-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/beauty-the-beast-advance-teaser.html">
-    <script>const posterData = {"title":"BEAUTY & THE BEAST","variant":"advance teaser","originally released":1986,"director":"Gary Trousdale and Kirk Wise","actors":["Paige O'Hara","Robby Benson","Jesse Corti"],"genre":["romance","family","fantasy","fairy tale","adventure","animation"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/beauty-and-the-beast-a-quad-poster.jpg","hires":"posters/beauty-and-the-beast-a-quad-poster.jpg","price":99.99,"film_summary":"Gary Trousdale and Kirk Wise's beautiful 1991 Disney classic Beauty and the Beast, starring Paige O'Hara, Robby Benson and Jesse Corti.","poster_notes":"Simple, beautiful artwork, still highly sought after","tags":["29.95"],"gallery":["gallery_images/beauty-and-the-beast-a-quad-poster-1.jpg","gallery_images/beauty-and-the-beast-a-quad-poster-2.jpg"],"sort_title":"BEAUTY & THE BEAST","on_sale":false,"purchase_date":"2026-01-14","product_id":""};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BEAUTY &amp; THE BEAST","description":"Gary Trousdale and Kirk Wise&#039;s beautiful 1991 Disney classic Beauty and the Beast, starring Paige O&#039;Hara, Robby Benson and Jesse Corti.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/beauty-and-the-beast-a-quad-poster.jpg","offers":{"@type":"Offer","price":99.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"BEAUTY & THE BEAST","variant":"advance teaser","originally released":1990,"director":"Gary Trousdale and Kirk Wise","actors":["Paige O'Hara","Robby Benson","Jesse Corti"],"genre":["romance","family","fantasy","fairy tale","adventure","animation"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/beauty-and-the-beast-a-quad-poster.jpg","hires":"posters/beauty-and-the-beast-a-quad-poster.jpg","price":99.99,"film_summary":"Gary Trousdale and Kirk Wise's beautiful 1991 Disney classic Beauty and the Beast, starring Paige O'Hara, Robby Benson and Jesse Corti.","poster_notes":"Simple, beautiful artwork, still highly sought after","tags":["29.95"],"gallery":["gallery_images/beauty-and-the-beast-a-quad-poster-1.jpg","gallery_images/beauty-and-the-beast-a-quad-poster-2.jpg"],"sort_title":"BEAUTY & THE BEAST","on_sale":false,"purchase_date":"2026-01-14","product_id":""};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BEAUTY &amp; THE BEAST","description":"Gary Trousdale and Kirk Wise&#039;s beautiful 1991 Disney classic Beauty and the Beast, starring Paige O&#039;Hara, Robby Benson and Jesse Corti.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/beauty-and-the-beast-a-quad-poster.jpg","offers":{"@type":"Offer","price":99.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

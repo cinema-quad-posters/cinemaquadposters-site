@@ -24,12 +24,11 @@
         <meta name="description" content="British 30  x 40 inch cinema quad poster for Martin Brest&#039;s 1984 detective comedy Beverly Hills Cop starring Eddie Murphey, Judge Reinhold, John Ashton and Stev... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="BEVERLY HILLS COP (1984) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30  x 40 inch cinema quad poster for Martin Brest&#039;s 1984 detective comedy Beverly Hills Cop starring Eddie Murphey, Judge Reinhold, John Ashton and Steven Berkoff.
-This classic movie poster is... Buy this collectible cinema poster.">
+    <meta property="og:description" content="British 30  x 40 inch cinema quad poster for Martin Brest&#039;s 1984 detective comedy Beverly Hills Cop starring Eddie Murphey, Judge Reinhold, John Ashton and Steven Berkoff.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/beverly-hills-cop-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/beverly-hills-cop.html">
-    <script>const posterData = {"title":"BEVERLY HILLS COP","variant":null,"originally released":1984,"director":"Martin Brest","actors":["Eddie Murphey","Judge Reinhold","John Ashton","Steven Berkoff"],"genre":["crime","action","comedy"],"condition":"near mint, folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/beverly-hills-cop-quad-poster.jpg","hires":"posters/beverly-hills-cop-quad-poster.jpg","price":79.99,"film_summary":"British 30  x 40 inch cinema quad poster for Martin Brest's 1984 detective comedy Beverly Hills Cop starring Eddie Murphey, Judge Reinhold, John Ashton and Steven Berkoff.\nThis classic movie poster is in near mint, folded.","poster_notes":"","tags":["1984","comedy","Eddie Murphey","Judge Reinhold","Martin Brest","folded"],"gallery":["gallery_images/beverly-hills-cop-quad-poster-1.jpg","gallery_images/beverly-hills-cop-quad-poster-2.jpg"],"sort_title":"BEVERLY HILLS COP","on_sale":false,"purchase_date":"","product_id":"prod_TiiMubBtWxciso"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BEVERLY HILLS COP","description":"British 30  x 40 inch cinema quad poster for Martin Brest&#039;s 1984 detective comedy Beverly Hills Cop starring Eddie Murphey, Judge Reinhold, John Ashton and Steven Berkoff.\nThis classic movie poster is in near mint, folded.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/beverly-hills-cop-quad-poster.jpg","offers":{"@type":"Offer","price":79.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"BEVERLY HILLS COP","variant":null,"originally released":1984,"director":"Martin Brest","actors":["Eddie Murphey","Judge Reinhold","John Ashton","Steven Berkoff"],"genre":["crime","action","comedy"],"condition":"near mint, folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/beverly-hills-cop-quad-poster.jpg","hires":"posters/beverly-hills-cop-quad-poster.jpg","price":79.99,"film_summary":"British 30  x 40 inch cinema quad poster for Martin Brest's 1984 detective comedy Beverly Hills Cop starring Eddie Murphey, Judge Reinhold, John Ashton and Steven Berkoff.","poster_notes":"Definitely a movie poster classic.","tags":["1984"],"gallery":["gallery_images/beverly-hills-cop-quad-poster-1.jpg","gallery_images/beverly-hills-cop-quad-poster-2.jpg"],"sort_title":"BEVERLY HILLS COP","on_sale":false,"purchase_date":"","product_id":"prod_TiiMubBtWxciso"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BEVERLY HILLS COP","description":"British 30  x 40 inch cinema quad poster for Martin Brest&#039;s 1984 detective comedy Beverly Hills Cop starring Eddie Murphey, Judge Reinhold, John Ashton and Steven Berkoff.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/beverly-hills-cop-quad-poster.jpg","offers":{"@type":"Offer","price":79.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -191,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

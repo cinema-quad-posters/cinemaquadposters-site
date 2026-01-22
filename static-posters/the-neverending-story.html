@@ -21,14 +21,14 @@
 
 
         <title>THE NEVERENDING STORY (1984) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 inch original cinema quad poster for Wolfgang Petersen&#039;s wonderful 1984 fantasy adventure classic The Neverending Stoey, starring Barret Oliver,... Buy this collectible cinema poster.">
+        <meta name="description" content="Wolfgang Petersen&#039;s wonderful 1984 fantasy adventure classic The Neverending Stoey, starring Barret Oliver, Noah Hathaway and Tami Stronach.... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="THE NEVERENDING STORY (1984) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 inch original cinema quad poster for Wolfgang Petersen&#039;s wonderful 1984 fantasy adventure classic The Neverending Stoey, starring Barret Oliver, Noah Hathaway and Tami Stronach.... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Wolfgang Petersen&#039;s wonderful 1984 fantasy adventure classic The Neverending Stoey, starring Barret Oliver, Noah Hathaway and Tami Stronach.... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/the-neverending-story-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/the-neverending-story.html">
-    <script>const posterData = {"title":"THE NEVERENDING STORY","variant":null,"originally released":1984,"director":"Wolfgang Petersen","actors":["Barret Oliver","Noah Hathaway","Tami Stronach"],"genre":["family","fantasy","adventure"],"condition":"near mint, folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/the-neverending-story-quad-poster.jpg","hires":"posters/the-neverending-story-quad-poster.jpg","price":294.99,"film_summary":"British 30 x 40 inch original cinema quad poster for Wolfgang Petersen's wonderful 1984 fantasy adventure classic The Neverending Stoey, starring Barret Oliver, Noah Hathaway and Tami Stronach.","poster_notes":"This highly sought after quad poster has just the top right corner missing, some paper surface loss on the very tip of the bottom right corner and some very minor edge wear.","tags":["1984"],"gallery":["gallery_images/the-neverending-story-quad-poster-1.jpg","gallery_images/the-neverending-story-quad-poster-2.jpg"],"sort_title":"NEVERENDING STORY","on_sale":false,"purchase_date":"","product_id":"prod_TiiOBYfvdk2pJR"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"THE NEVERENDING STORY","description":"British 30 x 40 inch original cinema quad poster for Wolfgang Petersen&#039;s wonderful 1984 fantasy adventure classic The Neverending Stoey, starring Barret Oliver, Noah Hathaway and Tami Stronach.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/the-neverending-story-quad-poster.jpg","offers":{"@type":"Offer","price":294.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"THE NEVERENDING STORY","variant":null,"originally released":1984,"director":"Wolfgang Petersen","actors":["Barret Oliver","Noah Hathaway","Tami Stronach"],"genre":["family","fantasy","adventure"],"condition":"near mint, folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/the-neverending-story-quad-poster.jpg","hires":"posters/the-neverending-story-quad-poster.jpg","price":294.99,"film_summary":"Wolfgang Petersen's wonderful 1984 fantasy adventure classic The Neverending Stoey, starring Barret Oliver, Noah Hathaway and Tami Stronach.","poster_notes":"This highly sought after quad poster has just the top right corner missing, some paper surface loss on the very tip of the bottom right corner and some very minor edge wear.","tags":["1984"],"gallery":["gallery_images/the-neverending-story-quad-poster-1.jpg","gallery_images/the-neverending-story-quad-poster-2.jpg"],"sort_title":"NEVERENDING STORY","on_sale":false,"purchase_date":"","product_id":"prod_TiiOBYfvdk2pJR"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"THE NEVERENDING STORY","description":"Wolfgang Petersen&#039;s wonderful 1984 fantasy adventure classic The Neverending Stoey, starring Barret Oliver, Noah Hathaway and Tami Stronach.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/the-neverending-story-quad-poster.jpg","offers":{"@type":"Offer","price":294.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

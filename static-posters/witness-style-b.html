@@ -21,14 +21,14 @@
 
 
         <title>WITNESS (1985) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 style B cinema quad poster for Peter Weir&#039;s oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford&#039;s best performances as det... Buy this collectible cinema poster.">
+        <meta name="description" content="Peter Weir&#039;s oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford&#039;s best performances as detective John Book. Also starring Kelly McGillis,... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="WITNESS (1985) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 style B cinema quad poster for Peter Weir&#039;s oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford&#039;s best performances as detective John Book. Also starring Kelly Mc... Buy this collectible cinema poster.">
+    <meta property="og:description" content="Peter Weir&#039;s oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford&#039;s best performances as detective John Book. Also starring Kelly McGillis, Lukas Haas, Danny Glover and Viggo Mort... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/witness-quad-poster-style-b.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/witness-style-b.html">
-    <script>const posterData = {"title":"WITNESS","variant":"Style B","originally released":1985,"director":"Peter Weir","actors":["Kelly McGillis","Lukas Haas","Danny Glover","Viggo Mortensen"],"genre":["romance","crime","thriller","drama"],"condition":"excellent folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/witness-quad-poster-style-b.jpg","hires":"posters/witness-quad-poster-style-b.jpg","price":59.99,"film_summary":"British 30 x 40 style B cinema quad poster for Peter Weir's oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford's best performances as detective John Book. Also starring Kelly McGillis, Lukas Haas, Danny Glover and Viggo Mortensen.","poster_notes":"This classic poster has pin holes in the corners.","tags":["1985"],"gallery":["gallery_images/witness-quad-poster-style-b-1.jpg","gallery_images/witness-quad-poster-style-b-2.jpg"],"sort_title":"WITNESS","on_sale":false,"purchase_date":"","product_id":"prod_TiiQRv8RajhonT"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"WITNESS","description":"British 30 x 40 style B cinema quad poster for Peter Weir&#039;s oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford&#039;s best performances as detective John Book. Also starring Kelly McGillis, Lukas Haas, Danny Glover and Viggo Mortensen.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/witness-quad-poster-style-b.jpg","offers":{"@type":"Offer","price":59.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"WITNESS","variant":"Style B","originally released":1985,"director":"Peter Weir","actors":["Kelly McGillis","Lukas Haas","Danny Glover","Viggo Mortensen"],"genre":["romance","crime","thriller","drama"],"condition":"excellent folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/witness-quad-poster-style-b.jpg","hires":"posters/witness-quad-poster-style-b.jpg","price":59.99,"film_summary":"Peter Weir's oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford's best performances as detective John Book. Also starring Kelly McGillis, Lukas Haas, Danny Glover and Viggo Mortensen.","poster_notes":"This classic poster has pin holes in the corners.","tags":["1985"],"gallery":["gallery_images/witness-quad-poster-style-b-1.jpg","gallery_images/witness-quad-poster-style-b-2.jpg"],"sort_title":"WITNESS","on_sale":false,"purchase_date":"","product_id":"prod_TiiQRv8RajhonT"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"WITNESS","description":"Peter Weir&#039;s oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford&#039;s best performances as detective John Book. Also starring Kelly McGillis, Lukas Haas, Danny Glover and Viggo Mortensen.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/witness-quad-poster-style-b.jpg","offers":{"@type":"Offer","price":59.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

@@ -21,14 +21,14 @@
 
 
         <title>BETTY BLUE (1986) – Original British Quad Poster – Cinema Quad Posters</title>
-        <meta name="description" content="British 30 x 40 cinema re-release quad poster for Jean-Jacques Beineix&#039;s director&#039;s re-cut of his 1986 French erotic psychological classic Betty Blue (37°2 Me M... Buy this collectible cinema poster.">
+        <meta name="description" content="1992 re-release quad poster for Jean-Jacques Beineix&#039;s director&#039;s re-cut of his 1986 French erotic psychological classic Betty Blue (37°2 Me Matin), starring  B... Buy this collectible cinema poster.">
     
     <meta property="og:title" content="BETTY BLUE (1986) – Original British Quad Poster – Cinema Quad Posters">
-    <meta property="og:description" content="British 30 x 40 cinema re-release quad poster for Jean-Jacques Beineix&#039;s director&#039;s re-cut of his 1986 French erotic psychological classic Betty Blue (37°2 Me Matin), starring  Béatrice Dalle, Jean-Hu... Buy this collectible cinema poster.">
+    <meta property="og:description" content="1992 re-release quad poster for Jean-Jacques Beineix&#039;s director&#039;s re-cut of his 1986 French erotic psychological classic Betty Blue (37°2 Me Matin), starring  Béatrice Dalle, Jean-Hugues Anglade and G... Buy this collectible cinema poster.">
     <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/betty-blue-dc-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/betty-blue-director-s-complete-cut-1992-re-release.html">
-    <script>const posterData = {"title":"BETTY BLUE","variant":"Director's Complete Cut 1992 re-release","originally released":1986,"director":"Jean-Jacques Beineix","actors":["Béatrice Dalle","Hugues Anglade","Gérard Darmon"],"genre":["French","drama","romance"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/betty-blue-dc-quad-poster.jpg","hires":"posters/betty-blue-dc-quad-poster.jpg","price":104.99,"film_summary":"British 30 x 40 cinema re-release quad poster for Jean-Jacques Beineix's director's re-cut of his 1986 French erotic psychological classic Betty Blue (37°2 Me Matin), starring  Béatrice Dalle, Jean-Hugues Anglade and Gérard Darmon.","poster_notes":"This famous film poster art now features Jean-Hugues in this rare re-release poster.","tags":["22.94","Director's Cut","re-cut"],"gallery":["gallery_images/betty-blue-dc-quad-poster-1.jpg","gallery_images/betty-blue-dc-quad-poster-2.jpg"],"sort_title":"BETTY BLUE","on_sale":false,"purchase_date":"2018-06-24","product_id":"prod_TiiMECvqSeOBEk"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BETTY BLUE","description":"British 30 x 40 cinema re-release quad poster for Jean-Jacques Beineix&#039;s director&#039;s re-cut of his 1986 French erotic psychological classic Betty Blue (37°2 Me Matin), starring  Béatrice Dalle, Jean-Hugues Anglade and Gérard Darmon.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/betty-blue-dc-quad-poster.jpg","offers":{"@type":"Offer","price":104.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"BETTY BLUE","variant":"Director's Complete Cut 1992 re-release","originally released":1986,"director":"Jean-Jacques Beineix","actors":["Béatrice Dalle","Hugues Anglade","Gérard Darmon"],"genre":["French","drama","romance"],"condition":"near mint, rolled","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/betty-blue-dc-quad-poster.jpg","hires":"posters/betty-blue-dc-quad-poster.jpg","price":104.99,"film_summary":"1992 re-release quad poster for Jean-Jacques Beineix's director's re-cut of his 1986 French erotic psychological classic Betty Blue (37°2 Me Matin), starring  Béatrice Dalle, Jean-Hugues Anglade and Gérard Darmon.","poster_notes":"This famous film poster art now features Jean-Hugues in this rare re-release poster.","tags":["22.94","Director's Cut","re-cut"],"gallery":["gallery_images/betty-blue-dc-quad-poster-1.jpg","gallery_images/betty-blue-dc-quad-poster-2.jpg"],"sort_title":"BETTY BLUE","on_sale":false,"purchase_date":"2018-06-24","product_id":"prod_TiiMECvqSeOBEk"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"BETTY BLUE","description":"1992 re-release quad poster for Jean-Jacques Beineix&#039;s director&#039;s re-cut of his 1986 French erotic psychological classic Betty Blue (37°2 Me Matin), starring  Béatrice Dalle, Jean-Hugues Anglade and Gérard Darmon.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/betty-blue-dc-quad-poster.jpg","offers":{"@type":"Offer","price":104.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">
