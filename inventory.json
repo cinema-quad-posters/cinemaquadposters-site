@@ -1858,7 +1858,7 @@
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/cyrano-de-bergerac-quad-poster.jpg",
-    "hires": "posters/cyrano-de-bergerac-quad-poster-2.jpg",
+    "hires": "posters/cyrano-de-bergerac-quad-poster.jpg",
     "price": 89.99,
     "film_summary": "Jean-Paul Rappeneau's Multi-Oscar nominated classic Cyrano De Bergerac, starring Edmond Rostand, Jean-Paul Rappeneau and Jean-Claude Carrière.",
     "poster_notes": "This has beatiful film poster image.",
@@ -1866,8 +1866,8 @@
       "13.06"
     ],
     "gallery": [
-      "gallery_images/cyrano-de-bergerac-quad-poster-2-1.jpg",
-      "gallery_images/cyrano-de-bergerac-quad-poster-2-2.jpg"
+      "gallery_images/cyrano-de-bergerac-quad-poster-1.jpg",
+      "gallery_images/cyrano-de-bergerac-quad-poster-2.jpg"
     ],
     "sort_title": "CYRANO DE BERGERAC",
     "on_sale": false,
