@@ -1,4 +1,5 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Uses env var—no hardcoded key!
+const fs = require('fs');
 
 // Load inventory
 let inventory = JSON.parse(fs.readFileSync('inventory.json', 'utf8'));
