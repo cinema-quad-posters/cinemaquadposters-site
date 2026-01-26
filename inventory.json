@@ -312,7 +312,7 @@
       "Vietnam",
       "period drama"
     ],
-    "condition": "mint condition",
+    "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/apocalypse_2011_poster.jpg",
@@ -331,6 +331,42 @@
     "on_sale": false,
     "purchase_date": "",
     "product_id": "prod_TiiMFdqvGZ7ibW"
+  },
+  {
+    "title": "THE ARTIST",
+    "variant": "2011 re-release",
+    "originally released": 2011,
+    "director": "Michel Hazanavicius",
+    "actors": [
+      "Jean Dujardin",
+      "Bérénice Bejo",
+      "John Goodman"
+    ],
+    "genre": [
+      "romance",
+      "comedy",
+      "period drama",
+      "classic"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/the-artist-quad-poster.jpg",
+    "hires": "posters/the-artist-quad-poster.jpg",
+    "price": 89.99,
+    "film_summary": "Michel Hazanavicius's original 2011 black and white 1930's classic film homage The Artist, starring Jean Dujardin, Bérénice Bejo and John Goodman.",
+    "poster_notes": "A genuine classic design",
+    "tags": [
+      "2011"
+    ],
+    "gallery": [
+      "gallery_images/the-artist-quad-poster-1.jpg",
+      "gallery_images/the-artist-quad-poster-2.jpg"
+    ],
+    "sort_title": "THE ARTIST",
+    "on_sale": false,
+    "purchase_date": "2026-01-25",
+    "product_id": "prod_TriJBiLy1dvYFB"
   },
   {
     "title": "ATTACK THE BLOCK",
@@ -1014,7 +1050,7 @@
     "title": "THE BLACK HOLE",
     "variant": null,
     "originally released": 1979,
-    "director": "Disney",
+    "director": "Gary Nelson",
     "actors": [
       "Maximilian Schell",
       "Anthony Perkins",
@@ -1033,7 +1069,7 @@
     "thumbnail": "posters-thumb/the-black-hole-quad-poster.jpg",
     "hires": "posters/the-black-hole-quad-poster.jpg",
     "price": 84.99,
-    "film_summary": "Disney's 1979 cult sci-fi 'Star Wars' competitor The Black Hole starring Maximilian Schell, Anthony Perkins, Robert Forster, Joseph Bottoms and Yvette Mimieux.",
+    "film_summary": "Disney's 1979 cult sci-fi 'Star Wars' competitor The Black Hole directed by Gary Nelson and starring Maximilian Schell, Anthony Perkins, Robert Forster, Joseph Bottoms and Yvette Mimieux.",
     "poster_notes": "This bold and dynamic poster artwork has just three small tears on the bottom edge.",
     "tags": [
       "31.49"
@@ -1046,6 +1082,42 @@
     "on_sale": false,
     "purchase_date": "2019-06-27",
     "product_id": "prod_TiiMA3qHnnkQCU"
+  },
+  {
+    "title": "BLACK PANTHER",
+    "variant": "advance teaser",
+    "originally released": 2018,
+    "director": "Ryan Coogler",
+    "actors": [
+      "Chadwick Boseman",
+      "Michael B. Jordan",
+      "Lupita Nyong'o"
+    ],
+    "genre": [
+      "superhero",
+      "action",
+      "adventure",
+      "fantasy"
+    ],
+    "condition": "fine, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/black-panther-a-quad-poster.jpg",
+    "hires": "posters/black-panther-a-quad-poster.jpg",
+    "price": 27.99,
+    "film_summary": "Ryan Coogler's 2018 award winning superhero action adventure Black Panther starring Chadwick Boseman, Michael B. Jordan and Lupita Nyong'o.",
+    "poster_notes": "",
+    "tags": [
+      "31.49"
+    ],
+    "gallery": [
+      "gallery_images/black-panther-a-quad-poster-1.jpg",
+      "gallery_images/black-panther-a-quad-poster-2.jpg"
+    ],
+    "sort_title": "BLACK PANTHER",
+    "on_sale": true,
+    "purchase_date": "2025-03-27",
+    "product_id": "prod_TriJCeUfFwCqmp"
   },
   {
     "title": "BLADE RUNNER - THE FINAL CUT",
@@ -1388,7 +1460,7 @@
       "comedy",
       "drama"
     ],
-    "condition": "excellent, folded",
+    "condition": "very fine, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-kid-r-quad-poster.jpg",
@@ -1819,7 +1891,7 @@
     "genre": [
       "war"
     ],
-    "condition": "excellent, folded",
+    "condition": "very fine, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/cross-of-iron-quad-poster.jpg",
@@ -1963,7 +2035,7 @@
       "Meryl Streep"
     ],
     "genre": "war",
-    "condition": "Excellent, folded",
+    "condition": "very fine, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-deer-hunter-quad-poster.jpg",
@@ -2798,7 +2870,7 @@
       "crime",
       "thriller"
     ],
-    "condition": "excellent, rolled",
+    "condition": "very fine, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/fargo-quad-poster.jpg",
@@ -3661,7 +3733,7 @@
       "romance",
       "comedy"
     ],
-    "condition": "Excellent, rolled.",
+    "condition": "very fine, rolled.",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/guardians-of-the-galaxy-quad-poster.jpg",
@@ -4181,6 +4253,42 @@
     "product_id": "prod_TiiOXuTdKcAoe2"
   },
   {
+    "title": "IN BRUGES",
+    "variant": null,
+    "originally released": 2008,
+    "director": "Martin McDonagh",
+    "actors": [
+      "Colin Farrell",
+      "Brendan Gleeson",
+      "Ciarán Hinds"
+    ],
+    "genre": [
+      "dark",
+      "comedy",
+      "crime",
+      "thriller"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/in-bruges-quad-poster.jpg",
+    "hires": "posters/in-bruges-quad-poster.jpg",
+    "price": 89.99,
+    "film_summary": "Martin McDonagh' comedy crime thriller cult classic In Bruges, starring Colin Farrell, Brendan Gleeson and Ciarán Hinds.",
+    "poster_notes": "This poster perfectly captures this cult classic.",
+    "tags": [
+      "2008"
+    ],
+    "gallery": [
+      "gallery_images/in-bruges-quad-poster-1.jpg",
+      "gallery_images/in-bruges-quad-poster-2.jpg"
+    ],
+    "sort_title": "IN BRUGES",
+    "on_sale": false,
+    "purchase_date": "2026-01-26",
+    "product_id": "prod_TriJIoO4qyBvnJ"
+  },
+  {
     "title": "INCEPTION",
     "variant": null,
     "originally released": 2010,
@@ -4388,7 +4496,7 @@
       "mystery",
       "horror"
     ],
-    "condition": "Excellent, rolled.",
+    "condition": "very fine, rolled.",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/jacobs-ladder-quad-poster.jpg",
@@ -4610,6 +4718,41 @@
     "product_id": "prod_TiiO8bwI2j7je3"
   },
   {
+    "title": "LA LA LAND",
+    "variant": null,
+    "originally released": 2016,
+    "director": "Damien Chazelle",
+    "actors": [
+      "Ryan Gosling",
+      "Emma Stone",
+      "Rosemarie DeWitt"
+    ],
+    "genre": [
+      "musical",
+      "romance",
+      "comedy",
+      "drama",
+      "music"
+    ],
+    "condition": "fine, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/la-la-land-quad-poster.jpg",
+    "hires": "posters/la-la-land-quad-poster.jpg",
+    "price": 89.99,
+    "film_summary": "Damien Chazelle's 2016 oscar winning musical La La Land, starring Ryan Gosling, Emma Stone and Rosemarie DeWitt.",
+    "poster_notes": "This poster seems to have got damp in the bottom left corner, as a result it does not lie completely flat in that corner, otherwise perfecta beautiful piece",
+    "tags": null,
+    "gallery": [
+      "gallery_images/la-la-land-quad-poster-1.jpg",
+      "gallery_images/la-la-land-quad-poster-2.jpg"
+    ],
+    "sort_title": "LA LA LAND",
+    "on_sale": false,
+    "purchase_date": "",
+    "product_id": "prod_TriJBuMSXlaNH1"
+  },
+  {
     "title": "THE LAST OF THE MOHICANS",
     "variant": null,
     "originally released": 1992,
@@ -4663,7 +4806,7 @@
       "adventure",
       "period drama"
     ],
-    "condition": "excellent, rolled",
+    "condition": "very fine, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/lawrence-of-arabia-50th-quad-poster.jpg",
@@ -4682,6 +4825,79 @@
     "on_sale": false,
     "purchase_date": "",
     "product_id": "prod_TiiOXSDQPpOfbc"
+  },
+  {
+    "title": "LIFE OF PI",
+    "variant": null,
+    "originally released": 2012,
+    "director": "Ang Lee",
+    "actors": [
+      "Suraj Sharma",
+      "Irrfan Khan",
+      "Ayush Tandon"
+    ],
+    "genre": [
+      "epic",
+      "teen",
+      "adventure",
+      "fantasy"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/life-of-pi-quad-poster.jpg",
+    "hires": "posters/life-of-pi-quad-poster.jpg",
+    "price": 79.99,
+    "film_summary": "Ang Lee's oscar winning out-at-sea adventure Life of Pi, starring Suraj Sharma, Irrfan Khan and Ayush Tandon.",
+    "poster_notes": "",
+    "tags": [
+      "2012"
+    ],
+    "gallery": [
+      "gallery_images/life-of-pi-quad-poster-1.jpg",
+      "gallery_images/life-of-pi-quad-poster-2.jpg"
+    ],
+    "sort_title": "LIFE OF PI",
+    "on_sale": false,
+    "purchase_date": "2026-01-26",
+    "product_id": "prod_TriJ4QucbZgJgW"
+  },
+  {
+    "title": "LOOPER",
+    "variant": "advance teaser",
+    "originally released": 2012,
+    "director": "Rian Johnson",
+    "actors": [
+      "Joseph Gordon-Levitt",
+      "Bruce Willis",
+      "Emily Blunt"
+    ],
+    "genre": [
+      "time travel",
+      "sci-fi",
+      "psychological",
+      "action",
+      "thriller"
+    ],
+    "condition": "very fine, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/looper-a-quad-poster.jpg",
+    "hires": "posters/looper-a-quad-poster.jpg",
+    "price": 69.99,
+    "film_summary": "Rian Johnson's original time-travel thriller Looper, starring Joseph Gordon-Levitt, Bruce Willis and Emily Blunt.",
+    "poster_notes": "This poster has some light handling wear.",
+    "tags": [
+      "2012"
+    ],
+    "gallery": [
+      "gallery_images/looper-a-quad-poster-1.jpg",
+      "gallery_images/looper-a-quad-poster-2.jpg"
+    ],
+    "sort_title": "LOOPER",
+    "on_sale": false,
+    "purchase_date": "2026-01-24",
+    "product_id": "prod_TriJ6q5fV6BVxe"
   },
   {
     "title": "THE LOST BOYS",
@@ -5023,7 +5239,7 @@
       "martial arts",
       "adventure"
     ],
-    "condition": "excellent, rolled",
+    "condition": "very fine, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-matrix-20th-r-quad-poster.jpg",
@@ -5958,7 +6174,7 @@
       "romance",
       "period drama"
     ],
-    "condition": "excellent, rolled (but once folded)",
+    "condition": "very fine, rolled (but once folded)",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-piano-quad-poster.jpg",
@@ -6326,7 +6542,7 @@
       "comedy",
       "animation"
     ],
-    "condition": "excellent, folded",
+    "condition": "very fine, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-rescuers-quad-poster.jpg",
@@ -6431,7 +6647,7 @@
       "adventure",
       "period drama"
     ],
-    "condition": "excellent, once folded but now rolled",
+    "condition": "very fine, once folded but now rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/robin-and-marion-quad-poster.jpg",
@@ -6470,7 +6686,7 @@
       "adventure",
       "period drama"
     ],
-    "condition": "excellent, rolled",
+    "condition": "very fine, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/rob-roy-a-quad-poster.jpg",
@@ -6542,7 +6758,7 @@
       "romance",
       "comedy"
     ],
-    "condition": "excellent, folded",
+    "condition": "very fine, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/romancing-the-stone-quad-poster.jpg",
@@ -8346,7 +8562,7 @@
       "action",
       "adventure"
     ],
-    "condition": "excellent, rolled.",
+    "condition": "very fine, rolled.",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/superman-the-movie-wb100th-rr-quad-poster.jpg",
@@ -8386,7 +8602,7 @@
       "action",
       "adventure"
     ],
-    "condition": "excellent, folded",
+    "condition": "very fine, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/superman-2-quad-poster-black.jpg",
@@ -8442,6 +8658,42 @@
     "on_sale": false,
     "purchase_date": "",
     "product_id": "prod_TiiQydU37ki5XC"
+  },
+  {
+    "title": "TAKEN",
+    "variant": null,
+    "originally released": 2008,
+    "director": "Pierre Morel",
+    "actors": [
+      "Liam Neeson",
+      "Magie Grace",
+      "Famke Janssen"
+    ],
+    "genre": [
+      "psychological",
+      "action",
+      "crime",
+      "thriller"
+    ],
+    "condition": "fine, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/taken-quad-poster.jpg",
+    "hires": "posters/taken-quad-poster.jpg",
+    "price": 59.99,
+    "film_summary": "Pierre Morel's original 2008 high-octane thriller Taken, starring Liam Neeson, Maggie Grace and Famke Janssen.",
+    "poster_notes": "The film that gave Liam Neeson his most famous line!",
+    "tags": [
+      "2008"
+    ],
+    "gallery": [
+      "gallery_images/taken-quad-poster-1.jpg",
+      "gallery_images/taken-quad-poster-2.jpg"
+    ],
+    "sort_title": "TAKEN",
+    "on_sale": false,
+    "purchase_date": "2014-07-14",
+    "product_id": "prod_TriJgZnJZs8NZE"
   },
   {
     "title": "THE TALENTED MR RIPLEY",
@@ -8625,6 +8877,41 @@
     "on_sale": false,
     "purchase_date": "",
     "product_id": "prod_TiiQsnILquJxvi"
+  },
+  {
+    "title": "TINKER TAYLOR SOLDIER SPY",
+    "variant": null,
+    "originally released": 2011,
+    "director": "Tomas Alfredson",
+    "actors": [
+      "Gary Oldman",
+      "Colin Firth",
+      "Tom Hardy"
+    ],
+    "genre": [
+      "spy",
+      "mystery",
+      "thriller"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/tinker-taylor-soldier-spy-quad-poster.jpg",
+    "hires": "posters/tinker-taylor-soldier-spy-quad-poster.jpg",
+    "price": 114.99,
+    "film_summary": "Tomas Alfredson's thrilling 2011 big-screen re-make of the classic BBC espionage thriller Tinker Taylor Soldier Spy, starring Gary Oldman, Colin Firth and Tom Hardy.",
+    "poster_notes": "An increasingly popular choice yet now pretty hard to find.",
+    "tags": [
+      "2011"
+    ],
+    "gallery": [
+      "gallery_images/tinker-taylor-soldier-spy-quad-poster-1.jpg",
+      "gallery_images/tinker-taylor-soldier-spy-quad-poster-2.jpg"
+    ],
+    "sort_title": "TINKER TAYLOR SOLDIER SPY",
+    "on_sale": false,
+    "purchase_date": "2026-01-24",
+    "product_id": "prod_TriJw6QsmPgdtU"
   },
   {
     "title": "TITANIC",
@@ -8847,6 +9134,43 @@
     "product_id": "prod_TiiQOHolx6XcJn"
   },
   {
+    "title": "28 DAYS LATER",
+    "variant": "advance teaser",
+    "originally released": 2002,
+    "director": "Danny Boyle",
+    "actors": [
+      "Cillian Murphy",
+      "Naomie Harris",
+      "Christopher Eccleston"
+    ],
+    "genre": [
+      "dystopian",
+      "psychological",
+      "zombie",
+      "thriller",
+      "horror"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/28-days-later-a-quad-poster.jpg",
+    "hires": "posters/28-days-later-a-quad-poster.jpg",
+    "price": 249.99,
+    "film_summary": "Danny Boyle's 2002 zombie apocalyptic thriller 29 Days Later, starring Cillian Murphy, Naomie Harris and Christopher Eccleston.",
+    "poster_notes": "This fantastic film poster is still in such good condition for its age - a rare find.",
+    "tags": [
+      "2002"
+    ],
+    "gallery": [
+      "gallery_images/28-days-later-a-quad-poster-1.jpg",
+      "gallery_images/28-days-later-a-quad-poster-2.jpg"
+    ],
+    "sort_title": "28 DAYS LATER",
+    "on_sale": false,
+    "purchase_date": "2026-01-26",
+    "product_id": "prod_TriJgzCjDYPHp6"
+  },
+  {
     "title": "UNFORGIVEN",
     "variant": null,
     "originally released": 1992,
@@ -9033,6 +9357,42 @@
     "on_sale": false,
     "purchase_date": "",
     "product_id": "prod_TiiQulUS3rnREk"
+  },
+  {
+    "title": "WHO FRAMED ROGER RABBIT",
+    "variant": null,
+    "originally released": 1988,
+    "director": "Robert Zemeckis",
+    "actors": [
+      "Bob Hoskins",
+      "Christopher Lloyd",
+      "Joanna Cassidy"
+    ],
+    "genre": [
+      "slapstick",
+      "whodunnit",
+      "adventure",
+      "animation"
+    ],
+    "condition": "fine, folded",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/who-framed-roger-rabbit-quad-poster.jpg",
+    "hires": "posters/who-framed-roger-rabbit-quad-poster.jpg",
+    "price": 44.99,
+    "film_summary": "Robert Zemeckis' groundbreaking mixed live-action and animation slapstick adventure Who Framed Roger Rabbit, starring Bob Hoskins, Christopher Lloyd and Joanna Cassidy.",
+    "poster_notes": "white background is a little grubby with a few scuff marks and some veining.",
+    "tags": [
+      "1978"
+    ],
+    "gallery": [
+      "gallery_images/who-framed-roger-rabbit-quad-poster-1.jpg",
+      "gallery_images/who-framed-roger-rabbit-quad-poster-2.jpg"
+    ],
+    "sort_title": "WHO FRAMED ROGER RABBIT",
+    "on_sale": true,
+    "purchase_date": "",
+    "product_id": "prod_TriJloOHjxIodi"
   },
   {
     "title": "THE WICKER MAN",
@@ -9252,6 +9612,7 @@
       "gallery_images/the-wizard-of-oz-tom-thumb-quad-poster-2.jpg"
     ],
     "sort_title": "WIZARD OF OZ",
+    "on_sale": false,
     "purchase_date": "",
     "product_id": "prod_TiiQ3QFztzl3Ve"
   },
@@ -9290,6 +9651,44 @@
     ],
     "sort_title": "WORLD'S END",
     "on_sale": true,
+    "purchase_date": "",
     "product_id": "prod_TiiQCXoH9LV5UC"
+  },
+  {
+    "title": "ZOMBIELAND",
+    "variant": null,
+    "originally released": 2009,
+    "director": "Ruben Fleischer",
+    "actors": [
+      "Jesse Eisenberg",
+      "Emma Stone",
+      "Woody Harrelson"
+    ],
+    "genre": [
+      "zombie",
+      "action",
+      "comedy",
+      "horror",
+      "road trip"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inch",
+    "thumbnail": "posters-thumb/zombieland-a-quad-poster.jpg",
+    "hires": "posters/zombieland-quad-poster.jpg",
+    "price": 44.99,
+    "film_summary": "Ruben Fleischer's zombie action comedy road trip, Zombieland, starring Jesse Eisenberg, Emma Stone and Woody Harrelson.",
+    "poster_notes": "",
+    "tags": [
+      "2009"
+    ],
+    "gallery": [
+      "gallery_images/zombieland-quad-poster-1.jpg",
+      "gallery_images/zombieland-quad-poster-2.jpg"
+    ],
+    "sort_title": "ZOMBIELAND",
+    "on_sale": false,
+    "purchase_date": "2026-01-03",
+    "product_id": "prod_TriJeAQ6Dm3u6T"
   }
 ]
