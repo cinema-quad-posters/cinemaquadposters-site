@@ -550,6 +550,39 @@ prevents selection/copy only on high-res elements
 }
 
 
+/* ========
+ New Poster Badge
+======== */
+.new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;           /* Opposite side from SALE */
+    background: #0d6efd;  /* Bootstrap primary blue – clean & visible */
+    color: #fff;
+    padding: 4px 9px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 4px;
+    z-index: 2;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Optional: Make SALE and NEW play nicely together */
+.poster-card .sale-badge {
+    right: 10px;
+}
+
+.poster-card .new-badge {
+    left: 10px;
+}
+
+/* If both badges appear, adjust positioning slightly */
+.poster-card:has(.sale-badge) .new-badge {
+    top: 48px;   /* push NEW down a bit if SALE is also present */
+}
+
+
 /* =============
  Poster.html CSS
 ============= */
