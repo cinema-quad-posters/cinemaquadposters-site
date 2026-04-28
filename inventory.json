@@ -805,7 +805,7 @@
     ],
     "sort_title": "BEAUTY & THE BEAST",
     "on_sale": false,
-    "is_new": false,
+    "is_new": true,
     "purchase_date": "2026-01-14",
     "product_id": "prod_TqDnGLXISQmHis"
   },
@@ -4717,7 +4717,7 @@
     ],
     "sort_title": "JAWS",
     "on_sale": false,
-    "is_new": false,
+    "is_new": true,
     "purchase_date": "2026-03-25",
     "product_id": "prod_UQ70E92W61rlXJ"
   },
@@ -5091,7 +5091,7 @@
     ],
     "sort_title": "LOOPER",
     "on_sale": false,
-    "is_new": false,
+    "is_new": true,
     "purchase_date": "2026-01-24",
     "product_id": "prod_TriJ6q5fV6BVxe"
   },
@@ -10132,7 +10132,7 @@
     ],
     "sort_title": "ZOMBIELAND",
     "on_sale": false,
-    "is_new": false,
+    "is_new": true,
     "purchase_date": "2026-01-03",
     "product_id": "prod_TriJeAQ6Dm3u6T"
   }
