@@ -1,58 +1,42 @@
-// create-products.js  (Improved version)
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')('sk_test_51SfRLFAn4nVEPNCVk1ZMglfBfKKQvna2AHT850SAEa33ewNZO8nxxCLStpIPLwZ87WqlvfvfMKKUvZ9vkNkUltks00Zmtgl2Ms'); // Replace with your Stripe SECRET key (test mode first!)
 const fs = require('fs');
 
-if (!process.env.STRIPE_SECRET_KEY) {
-    console.error("❌ ERROR: STRIPE_SECRET_KEY environment variable is not set!");
-    console.error("Please set it first, then run the script again.");
-    process.exit(1);
-}
-
+// Load inventory
 let inventory = JSON.parse(fs.readFileSync('inventory.json', 'utf8'));
 
 async function createProducts() {
-    console.log(`Starting to process ${inventory.length} posters...\n`);
+  for (let i = 0; i < inventory.length; i++) {
+    const item = inventory[i];
+    if (!item.product_id) {  // Only create if missing
+      try {
+        // Create Product
+        const product = await stripe.products.create({
+          name: item.title,
+          description: item.film_summary,
+          images: [`https://www.cinemaquadposters.co.uk/${item.thumbnail}`],  // Optional: Full URL to thumbnail
+        });
 
-    for (let i = 0; i < inventory.length; i++) {
-        const item = inventory[i];
+        // Create Price (one-time, in pence)
+        const price = await stripe.prices.create({
+          product: product.id,
+          unit_amount: Math.round(item.price * 100),  // e.g., 89.99 -> 8999
+          currency: 'gbp',
+        });
 
-        if (item.product_id) {
-            console.log(`⏭️  Skipping "${item.title}" (already has ID: ${item.product_id})`);
-            continue;
-        }
-
-        try {
-            // Create Stripe Product
-            const product = await stripe.products.create({
-                name: item.title + (item.variant ? ` - ${item.variant}` : ''),
-                description: item.film_summary || "Original British cinema quad poster",
-                images: [`https://www.cinemaquadposters.co.uk/${item.thumbnail}`],
-                metadata: {
-                    originally_released: item['originally released'] || '',
-                    director: item.director || '',
-                    condition: item.condition || ''
-                }
-            });
-
-            // Create Price (in pence)
-            const price = await stripe.prices.create({
-                product: product.id,
-                unit_amount: Math.round(item.price * 100),
-                currency: 'gbp',
-            });
-
-            item.product_id = product.id;
-
-            console.log(`✅ Created product for "${item.title}": ${product.id}`);
-
-        } catch (error) {
-            console.error(`❌ Error creating product for "${item.title}":`, error.message);
-        }
+        // Assign ID and log
+        item.product_id = product.id;
+        console.log(`Created product for "${item.title}": ${product.id}`);
+      } catch (error) {
+        console.error(`Error creating product for "${item.title}":`, error.message);
+      }
+    } else {
+      console.log(`Skipping "${item.title}" (already has ID: ${item.product_id})`);
     }
+  }
 
-    // Save updated inventory (pretty-printed)
-    fs.writeFileSync('inventory.json', JSON.stringify(inventory, null, 2));
-    console.log('\n🎉 Finished! inventory.json has been updated with new Stripe product IDs.');
+  // Save updated inventory.json
+  fs.writeFileSync('inventory.json', JSON.stringify(inventory, null, 2));
+  console.log('Updated inventory.json with new product IDs.');
 }
 
 createProducts().catch(console.error);

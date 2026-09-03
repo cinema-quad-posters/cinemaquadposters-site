@@ -25,10 +25,10 @@
     
     <meta property="og:title" content="DUNE (1984) – Original British Quad Poster – Cinema Quad Posters">
     <meta property="og:description" content="David Lynch&#039;s 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.... Buy this collectible cinema poster.">
-    <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/dune-a-quad-poster-style-b.jpg">
+    <meta property="og:image" content="https://www.cinemaquadposters.co.uk/posters-thumb/dune-quad-poster.jpg">
     <meta property="og:type" content="product">
     <meta property="og:url" content="https://www.cinemaquadposters.co.uk/static-posters/dune.html">
-    <script>const posterData = {"title":"DUNE","variant":"Advance teaser, style B","originally released":1984,"director":"David Lynch","actors":["Kyle Mac","Virginia Madsen","Francesca Annis"],"genre":["sci-fi","action","adventure"],"condition":"Near mint, folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/dune-a-quad-poster-style-b.jpg","hires":"posters/dune-a-quad-poster-style-b.jpg","price":74.99,"film_summary":"David Lynch's 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.","poster_notes":"This beautiful advance poster has two additional diagonal folds in the bottom right section, some minor surface paper loss between 'N' and 'E' and pin holes in the corners.","tags":["1984"],"gallery":["gallery_images/dune-a-quad-poster-style-b-1.jpg"],"sort_title":"DUNE","on_sale":false,"purchase_date":"","product_id":"prod_TiiNmPlw8lBRQn"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"DUNE","description":"David Lynch&#039;s 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/dune-a-quad-poster-style-b.jpg","offers":{"@type":"Offer","price":74.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
+    <script>const posterData = {"title":"DUNE","variant":null,"originally released":1984,"director":"David Lynch","actors":["Kyle Mac","Virginia Madsen","Francesca Annis"],"genre":["sci-fi","action","adventure"],"condition":"excellent folded","poster_type":"British quad","poster_size":"30 x 40 inches","thumbnail":"posters-thumb/dune-quad-poster.jpg","hires":"posters/dune-quad-poster.jpg","price":129.99,"film_summary":"David Lynch's 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.","poster_notes":"This popular main poster has some fold wear and pin holes in the corners.","tags":["1984"],"gallery":["gallery_images/dune-quad-poster-1.jpg","gallery_images/dune-quad-poster-2.jpg"],"sort_title":"DUNE","on_sale":false,"is_new":true,"purchase_date":"","product_id":"prod_VC76qutQHZe4kC"};</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"DUNE","description":"David Lynch&#039;s 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.","image":"https://www.cinemaquadposters.co.uk/posters-thumb/dune-quad-poster.jpg","offers":{"@type":"Offer","price":129.99,"priceCurrency":"GBP","itemCondition":"https://schema.org/UsedCondition","availability":"https://schema.org/InStock"}}</script></head>
 
 <body class="bg-black text-white">
 
@@ -190,7 +190,14 @@ fetch('/inventory.json')
         .slice(0, 4);
 
         if (related.length) {
-            const slugs = related.map(x => x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, ''));
+            const slugs = related.map(x => {
+    let slug = x.title.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+    if (x.variant) {
+        const variantSlug = x.variant.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+        slug += `-${variantSlug}`;
+    }
+    return slug;
+});
             document.getElementById('relatedSection').innerHTML = `
                 <h5 class="mb-4">You may also like</h5>
                 <div class="row g-3">

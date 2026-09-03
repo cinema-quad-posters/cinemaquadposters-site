@@ -31,6 +31,7 @@
     ],
     "sort_title": "ABBA - THE MOVIE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-08-30",
     "product_id": "prod_TiiMd9wKNMr1Um"
   },
@@ -64,6 +65,7 @@
     ],
     "sort_title": "ABYSS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2022-08-24",
     "product_id": "prod_TiiMGCMU4AzdWD"
   },
@@ -100,6 +102,7 @@
     ],
     "sort_title": "AKIRA",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-12-26",
     "product_id": "prod_TiiMl2G9AHBcYH"
   },
@@ -139,8 +142,46 @@
     ],
     "sort_title": "ALIEN 3",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMZQhsTarL2d"
+  },
+  {
+    "title": "AMELIE",
+    "variant": "25th anniversary Curzon re-release",
+    "originally released": 2001,
+    "director": "Jean-Pierre Jeunet",
+    "actors": [
+      "Audrey Tautou",
+      "Mathieu Kassovitz",
+      "Rufus"
+    ],
+    "genre": [
+      "French",
+      "quirky",
+      "romance",
+      "comedy"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inch",
+    "thumbnail": "posters-thumb/amelie-25th-quad-poster.jpg",
+    "hires": "posters/amelie-25th-quad-poster.jpg",
+    "price": 136.99,
+    "film_summary": "Jean-Pierre Jeunet's heart-warming 2001 quirky romantic comendy drama Amelie, starring Audrey Tautou, Mathieu Kassovitz and Rufus.",
+    "poster_notes": "This single sided film poster has one small minor mark on the bottom edge.",
+    "tags": [
+      "73.45"
+    ],
+    "gallery": [
+      "gallery_images/amelie-25th-quad-poster-1.jpg",
+      "gallery_images/amelie-25th-quad-poster-2.jpg"
+    ],
+    "sort_title": "AMÉLIE",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-04-19",
+    "product_id": "prod_UQ74KhhQJ1uruT"
   },
   {
     "title": "AMORES PERROS",
@@ -181,6 +222,7 @@
     ],
     "sort_title": "AMORES PERROS",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMeLjj4EotMX"
   },
@@ -214,6 +256,7 @@
     ],
     "sort_title": "ANGEL-A",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMEWK6C7jVxX"
   },
@@ -253,6 +296,7 @@
     ],
     "sort_title": "APOCALYPSE NOW - FINAL CUT",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-08-18",
     "product_id": "prod_TiiM3Y9CPiSuRo"
   },
@@ -291,6 +335,7 @@
     ],
     "sort_title": "APOCALYPSE NOW - REDUX",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMV5lVp4knOW"
   },
@@ -329,6 +374,7 @@
     ],
     "sort_title": "APOCALYPSE NOW",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMFdqvGZ7ibW"
   },
@@ -365,8 +411,9 @@
     ],
     "sort_title": "THE ARTIST",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-25",
-    "product_id": ""
+    "product_id": "prod_TriJBiLy1dvYFB"
   },
   {
     "title": "ATTACK THE BLOCK",
@@ -409,6 +456,7 @@
     ],
     "sort_title": "ATTACK THE BLOCK",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiM7NNKYFfIdv"
   },
@@ -450,6 +498,7 @@
     ],
     "sort_title": "BABY DRIVER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2017-06-11",
     "product_id": "prod_TqDnly0Djdvftx"
   },
@@ -491,6 +540,7 @@
     ],
     "sort_title": "BABY DRIVER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDn1kfXVguWip"
   },
@@ -527,6 +577,7 @@
     ],
     "sort_title": "BACK TO THE FUTURE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMlgbphYTBtz"
   },
@@ -563,6 +614,7 @@
     ],
     "sort_title": "BACK TO THE FUTURE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMlgbphYTBtz"
   },
@@ -599,6 +651,7 @@
     ],
     "sort_title": "BACK TO THE FUTURE",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-06-22",
     "product_id": "prod_TiiMlgbphYTBtz"
   },
@@ -635,6 +688,7 @@
     ],
     "sort_title": "BACK TO THE FUTURE",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-10-07",
     "product_id": "prod_TiiMlgbphYTBtz"
   },
@@ -671,6 +725,7 @@
     ],
     "sort_title": "BATMAN RETURNS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMkGgie59uaH"
   },
@@ -711,6 +766,7 @@
     ],
     "sort_title": "BATMAN BEGINS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiM2QxmQL4pR9"
   },
@@ -749,6 +805,7 @@
     ],
     "sort_title": "BEAUTY & THE BEAST",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-14",
     "product_id": "prod_TqDnGLXISQmHis"
   },
@@ -786,6 +843,7 @@
     ],
     "sort_title": "BETTY BLUE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2018-06-24",
     "product_id": "prod_TiiMECvqSeOBEk"
   },
@@ -822,6 +880,7 @@
     ],
     "sort_title": "BEVERLY HILLS COP",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMubBtWxciso"
   },
@@ -868,6 +927,7 @@
     ],
     "sort_title": "BIG FISH",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMveL9XolqAd"
   },
@@ -904,6 +964,7 @@
     ],
     "sort_title": "BIG TROBLE IN LITLE CHINA",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiM8cFAACoQeN"
   },
@@ -941,6 +1002,7 @@
     ],
     "sort_title": "BIG HERO 6",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMEx6C8SzICJ"
   },
@@ -975,6 +1037,7 @@
     ],
     "sort_title": "BILLY ELLIOT",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDn1sKnpwfSVu"
   },
@@ -1009,6 +1072,7 @@
     ],
     "sort_title": "BILLY ELLIOT",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-10-09",
     "product_id": "prod_TqDnLx4n53rVVe"
   },
@@ -1080,6 +1144,7 @@
     ],
     "sort_title": "BLACK HOLE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-06-27",
     "product_id": "prod_TiiMA3qHnnkQCU"
   },
@@ -1116,8 +1181,9 @@
     ],
     "sort_title": "BLACK PANTHER",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2025-03-27",
-    "product_id": ""
+    "product_id": "prod_TriJCeUfFwCqmp"
   },
   {
     "title": "BLADE RUNNER - THE FINAL CUT",
@@ -1152,6 +1218,7 @@
     ],
     "sort_title": "BLADE RUNNER - THE FINAL CUT",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMY8CurOwo0L"
   },
@@ -1187,6 +1254,7 @@
     ],
     "sort_title": "BLOOD SIMPLE",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMyr9K3WWWV0"
   },
@@ -1220,6 +1288,7 @@
     ],
     "sort_title": "BODYGUARD",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMaoCHswXfeh"
   },
@@ -1260,6 +1329,7 @@
     ],
     "sort_title": "BOURNE IDENTITY",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-14",
     "product_id": "prod_TqDnY74cQVbBdR"
   },
@@ -1299,6 +1369,7 @@
     ],
     "sort_title": "BOURNE SUPREMACY",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2017-12-06",
     "product_id": "prod_TqDnNMG5QPZ0eE"
   },
@@ -1341,8 +1412,46 @@
     ],
     "sort_title": "BOURNE ULTIMATUM",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDnvORknCIC4A"
+  },
+  {
+    "title": "BRIDGET JONES'S DIARY",
+    "variant": "25th anniversary re-release",
+    "originally released": 2001,
+    "director": "Sharon Maguire",
+    "actors": [
+      "Renée Zellweger",
+      "Colin Firth",
+      "Hugh Grant"
+    ],
+    "genre": [
+      "comedy",
+      "romantic",
+      "feel-good",
+      "drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/bridget-jones-diary-25th-quad-poster.jpg",
+    "hires": "posters/bridget-jones-diary-25th-quad-poster.jpg",
+    "price": 47.99,
+    "film_summary": "Working Title's 2001 romantic comedy sucess Bridget Jones's Diary, starring Renée Zellweger, Colin Firth and Hugh Grant.",
+    "poster_notes": "This 2026 re-release sticks to the classic artwork making it a clean, fresh artwork ideal for framing.",
+    "tags": [
+      "9.00"
+    ],
+    "gallery": [
+      "gallery_images/bridget-jones-diary-25th-quad-poster-1.jpg",
+      "gallery_images/bridget-jones-diary-25th-quad-poster-2.jpg"
+    ],
+    "sort_title": "BRIDGET JONES'S DIARY",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-07-26",
+    "product_id": ""
   },
   {
     "title": "BUGSY MALONE",
@@ -1374,6 +1483,7 @@
     ],
     "sort_title": "BUGSY MALONE",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMtyJlwdsNcH"
   },
@@ -1410,6 +1520,7 @@
     ],
     "sort_title": "CABARET",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMwiAnFwZJwt"
   },
@@ -1444,6 +1555,7 @@
     ],
     "sort_title": "CASUALTIES OF WAR",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMxcR2s1dp6p"
   },
@@ -1477,6 +1589,7 @@
     ],
     "sort_title": "CHARLIE CHAPLIN'S THE KID",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMRmGP4CKQAL"
   },
@@ -1516,6 +1629,7 @@
     ],
     "sort_title": "CHINATOWN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiMjSFguX52rL"
   },
@@ -1552,6 +1666,7 @@
     ],
     "sort_title": "CITIZEN KANE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-03-01",
     "product_id": "prod_TiiMNs2AituCTJ"
   },
@@ -1589,6 +1704,7 @@
     ],
     "sort_title": "CITY OF LOST CHILDREN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "17-12-16",
     "product_id": "prod_TiiNGLYzmvofSd"
   },
@@ -1623,6 +1739,7 @@
     ],
     "sort_title": "CLOSE ENCOUNTERS OF THE THIRD KIND",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNjjjyrujuRp"
   },
@@ -1655,6 +1772,7 @@
     ],
     "sort_title": "CLOSE ENCOUNTERS OF THE THIRD KIND",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNjjjyrujuRp"
   },
@@ -1692,6 +1810,7 @@
     ],
     "sort_title": "CLOSE ENCOUNTERS OF THE THIRD KIND",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNjjjyrujuRp"
   },
@@ -1722,6 +1841,7 @@
     ],
     "sort_title": "COBAIN - MONTAGE OF HECK",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNWqxMydL6Sy"
   },
@@ -1761,6 +1881,7 @@
     ],
     "sort_title": "COCO",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-08-18",
     "product_id": "prod_TiiN2rX9byZwsP"
   },
@@ -1803,6 +1924,7 @@
     ],
     "sort_title": "CORPSE BRIDE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN0db0EH6YpI"
   },
@@ -1839,6 +1961,7 @@
     ],
     "sort_title": "CREATOR",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-12-08",
     "product_id": "prod_TiiNgPoIAvtGIF"
   },
@@ -1875,6 +1998,7 @@
     ],
     "sort_title": "CREATOR",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-12-08",
     "product_id": "prod_TiiNgPoIAvtGIF"
   },
@@ -1908,6 +2032,7 @@
     ],
     "sort_title": "CROSS OF IRON",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN6dKcHdqLZQ"
   },
@@ -1943,6 +2068,7 @@
     ],
     "sort_title": "CYRANO DE BERGERAC",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2006-01-18",
     "product_id": "prod_TqDnKpzDBbt2O2"
   },
@@ -1983,6 +2109,7 @@
     ],
     "sort_title": "DAS BOOT",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN3kq67oqVz7"
   },
@@ -2021,6 +2148,7 @@
     ],
     "sort_title": "DEATH WEEKEND",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN1ksnWjePKG"
   },
@@ -2052,6 +2180,7 @@
     ],
     "sort_title": "DEER HUNTER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNGuoM0DJnoc"
   },
@@ -2083,6 +2212,7 @@
     ],
     "sort_title": "DELICATESSEN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNqIoKyBQVhz"
   },
@@ -2114,6 +2244,7 @@
     ],
     "sort_title": "DELIVERANCE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNKIOvtkZovF"
   },
@@ -2150,6 +2281,7 @@
     ],
     "sort_title": "DIE HARD",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNiqchTyiRY9"
   },
@@ -2186,6 +2318,7 @@
     ],
     "sort_title": "DISTRICT 9",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNybigdLHot6"
   },
@@ -2218,6 +2351,7 @@
     ],
     "sort_title": "DR. WHO AND THE DALEKS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-06-04",
     "product_id": "prod_TiiNSZHPSYAy8D"
   },
@@ -2251,6 +2385,7 @@
     ],
     "sort_title": "DR. WHO - DAY OF THE DOCTOR",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDnvckojwQswF"
   },
@@ -2284,6 +2419,7 @@
     ],
     "sort_title": "DOCTOR ZHIVAGO",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNLQh3jkJ9PG"
   },
@@ -2321,6 +2457,7 @@
     ],
     "sort_title": "DONNIE DARKO DIRECTORS'S CUT",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNkUL5XsGgm8"
   },
@@ -2359,6 +2496,7 @@
     ],
     "sort_title": "DONNIE DARKO",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2017-07-21",
     "product_id": "prod_TiiNphgU5Bc1Ix"
   },
@@ -2392,6 +2530,7 @@
     ],
     "sort_title": "DOWNFALL",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDny2YauHeC4e"
   },
@@ -2428,6 +2567,7 @@
     ],
     "sort_title": "DRAGONSLAYER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-07-09",
     "product_id": "prod_TiiNQ2wrmj95cl"
   },
@@ -2464,45 +2604,11 @@
     ],
     "sort_title": "DRIVER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-02-17",
     "product_id": "prod_TiiNaJclyKeaZF"
   },
-  {
-    "title": "DUNE",
-    "variant": "Advance teaser, style A",
-    "originally released": 1984,
-    "director": "David Lynch",
-    "actors": [
-      "Kyle Mac",
-      "Virginia Madsen",
-      "Francesca Annis"
-    ],
-    "genre": [
-      "sci-fi",
-      "action",
-      "adventure"
-    ],
-    "condition": "near mint, folded",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/dune-a-quad-poster-style-a.jpg",
-    "hires": "posters/dune-a-quad-poster-style-a.jpg",
-    "price": 74.99,
-    "film_summary": "David Lynch's 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.",
-    "poster_notes": "This rarer advance poster has some minor fold wear and pin holes in the corners.",
-    "tags": [
-      "1984"
-    ],
-    "gallery": [
-      "gallery_images/dune-a-quad-poster-style-a-1.jpg",
-      "gallery_images/dune-a-quad-poster-style-a-2.jpg"
-    ],
-    "sort_title": "DUNE",
-    "on_sale": false,
-    "purchase_date": "",
-    "product_id": "prod_TiiNmPlw8lBRQn"
-  },
-  {
+    {
     "title": "DUNE",
     "variant": "Advance teaser, style B",
     "originally released": 1984,
@@ -2534,8 +2640,82 @@
     ],
     "sort_title": "DUNE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNmPlw8lBRQn"
+  },
+  {
+    "title": "DUNE",
+    "variant": null,
+    "originally released": 1984,
+    "director": "David Lynch",
+    "actors": [
+      "Kyle Mac",
+      "Virginia Madsen",
+      "Francesca Annis"
+    ],
+    "genre": [
+      "sci-fi",
+      "action",
+      "adventure"
+    ],
+    "condition": "excellent folded",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/dune-quad-poster.jpg",
+    "hires": "posters/dune-quad-poster.jpg",
+    "price": 129.99,
+    "film_summary": "David Lynch's 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.",
+    "poster_notes": "This popular main poster has some fold wear and pin holes in the corners.",
+    "tags": [
+      "1984"
+    ],
+    "gallery": [
+      "gallery_images/dune-quad-poster-1.jpg",
+      "gallery_images/dune-quad-poster-2.jpg"
+    ],
+    "sort_title": "DUNE",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "",
+    "product_id": ""
+  },
+    {
+    "title": "EASY RIDER",
+    "variant": null,
+    "originally released": 1969,
+    "director": "Dennis Hopper",
+    "actors": [
+      "Peter Fonda",
+      "Dennis Hopper",
+      "Jack Nicholson"
+    ],
+    "genre": [
+      "psychological",
+      "adventure",
+      "road trip",
+      "drama"
+    ],
+    "condition": "excellent folded",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/easy-rider-quad-poster.jpg",
+    "hires": "posters/easy-rider-quad-poster.jpg",
+    "price": 299.99,
+    "film_summary": "Dennis Hopper's 1969 art house classic Easy Rider, starring Peter Fonda, Dennis Hopper and Jack Nicholson.",
+    "poster_notes": "This bright illuminous poster design captures the 60's vibe perfectly and has become incredibly sought after. This version is in pretty good condition for it's age, with some minor cross fold paper loss, smudges and faint black and red ink transfer marks near some of the yellow folds - a perfect poster for linen backing.",
+    "tags": [
+      "165.00"
+    ],
+    "gallery": [
+      "gallery_images/easy-rider-quad-poster.jpg",
+      "gallery_images/easy-rider-quad-poster.jpg"
+    ],
+    "sort_title": "EASY RIDER",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2017-01-25",
+    "product_id": ""
   },
   {
     "title": "EDWARD SCISSORHANDS",
@@ -2568,6 +2748,7 @@
     ],
     "sort_title": "EDWARD SCISSORHANDS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNguWPEl5lGa"
   },
@@ -2604,6 +2785,7 @@
     ],
     "sort_title": "8½",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNs8FDV2ndMo"
   },
@@ -2640,6 +2822,7 @@
     ],
     "sort_title": "ELEPHANT MAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNjgo9FmCQtb"
   },
@@ -2676,6 +2859,7 @@
     ],
     "sort_title": "ELEPHANT MAN",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2020-05-10",
     "product_id": "prod_TiiNjgo9FmCQtb"
   },
@@ -2713,6 +2897,7 @@
     ],
     "sort_title": "EMPIRE OF LIGHT",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-15",
     "product_id": "prod_TqDnulsSHFT8Us"
   },
@@ -2743,6 +2928,7 @@
     ],
     "sort_title": "ENEMY MINE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDnXxeKnRTIBn"
   },
@@ -2781,6 +2967,7 @@
     ],
     "sort_title": "E.T. THE EXTRA TERRESTRIAL",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2018-06-06",
     "product_id": "prod_TiiNmiaWGnCwmo"
   },
@@ -2819,6 +3006,7 @@
     ],
     "sort_title": "E.T. THE EXTRA TERRESTRIAL",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2022-10-25",
     "product_id": "prod_TiiNmiaWGnCwmo"
   },
@@ -2855,77 +3043,9 @@
     ],
     "sort_title": "FALLING DOWN",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-01-22",
     "product_id": "prod_TiiNSqAO4eprxG"
-  },
-  {
-    "title": "FARGO",
-    "variant": null,
-    "originally released": 1996,
-    "director": "Joel & Ethan Coen",
-    "actors": [],
-    "genre": [
-      "dark",
-      "comedy",
-      "crime",
-      "thriller"
-    ],
-    "condition": "very fine, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/fargo-quad-poster.jpg",
-    "hires": "posters/fargo-quad-poster.jpg",
-    "price": 34.99,
-    "film_summary": "The Cohen Brothers' 1996 modern classic Fargo, starring William H. Macy, Steve Buscemi, Frances McDormand, Kristin Rudrud and Harve Presnell.",
-    "poster_notes": "This film poster has minor edge wear.",
-    "tags": [
-      "1996"
-    ],
-    "gallery": [
-      "gallery_images/fargo-quad-poster-1.jpg",
-      "gallery_images/fargo-quad-poster-2.jpg"
-    ],
-    "sort_title": "FARGO",
-    "on_sale": true,
-    "purchase_date": "",
-    "product_id": "prod_TiiN5n0d1x521j"
-  },
-  {
-    "title": "THE FIFTH ELEMENT",
-    "variant": null,
-    "originally released": 1997,
-    "director": "Luc Besson",
-    "actors": [
-      "Bruce Willis",
-      "Gary Oldman",
-      "Ian Holm",
-      "Milla Jovovich",
-      "Chris Tucker"
-    ],
-    "genre": [
-      "sci-fi",
-      "action",
-      "adventure"
-    ],
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/the-fifth-element-quad-poster.jpg",
-    "hires": "posters/the-fifth-element-quad-poster.jpg",
-    "price": 194.99,
-    "film_summary": "Luc Besson's 1997 futuristic action thriller The Fifth Element, starring Bruce Willis, Gary Oldman, Ian Holm, Milla Jovovich and Chris Tucker.",
-    "poster_notes": "",
-    "tags": [
-      "1997"
-    ],
-    "gallery": [
-      "gallery_images/the-fifth-element-quad-poster-1.jpg",
-      "gallery_images/the-fifth-element-quad-poster-2.jpg"
-    ],
-    "sort_title": "FIFTH ELEMENT",
-    "on_sale": false,
-    "purchase_date": "",
-    "product_id": "prod_TiiNnk5YRiX44x"
   },
   {
     "title": "FIRST BLOOD",
@@ -2960,74 +3080,9 @@
     ],
     "sort_title": "FIRST BLOOD",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN92sBlud4EG"
-  },
-  {
-    "title": "FIRST KNIGHT",
-    "variant": "advance teaser",
-    "originally released": 1991,
-    "director": "Jerry Zucker",
-    "actors": [
-      "Sean Connery",
-      "Richard Gere",
-      "Julia Ormond"
-    ],
-    "genre": [
-      "action",
-      "adventure",
-      "romance"
-    ],
-    "condition": "near mint, rolled.",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/first-knight-a-quad-poster.jpg",
-    "hires": "posters/first-knight-a-quad-poster.jpg",
-    "price": 27.99,
-    "film_summary": "Jerry Zucker's underrated 1995 adventure romance First Knight, starring Sean Connery, Richard Gere and Julie Ormond. Jerrry Goldsmith's beautiful score has made this film a modest cult classic.",
-    "poster_notes": "This extremely rare advance cinema poster is single-sided.",
-    "tags": null,
-    "gallery": [
-      "gallery_images/first-knight-a-quad-poster-1.jpg",
-      "gallery_images/first-knight-a-quad-poster-2.jpg"
-    ],
-    "sort_title": "FIRST KNIGHT.",
-    "on_sale": true,
-    "purchase_date": "",
-    "product_id": "prod_TiiNMOMhKvRsyW"
-  },
-  {
-    "title": "FIRST KNIGHT",
-    "variant": null,
-    "originally released": 1991,
-    "director": "Jerry Zucker",
-    "actors": [
-      "Sean Connery",
-      "Richard Gere",
-      "Julia Ormond"
-    ],
-    "genre": [
-      "action",
-      "adventure",
-      "romance"
-    ],
-    "condition": "near mint, rolled.",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/first-knight-quad-poster.jpg",
-    "hires": "posters/first-knight-quad-poster.jpg",
-    "price": 27.99,
-    "film_summary": "Jerry Zucker's underrated 1995 adventure romance First Knight, starring Sean Connery, Richard Gere and Julie Ormond. Jerrry Goldsmith's beautiful score has made this film a modest cult classic",
-    "poster_notes": "This poster is double-sided.",
-    "tags": null,
-    "gallery": [
-      "gallery_images/first-knight-quad-poster-1.jpg",
-      "gallery_images/first-knight-quad-poster-2.jpg"
-    ],
-    "sort_title": "FIRST KNIGHT",
-    "on_sale": true,
-    "purchase_date": "",
-    "product_id": "prod_TiiNMOMhKvRsyW"
   },
   {
     "title": "FLASH GORDON",
@@ -3068,6 +3123,7 @@
     ],
     "sort_title": "FLASH GORDON",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNssGGipEdKJ"
   },
@@ -3111,6 +3167,7 @@
     ],
     "sort_title": "FLASH GORDON",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-10-19",
     "product_id": "prod_TiiNssGGipEdKJ"
   },
@@ -3147,6 +3204,7 @@
     ],
     "sort_title": "FRENCH DISPATCH",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2022-03-08",
     "product_id": "prod_TiiNSrb4czdZP2"
   },
@@ -3181,6 +3239,7 @@
     ],
     "sort_title": "FRENCH KISS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN0Dgaer5YtE"
   },
@@ -3217,6 +3276,7 @@
     ],
     "sort_title": "FUGITIVE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-07-25",
     "product_id": "prod_TiiN3MUwLxqFm0"
   },
@@ -3252,6 +3312,7 @@
     ],
     "sort_title": "FUNNY GAMES",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-08-03",
     "product_id": "prod_TiiNLhaDfkbPB4"
   },
@@ -3288,13 +3349,14 @@
     ],
     "sort_title": "GHOST",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDn8rT55ESjI7"
   },
   {
     "title": "GHOSTBUSTERS",
     "variant": "Park Circus 2011 re-release",
-    "originally released": 2084,
+    "originally released": 1984,
     "director": null,
     "actors": [
       "Bill Murray",
@@ -3326,6 +3388,7 @@
     ],
     "sort_title": "GHOSTBUSTERS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNOBUIditJt1"
   },
@@ -3363,6 +3426,7 @@
     ],
     "sort_title": "GIRL WITH THE DRAGON TATTOO",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN5UZJhEAZ3h"
   },
@@ -3400,6 +3464,7 @@
     ],
     "sort_title": "GIRL WHO PLAYED WITH FIRE",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNODqpZrHQXq"
   },
@@ -3437,6 +3502,7 @@
     ],
     "sort_title": "GIRL WHO KICKED THE HORNET'S NEST",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN4qg8EMctEs"
   },
@@ -3474,6 +3540,7 @@
     ],
     "sort_title": "GODFATHER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2022-02-25",
     "product_id": "prod_TiiNGqA0bD9sLA"
   },
@@ -3505,6 +3572,7 @@
     ],
     "sort_title": "GRADUATE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-11-25",
     "product_id": "prod_TiiNLOH5hGujKv"
   },
@@ -3539,6 +3607,7 @@
     ],
     "sort_title": "GREASE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-06-26",
     "product_id": "prod_TiiNpQGaeic8dt"
   },
@@ -3573,6 +3642,7 @@
     ],
     "sort_title": "GREASE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNpQGaeic8dt"
   },
@@ -3607,6 +3677,7 @@
     ],
     "sort_title": "GREASE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDn5M8UOiGQ9Z"
   },
@@ -3641,6 +3712,7 @@
     ],
     "sort_title": "GREASE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2018-08-21",
     "product_id": "prod_TiiNpQGaeic8dt"
   },
@@ -3676,6 +3748,7 @@
     ],
     "sort_title": "GREATEST SHOWMAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-03-28",
     "product_id": "prod_TiiN9REDCi2qqe"
   },
@@ -3707,6 +3780,7 @@
     ],
     "sort_title": "GREMLINS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNVjRrPYGdyQ"
   },
@@ -3748,6 +3822,7 @@
     ],
     "sort_title": "GUARDIANS OF THE GALAXY",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiN23Ae5shmwp"
   },
@@ -3791,6 +3866,7 @@
     ],
     "sort_title": "GUARDIANS OF THE GALAXY Vol. 3",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2023-01-29",
     "product_id": "prod_TiiNqF8Y7CIjtk"
   },
@@ -3834,6 +3910,7 @@
     ],
     "sort_title": "GUARDIANS OF THE GALAXY Vol. 3",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2023-04-04",
     "product_id": "prod_TiiNqF8Y7CIjtk"
   },
@@ -3867,6 +3944,7 @@
     ],
     "sort_title": "HANOVER STREET",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOAlF6iXlUm1"
   },
@@ -3904,6 +3982,7 @@
     ],
     "sort_title": "HAROLD AND MAUDE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOhywSoVUiSF"
   },
@@ -3954,6 +4033,7 @@
     ],
     "sort_title": "HARRY POTTER AND THE PHILOSOPHERS STONE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-04-08",
     "product_id": "prod_TiiOkFbnbBLKyR"
   },
@@ -4004,6 +4084,7 @@
     ],
     "sort_title": "HARRY POTTER AND THE PHILOSOPHERS STONE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-10-25",
     "product_id": "prod_TiiOkFbnbBLKyR"
   },
@@ -4039,6 +4120,7 @@
     ],
     "sort_title": "HEADHUNTERS",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-18",
     "product_id": "prod_TqDnrmcpFlzfIm"
   },
@@ -4078,6 +4160,7 @@
     ],
     "sort_title": "HEARTS OF DARKNESS: A Filmmaker's Apocalypse",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-06-02",
     "product_id": "prod_TiiOCUVUd7MXQq"
   },
@@ -4114,6 +4197,7 @@
     ],
     "sort_title": "HEATHERS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2018-08-24",
     "product_id": "prod_TiiOklNvlva2I3"
   },
@@ -4151,6 +4235,7 @@
     ],
     "sort_title": "HELL OR HIGH WATER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOlioMsasik3"
   },
@@ -4182,6 +4267,7 @@
     ],
     "sort_title": "HITCHER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOBIt7IyAiPU"
   },
@@ -4219,38 +4305,9 @@
     ],
     "sort_title": "HUNCHBACK OF NOTRE DAME",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOLxmOjbJm1t"
-  },
-  {
-    "title": "I LOVE JOHN HUGHES",
-    "variant": null,
-    "originally released": 2018,
-    "director": "John Hughes",
-    "actors": [],
-    "genre": [
-      "teen",
-      "comedy"
-    ],
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/i-love-john-hughes-quad-poster.jpg",
-    "hires": "posters/i-love-john-hughes-quad-poster.jpg",
-    "price": 94.99,
-    "film_summary": "A celebratory re-release of some of the best 80's John Hughes' teen comedy classics, appropriately titled - I Love John Hughes, including Ferris Bueller's Day Off, Pretty In Pink, Breakfast Club, Sixteen Candles and Weird Science.",
-    "poster_notes": "This fantastic rare limited release film poster is a must for any John Hughes fan.",
-    "tags": [
-      "20.88"
-    ],
-    "gallery": [
-      "gallery_images/i-love-john-hughes-quad-poster-1.jpg",
-      "gallery_images/i-love-john-hughes-quad-poster-2.jpg"
-    ],
-    "sort_title": "I LOVE JOHN HUGHES",
-    "on_sale": false,
-    "purchase_date": "2018-08-21",
-    "product_id": "prod_TiiOXuTdKcAoe2"
   },
   {
     "title": "IN BRUGES",
@@ -4285,8 +4342,9 @@
     ],
     "sort_title": "IN BRUGES",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-26",
-    "product_id": ""
+    "product_id": "prod_TriJIoO4qyBvnJ"
   },
   {
     "title": "INCEPTION",
@@ -4327,6 +4385,7 @@
     ],
     "sort_title": "INCEPTION",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiO5dS8tUJm0I"
   },
@@ -4360,6 +4419,7 @@
     ],
     "sort_title": "INCREDIBLES",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiO81gq03s9t8"
   },
@@ -4401,6 +4461,7 @@
     ],
     "sort_title": "INDIANA JONES & THE LAST CRUSADE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOFoAfIIGqlV"
   },
@@ -4437,6 +4498,7 @@
     ],
     "sort_title": "IRON GIANT",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOQEt0N9fTlI"
   },
@@ -4475,6 +4537,7 @@
     ],
     "sort_title": "JACOB'S LADDER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-08-13",
     "product_id": "prod_TiiOBo6Lft32TA"
   },
@@ -4511,39 +4574,9 @@
     ],
     "sort_title": "JACOB'S LADDER",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOBo6Lft32TA"
-  },
-  {
-    "title": "JAWS",
-    "variant": null,
-    "originally released": 1975,
-    "director": "Steven Spielberg",
-    "actors": [
-      "Roy Scheider",
-      "Robert Shaw",
-      "Richard Dreyfuss"
-    ],
-    "genre": null,
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/jaws-quad-poster.jpg",
-    "hires": "posters/jaws-quad-poster.jpg",
-    "price": 800.99,
-    "film_summary": "Steven Spielberg's terrifying 1975 blockbuster Jaws starring Roy Scheider, Robert Shaw and Richard Dreyfuss.",
-    "poster_notes": "This poster has been professionally linen backed.",
-    "tags": [
-      "211.74"
-    ],
-    "gallery": [
-      "gallery_images/jaws-quad-poster-1.jpg",
-      "gallery_images/jaws-quad-poster-2.jpg"
-    ],
-    "sort_title": "JAWS",
-    "on_sale": false,
-    "purchase_date": "2007-09-08",
-    "product_id": "prod_TiiOAbYOQfPQmC"
   },
   {
     "title": "JAWS",
@@ -4555,13 +4588,19 @@
       "Robert Shaw",
       "Richard Dreyfuss"
     ],
-    "genre": null,
+    "genre": [
+      "monster",
+      "horror",
+      "thriller",
+      "adventure",
+      "drama"
+    ],
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/jaws-2012-quad-poster.jpg",
     "hires": "posters/jaws-2012-quad-poster.jpg",
-    "price": 94.99,
+    "price": 124.99,
     "film_summary": "2012 re-release of Steven Spielberg's terrifying 1975 blockbuster Jaws starring Roy Scheider, Robert Shaw and Richard Dreyfuss.",
     "poster_notes": "",
     "tags": [
@@ -4573,8 +4612,47 @@
     ],
     "sort_title": "JAWS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TiiOAbYOQfPQmC"
+    "product_id": "prod_UQ70c4D6kHVQes"
+  },
+  {
+    "title": "JAWS",
+    "variant": "2022 IMAX re-release",
+    "originally released": 1975,
+    "director": "Steven Spielberg",
+    "actors": [
+      "Roy Scheider",
+      "Robert Shaw",
+      "Richard Dreyfuss"
+    ],
+    "genre": [
+      "monster",
+      "horror",
+      "thriller",
+      "adventure",
+      "drama"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/jaws-imax-2022-quad-poster.jpg",
+    "hires": "posters/jaws-imax-2022-quad-poster.jpg",
+    "price": 94.99,
+    "film_summary": "2022 IMAX re-release of Steven Spielberg's terrifying 1975 blockbuster Jaws starring Roy Scheider, Robert Shaw and Richard Dreyfuss.",
+    "poster_notes": "There is a white crack to the left of the text 'director Steven Spielberg' and three smaller cracks together on the right edge, another by the red 'book now' text and a small tear on the bottom edge.",
+    "tags": [
+      "26.70"
+    ],
+    "gallery": [
+      "gallery_images/jaws-imax-2022-quad-poster-1.jpg",
+      "gallery_images/jaws-imax-2022-quad-poster-2.jpg"
+    ],
+    "sort_title": "JAWS",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-03-25",
+    "product_id": "prod_UQ70E92W61rlXJ"
   },
   {
     "title": "THE JEWEL OF THE NILE",
@@ -4609,6 +4687,7 @@
     ],
     "sort_title": "JEWEL OF THE NILE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-03-20",
     "product_id": "prod_TiiOTWFSvX8EwD"
   },
@@ -4644,8 +4723,51 @@
     ],
     "sort_title": "JOKER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-01-09",
     "product_id": "prod_TiiOjABDNe64JY"
+  },
+  {
+    "title": "KILL BILL - THE WHOLE BLOODY AFFAIR",
+    "variant": null,
+    "originally released": 2025,
+    "director": "Quentin Tarantino",
+    "actors": [
+      "Uma Thurman",
+      "David Caraldine",
+      "Daryl Hannah",
+      "Michael Madsen",
+      "Lucy Liu",
+      "Vivica A Fox"
+    ],
+    "genre": [
+      "Epic",
+      "kung fu",
+      "martial arts",
+      "action",
+      "crime",
+      "thriller"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inch",
+    "thumbnail": "posters-thumb/kill-bill-the-whole-bloody-affair-quad-poster.jpg",
+    "hires": "posters/kill-bill-the-whole-bloody-affair-quad-poster.jpg",
+    "price": 99.99,
+    "film_summary": "Quentin Tarantino's 4th film originally released in two volumes in 2004, was re-released in 2025 as one whole four hour masterpiece as KIll Bill - The Whole Bloody Affair, starring Uma Thurman, David Caraldine, Daryl Hannah, Michael Madsen, Lucy Liu and Vivica A Fox.",
+    "poster_notes": "This double sided film poster has some very minor wear on the bottom right edge.",
+    "tags": [
+      "50.14"
+    ],
+    "gallery": [
+      "gallery_images/kill-bill-the-whole-bloody-affair-quad-poster-1.jpg",
+      "gallery_images/kill-bill-the-whole-bloody-affair-quad-poster-2.jpg"
+    ],
+    "sort_title": "KILL BILL - THE WHOLE BLOODY AFFAIR",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-04-01",
+    "product_id": "prod_UQ704TCw9dALWW"
   },
   {
     "title": "KILLER JOE",
@@ -4680,6 +4802,7 @@
     ],
     "sort_title": "KILLER JOE",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDnvtsQqiZ5f3"
   },
@@ -4714,8 +4837,47 @@
     ],
     "sort_title": "L.A. CONFIDENTIAL",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiO8bwI2j7je3"
+  },
+    {
+    "title": "LA HAINE",
+    "variant": "Bfi 4k restoration re-release",
+    "originally released": 1995,
+    "director": "Mathieu Kassovitz",
+    "actors": [
+      "Vincent Cassel",
+      "Hubert Koundé",
+      "Saïd Taghmaoui"
+    ],
+    "genre": [
+      "French",
+      "crime",
+      "gangster",
+      "psychological",
+      "drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/la-haine-bfi-4k-quad-poster.jpg",
+    "hires": "posters/la-haine-bfi-4k-quad-poster.jpg",
+    "price": 104.99,
+    "film_summary": "1995 Cannes winning director Mathieu Kassovitz's French crime drama La Haine (Hate), starring  Vincent Cassel, Hubert Koundé and Saïd Taghmaoui.",
+    "poster_notes": "This brilliamt Bfi re-relese quad poster is a much cooler, more refined design than the somewhat crude original or even the better 10th anniversary quad design. This original copy has some very minor edgware.",
+    "tags": [
+      "45.00"
+    ],
+    "gallery": [
+      "gallery_images/la-haine-bfi-4k-quad-poster-1.jpg",
+      "gallery_images/la-haine-bfi-4k-quad-poster-2.jpg"
+    ],
+    "sort_title": "HAINE",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-16",
+    "product_id": ""
   },
   {
     "title": "LA LA LAND",
@@ -4737,20 +4899,21 @@
     "condition": "fine, rolled.",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/la-la-land-quad-poster.jpg",
-    "hires": "posters/la-la-land-quad-poster.jpg",
+    "thumbnail": "posters-thumb/la-la-land-quad-poster-b.jpg",
+    "hires": "posters/la-la-land-quad-poster-b.jpg",
     "price": 89.99,
     "film_summary": "Damien Chazelle's 2016 oscar winning musical La La Land, starring Ryan Gosling, Emma Stone and Rosemarie DeWitt.",
     "poster_notes": "This poster seems to have got damp in the bottom left corner, as a result it does not lie completely flat in that corner, otherwise perfecta beautiful piece",
     "tags": null,
     "gallery": [
-      "gallery_images/la-la-land-quad-poster-1.jpg",
-      "gallery_images/la-la-land-quad-poster-2.jpg"
+      "gallery_images/la-la-land-quad-poster-b-1.jpg",
+      "gallery_images/la-la-land-quad-poster-b-2.jpg"
     ],
     "sort_title": "LA LA LAND",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
-    "product_id": ""
+    "product_id": "prod_TriJBuMSXlaNH1"
   },
   {
     "title": "THE LAST OF THE MOHICANS",
@@ -4786,6 +4949,7 @@
     ],
     "sort_title": "LAST OF THE MOHICANS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOzJ5eHegxHG"
   },
@@ -4823,6 +4987,7 @@
     ],
     "sort_title": "LAWRENCE OF ARABIA",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOXSDQPpOfbc"
   },
@@ -4859,8 +5024,9 @@
     ],
     "sort_title": "LIFE OF PI",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-26",
-    "product_id": ""
+    "product_id": "prod_TriJ4QucbZgJgW"
   },
   {
     "title": "LOOPER",
@@ -4896,8 +5062,9 @@
     ],
     "sort_title": "LOOPER",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-24",
-    "product_id": ""
+    "product_id": "prod_TriJ6q5fV6BVxe"
   },
   {
     "title": "THE LOST BOYS",
@@ -4937,6 +5104,7 @@
     ],
     "sort_title": "LOST BOYS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-06-10",
     "product_id": "prod_TiiOdBznrkuOMN"
   },
@@ -4974,6 +5142,7 @@
     ],
     "sort_title": "MACHETE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOVnW03kvpXz"
   },
@@ -5008,6 +5177,7 @@
     ],
     "sort_title": "MACHINIST",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOWU7zSeEKF5"
   },
@@ -5042,6 +5212,7 @@
     ],
     "sort_title": "MAGNIFICENT TWO",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2024-05-26",
     "product_id": "prod_TiiOGdxgmhdjzw"
   },
@@ -5076,6 +5247,7 @@
     ],
     "sort_title": "MAN BITES DOG",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOkGyOkDdSyD"
   },
@@ -5112,6 +5284,7 @@
     ],
     "sort_title": "MAN ON WIRE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-02-24",
     "product_id": "prod_TiiOOLgD1TAWzU"
   },
@@ -5147,6 +5320,7 @@
     ],
     "sort_title": "MAN WHO FELL TO EARTH",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOLygGK1eR15"
   },
@@ -5183,13 +5357,14 @@
     ],
     "sort_title": "MATTER OF LIFE AND DEATH",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-11-07",
     "product_id": "prod_TiiOzkyFxXsWt1"
   },
   {
     "title": "A MATTER OF LIFE AND DEATH",
     "variant": "Park Circus 4K re-release",
-    "originally released": 2046,
+    "originally released": 1946,
     "director": "Powell and Pressburger",
     "actors": [
       "David Niven",
@@ -5219,6 +5394,7 @@
     ],
     "sort_title": "MATTER OF LIFE AND DEATH",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOzkyFxXsWt1"
   },
@@ -5244,9 +5420,9 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-matrix-20th-r-quad-poster.jpg",
     "hires": "posters/the-matrix-20th-r-quad-poster.jpg",
-    "price": 59.99,
+    "price": 99.99,
     "film_summary": "2019 re-release of The Wachowski Brothers' 1999 action sci-fi classic The Matrix, starring Keanu Reeves, Laurence Fishburne and Carrie-Anne Moss.",
-    "poster_notes": "This modernised (and much better designed) re-release poster has some subtle roll wear.",
+    "poster_notes": "This is a much better modern designed poster than the original",
     "tags": [
       "35.30"
     ],
@@ -5256,8 +5432,9 @@
     ],
     "sort_title": "MATRIX",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-08-12",
-    "product_id": "prod_TiiOqEdINvFPe8"
+    "product_id": ""
   },
   {
     "title": "MEAN STREETS",
@@ -5291,6 +5468,7 @@
     ],
     "sort_title": "MEAN STREETS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOHusqbRzrzu"
   },
@@ -5326,6 +5504,7 @@
     ],
     "sort_title": "MEMORIES OF MURDER",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2024-04-13",
     "product_id": "prod_TiiOfMDzAcgFKJ"
   },
@@ -5362,6 +5541,7 @@
     ],
     "sort_title": "MIDNIGHT RUN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-09-13",
     "product_id": "prod_TiiOuCv4ru1TdE"
   },
@@ -5397,8 +5577,45 @@
     ],
     "sort_title": "MINORITY REPORT",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDn99RIeMDN4H"
+  },
+  {
+    "title": "THE MISFITS",
+    "variant": "Bfi 2026 4k restoration re-release",
+    "originally released": 1961,
+    "director": "John Huston",
+    "actors": [
+      "Clark Gable",
+      "Marilyn Monroe",
+      "Montgomery Clift"
+    ],
+    "genre": [
+      "western",
+      "romance",
+      "drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/the-misfits-bfi-pc-quad-poster.jpg",
+    "hires": "posters/the-misfits-bfi-pc-quad-poster.jpg",
+    "price": 149.99,
+    "film_summary": "John Huston's 1961 masterpiece The Misfits, starring Clark Gable, Marilyn Monroe and Montgomery Clift.",
+    "poster_notes": "This Bfi and Park Circus 2026 4k re-rerease celebrates what would have been Marylin Monroe's 100th birthday and uses the identical artwork to the 2015 re-release",
+    "tags": [
+      "55.64"
+    ],
+    "gallery": [
+      "gallery_images/the-misfits-bfi-pc-quad-poster-1.jpg",
+      "gallery_images/the-misfits-bfi-pc-quad-poster-2.jpg"
+    ],
+    "sort_title": "MISFITS",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-13",
+    "product_id": ""
   },
   {
     "title": "MONTY PYTHON AND THE HOLY GRAIL",
@@ -5434,6 +5651,7 @@
     ],
     "sort_title": "MONTY PYTHON AND THE HOLY GRAIL",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2024-05-18",
     "product_id": "prod_TiiOFu52tx5yXE"
   },
@@ -5471,6 +5689,7 @@
     ],
     "sort_title": "MONTY PYTHON'S LIFE OF BRIAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-08-03",
     "product_id": "prod_TiiOjEL3LPNENv"
   },
@@ -5504,6 +5723,7 @@
     ],
     "sort_title": "MOULIN ROUGE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOjJYRiy14Ea"
   },
@@ -5542,6 +5762,7 @@
     ],
     "sort_title": "NAKED",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOOcJTTdlXA7"
   },
@@ -5582,8 +5803,50 @@
     ],
     "sort_title": "NAKED",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2022-04-17",
     "product_id": "prod_TiiOOcJTTdlXA7"
+  },
+  {
+    "title": "NAKED",
+    "variant": "Bfi 4k 2022 re-release",
+    "originally released": 1993,
+    "director": "Mike Leigh",
+    "actors": [
+      "David Thewlis",
+      "Lesley Sharp",
+      "Katrin Cartlidge",
+      "Greg Cruttwell",
+      "Claire Skinner",
+      "Peter Wight",
+      "Gina McKee",
+      "Ewen Bremner"
+    ],
+    "genre": [
+      "dark",
+      "comedy",
+      "drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/mike-leighs-naked-4k-2022-quad-poster2.jpg",
+    "hires": "posters/mike-leighs-naked-4k-2022-quad-poster2.jpg",
+    "price": 159.99,
+    "film_summary": "Mike Leigh's award winning 1993 dark comedy drama Naked, starring David Thewlis, Lesley Sharp, the late Katrin Cartlidge, Greg Cruttwell, Claire Skinner, Peter Wight, Gina McKee and Ewen Bremner.",
+    "poster_notes": "This modern take on the original design, really captures the tone of the film and is exceptionally rare, due to its limited release.",
+    "tags": [
+      "22.00"
+    ],
+    "gallery": [
+      "gallery_images/mike-leighs-naked-4k-2022-quad-poster2-1.jpg",
+      "gallery_images/mike-leighs-naked-4k-2022-quad-poster2-2.jpg"
+    ],
+    "sort_title": "NAKED",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-16",
+    "product_id": ""
   },
   {
     "title": "THE NEVERENDING STORY",
@@ -5617,8 +5880,48 @@
     ],
     "sort_title": "NEVERENDING STORY",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOBYfvdk2pJR"
+  },
+  {
+    "title": "A NIGHTMARE BEFORE CHRISTMAS",
+    "variant": null,
+    "originally released": 1993,
+    "director": "Tim Burton",
+    "actors": [
+      "Danny Elfman",
+      "Chris Sarandon",
+      "Catherine O'Hara"
+    ],
+    "genre": [
+      "dark",
+      "family",
+      "fantasy",
+      "comedy",
+      "adventure",
+      "animation"
+    ],
+    "condition": "near mint, condition",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/a-nightmare-before-christmas-quad-poster.jpg",
+    "hires": "posters/a-nightmare-before-christmas-quad-poster.jpg",
+    "price": 214.99,
+    "film_summary": "Tim Burton's 1993 Christmas animation classic Nightmare Before Christmas starring Danny Elfman, Chris Sarandon and Catherine O'Hara.",
+    "poster_notes": "This wonderfullt tantilising poster is increasingly rare and always sought after. This original copy has a some slight wear on the bottom left edge.",
+    "tags": [
+      "107.63"
+    ],
+    "gallery": [
+      "gallery_images/a-nightmare-before-christmas-quad-poster-1.jpg",
+      "gallery_images/a-nightmare-before-christmas-quad-poster-2.jpg"
+    ],
+    "sort_title": "NIGHTMARE BEFORE CHRISTMAS",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-13",
+    "product_id": ""
   },
   {
     "title": "A NIGHTMARE ON ELM STREET",
@@ -5657,6 +5960,7 @@
     ],
     "sort_title": "NIGHTMARE ON ELM STREET",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOi7srwgqkNt"
   },
@@ -5691,6 +5995,7 @@
     ],
     "sort_title": "NIL BY MOUTH",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2024-07-15",
     "product_id": "prod_TiiO2QbAW5e1y2"
   },
@@ -5725,6 +6030,7 @@
     ],
     "sort_title": "NIL BY MOUTH",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2022-12-25",
     "product_id": "prod_TiiO2QbAW5e1y2"
   },
@@ -5756,6 +6062,7 @@
     ],
     "sort_title": "9",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDn9ADX3B6IXi"
   },
@@ -5792,6 +6099,7 @@
     ],
     "sort_title": "1917",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-15",
     "product_id": "prod_TqDnDs9y4OTlmy"
   },
@@ -5828,8 +6136,91 @@
     ],
     "sort_title": "1917",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2021-08-15",
     "product_id": "prod_TiiONVMQBP7aMH"
+  },
+  {
+    "title": "THE NORTHMAN",
+    "variant": null,
+    "originally released": 2022,
+    "director": "Robert Eggers",
+    "actors": [
+      "Alexander Skarsgård",
+      "Nicole Kidman",
+      "Claes Bang",
+      "Anya Taylor-Joy",
+      "Ethan Hawke",
+      "Bjork",
+      "William Dafoe"
+    ],
+    "genre": [
+      "epic",
+      "dark",
+      "action",
+      "revenge",
+      "period drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/the-northman-quad-poster.jpg",
+    "hires": "posters/the-northman-quad-poster.jpg",
+    "price": 54.99,
+    "film_summary": "Robert Eggers's dark and earthy 2022 Viking folllow-up to his masterpiece Lighthouse, starring Alexander Skarsgård, Nicole Kidman and Claes Bang.",
+    "poster_notes": "",
+    "tags": [
+      "16.74"
+    ],
+    "gallery": [
+      "gallery_images/the-northman-quad-poster-1.jpg",
+      "gallery_images/the-northman-quad-poster-2.jpg"
+    ],
+    "sort_title": "NORTHMAN",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-01-28",
+    "product_id": "prod_UQ70rquLXmqMl8"
+  },
+    {
+    "title": "THE NOSFERATU",
+    "variant": null,
+    "originally released": 2024,
+    "director": "Robert Eggers",
+    "actors": [
+      "Lily-Rose Depp",
+      "Nicholas Hoult",
+      "Bill Skarsgård",
+      "Aaron Taylor-Johnson",
+      "William Dafoe"
+    ],
+    "genre": [
+      "dark",
+      "fantasy",
+      "supernatural",
+      "horror",
+      "folk"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/nosferatu-quad-poster.jpg",
+    "hires": "posters/nosferatu-quad-poster.jpg",
+    "price": 54.99,
+    "film_summary": "Robert Eggers's wonderfully gothic 2024 adaptation of the classic Nosferatu, stars Lily-Rose Depp, Nicholas Hoult, Bill Skarsgård, Aaron Taylor-Johnson and William Dafoe.",
+    "poster_notes": "This wonderfullly dark double-sided quad poster design has Robert Eggers written all over it. This copy has some minor viening on the left and a few white cracks near the right edge, but is otherwise clean",
+    "tags": [
+      "12.96"
+    ],
+    "gallery": [
+      "gallery_images/nosferatu-quad-poster-1.jpg",
+      "gallery_images/nosferatu-quad-poster-2.jpg"
+    ],
+    "sort_title": "NOSFERATU",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-05-24",
+    "product_id": ""
   },
   {
     "title": "THE OLD MAN & THE GUN",
@@ -5864,6 +6255,7 @@
     ],
     "sort_title": "OLD MAN & THE GUN",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2019-08-31",
     "product_id": "prod_TiiOMRxJC7E9u9"
   },
@@ -5900,6 +6292,7 @@
     ],
     "sort_title": "ONCE UPON A TIME IN THE WEST",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-03-25",
     "product_id": "prod_TiiOhQOd2whPHU"
   },
@@ -5940,6 +6333,7 @@
     ],
     "sort_title": "ONE FLEW OVER THE CUCKOO'S NEST",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-11-18",
     "product_id": "prod_TiiOOS3HrquGTf"
   },
@@ -5976,6 +6370,7 @@
     ],
     "sort_title": "ORPHANAGE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOhLF3hsrANq"
   },
@@ -6018,6 +6413,7 @@
     ],
     "sort_title": "OUTSIDERS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-11-16",
     "product_id": "prod_TiiOj9rIrcvrg7"
   },
@@ -6051,6 +6447,7 @@
     ],
     "sort_title": "PALE RIDER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOLnbIktomCN"
   },
@@ -6087,6 +6484,7 @@
     ],
     "sort_title": "PAN'S LABYRINTH",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-06-26",
     "product_id": "prod_TiiOcxFposV5UJ"
   },
@@ -6121,6 +6519,7 @@
     ],
     "sort_title": "PAN'S LABYRINTH",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOcxFposV5UJ"
   },
@@ -6156,6 +6555,7 @@
     ],
     "sort_title": "PEEPING TOM",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-11-07",
     "product_id": "prod_TiiOgHWhOGp5WC"
   },
@@ -6191,6 +6591,7 @@
     ],
     "sort_title": "PIANO",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-02-17",
     "product_id": "prod_TiiOVwgE6ho3Ht"
   },
@@ -6226,6 +6627,7 @@
     ],
     "sort_title": "PIANO",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2018-08-19",
     "product_id": "prod_TiiOVwgE6ho3Ht"
   },
@@ -6264,6 +6666,7 @@
     ],
     "sort_title": "PLATOON",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPGWPjx16EFr"
   },
@@ -6299,6 +6702,7 @@
     ],
     "sort_title": "PRIMER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-04-24",
     "product_id": "prod_TiiPREQK8Qg9RG"
   },
@@ -6339,6 +6743,7 @@
     ],
     "sort_title": "PRINCESS BRIDE",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPVpA0fol4qY"
   },
@@ -6374,6 +6779,7 @@
     ],
     "sort_title": "PRODUCERS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2018-10-21",
     "product_id": "prod_TiiPVgYmvRAPAz"
   },
@@ -6411,8 +6817,50 @@
     ],
     "sort_title": "RAGING BULL",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPo6NDu52oXn"
+  },
+  {
+    "title": "RAIDERS OF THE LOST ARK",
+    "variant": "45th anniversary 2026 re-release",
+    "originally released": 1981,
+    "director": "Steven Sielberg",
+    "actors": [
+      "Harrison Ford",
+      "Karen Allen",
+      "Paul Freeman",
+      "Ronald Lacey",
+      "John Rhys-Davies",
+      "Denholm Elliott",
+      "Alfred Molina"
+    ],
+    "genre": [
+      "epic",
+      "action",
+      "adventure",
+      "period drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/raiders-of-the-lost-ark-45th-quad-poster.jpg",
+    "hires": "posters/raiders-of-the-lost-ark-45th-quad-poster.jpg",
+    "price": 119.99,
+    "film_summary": "Steven Spielberg and George Lucas' 1981 action adventure classic Raiders of the Lost Ark, starring Harrison Ford, Karen Allen, Paul Freeman, Ronald Lacey, John Rhys-Davies, Denholm Elliott and Alfred Molina",
+    "poster_notes": "This vibrant double-sided variant on Amsel's classic artwork is exceptionally well printed and crystal clear.",
+    "tags": [
+      "56.55"
+    ],
+    "gallery": [
+      "gallery_images/raiders-of-the-lost-ark-45th-quad-poster-1.jpg",
+      "gallery_images/raiders-of-the-lost-ark-45th-quad-poster-2.jpg"
+    ],
+    "sort_title": "RAIDERS OF THE LOST ARK",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-08",
+    "product_id": ""
   },
   {
     "title": "THE RAID 2",
@@ -6447,6 +6895,7 @@
     ],
     "sort_title": "RAID 2",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2020-08-21",
     "product_id": "prod_TiiPuRjlNk19yc"
   },
@@ -6484,13 +6933,14 @@
     ],
     "sort_title": "RAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPj22K48wpE0"
   },
   {
     "title": "RAN",
-    "variant": "40th 4K anniversary re-release",
-    "originally released": 2025,
+    "variant": "2025 4K 40th anniversary re-release",
+    "originally released": 1985,
     "director": "Akira Kurosawa",
     "actors": [
       "Tatsuya Nakadai",
@@ -6521,6 +6971,7 @@
     ],
     "sort_title": "RAN",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-06-19",
     "product_id": "prod_TiiPj22K48wpE0"
   },
@@ -6559,6 +7010,7 @@
     ],
     "sort_title": "RESCUERS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPBT1KL8OFyu"
   },
@@ -6594,6 +7046,7 @@
     ],
     "sort_title": "REQUIEM FOR A DREAM",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPs3mlASSmiK"
   },
@@ -6629,6 +7082,7 @@
     ],
     "sort_title": "RING",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPZQnpLudWZ9"
   },
@@ -6651,7 +7105,7 @@
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/robin-and-marion-quad-poster.jpg",
-    "hires": "posters/robin-and-marion-quad-poster.jpg",
+    "hires": "posters/robin-and-marian-quad-poster.jpg",
     "price": 76.99,
     "film_summary": "Richard Lester's superbly written 1976 underrated cult classic Robin and Marian, starring Sean Connery, Audrey Hepburn and Robert Shaw.",
     "poster_notes": "This wonderful, classic film poster art has been beautifully designed and has a small sellotape stain on the top edge, a tear on the top left corner and a slither of paper loss on the bottom right corner and a subtle water stain fading out from the centre right edge.",
@@ -6664,6 +7118,7 @@
     ],
     "sort_title": "ROBIN AND MARIAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-05-07",
     "product_id": "prod_TiiPTSOyyPdvY4"
   },
@@ -6703,6 +7158,7 @@
     ],
     "sort_title": "ROB ROY",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiP3ZGuBoauBR"
   },
@@ -6739,6 +7195,7 @@
     ],
     "sort_title": "ROCKY",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPCU5vdO8QNH"
   },
@@ -6775,6 +7232,7 @@
     ],
     "sort_title": "ROMANCING THE STONE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-12-02",
     "product_id": "prod_TiiPqACxi5S5Nt"
   },
@@ -6810,6 +7268,7 @@
     ],
     "sort_title": "ROMAN HOLIDAY",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2023-12-15",
     "product_id": "prod_TiiPYKTuvUHVxq"
   },
@@ -6845,6 +7304,7 @@
     ],
     "sort_title": "ROMEO + JULIET",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2018-12-09",
     "product_id": "prod_TiiPA2CNwe6PAu"
   },
@@ -6881,6 +7341,7 @@
     ],
     "sort_title": "RUN LOLA RUN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPMRM8iFMhbT"
   },
@@ -6917,6 +7378,7 @@
     ],
     "sort_title": "RUNNING MAN",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-11-29",
     "product_id": "prod_TiiP2032BDlhHo"
   },
@@ -6952,6 +7414,7 @@
     ],
     "sort_title": "SATURDAY NIGHT FEVER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPe1GpBo2Ejl"
   },
@@ -6987,6 +7450,7 @@
     ],
     "sort_title": "SATURDAY NIGHT FEVER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPe1GpBo2Ejl"
   },
@@ -7024,6 +7488,7 @@
     ],
     "sort_title": "SAVING PRIVATE RYAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-04-19",
     "product_id": "prod_TiiPB6DbilD2x3"
   },
@@ -7058,6 +7523,7 @@
     ],
     "sort_title": "SECRETARY",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDnlEvNejNRjO"
   },
@@ -7093,49 +7559,9 @@
     ],
     "sort_title": "SENNA",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-06-02",
     "product_id": "prod_TiiPToDcd6OPl2"
-  },
-  {
-    "title": "SERENITY",
-    "variant": null,
-    "originally released": 2005,
-    "director": "Joss Whedon",
-    "actors": [
-      "Nathan Fillion",
-      "Gina Torres",
-      "Alan Tudyk",
-      "Morena Baccarin",
-      "Adam Baldwin",
-      "Jewel Staite",
-      "Sean Maher",
-      "Summer Glau"
-    ],
-    "genre": [
-      "sci-fi",
-      "western",
-      "adventure"
-    ],
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/serenity-quad-poster.jpg",
-    "hires": "posters/serenity-quad-poster.jpg",
-    "price": 64.99,
-    "film_summary": "Joss Whedon's 2005 modern cult classic sci-fi western Serenity, starring Nathan Fillion, Gina Torres, Alan Tudyk, Morena Baccarin, Adam Baldwin, Jewel Staite, Sean Maher and Summer Glau.",
-    "poster_notes": "This is another increasingly hard to find film poster.",
-    "tags": [
-      "10.09",
-      "rolled"
-    ],
-    "gallery": [
-      "gallery_images/serenity-quad-poster-1.jpg",
-      "gallery_images/serenity-quad-poster-2.jpg"
-    ],
-    "sort_title": "SERENITY",
-    "on_sale": false,
-    "purchase_date": "2017-12-05",
-    "product_id": "prod_TiiPdzZJIdqmA2"
   },
   {
     "title": "SE7EN",
@@ -7172,8 +7598,47 @@
     ],
     "sort_title": "SE7EN",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2024-09-12",
     "product_id": "prod_TiiPLQwpmCn7TL"
+  },
+  {
+    "title": "SEVEN SAMURAI",
+    "variant": "Bfi 4k restoration 2024 re-release",
+    "originally released": 1954,
+    "director": "Akira Kurosawa",
+    "actors": [
+      "Toshirô Mifune",
+      "Takashi Shimura",
+      "Keiko Tsushima"
+    ],
+    "genre": [
+      "Japanese",
+      "epic",
+      "samurai",
+      "action",
+      "period drama"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/seven-samurai-bfi-4k-2024-quad-poster.jpg",
+    "hires": "posters/seven-samurai-bfi-4k-2024-quad-poster.jpg",
+    "price": 94.99,
+    "film_summary": "Akira Kurosawa's 1954 epic action drama classic Seven Samurai, back on the big screen in 4k, starring Toshirô Mifune, Takashi Shimura and Keiko Tsushima.",
+    "poster_notes": "This is fantastic re-release artwork by the Bfi and already hard to find.",
+    "tags": [
+      "36.32"
+    ],
+    "gallery": [
+      "gallery_images/seven-samurai-bfi-4k-2024-quad-poster-1.jpg",
+      "gallery_images/seven-samurai-bfi-4k-2024-quad-poster-2.jpg"
+    ],
+    "sort_title": "SEVEN SAMURAI",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-02-08",
+    "product_id": "prod_UQ70YVagZfAgHT"
   },
   {
     "title": "A SHORT FILM ABOUT KILLING",
@@ -7207,6 +7672,7 @@
     ],
     "sort_title": "SHORT FILM ABOUT KILLING",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-10-18",
     "product_id": "prod_TiiPE8zSCAHqRL"
   },
@@ -7246,6 +7712,7 @@
     ],
     "sort_title": "SIN CITY",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiP48YcEBvMXb"
   },
@@ -7281,6 +7748,7 @@
     ],
     "sort_title": "SINGIN' IN THE RAIN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPFq1Oj9wM2n"
   },
@@ -7316,6 +7784,7 @@
     ],
     "sort_title": "SINGIN' IN THE RAIN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-05-15",
     "product_id": "prod_TiiPFq1Oj9wM2n"
   },
@@ -7360,6 +7829,7 @@
     ],
     "sort_title": "SINGLES",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2017-09-03",
     "product_id": "prod_TiiPHWoNPn71WI"
   },
@@ -7399,6 +7869,7 @@
     ],
     "sort_title": "SOMETHING WICKED THIS WAY COMES",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-06-28",
     "product_id": "prod_TiiPRqadEEH1c8"
   },
@@ -7438,6 +7909,7 @@
     ],
     "sort_title": "SOMETHING WICKED THIS WAY COMES",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2018-04-09",
     "product_id": "prod_TiiPRqadEEH1c8"
   },
@@ -7474,6 +7946,7 @@
     ],
     "sort_title": "SON OF RAMBOW",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPA1sRmVL4ZK"
   },
@@ -7512,6 +7985,7 @@
     ],
     "sort_title": "SPIDER-MAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiP4J9T99pcoO"
   },
@@ -7550,6 +8024,7 @@
     ],
     "sort_title": "SPIDER-MAN 3",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDn1dTeju0w4c"
   },
@@ -7588,6 +8063,7 @@
     ],
     "sort_title": "SPIDER-MAN 3",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDnJqDLg8EJ30"
   },
@@ -7626,6 +8102,7 @@
     ],
     "sort_title": "SPIDER-MAN: INTO THE SPIDER-VERSE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2021-08-14",
     "product_id": "prod_TiiP8hDkAIpsbc"
   },
@@ -7664,6 +8141,7 @@
     ],
     "sort_title": "SPIDER-MAN: INTO THE SPIDER-VERSE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2022-06-29",
     "product_id": "prod_TiiP8hDkAIpsbc"
   },
@@ -7702,6 +8180,7 @@
     ],
     "sort_title": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-06-12",
     "product_id": "prod_TiiP11dnLISil4"
   },
@@ -7741,6 +8220,7 @@
     ],
     "sort_title": "SPIDER-MAN: ACROSS THE SPIDER-VERSE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-06-12",
     "product_id": "prod_TiiP11dnLISil4"
   },
@@ -7777,6 +8257,7 @@
     ],
     "sort_title": "SPY WHO LOVED ME",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPgXppzSDuKZ"
   },
@@ -7816,6 +8297,7 @@
     ],
     "sort_title": "STAR TREK II - THE WRATH OF KHAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPwx4jetaDmG"
   },
@@ -7855,8 +8337,52 @@
     ],
     "sort_title": "STAR TREK III - THE SEARCH FOR SPOCK",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2024-10-25",
     "product_id": "prod_TiiPeoJxqdtC69"
+  },
+  {
+    "title": "STAR TREK IV - THE VOYAGE HOME",
+    "variant": "40th anniversary 4K re-release",
+    "originally released": 1986,
+    "director": "Leonard Nimoy",
+    "actors": [
+      "William Shatner",
+      "Leonard Nimoy",
+      "DeForest Kelley",
+      "James Doohan",
+      "Walter Koenig",
+      "Nichelle Nichols",
+      "George Takei"
+    ],
+    "genre": [
+      "sci-fi",
+      "action",
+      "adventure",
+      "time travel",
+      "comedy"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/star-trek-iv-the-voyage-home-40th-quad-poster.jpg",
+    "hires": "posters/star-trek-iv-the-voyage-home-40th-quad-poster.jpg",
+    "price": 209.99,
+    "film_summary": "Leonard Nimoy's 1986 Star Trek installment, Star Trek IV - The Voyage Home, starring William Shatner, Leonard Nimoy, DeForest Kelley, James Doohan, Walter Koenig, Nichelle Nichols, George Takei.",
+    "poster_notes": "Another fantatic 40th anniversary artwork by the one and only Matt Fergerson, filled with details to please fans, and designed to accomodate the quad size rather than a one sheet.",
+    "tags": [
+      "34.15",
+      "Matt Fergerson"
+    ],
+    "gallery": [
+      "gallery_images/star-trek-iv-the-voyage-home-40th-quad-poster-1.jpg",
+      "gallery_images/star-trek-iv-the-voyage-home-40th-quad-poster-2.jpg"
+    ],
+    "sort_title": "STAR TREK IV - THE VOYAGE HOME",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-07-26",
+    "product_id": ""
   },
   {
     "title": "STAR TREK VI - THE UNDISCOVERED COUNTRY",
@@ -7897,6 +8423,7 @@
     ],
     "sort_title": "STAR TREK VI - THE UNDISCOVERED COUNTRY",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2023-12-20",
     "product_id": "prod_TiiPnTcVOUVBeW"
   },
@@ -7936,6 +8463,7 @@
     ],
     "sort_title": "STAR TREK - THE FUTURE BEGINS",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPtmdRW9h9dY"
   },
@@ -7980,6 +8508,7 @@
     ],
     "sort_title": "STAR WARS EPISODE ONE - THE PHANTOM MENACE",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2024-06-17",
     "product_id": "prod_TiiPC1oDmpEJWP"
   },
@@ -8024,6 +8553,7 @@
     ],
     "sort_title": "STAR WARS EPISODE III - REVENGE OF THE SITH",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2025-04-16",
     "product_id": "prod_TiiP02eEvLwnAi"
   },
@@ -8066,6 +8596,7 @@
     ],
     "sort_title": "STAR WARS TRILOGY",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPgbYuCnQBeJ"
   },
@@ -8108,6 +8639,7 @@
     ],
     "sort_title": "STAR WARS TRILOGY",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPgbYuCnQBeJ"
   },
@@ -8148,6 +8680,7 @@
     ],
     "sort_title": "STAR WARS - THE EMPIRE STRIKES BACK",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPQAyCC9gInA"
   },
@@ -8190,6 +8723,7 @@
     ],
     "sort_title": "STAR WARS - RETURN OF THE JEDI",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiP4DCAoVyvqH"
   },
@@ -8232,6 +8766,7 @@
     ],
     "sort_title": "STAR WARS - RETURN OF THE JEDI",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiP4DCAoVyvqH"
   },
@@ -8272,6 +8807,7 @@
     ],
     "sort_title": "STAR WARS - RETURN OF THE JEDI",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiP4DCAoVyvqH"
   },
@@ -8309,6 +8845,7 @@
     ],
     "sort_title": "STORY OF ROBIN HOOD",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiP9uQ5kT9IXF"
   },
@@ -8344,6 +8881,7 @@
     ],
     "sort_title": "STRAW DOGS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2020-11-08",
     "product_id": "prod_TiiPYvoSJWnn3r"
   },
@@ -8381,6 +8919,7 @@
     ],
     "sort_title": "SUBSTANCE",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-14",
     "product_id": "prod_TqDnbx6CKN4i4v"
   },
@@ -8416,6 +8955,7 @@
     ],
     "sort_title": "SUGARLAND EXPRESS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPNUKRmvIIsc"
   },
@@ -8456,6 +8996,7 @@
     ],
     "sort_title": "SUNSHINE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDnvyBrt1brrf"
   },
@@ -8497,6 +9038,7 @@
     ],
     "sort_title": "SUPERMAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPbOrMdQOPTV"
   },
@@ -8538,6 +9080,7 @@
     ],
     "sort_title": "SUPERMAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiPbOrMdQOPTV"
   },
@@ -8579,6 +9122,7 @@
     ],
     "sort_title": "SUPERMAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2023-06-05",
     "product_id": "prod_TiiPbOrMdQOPTV"
   },
@@ -8619,6 +9163,7 @@
     ],
     "sort_title": "SUPERMAN II",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQbf7jmBqNCf"
   },
@@ -8656,6 +9201,7 @@
     ],
     "sort_title": "SWEENEY TODD: THE DEMON BARBER OF FLEET STREET",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQydU37ki5XC"
   },
@@ -8692,8 +9238,9 @@
     ],
     "sort_title": "TAKEN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2014-07-14",
-    "product_id": ""
+    "product_id": "prod_TriJgZnJZs8NZE"
   },
   {
     "title": "THE TALENTED MR RIPLEY",
@@ -8729,6 +9276,7 @@
     ],
     "sort_title": "TALENTED MR RIPLEY",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2017-12-03",
     "product_id": "prod_TiiQalBIt5gEoy"
   },
@@ -8765,6 +9313,7 @@
     ],
     "sort_title": "TAXI DRIVER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "2019-06-28",
     "product_id": "prod_TiiQLR0k7dY4Gb"
   },
@@ -8802,6 +9351,7 @@
     ],
     "sort_title": "TELL NO ONE (Ne le dis à personne)",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQXqjVGCgpuB"
   },
@@ -8826,8 +9376,8 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/the-terminator-2015-r-quad-poster.jpg",
-    "hires": "posters/the-terminator-2015-r-quad-poster.jpg",
+    "thumbnail": "posters-thumb/the-terminator-2015-pc-r-quad-poster.jpg",
+    "hires": "posters/the-terminator-2015-pc-r-quad-poster.jpg",
     "price": 544.99,
     "film_summary": "James Cameron's 1984 sci-fi thriller The Terminator, starring Arnold Schwarzenegger, Michael Biehn, Linda Hamilton and Lance Henriksen.",
     "poster_notes": "This exceptionally rare, limited re-release film poster is easily the best ever quad poster for this title.",
@@ -8835,13 +9385,92 @@
       "2015"
     ],
     "gallery": [
-      "gallery_images/the-terminator-2015-r-quad-poster-1.jpg",
-      "gallery_images/the-terminator-2015-r-quad-poster-2.jpg"
+      "gallery_images/the-terminator-2015-pc-r-quad-poster-1.jpg",
+      "gallery_images/the-terminator-2015-pc-r-quad-poster-2.jpg"
     ],
     "sort_title": "TERMINATOR",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQ6t0UxevWNS"
+  },
+    {
+    "title": "TERMINATOR 2 - Style A",
+    "variant": "2026 35th anniversary re-release style A",
+    "originally released": 1991,
+    "director": "James Cameron",
+    "actors": [
+      "Arnold Schwarzenegger",
+      "Linda Hamilton",
+      "Edward Furlong",
+      "Robert Patrick"
+    ],
+    "genre": [
+      "dystopian",
+      "sci-fi",
+      "time travel",
+      "action",
+      "thriller"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/terminator-2-35th-quad-poster-style-a.jpg",
+    "hires": "posters/terminator-2-35th-quad-poster-style-a.jpg",
+    "price": 149.99,
+    "film_summary": "James Cameron's 1991 blockbuster sci-fi thriller sequel Terminator 2 - Judgement Day, starring Arnold Schwarzenegger, Linda Hamilton, Edward Furlong and Robert Patrick.",
+    "poster_notes": "This beautiful limited re-release film poster design is a beautiful renditon of the original and a highly sought after alternative.",
+    "tags": [
+      "47.45"
+    ],
+    "gallery": [
+      "gallery_images/terminator-2-35th-quad-poster-style-a-1.jpg",
+      "gallery_images/terminator-2-35th-quad-poster-style-a-2.jpg"
+    ],
+    "sort_title": "TERMINATOR 2",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-27",
+    "product_id": ""
+  },
+      {
+    "title": "TERMINATOR 2 - Style B",
+    "variant": "2026 35th anniversary re-release style B",
+    "originally released": 1991,
+    "director": "James Cameron",
+    "actors": [
+      "Arnold Schwarzenegger",
+      "Linda Hamilton",
+      "Edward Furlong",
+      "Robert Patrick"
+    ],
+    "genre": [
+      "dystopian",
+      "sci-fi",
+      "time travel",
+      "action",
+      "thriller"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/terminator-2-35th-quad-poster-style-b.jpg",
+    "hires": "posters/terminator-2-35th-quad-poster-style-b.jpg",
+    "price": 199.99,
+    "film_summary": "James Cameron's 1991 blockbuster sci-fi thriller sequel Terminator 2 - Judgement Day, starring Arnold Schwarzenegger, Linda Hamilton, Edward Furlong and Robert Patrick.",
+    "poster_notes": "This fantastic alternative style B limited re-release film poster design has whole new artwork and is very sought after.",
+    "tags": [
+      "49.00"
+    ],
+    "gallery": [
+      "gallery_images/terminator-2-35th-quad-poster-style-b-1.jpg",
+      "gallery_images/terminator-2-35th-quad-poster-style-b-2.jpg"
+    ],
+    "sort_title": "TERMINATOR 2",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-27",
+    "product_id": ""
   },
   {
     "title": "THE TEXAS CHAINSAW MASSACRE",
@@ -8875,6 +9504,7 @@
     ],
     "sort_title": "TEXAS CHAINSAW MASSACRE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQsnILquJxvi"
   },
@@ -8910,8 +9540,9 @@
     ],
     "sort_title": "TINKER TAYLOR SOLDIER SPY",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-24",
-    "product_id": ""
+    "product_id": "prod_TriJw6QsmPgdtU"
   },
   {
     "title": "TITANIC",
@@ -8946,8 +9577,50 @@
     ],
     "sort_title": "TITANIC",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQTVqN11ZhWx"
+  },
+  {
+    "title": "TRAINSPOTTING",
+    "variant": "4k restoration 30th re-release",
+    "originally released": 1996,
+    "director": "Danny Boyle",
+    "actors": [
+      "Ewan McGregor",
+      "Ewen Bremner",
+      "Jonny Lee Miller",
+      "Kevin McKidd",
+      "Robert Carlyle",
+      "Kelly MacDonald"
+    ],
+    "genre": [
+      "dark",
+      "psychological",
+      "comedy",
+      "drama"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inch",
+    "thumbnail": "posters-thumb/trainspotting-30th-pc-4k-quad-poster.jpg",
+    "hires": "posters/trainspotting-30th-pc-4k-quad-poster.jpg",
+    "price": 59.99,
+    "film_summary": "Danny Boyle's 1996 drug spiral masterpiece based on Irvin Welsh's cult classic novel Trainspotting, starring Ewan McGregor, Ewen Bremner, Jonny Lee Miller, Kevin McKidd, Robert Carlyle and Kelly MacDonald.",
+    "poster_notes": "This new designed re-release artwork stays true to the original artwork and looks amazing framed. However, please note that this original cinema poster by Park Circus is a limited release and is therfore a single sided, digitally printed poster, meaning its definition is not as sharp as usual original quad posters (the recent Taxi Driver and Labyrinth 40th quad releases are the same), so please see additional images before ordering.",
+    "tags": [
+      "47.45"
+    ],
+    "gallery": [
+      "gallery_images/trainspotting-30th-pc-4k-quad-poster-3.jpg",
+      "gallery_images/trainspotting-30th-pc-4k-quad-poster-1.jpg"
+      "gallery_images/trainspotting-30th-pc-4k-quad-poster-2.jpg"
+    ],
+    "sort_title": "TRAINSPOTTING",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-07-21",
+    "product_id": ""
   },
   {
     "title": "THE TREE OF WOODEN CLOGS",
@@ -8982,6 +9655,7 @@
     ],
     "sort_title": "TREE OF WOODEN CLOGS",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2021-08-08",
     "product_id": "prod_TiiQrcawLXiLWz"
   },
@@ -9019,6 +9693,7 @@
     ],
     "sort_title": "TROLL HUNTER",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQqtbpu44PNL"
   },
@@ -9053,6 +9728,7 @@
     ],
     "sort_title": "TRON",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQ67vKTnb0wn"
   },
@@ -9092,46 +9768,9 @@
     ],
     "sort_title": "TRUE ROMANCE",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQIwImZVeb81"
-  },
-  {
-    "title": "TWELVE MONKEYS",
-    "variant": null,
-    "originally released": 1995,
-    "director": "Terry Gilliam",
-    "actors": [
-      "Bruce Willis",
-      "Brad Pitt",
-      "Madeleine Stowe"
-    ],
-    "genre": [
-      "dystopian",
-      "psychological",
-      "sci-fi",
-      "time travel",
-      "mystery",
-      "thriller"
-    ],
-    "condition": "excelent, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/twelve-monkeys-quad-poster.jpg",
-    "hires": "posters/twelve-monkeys-quad-poster.jpg",
-    "price": 69.99,
-    "film_summary": "Terry Gilliam's 1995 futuristic thriller Twelve Monkeys, starring Bruce Willis, Brad Pitt and Madeleine Stowe.",
-    "poster_notes": "This sought after cult film poster classic has staple holes in the corners and middle edges.",
-    "tags": [
-      "1995"
-    ],
-    "gallery": [
-      "gallery_images/twelve-monkeys-quad-poster-1.jpg",
-      "gallery_images/twelve-monkeys-quad-poster-2.jpg"
-    ],
-    "sort_title": "TWELVE MONKEYS",
-    "on_sale": false,
-    "purchase_date": "",
-    "product_id": "prod_TiiQOHolx6XcJn"
   },
   {
     "title": "28 DAYS LATER",
@@ -9167,8 +9806,49 @@
     ],
     "sort_title": "28 DAYS LATER",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-26",
-    "product_id": ""
+    "product_id": "prod_TriJgzCjDYPHp6"
+  },
+  {
+    "title": "28 YEARS LATER - THE BONE TEMPLE",
+    "variant": "advance teaser",
+    "originally released": 2026,
+    "director": "Nia DaCosta",
+    "actors": [
+      "Jack O'Connell",
+      "Alfie Williams",
+      "Connor Newall",
+      "Erin Kellyman",
+      "Ralph Fiennes"
+    ],
+    "genre": [
+      "dystopian",
+      "psychological",
+      "zombie",
+      "thriller",
+      "horror"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/28-years-later-the-bone-temple-a-quad-poster.jpg",
+    "hires": "posters/28-years-later-the-bone-temple-a-quad-poster.jpg",
+    "price": 249.99,
+    "film_summary": "Nia DaCosta's excellent 2026 zombie apocalyptic sequel 29 Years Later - The Bone Temple, starring Jack O'Connell, Alfie Williams, Connor Newall, Erin Kellyman and Ralph Fiennes.",
+    "poster_notes": "This brilliant double-sided film poster captures the sheer madness of this film wonderfully.",
+    "tags": [
+      "2002"
+    ],
+    "gallery": [
+      "gallery_images/28-years-later-the-bone-temple-a-quad-poster-1.jpg",
+      "gallery_images/28-years-later-the-bone-temple-a-quad-poster-2.jpg"
+    ],
+    "sort_title": "28 YEARS LATER - THE BONE TEMPLE",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-01-26",
+    "product_id": "prod_UQ70BK9rkPwLBx"
   },
   {
     "title": "UNFORGIVEN",
@@ -9201,6 +9881,7 @@
     ],
     "sort_title": "UNFORGIVEN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQznDxKhSy1L"
   },
@@ -9237,6 +9918,7 @@
     ],
     "sort_title": "UP",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQnVhG0t72IK"
   },
@@ -9273,6 +9955,7 @@
     ],
     "sort_title": "VAMP",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQV5vFmXz4vN"
   },
@@ -9316,6 +9999,7 @@
     ],
     "sort_title": "WATCHMEN",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQx7DUESC7l4"
   },
@@ -9355,10 +10039,11 @@
     ],
     "sort_title": "WATERSHIP DOWN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQulUS3rnREk"
   },
-    {
+  {
     "title": "WHO FRAMED ROGER RABBIT",
     "variant": null,
     "originally released": 1988,
@@ -9381,7 +10066,7 @@
     "hires": "posters/who-framed-roger-rabbit-quad-poster.jpg",
     "price": 44.99,
     "film_summary": "Robert Zemeckis' groundbreaking mixed live-action and animation slapstick adventure Who Framed Roger Rabbit, starring Bob Hoskins, Christopher Lloyd and Joanna Cassidy.",
-    "poster_notes": "white background is a little grubby with a few scuff marks and some veining.",
+    "poster_notes": "The white background is a little grubby with a few scuff marks and some veining.",
     "tags": [
       "1978"
     ],
@@ -9391,8 +10076,9 @@
     ],
     "sort_title": "WHO FRAMED ROGER RABBIT",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
-    "product_id": ""
+    "product_id": "prod_TriJloOHjxIodi"
   },
   {
     "title": "THE WICKER MAN",
@@ -9427,6 +10113,7 @@
     ],
     "sort_title": "WICKER MAN",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQwLDOw5Ykcp"
   },
@@ -9464,6 +10151,7 @@
     ],
     "sort_title": "WILLOW",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "2018-05-09",
     "product_id": "prod_TiiQxsR3Wy1wrZ"
   },
@@ -9501,6 +10189,7 @@
     ],
     "sort_title": "WITCHES",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQSgWmvROeGU"
   },
@@ -9537,6 +10226,7 @@
     ],
     "sort_title": "WITHNAIL & I",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQbg7LorY9Az"
   },
@@ -9574,6 +10264,7 @@
     ],
     "sort_title": "WITNESS",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQRv8RajhonT"
   },
@@ -9613,6 +10304,7 @@
     ],
     "sort_title": "WIZARD OF OZ",
     "on_sale": false,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQ3QFztzl3Ve"
   },
@@ -9651,6 +10343,7 @@
     ],
     "sort_title": "WORLD'S END",
     "on_sale": true,
+    "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQCXoH9LV5UC"
   },
@@ -9674,7 +10367,7 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inch",
-    "thumbnail": "posters-thumb/zombieland-a-quad-poster.jpg",
+    "thumbnail": "posters-thumb/zombieland-quad-poster.jpg",
     "hires": "posters/zombieland-quad-poster.jpg",
     "price": 44.99,
     "film_summary": "Ruben Fleischer's zombie action comedy road trip, Zombieland, starring Jesse Eisenberg, Emma Stone and Woody Harrelson.",
@@ -9688,7 +10381,8 @@
     ],
     "sort_title": "ZOMBIELAND",
     "on_sale": false,
+    "is_new": true,
     "purchase_date": "2026-01-03",
-    "product_id": ""
+    "product_id": "prod_TriJeAQ6Dm3u6T"
   }
 ]

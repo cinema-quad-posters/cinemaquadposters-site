@@ -1417,6 +1417,43 @@
     "product_id": "prod_TqDnvORknCIC4A"
   },
   {
+    "title": "BRIDGET JONES'S DIARY",
+    "variant": "25th anniversary re-release",
+    "originally released": 2001,
+    "director": "Sharon Maguire",
+    "actors": [
+      "Renée Zellweger",
+      "Colin Firth",
+      "Hugh Grant"
+    ],
+    "genre": [
+      "comedy",
+      "romantic",
+      "feel-good",
+      "drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/bridget-jones-diary-25th-quad-poster.jpg",
+    "hires": "posters/bridget-jones-diary-25th-quad-poster.jpg",
+    "price": 47.99,
+    "film_summary": "Working Title's 2001 romantic comedy sucess Bridget Jones's Diary, starring Renée Zellweger, Colin Firth and Hugh Grant.",
+    "poster_notes": "This 2026 re-release sticks to the classic artwork making it a clean, fresh artwork ideal for framing.",
+    "tags": [
+      "9.00"
+    ],
+    "gallery": [
+      "gallery_images/bridget-jones-diary-25th-quad-poster-1.jpg",
+      "gallery_images/bridget-jones-diary-25th-quad-poster-2.jpg"
+    ],
+    "sort_title": "BRIDGET JONES'S DIARY",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-07-26",
+    "product_id": "prod_VC76l4X7X5Pyx3"
+  },
+  {
     "title": "BUGSY MALONE",
     "variant": "30th anniversary re-release",
     "originally released": 1976,
@@ -2573,42 +2610,6 @@
   },
   {
     "title": "DUNE",
-    "variant": "Advance teaser, style A",
-    "originally released": 1984,
-    "director": "David Lynch",
-    "actors": [
-      "Kyle Mac",
-      "Virginia Madsen",
-      "Francesca Annis"
-    ],
-    "genre": [
-      "sci-fi",
-      "action",
-      "adventure"
-    ],
-    "condition": "near mint, folded",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/dune-a-quad-poster-style-a.jpg",
-    "hires": "posters/dune-a-quad-poster-style-a.jpg",
-    "price": 74.99,
-    "film_summary": "David Lynch's 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.",
-    "poster_notes": "This rarer advance poster has some minor fold wear and pin holes in the corners.",
-    "tags": [
-      "1984"
-    ],
-    "gallery": [
-      "gallery_images/dune-a-quad-poster-style-a-1.jpg",
-      "gallery_images/dune-a-quad-poster-style-a-2.jpg"
-    ],
-    "sort_title": "DUNE",
-    "on_sale": false,
-    "is_new": false,
-    "purchase_date": "",
-    "product_id": "prod_TiiNmPlw8lBRQn"
-  },
-  {
-    "title": "DUNE",
     "variant": "Advance teaser, style B",
     "originally released": 1984,
     "director": "David Lynch",
@@ -2642,6 +2643,79 @@
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiNmPlw8lBRQn"
+  },
+  {
+    "title": "DUNE",
+    "variant": null,
+    "originally released": 1984,
+    "director": "David Lynch",
+    "actors": [
+      "Kyle Mac",
+      "Virginia Madsen",
+      "Francesca Annis"
+    ],
+    "genre": [
+      "sci-fi",
+      "action",
+      "adventure"
+    ],
+    "condition": "excellent folded",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/dune-quad-poster.jpg",
+    "hires": "posters/dune-quad-poster.jpg",
+    "price": 129.99,
+    "film_summary": "David Lynch's 1984 sci-fi epic Dune, starring Kyle MacLachlan, Virginia Madsen and Francesca Annis.",
+    "poster_notes": "This popular main poster has some fold wear and pin holes in the corners.",
+    "tags": [
+      "1984"
+    ],
+    "gallery": [
+      "gallery_images/dune-quad-poster-1.jpg",
+      "gallery_images/dune-quad-poster-2.jpg"
+    ],
+    "sort_title": "DUNE",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "",
+    "product_id": "prod_VC76qutQHZe4kC"
+  },
+  {
+    "title": "EASY RIDER",
+    "variant": null,
+    "originally released": 1969,
+    "director": "Dennis Hopper",
+    "actors": [
+      "Peter Fonda",
+      "Dennis Hopper",
+      "Jack Nicholson"
+    ],
+    "genre": [
+      "psychological",
+      "adventure",
+      "road trip",
+      "drama"
+    ],
+    "condition": "excellent folded",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/easy-rider-quad-poster.jpg",
+    "hires": "posters/easy-rider-quad-poster.jpg",
+    "price": 299.99,
+    "film_summary": "Dennis Hopper's 1969 art house classic Easy Rider, starring Peter Fonda, Dennis Hopper and Jack Nicholson.",
+    "poster_notes": "This bright illuminous poster design captures the 60's vibe perfectly and has become incredibly sought after. This version is in pretty good condition for it's age, with some minor cross fold paper loss, smudges and faint black and red ink transfer marks near some of the yellow folds - a perfect poster for linen backing.",
+    "tags": [
+      "165.00"
+    ],
+    "gallery": [
+      "gallery_images/easy-rider-quad-poster.jpg",
+      "gallery_images/easy-rider-quad-poster.jpg"
+    ],
+    "sort_title": "EASY RIDER",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2017-01-25",
+    "product_id": "prod_VC76GILgTxEfQt"
   },
   {
     "title": "EDWARD SCISSORHANDS",
@@ -2974,77 +3048,6 @@
     "product_id": "prod_TiiNSqAO4eprxG"
   },
   {
-    "title": "FARGO",
-    "variant": null,
-    "originally released": 1996,
-    "director": "Joel & Ethan Coen",
-    "actors": [],
-    "genre": [
-      "dark",
-      "comedy",
-      "crime",
-      "thriller"
-    ],
-    "condition": "very fine, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/fargo-quad-poster.jpg",
-    "hires": "posters/fargo-quad-poster.jpg",
-    "price": 34.99,
-    "film_summary": "The Cohen Brothers' 1996 modern classic Fargo, starring William H. Macy, Steve Buscemi, Frances McDormand, Kristin Rudrud and Harve Presnell.",
-    "poster_notes": "This film poster has minor edge wear.",
-    "tags": [
-      "1996"
-    ],
-    "gallery": [
-      "gallery_images/fargo-quad-poster-1.jpg",
-      "gallery_images/fargo-quad-poster-2.jpg"
-    ],
-    "sort_title": "FARGO",
-    "on_sale": true,
-    "is_new": false,
-    "purchase_date": "",
-    "product_id": "prod_TiiN5n0d1x521j"
-  },
-  {
-    "title": "THE FIFTH ELEMENT",
-    "variant": null,
-    "originally released": 1997,
-    "director": "Luc Besson",
-    "actors": [
-      "Bruce Willis",
-      "Gary Oldman",
-      "Ian Holm",
-      "Milla Jovovich",
-      "Chris Tucker"
-    ],
-    "genre": [
-      "sci-fi",
-      "action",
-      "adventure"
-    ],
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/the-fifth-element-quad-poster.jpg",
-    "hires": "posters/the-fifth-element-quad-poster.jpg",
-    "price": 194.99,
-    "film_summary": "Luc Besson's 1997 futuristic action thriller The Fifth Element, starring Bruce Willis, Gary Oldman, Ian Holm, Milla Jovovich and Chris Tucker.",
-    "poster_notes": "",
-    "tags": [
-      "1997"
-    ],
-    "gallery": [
-      "gallery_images/the-fifth-element-quad-poster-1.jpg",
-      "gallery_images/the-fifth-element-quad-poster-2.jpg"
-    ],
-    "sort_title": "FIFTH ELEMENT",
-    "on_sale": false,
-    "is_new": false,
-    "purchase_date": "",
-    "product_id": "prod_TiiNnk5YRiX44x"
-  },
-  {
     "title": "FIRST BLOOD",
     "variant": null,
     "originally released": 1984,
@@ -3353,7 +3356,7 @@
   {
     "title": "GHOSTBUSTERS",
     "variant": "Park Circus 2011 re-release",
-    "originally released": 2084,
+    "originally released": 1984,
     "director": null,
     "actors": [
       "Bill Murray",
@@ -3946,45 +3949,6 @@
     "product_id": "prod_TiiOAlF6iXlUm1"
   },
   {
-    "title": "HARD BOILED",
-    "variant": "2025 4k restoration re-release",
-    "originally released": 1992,
-    "director": "John Woo",
-    "actors": [
-      "Chow Yun-Fat",
-      "Tony Leung Chiu-wai",
-      "Teresa Mo"
-    ],
-    "genre": [
-      "Cantonese",
-      "dark",
-      "action",
-      "comedy",
-      "crime",
-      "thriller"
-    ],
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/hard-boiled-4k-quad-poster.jpg",
-    "hires": "posters/hard-boiled-4k-quad-poster.jpg",
-    "price": 124.99,
-    "film_summary": "John Woo's 1992 gun fu cult classic Hard Boiled (Lat sau san taam), starring Chow Yun-Fat, Tony Leung Chiu-wai and Teresa Mo.",
-    "poster_notes": "This is another rare re-release with fantastic artwork",
-    "tags": [
-      "43.00"
-    ],
-    "gallery": [
-      "gallery_images/hard-boiled-4k-quad-poster-1.jpg",
-      "gallery_images/hard-boiled-4k-quad-poster-2.jpg"
-    ],
-    "sort_title": "HARD BOILED",
-    "on_sale": false,
-    "is_new": true,
-    "purchase_date": "2026-03-21",
-    "product_id": "prod_UQ708IppdUsTgq"
-  },
-  {
     "title": "HAROLD AND MAUDE",
     "variant": null,
     "originally released": 1971,
@@ -4344,37 +4308,6 @@
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOLxmOjbJm1t"
-  },
-  {
-    "title": "I LOVE JOHN HUGHES",
-    "variant": null,
-    "originally released": 2018,
-    "director": "John Hughes",
-    "actors": [],
-    "genre": [
-      "teen",
-      "comedy"
-    ],
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/i-love-john-hughes-quad-poster.jpg",
-    "hires": "posters/i-love-john-hughes-quad-poster.jpg",
-    "price": 94.99,
-    "film_summary": "A celebratory re-release of some of the best 80's John Hughes' teen comedy classics, appropriately titled - I Love John Hughes, including Ferris Bueller's Day Off, Pretty In Pink, Breakfast Club, Sixteen Candles and Weird Science.",
-    "poster_notes": "This fantastic rare limited release film poster is a must for any John Hughes fan.",
-    "tags": [
-      "20.88"
-    ],
-    "gallery": [
-      "gallery_images/i-love-john-hughes-quad-poster-1.jpg",
-      "gallery_images/i-love-john-hughes-quad-poster-2.jpg"
-    ],
-    "sort_title": "I LOVE JOHN HUGHES",
-    "on_sale": false,
-    "is_new": false,
-    "purchase_date": "2018-08-21",
-    "product_id": "prod_TiiOXuTdKcAoe2"
   },
   {
     "title": "IN BRUGES",
@@ -4909,6 +4842,44 @@
     "product_id": "prod_TiiO8bwI2j7je3"
   },
   {
+    "title": "LA HAINE",
+    "variant": "Bfi 4k restoration re-release",
+    "originally released": 1995,
+    "director": "Mathieu Kassovitz",
+    "actors": [
+      "Vincent Cassel",
+      "Hubert Koundé",
+      "Saïd Taghmaoui"
+    ],
+    "genre": [
+      "French",
+      "crime",
+      "gangster",
+      "psychological",
+      "drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/la-haine-bfi-4k-quad-poster.jpg",
+    "hires": "posters/la-haine-bfi-4k-quad-poster.jpg",
+    "price": 104.99,
+    "film_summary": "1995 Cannes winning director Mathieu Kassovitz's French crime drama La Haine (Hate), starring  Vincent Cassel, Hubert Koundé and Saïd Taghmaoui.",
+    "poster_notes": "This brilliamt Bfi re-relese quad poster is a much cooler, more refined design than the somewhat crude original or even the better 10th anniversary quad design. This original copy has some very minor edgware.",
+    "tags": [
+      "45.00"
+    ],
+    "gallery": [
+      "gallery_images/la-haine-bfi-4k-quad-poster-1.jpg",
+      "gallery_images/la-haine-bfi-4k-quad-poster-2.jpg"
+    ],
+    "sort_title": "HAINE",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-16",
+    "product_id": "prod_VC767vaTTD2Uy3"
+  },
+  {
     "title": "LA LA LAND",
     "variant": null,
     "originally released": 2016,
@@ -5393,7 +5364,7 @@
   {
     "title": "A MATTER OF LIFE AND DEATH",
     "variant": "Park Circus 4K re-release",
-    "originally released": 2046,
+    "originally released": 1946,
     "director": "Powell and Pressburger",
     "actors": [
       "David Niven",
@@ -5449,9 +5420,9 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-matrix-20th-r-quad-poster.jpg",
     "hires": "posters/the-matrix-20th-r-quad-poster.jpg",
-    "price": 59.99,
+    "price": 99.99,
     "film_summary": "2019 re-release of The Wachowski Brothers' 1999 action sci-fi classic The Matrix, starring Keanu Reeves, Laurence Fishburne and Carrie-Anne Moss.",
-    "poster_notes": "This modernised (and much better designed) re-release poster has some subtle roll wear.",
+    "poster_notes": "This is a much better modern designed poster than the original",
     "tags": [
       "35.30"
     ],
@@ -5463,7 +5434,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2021-08-12",
-    "product_id": "prod_TiiOqEdINvFPe8"
+    "product_id": "prod_VC7636c444lxRT"
   },
   {
     "title": "MEAN STREETS",
@@ -5609,6 +5580,42 @@
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDn99RIeMDN4H"
+  },
+  {
+    "title": "THE MISFITS",
+    "variant": "Bfi 2026 4k restoration re-release",
+    "originally released": 1961,
+    "director": "John Huston",
+    "actors": [
+      "Clark Gable",
+      "Marilyn Monroe",
+      "Montgomery Clift"
+    ],
+    "genre": [
+      "western",
+      "romance",
+      "drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/the-misfits-bfi-pc-quad-poster.jpg",
+    "hires": "posters/the-misfits-bfi-pc-quad-poster.jpg",
+    "price": 149.99,
+    "film_summary": "John Huston's 1961 masterpiece The Misfits, starring Clark Gable, Marilyn Monroe and Montgomery Clift.",
+    "poster_notes": "This Bfi and Park Circus 2026 4k re-rerease celebrates what would have been Marylin Monroe's 100th birthday and uses the identical artwork to the 2015 re-release",
+    "tags": [
+      "55.64"
+    ],
+    "gallery": [
+      "gallery_images/the-misfits-bfi-pc-quad-poster-1.jpg",
+      "gallery_images/the-misfits-bfi-pc-quad-poster-2.jpg"
+    ],
+    "sort_title": "MISFITS",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-13",
+    "product_id": "prod_VC76xdsP3GR5AW"
   },
   {
     "title": "MONTY PYTHON AND THE HOLY GRAIL",
@@ -5801,6 +5808,47 @@
     "product_id": "prod_TiiOOcJTTdlXA7"
   },
   {
+    "title": "NAKED",
+    "variant": "Bfi 4k 2022 re-release",
+    "originally released": 1993,
+    "director": "Mike Leigh",
+    "actors": [
+      "David Thewlis",
+      "Lesley Sharp",
+      "Katrin Cartlidge",
+      "Greg Cruttwell",
+      "Claire Skinner",
+      "Peter Wight",
+      "Gina McKee",
+      "Ewen Bremner"
+    ],
+    "genre": [
+      "dark",
+      "comedy",
+      "drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/mike-leighs-naked-4k-2022-quad-poster2.jpg",
+    "hires": "posters/mike-leighs-naked-4k-2022-quad-poster2.jpg",
+    "price": 159.99,
+    "film_summary": "Mike Leigh's award winning 1993 dark comedy drama Naked, starring David Thewlis, Lesley Sharp, the late Katrin Cartlidge, Greg Cruttwell, Claire Skinner, Peter Wight, Gina McKee and Ewen Bremner.",
+    "poster_notes": "This modern take on the original design, really captures the tone of the film and is exceptionally rare, due to its limited release.",
+    "tags": [
+      "22.00"
+    ],
+    "gallery": [
+      "gallery_images/mike-leighs-naked-4k-2022-quad-poster2-1.jpg",
+      "gallery_images/mike-leighs-naked-4k-2022-quad-poster2-2.jpg"
+    ],
+    "sort_title": "NAKED",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-16",
+    "product_id": "prod_VC76CgEm8PtELc"
+  },
+  {
     "title": "THE NEVERENDING STORY",
     "variant": null,
     "originally released": 1984,
@@ -5835,6 +5883,45 @@
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiOBYfvdk2pJR"
+  },
+  {
+    "title": "A NIGHTMARE BEFORE CHRISTMAS",
+    "variant": null,
+    "originally released": 1993,
+    "director": "Tim Burton",
+    "actors": [
+      "Danny Elfman",
+      "Chris Sarandon",
+      "Catherine O'Hara"
+    ],
+    "genre": [
+      "dark",
+      "family",
+      "fantasy",
+      "comedy",
+      "adventure",
+      "animation"
+    ],
+    "condition": "near mint, condition",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/a-nightmare-before-christmas-quad-poster.jpg",
+    "hires": "posters/a-nightmare-before-christmas-quad-poster.jpg",
+    "price": 214.99,
+    "film_summary": "Tim Burton's 1993 Christmas animation classic Nightmare Before Christmas starring Danny Elfman, Chris Sarandon and Catherine O'Hara.",
+    "poster_notes": "This wonderfullt tantilising poster is increasingly rare and always sought after. This original copy has a some slight wear on the bottom left edge.",
+    "tags": [
+      "107.63"
+    ],
+    "gallery": [
+      "gallery_images/a-nightmare-before-christmas-quad-poster-1.jpg",
+      "gallery_images/a-nightmare-before-christmas-quad-poster-2.jpg"
+    ],
+    "sort_title": "NIGHTMARE BEFORE CHRISTMAS",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-13",
+    "product_id": "prod_VC76jTcCuK4mqT"
   },
   {
     "title": "A NIGHTMARE ON ELM STREET",
@@ -6094,6 +6181,46 @@
     "is_new": true,
     "purchase_date": "2026-01-28",
     "product_id": "prod_UQ70rquLXmqMl8"
+  },
+  {
+    "title": "THE NOSFERATU",
+    "variant": null,
+    "originally released": 2024,
+    "director": "Robert Eggers",
+    "actors": [
+      "Lily-Rose Depp",
+      "Nicholas Hoult",
+      "Bill Skarsgård",
+      "Aaron Taylor-Johnson",
+      "William Dafoe"
+    ],
+    "genre": [
+      "dark",
+      "fantasy",
+      "supernatural",
+      "horror",
+      "folk"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/nosferatu-quad-poster.jpg",
+    "hires": "posters/nosferatu-quad-poster.jpg",
+    "price": 54.99,
+    "film_summary": "Robert Eggers's wonderfully gothic 2024 adaptation of the classic Nosferatu, stars Lily-Rose Depp, Nicholas Hoult, Bill Skarsgård, Aaron Taylor-Johnson and William Dafoe.",
+    "poster_notes": "This wonderfullly dark double-sided quad poster design has Robert Eggers written all over it. This copy has some minor viening on the left and a few white cracks near the right edge, but is otherwise clean",
+    "tags": [
+      "12.96"
+    ],
+    "gallery": [
+      "gallery_images/nosferatu-quad-poster-1.jpg",
+      "gallery_images/nosferatu-quad-poster-2.jpg"
+    ],
+    "sort_title": "NOSFERATU",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-05-24",
+    "product_id": "prod_VC76zS498cK707"
   },
   {
     "title": "THE OLD MAN & THE GUN",
@@ -6695,6 +6822,47 @@
     "product_id": "prod_TiiPo6NDu52oXn"
   },
   {
+    "title": "RAIDERS OF THE LOST ARK",
+    "variant": "45th anniversary 2026 re-release",
+    "originally released": 1981,
+    "director": "Steven Sielberg",
+    "actors": [
+      "Harrison Ford",
+      "Karen Allen",
+      "Paul Freeman",
+      "Ronald Lacey",
+      "John Rhys-Davies",
+      "Denholm Elliott",
+      "Alfred Molina"
+    ],
+    "genre": [
+      "epic",
+      "action",
+      "adventure",
+      "period drama"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/raiders-of-the-lost-ark-45th-quad-poster.jpg",
+    "hires": "posters/raiders-of-the-lost-ark-45th-quad-poster.jpg",
+    "price": 119.99,
+    "film_summary": "Steven Spielberg and George Lucas' 1981 action adventure classic Raiders of the Lost Ark, starring Harrison Ford, Karen Allen, Paul Freeman, Ronald Lacey, John Rhys-Davies, Denholm Elliott and Alfred Molina",
+    "poster_notes": "This vibrant double-sided variant on Amsel's classic artwork is exceptionally well printed and crystal clear.",
+    "tags": [
+      "56.55"
+    ],
+    "gallery": [
+      "gallery_images/raiders-of-the-lost-ark-45th-quad-poster-1.jpg",
+      "gallery_images/raiders-of-the-lost-ark-45th-quad-poster-2.jpg"
+    ],
+    "sort_title": "RAIDERS OF THE LOST ARK",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-08",
+    "product_id": "prod_VC76nJGI9odUay"
+  },
+  {
     "title": "THE RAID 2",
     "variant": null,
     "originally released": 2014,
@@ -6771,8 +6939,8 @@
   },
   {
     "title": "RAN",
-    "variant": "40th 4K anniversary re-release",
-    "originally released": 2025,
+    "variant": "2025 4K 40th anniversary re-release",
+    "originally released": 1985,
     "director": "Akira Kurosawa",
     "actors": [
       "Tatsuya Nakadai",
@@ -6937,7 +7105,7 @@
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/robin-and-marion-quad-poster.jpg",
-    "hires": "posters/robin-and-marion-quad-poster.jpg",
+    "hires": "posters/robin-and-marian-quad-poster.jpg",
     "price": 76.99,
     "film_summary": "Richard Lester's superbly written 1976 underrated cult classic Robin and Marian, starring Sean Connery, Audrey Hepburn and Robert Shaw.",
     "poster_notes": "This wonderful, classic film poster art has been beautifully designed and has a small sellotape stain on the top edge, a tear on the top left corner and a slither of paper loss on the bottom right corner and a subtle water stain fading out from the centre right edge.",
@@ -7394,48 +7562,6 @@
     "is_new": false,
     "purchase_date": "2020-06-02",
     "product_id": "prod_TiiPToDcd6OPl2"
-  },
-  {
-    "title": "SERENITY",
-    "variant": null,
-    "originally released": 2005,
-    "director": "Joss Whedon",
-    "actors": [
-      "Nathan Fillion",
-      "Gina Torres",
-      "Alan Tudyk",
-      "Morena Baccarin",
-      "Adam Baldwin",
-      "Jewel Staite",
-      "Sean Maher",
-      "Summer Glau"
-    ],
-    "genre": [
-      "sci-fi",
-      "western",
-      "adventure"
-    ],
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/serenity-quad-poster.jpg",
-    "hires": "posters/serenity-quad-poster.jpg",
-    "price": 64.99,
-    "film_summary": "Joss Whedon's 2005 modern cult classic sci-fi western Serenity, starring Nathan Fillion, Gina Torres, Alan Tudyk, Morena Baccarin, Adam Baldwin, Jewel Staite, Sean Maher and Summer Glau.",
-    "poster_notes": "This is another increasingly hard to find film poster.",
-    "tags": [
-      "10.09",
-      "rolled"
-    ],
-    "gallery": [
-      "gallery_images/serenity-quad-poster-1.jpg",
-      "gallery_images/serenity-quad-poster-2.jpg"
-    ],
-    "sort_title": "SERENITY",
-    "on_sale": false,
-    "is_new": false,
-    "purchase_date": "2017-12-05",
-    "product_id": "prod_TiiPdzZJIdqmA2"
   },
   {
     "title": "SE7EN",
@@ -8214,6 +8340,49 @@
     "is_new": true,
     "purchase_date": "2024-10-25",
     "product_id": "prod_TiiPeoJxqdtC69"
+  },
+  {
+    "title": "STAR TREK IV - THE VOYAGE HOME",
+    "variant": "40th anniversary 4K re-release",
+    "originally released": 1986,
+    "director": "Leonard Nimoy",
+    "actors": [
+      "William Shatner",
+      "Leonard Nimoy",
+      "DeForest Kelley",
+      "James Doohan",
+      "Walter Koenig",
+      "Nichelle Nichols",
+      "George Takei"
+    ],
+    "genre": [
+      "sci-fi",
+      "action",
+      "adventure",
+      "time travel",
+      "comedy"
+    ],
+    "condition": "near mint, rolled.",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/star-trek-iv-the-voyage-home-40th-quad-poster.jpg",
+    "hires": "posters/star-trek-iv-the-voyage-home-40th-quad-poster.jpg",
+    "price": 209.99,
+    "film_summary": "Leonard Nimoy's 1986 Star Trek installment, Star Trek IV - The Voyage Home, starring William Shatner, Leonard Nimoy, DeForest Kelley, James Doohan, Walter Koenig, Nichelle Nichols, George Takei.",
+    "poster_notes": "Another fantatic 40th anniversary artwork by the one and only Matt Fergerson, filled with details to please fans, and designed to accomodate the quad size rather than a one sheet.",
+    "tags": [
+      "34.15",
+      "Matt Fergerson"
+    ],
+    "gallery": [
+      "gallery_images/star-trek-iv-the-voyage-home-40th-quad-poster-1.jpg",
+      "gallery_images/star-trek-iv-the-voyage-home-40th-quad-poster-2.jpg"
+    ],
+    "sort_title": "STAR TREK IV - THE VOYAGE HOME",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-07-26",
+    "product_id": "prod_VC761fXPPnP3Dz"
   },
   {
     "title": "STAR TREK VI - THE UNDISCOVERED COUNTRY",
@@ -9207,8 +9376,8 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/the-terminator-2015-r-quad-poster.jpg",
-    "hires": "posters/the-terminator-2015-r-quad-poster.jpg",
+    "thumbnail": "posters-thumb/the-terminator-2015-pc-r-quad-poster.jpg",
+    "hires": "posters/the-terminator-2015-pc-r-quad-poster.jpg",
     "price": 544.99,
     "film_summary": "James Cameron's 1984 sci-fi thriller The Terminator, starring Arnold Schwarzenegger, Michael Biehn, Linda Hamilton and Lance Henriksen.",
     "poster_notes": "This exceptionally rare, limited re-release film poster is easily the best ever quad poster for this title.",
@@ -9216,14 +9385,92 @@
       "2015"
     ],
     "gallery": [
-      "gallery_images/the-terminator-2015-r-quad-poster-1.jpg",
-      "gallery_images/the-terminator-2015-r-quad-poster-2.jpg"
+      "gallery_images/the-terminator-2015-pc-r-quad-poster-1.jpg",
+      "gallery_images/the-terminator-2015-pc-r-quad-poster-2.jpg"
     ],
     "sort_title": "TERMINATOR",
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQ6t0UxevWNS"
+  },
+  {
+    "title": "TERMINATOR 2 - Style A",
+    "variant": "2026 35th anniversary re-release style A",
+    "originally released": 1991,
+    "director": "James Cameron",
+    "actors": [
+      "Arnold Schwarzenegger",
+      "Linda Hamilton",
+      "Edward Furlong",
+      "Robert Patrick"
+    ],
+    "genre": [
+      "dystopian",
+      "sci-fi",
+      "time travel",
+      "action",
+      "thriller"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/terminator-2-35th-quad-poster-style-a.jpg",
+    "hires": "posters/terminator-2-35th-quad-poster-style-a.jpg",
+    "price": 149.99,
+    "film_summary": "James Cameron's 1991 blockbuster sci-fi thriller sequel Terminator 2 - Judgement Day, starring Arnold Schwarzenegger, Linda Hamilton, Edward Furlong and Robert Patrick.",
+    "poster_notes": "This beautiful limited re-release film poster design is a beautiful renditon of the original and a highly sought after alternative.",
+    "tags": [
+      "47.45"
+    ],
+    "gallery": [
+      "gallery_images/terminator-2-35th-quad-poster-style-a-1.jpg",
+      "gallery_images/terminator-2-35th-quad-poster-style-a-2.jpg"
+    ],
+    "sort_title": "TERMINATOR 2",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-27",
+    "product_id": "prod_VC76mp68vGHgfp"
+  },
+  {
+    "title": "TERMINATOR 2 - Style B",
+    "variant": "2026 35th anniversary re-release style B",
+    "originally released": 1991,
+    "director": "James Cameron",
+    "actors": [
+      "Arnold Schwarzenegger",
+      "Linda Hamilton",
+      "Edward Furlong",
+      "Robert Patrick"
+    ],
+    "genre": [
+      "dystopian",
+      "sci-fi",
+      "time travel",
+      "action",
+      "thriller"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inches",
+    "thumbnail": "posters-thumb/terminator-2-35th-quad-poster-style-b.jpg",
+    "hires": "posters/terminator-2-35th-quad-poster-style-b.jpg",
+    "price": 199.99,
+    "film_summary": "James Cameron's 1991 blockbuster sci-fi thriller sequel Terminator 2 - Judgement Day, starring Arnold Schwarzenegger, Linda Hamilton, Edward Furlong and Robert Patrick.",
+    "poster_notes": "This fantastic alternative style B limited re-release film poster design has whole new artwork and is very sought after.",
+    "tags": [
+      "49.00"
+    ],
+    "gallery": [
+      "gallery_images/terminator-2-35th-quad-poster-style-b-1.jpg",
+      "gallery_images/terminator-2-35th-quad-poster-style-b-2.jpg"
+    ],
+    "sort_title": "TERMINATOR 2",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-08-27",
+    "product_id": "prod_VC76ZSHkK9318H"
   },
   {
     "title": "THE TEXAS CHAINSAW MASSACRE",
@@ -9333,6 +9580,47 @@
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQTVqN11ZhWx"
+  },
+  {
+    "title": "TRAINSPOTTING",
+    "variant": "4k restoration 30th re-release",
+    "originally released": 1996,
+    "director": "Danny Boyle",
+    "actors": [
+      "Ewan McGregor",
+      "Ewen Bremner",
+      "Jonny Lee Miller",
+      "Kevin McKidd",
+      "Robert Carlyle",
+      "Kelly MacDonald"
+    ],
+    "genre": [
+      "dark",
+      "psychological",
+      "comedy",
+      "drama"
+    ],
+    "condition": "near mint, rolled",
+    "poster_type": "British quad",
+    "poster_size": "30 x 40 inch",
+    "thumbnail": "posters-thumb/trainspotting-30th-pc-4k-quad-poster.jpg",
+    "hires": "posters/trainspotting-30th-pc-4k-quad-poster.jpg",
+    "price": 59.99,
+    "film_summary": "Danny Boyle's 1996 drug spiral masterpiece based on Irvin Welsh's cult classic novel Trainspotting, starring Ewan McGregor, Ewen Bremner, Jonny Lee Miller, Kevin McKidd, Robert Carlyle and Kelly MacDonald.",
+    "poster_notes": "This new designed re-release artwork stays true to the original artwork and looks amazing framed. However, please note that this original cinema poster by Park Circus is a limited release and is therfore a single sided, digitally printed poster, meaning its definition is not as sharp as usual original quad posters (the recent Taxi Driver and Labyrinth 40th quad releases are the same), so please see additional images before ordering.",
+    "tags": [
+      "47.45"
+    ],
+    "gallery": [
+      "gallery_images/trainspotting-30th-pc-4k-quad-poster-1.jpg",
+      "gallery_images/trainspotting-30th-pc-4k-quad-poster-2.jpg",
+      "gallery_images/trainspotting-30th-pc-4k-quad-poster-3.jpg"
+    ],
+    "sort_title": "TRAINSPOTTING",
+    "on_sale": false,
+    "is_new": true,
+    "purchase_date": "2026-07-21",
+    "product_id": "prod_VC76Tki85cQtU6"
   },
   {
     "title": "THE TREE OF WOODEN CLOGS",
@@ -9483,45 +9771,6 @@
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQIwImZVeb81"
-  },
-  {
-    "title": "TWELVE MONKEYS",
-    "variant": null,
-    "originally released": 1995,
-    "director": "Terry Gilliam",
-    "actors": [
-      "Bruce Willis",
-      "Brad Pitt",
-      "Madeleine Stowe"
-    ],
-    "genre": [
-      "dystopian",
-      "psychological",
-      "sci-fi",
-      "time travel",
-      "mystery",
-      "thriller"
-    ],
-    "condition": "excelent, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/twelve-monkeys-quad-poster.jpg",
-    "hires": "posters/twelve-monkeys-quad-poster.jpg",
-    "price": 69.99,
-    "film_summary": "Terry Gilliam's 1995 futuristic thriller Twelve Monkeys, starring Bruce Willis, Brad Pitt and Madeleine Stowe.",
-    "poster_notes": "This sought after cult film poster classic has staple holes in the corners and middle edges.",
-    "tags": [
-      "1995"
-    ],
-    "gallery": [
-      "gallery_images/twelve-monkeys-quad-poster-1.jpg",
-      "gallery_images/twelve-monkeys-quad-poster-2.jpg"
-    ],
-    "sort_title": "TWELVE MONKEYS",
-    "on_sale": false,
-    "is_new": false,
-    "purchase_date": "",
-    "product_id": "prod_TiiQOHolx6XcJn"
   },
   {
     "title": "28 DAYS LATER",
