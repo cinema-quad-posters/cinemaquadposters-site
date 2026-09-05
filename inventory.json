@@ -251,8 +251,8 @@
       "2005"
     ],
     "gallery": [
-      "gallery_images/angel-a-1.jpg",
-      "gallery_images/angel-a-2.jpg"
+      "gallery_images/angel-a-quad-poster-1.jpg",
+      "gallery_images/angel-a-quad-poster-2.jpg"
     ],
     "sort_title": "ANGEL-A",
     "on_sale": false,
@@ -321,7 +321,7 @@
     "condition": "near mint, condition",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/apocalypsenowredux.jpg",
+    "thumbnail": "posters-thumb/apocalypse-now-redux-quad-poster.jpg",
     "hires": "posters/apocalypse-now-redux-quad-poster.jpg",
     "price": 69.99,
     "film_summary": "2001 re-release of Francis Ford Coppola's 1979 classic war film Apocalypse Now  starring Marlon Brando, Martin Sheen, Robert Duvall, Laurence Fishburne, Dennis Hopper and Harrison Ford.",
@@ -330,8 +330,8 @@
       "1979"
     ],
     "gallery": [
-      "gallery_images/apocalypsenowredux-1.jpg",
-      "gallery_images/apocalypsenowredux-2.jpg"
+      "gallery_images/apocalypse-now-redux-quad-poster-1.jpg",
+      "gallery_images/apocalypse-now-redux-quad-poster-2.jpg"
     ],
     "sort_title": "APOCALYPSE NOW - REDUX",
     "on_sale": false,
@@ -360,7 +360,7 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/apocalypse_2011_poster.jpg",
+    "thumbnail": "posters-thumb/apocalypse-now-2011-r-quad-poster.jpg",
     "hires": "posters/apocalypse-now-2011-r-quad-poster.jpg",
     "price": 89.99,
     "film_summary": "2011 re-release of Francis Ford Coppola's 1979 classic war film Apocalypse Now, starring Marlon Brando, Martin Sheen, Robert Duvall, Laurence Fishburne, Dennis Hopper and Harrison Ford.",
@@ -369,8 +369,8 @@
       "2011"
     ],
     "gallery": [
-      "gallery_images/apocalypse_2011_poster-1.jpg",
-      "gallery_images/apocalypse_2011_poster-2.jpg"
+      "gallery_images/apocalypse-now-2011-r-quad-poster-1.jpg",
+      "gallery_images/apocalypse-now-2011-r-quad-poster-2.jpg"
     ],
     "sort_title": "APOCALYPSE NOW",
     "on_sale": false,
@@ -414,51 +414,6 @@
     "is_new": true,
     "purchase_date": "2026-01-25",
     "product_id": "prod_TriJBiLy1dvYFB"
-  },
-  {
-    "title": "ATTACK THE BLOCK",
-    "variant": null,
-    "originally released": 2011,
-    "director": "Joe Cornish",
-    "actors": [
-      "John Boyega",
-      "Jodie Whittaker",
-      "Alex Esmail",
-      "Nick Frost"
-    ],
-    "genre": [
-      "sci-fi",
-      "action"
-    ],
-    "condition": "near mint, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inch",
-    "thumbnail": "posters-thumb/attack-the-block-quad-poster.jpg",
-    "hires": "posters/attack-the-block-quad-poster.jpg",
-    "price": 27.99,
-    "film_summary": "Joe Cornish's 2011 debut sci-fi action comedy Attack The Block, starring John Boyega, Jodie Whittaker, Alex Esmail and Nick Frost.",
-    "poster_notes": "This film poster is in near mint, rolled.",
-    "tags": [
-      "2011",
-      "Sci-Fi Action",
-      "John Boyega",
-      "Jodie Whittaker",
-      "Alex Esmail",
-      "Nick Frost",
-      "Joe Cornish",
-      "near",
-      "mint",
-      "rolled"
-    ],
-    "gallery": [
-      "gallery_images/attack-the-block-quad-poster-1.jpg",
-      "gallery_images/attack-the-block-quad-poster-2.jpg"
-    ],
-    "sort_title": "ATTACK THE BLOCK",
-    "on_sale": true,
-    "is_new": false,
-    "purchase_date": "",
-    "product_id": "prod_TiiM7NNKYFfIdv"
   },
   {
     "title": "BABY DRIVER",
@@ -527,7 +482,7 @@
     "poster_size": "30 x 40 inch",
     "thumbnail": "posters-thumb/baby-driver-quad-poster.jpg",
     "hires": "posters/baby-driver-quad-poster.jpg",
-    "price": 62.99,
+    "price": 82.99,
     "film_summary": "Edgar Wright's fresh, funny 2017 spin on the heist flick, Baby Driver, starring Ansel Elgort, Kevin Spacey, Lily James, Eiza González, Jon Hamm, Jamie Foxx and Jon Bernthal.",
     "poster_notes": "This dynamic poster design is very popular. This version has some minor edge wear.",
     "tags": [
@@ -542,7 +497,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TqDn1kfXVguWip"
+    "product_id": "prod_VCqsw8U7r5ldNB"
   },
   {
     "title": "BACK TO THE FUTURE",
@@ -1106,8 +1061,9 @@
       "gallery_images/birdy-quad-poster-2.jpg"
     ],
     "sort_title": "BIRDY",
-    "on_sale": true,
-    "p": "2020-06-09",
+    "on_sale": false,
+    "is_new": false,
+    "purchase_date": "2020-06-09",
     "product_id": "prod_TiiMe79mp5WXd3"
   },
   {
@@ -1505,7 +1461,7 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/cabaret-r-quad-poster.jpg",
+    "thumbnail": "posters-thumb/cabaret-30th-quad-poster.jpg",
     "hires": "posters/cabaret-30th-quad-poster.jpg",
     "price": 69.99,
     "film_summary": "Bob Fosse's 1972 musical classic Cabaret, starring Liza Minnelli, Michel York and Helmut Greim.",
@@ -1515,7 +1471,6 @@
     ],
     "gallery": [
       "gallery_images/cabaret-30th-quad-poster-1.jpg",
-      "gallery_images/cabaret-30th-quad-poster-2.jpg",
       "gallery_images/cabaret-30th-quad-poster-2.jpg"
     ],
     "sort_title": "CABARET",
@@ -1550,7 +1505,6 @@
     "tags": null,
     "gallery": [
       "gallery_images/casualties-of-war-quad-poster-1.jpg",
-      "gallery_images/casualties-of-war-quad-poster-2.jpg",
       "gallery_images/casualties-of-war-quad-poster-2.jpg"
     ],
     "sort_title": "CASUALTIES OF WAR",
@@ -1794,7 +1748,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/close-encounters-of-the-third-kind-40th-quad-poster.jpg",
     "hires": "posters/close-encounters-of-the-third-kind-40th-quad-poster.jpg",
-    "price": 149.99,
+    "price": 109.99,
     "film_summary": "40th anniversary re-release of Steven Spielberg's 1977 classic Close Encounters Of The Third Kind, starring Richard Dreyfuss, Fran&ccedil;ois Truffaut, Bob Balaban and Teri Garr.",
     "poster_notes": "This is an amazing and extremely rare re-release film poster.",
     "tags": [
@@ -1812,7 +1766,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TiiNjjjyrujuRp"
+    "product_id": "prod_VCqs0p14zHv8Gv"
   },
   {
     "title": "COBAIN - MONTAGE OF HECK",
@@ -1919,8 +1873,8 @@
       "animation"
     ],
     "gallery": [
-      "gallery_images/corpse-bride-quad-postere-1.jpg",
-      "gallery_images/corpse-bride-quad-postere-2.jpg"
+      "gallery_images/corpse-bride-quad-poster-1.jpg",
+      "gallery_images/corpse-bride-quad-poster-2.jpg"
     ],
     "sort_title": "CORPSE BRIDE",
     "on_sale": false,
@@ -1948,7 +1902,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-creator-advance-quad-poster.jpg",
     "hires": "posters/the-creator-advance-quad-poster.jpg",
-    "price": 79.99,
+    "price": 54.99,
     "film_summary": "Gareth Edwards's stunning original 2023 sci-fi, The Creator, starring John David Washington, Madeleine Yuna Voyles and Gemma Chan.",
     "poster_notes": "A beautiful, slick film poster",
     "tags": [
@@ -1963,7 +1917,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2023-12-08",
-    "product_id": "prod_TiiNgPoIAvtGIF"
+    "product_id": "prod_VCqsCIZ1YtV1Mj"
   },
   {
     "title": "THE CREATOR",
@@ -1985,7 +1939,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-creator-quad-poster.jpg",
     "hires": "posters/the-creator-quad-poster.jpg",
-    "price": 69.99,
+    "price": 44.99,
     "film_summary": "Gareth Edwards's stunning original 2023 sci-fi, The Creator, starring John David Washington, Madeleine Yuna Voyles and Gemma Chan.",
     "poster_notes": "This poster has a small tear on the top right edge and some edge scrunching on the lower right edge.",
     "tags": [
@@ -2000,7 +1954,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2023-12-08",
-    "product_id": "prod_TiiNgPoIAvtGIF"
+    "product_id": "prod_VCqsioDzy85Anv"
   },
   {
     "title": "CROSS OF IRON",
@@ -2027,8 +1981,8 @@
       "1977"
     ],
     "gallery": [
-      "gallery_images/cross-of-iron-quad-poster-2-1.jpg",
-      "gallery_images/cross-of-iron-quad-poster-2-2.jpg"
+      "gallery_images/cross-of-iron-quad-poster-1.jpg",
+      "gallery_images/cross-of-iron-quad-poster-2.jpg"
     ],
     "sort_title": "CROSS OF IRON",
     "on_sale": false,
@@ -2373,7 +2327,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/doctor-who-day-of-the-doctor-quad-poster.jpg",
     "hires": "posters/doctor-who-day-of-the-doctor-quad-poster.jpg",
-    "price": 159.99,
+    "price": 79.99,
     "film_summary": "2013 cinema 3D release of Nick Hurran's episode of Dr. Who - The Day Of The Doctor  starring Matt Smith, David Tennant, Jenna Coleman, Billie Piper and John Hurt.",
     "poster_notes": "This rare release poster is a must for any serious Dr. Who fan.",
     "tags": [
@@ -2387,7 +2341,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TqDnvckojwQswF"
+    "product_id": "prod_VCqsyGO3QROQlg"
   },
   {
     "title": "DOCTOR ZHIVAGO",
@@ -2405,8 +2359,8 @@
     "condition": "near mint, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/doctorzhivago.jpg",
-    "hires": "posters/doctorzhivago.jpg",
+    "thumbnail": "posters-thumb/doctor-zhivago-r-quad-poster.jpg",
+    "hires": "posters/doctor-zhivago-r-quad-poster.jpg",
     "price": 99.99,
     "film_summary": "David Lean's 1965 masterpiece Doctor Zhivago, starring Geraldine Chapman, Julie Christie, Tom Courtney, Alec Guinness and Omar Sharif.",
     "poster_notes": "This rare original 1970's re-release poster has a missing bottom right corner.",
@@ -2414,8 +2368,8 @@
       "1965"
     ],
     "gallery": [
-      "gallery_images/doctorzhivago-1.jpg",
-      "gallery_images/doctorzhivago-2.jpg"
+      "gallery_images/doctor-zhivago-r-quad-poster-1.jpg",
+      "gallery_images/doctor-zhivago-r-quad-poster-2.jpg"
     ],
     "sort_title": "DOCTOR ZHIVAGO",
     "on_sale": false,
@@ -2445,7 +2399,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/donnie-darko-dc-quad-poster.jpg",
     "hires": "posters/donnie-darko-dc-quad-poster.jpg",
-    "price": 79.99,
+    "price": 109.99,
     "film_summary": "Richard Kelly's 2001 instant cult classic Donnie Darko, starring Jake Gyllenhaal, Drew Barrymore and Patrick Swayze.",
     "poster_notes": "This poster has staple holes on the corners and in the middle of each edge.",
     "tags": [
@@ -2459,7 +2413,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TiiNkUL5XsGgm8"
+    "product_id": "prod_VCqs5DjVF3SVi7"
   },
   {
     "title": "DONNIE DARKO",
@@ -2737,7 +2691,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/edward-scissorhands-quad-poster.jpg",
     "hires": "posters/edward-scissorhands-quad-poster.jpg",
-    "price": 74.99,
+    "price": 94.99,
     "film_summary": "Tim Burton's brilliant 1990 modern classic fairytale Edward Scissorhands, starring Johnny Depp and Winona Ryder.",
     "poster_notes": "This classic poster is still very popular.",
     "tags": [
@@ -2751,7 +2705,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TiiNguWPEl5lGa"
+    "product_id": "prod_VCqs1m9njD8RUD"
   },
   {
     "title": " 8½",
@@ -2886,7 +2840,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/empire-of-light-a-quad-poster.jpg",
     "hires": "posters/empire-of-light-a-quad-poster.jpg",
-    "price": 88.99,
+    "price": 44.99,
     "film_summary": "Sam Mendes' beautifully shot 2022 coastal town drama Empire Of Light, starring Olivia Colman, Michael Ward, Colin Firth, Toby Jones and Tom Brooke.",
     "poster_notes": "A stunning poster image frame legendary cinematographer, Roger Deakins.",
     "tags": [
@@ -2900,7 +2854,7 @@
     "on_sale": false,
     "is_new": true,
     "purchase_date": "2026-01-15",
-    "product_id": "prod_TqDnulsSHFT8Us"
+    "product_id": "prod_VCqsiSKOZ7zkHB"
   },
   {
     "title": "ENEMY MINE",
@@ -2954,8 +2908,8 @@
     "condition": "near mint, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/e.t.-extra-terrestrial-quad-poster.jpg",
-    "hires": "posters/e.t.-extra-terrestrial-quad-poster.jpg",
+    "thumbnail": "posters-thumb/e.t.-the-extra-terrestrial-quad-poster.jpg",
+    "hires": "posters/e.t.-the-extra-terrestrial-quad-poster.jpg",
     "price": 127.99,
     "film_summary": "Steven Spielberg's 1982 instant classic that touched the world, starring Henry Thomas, Drew Barrymore, Robert MacNaughton, Dee Wallace-Stone and Peter Coyote.",
     "poster_notes": "This poster has some tape marks on the corners and a two inch tear on the bottom centre edge.",
@@ -2963,8 +2917,8 @@
       "26.73"
     ],
     "gallery": [
-      "gallery_images/e.t.-extra-terrestrial-quad-poster-1.jpg",
-      "gallery_images/e.t.-extra-terrestrial-quad-poster-2.jpg"
+      "gallery_images/e.t.-the-extra-terrestrial-quad-poster-1.jpg",
+      "gallery_images/e.t.-the-extra-terrestrial-quad-poster-2.jpg"
     ],
     "sort_title": "E.T. THE EXTRA TERRESTRIAL",
     "on_sale": false,
@@ -3812,7 +3766,7 @@
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/guardians-of-the-galaxy-quad-poster.jpg",
-    "hires": "posters/guardians-of-the-galaxy-quad-poster-1.jpg",
+    "hires": "posters/guardians-of-the-galaxy-quad-poster-sale.jpg",
     "price": 59.99,
     "film_summary": "James Gunn's near perfect 2014 instant sci-i fantasy classic Guardians Of the Galaxy, starring Chris Pratt, Vin Diesel, Bradley Cooper and the wonderful Zoe Saldana.",
     "poster_notes": "This bold classic style sci-fi fantasy film poster is already increasingly hard to find (despite its huge theatrical release) and is testament of its popularity. This original has some kinking across the top half of the poster.",
@@ -3855,7 +3809,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/guardians-of-the-galaxy-3-advance-quad-poster.jpg",
     "hires": "posters/guardians-of-the-galaxy-3-advance-quad-poster.jpg",
-    "price": 49.99,
+    "price": 34.99,
     "film_summary": "James Gunn's 2023 long-awaited trilogy finale Guardians of the Galaxy Vol. 3 starring Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Bradley Cooper, Karen Gillan, Pom Klementieff, Sylvester Stallone and Will Poulter.",
     "poster_notes": "This beautifully designed advance teaser film poster has two tiny right edge tears.",
     "tags": [
@@ -3869,7 +3823,7 @@
     "on_sale": true,
     "is_new": false,
     "purchase_date": "2023-01-29",
-    "product_id": "prod_TiiNqF8Y7CIjtk"
+    "product_id": "prod_VCqst5HRHhBW3i"
   },
   {
     "title": "GUARDIANS OF THE GALAXY Vol. 3",
@@ -3899,7 +3853,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/guardians-of-the-galaxy-3-quad-poster.jpg",
     "hires": "posters/guardians-of-the-galaxy-3-quad-poster.jpg",
-    "price": 49.99,
+    "price": 39.99,
     "film_summary": "James Gunn's 2023 long-awaited trilogy finale Guardians of the Galaxy Vol. 3 starring Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel, Bradley Cooper, Karen Gillan, Pom Klementieff, Sylvester Stallone and Will Poulter.",
     "poster_notes": null,
     "tags": [
@@ -3913,7 +3867,7 @@
     "on_sale": true,
     "is_new": false,
     "purchase_date": "2023-04-04",
-    "product_id": "prod_TiiNqF8Y7CIjtk"
+    "product_id": "prod_VCqsKCwF2s0LEn"
   },
   {
     "title": "HANOVER STREET",
@@ -4121,7 +4075,7 @@
     ],
     "sort_title": "HEADHUNTERS",
     "on_sale": false,
-    "is_new": true,
+    "is_new": false,
     "purchase_date": "2026-01-18",
     "product_id": "prod_TqDnrmcpFlzfIm"
   },
@@ -4343,7 +4297,7 @@
     ],
     "sort_title": "IN BRUGES",
     "on_sale": false,
-    "is_new": true,
+    "is_new": false,
     "purchase_date": "2026-01-26",
     "product_id": "prod_TriJIoO4qyBvnJ"
   },
@@ -4390,7 +4344,6 @@
     "purchase_date": "",
     "product_id": "prod_TiiO5dS8tUJm0I"
   },
-
   {
     "title": "INDIANA JONES & THE LAST CRUSADE",
     "variant": null,
@@ -4415,8 +4368,8 @@
     "condition": "mint rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/last-crusade-quad-poster-m.jpg",
-    "hires": "posters/last-crusade-quad-poster-m.jpg",
+    "thumbnail": "posters-thumb/indiana-jones-and-the-last-crusade-quad-poster.jpg",
+    "hires": "posters/indiana-jones-and-the-last-crusade-quad-poster.jpg",
     "price": 235.99,
     "film_summary": "George Lucas and  Steven Spielberg's 1989 action adventure sequel Indiana Jones & The Last Crusade, starring Harrison Ford, Sean Connery, Denholm Elliott, Alison Doody, John Rhys-Davies, Julian Glover and River Phoenix.",
     "poster_notes": "",
@@ -4424,8 +4377,8 @@
       "1989"
     ],
     "gallery": [
-      "gallery_images/last-crusade-quad-poster-m-1.jpg",
-      "gallery_images/last-crusade-quad-poster-m-2.jpg"
+      "gallery_images/indiana-jones-and-the-last-crusade-quad-poster-1.jpg",
+      "gallery_images/indiana-jones-and-the-last-crusade-quad-poster-2.jpg"
     ],
     "sort_title": "INDIANA JONES & THE LAST CRUSADE",
     "on_sale": false,
@@ -4679,7 +4632,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/joker-quad-poster.jpg",
     "hires": "posters/joker-quad-poster.jpg",
-    "price": 94.99,
+    "price": 64.99,
     "film_summary": "Todd Phillips' stunning 2019 multi-award winning modern masterpiece Joker, starring Joaquin Phoenix, Robert De Niro and Zazie Beetz.",
     "poster_notes": "This already iconic and rare modern film poster has a couple white of kink marks on the edges.",
     "tags": [
@@ -4693,7 +4646,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2020-01-09",
-    "product_id": "prod_TiiOjABDNe64JY"
+    "product_id": "prod_VCqsPsGZ60MUgK"
   },
   {
     "title": "KILL BILL - THE WHOLE BLOODY AFFAIR",
@@ -4769,7 +4722,7 @@
       "gallery_images/killer-joe-quad-poster-2.jpg"
     ],
     "sort_title": "KILLER JOE",
-    "on_sale": true,
+    "on_sale": false,
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TqDnvtsQqiZ5f3"
@@ -4804,7 +4757,7 @@
       "gallery_images/l.a.-confidential-quad-poster-2.jpg"
     ],
     "sort_title": "L.A. CONFIDENTIAL",
-    "on_sale": true,
+    "on_sale": false,
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiO8bwI2j7je3"
@@ -4869,7 +4822,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/la-la-land-quad-poster-b.jpg",
     "hires": "posters/la-la-land-quad-poster-b.jpg",
-    "price": 89.99,
+    "price": 129.99,
     "film_summary": "Damien Chazelle's 2016 oscar winning musical La La Land, starring Ryan Gosling, Emma Stone and Rosemarie DeWitt.",
     "poster_notes": "This poster seems to have got damp in the bottom left corner, as a result it does not lie completely flat in that corner, otherwise perfecta beautiful piece",
     "tags": null,
@@ -4881,7 +4834,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TriJBuMSXlaNH1"
+    "product_id": "prod_VCqsr7pKDdSfXU"
   },
   {
     "title": "THE LAST OF THE MOHICANS",
@@ -4992,47 +4945,9 @@
     ],
     "sort_title": "LIFE OF PI",
     "on_sale": false,
-    "is_new": true,
+    "is_new": false,
     "purchase_date": "2026-01-26",
     "product_id": "prod_TriJ4QucbZgJgW"
-  },
-  {
-    "title": "LOOPER",
-    "variant": "advance teaser",
-    "originally released": 2012,
-    "director": "Rian Johnson",
-    "actors": [
-      "Joseph Gordon-Levitt",
-      "Bruce Willis",
-      "Emily Blunt"
-    ],
-    "genre": [
-      "time travel",
-      "sci-fi",
-      "psychological",
-      "action",
-      "thriller"
-    ],
-    "condition": "very fine, rolled",
-    "poster_type": "British quad",
-    "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/looper-a-quad-poster.jpg",
-    "hires": "posters/looper-a-quad-poster.jpg",
-    "price": 69.99,
-    "film_summary": "Rian Johnson's original time-travel thriller Looper, starring Joseph Gordon-Levitt, Bruce Willis and Emily Blunt.",
-    "poster_notes": "This poster has some light handling wear.",
-    "tags": [
-      "2012"
-    ],
-    "gallery": [
-      "gallery_images/looper-a-quad-poster-1.jpg",
-      "gallery_images/looper-a-quad-poster-2.jpg"
-    ],
-    "sort_title": "LOOPER",
-    "on_sale": false,
-    "is_new": true,
-    "purchase_date": "2026-01-24",
-    "product_id": "prod_TriJ6q5fV6BVxe"
   },
   {
     "title": "THE LOST BOYS",
@@ -5293,7 +5208,7 @@
     "product_id": "prod_TiiOLygGK1eR15"
   },
   {
-    "title": "A MATTER OF LIFE AND DEATH",
+    "title": "A MATTER OF LIFE AND DEATH - Bfi",
     "variant": "Bfi 2000 re-release",
     "originally released": 1946,
     "director": "Michael Powell & Emeric Pressburger",
@@ -5311,8 +5226,8 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/a-matter-of-life-and-death-quad-poster.jpg",
-    "hires": "posters/a-matter-of-life-and-death-quad-poster.jpg",
+    "thumbnail": "posters-thumb/a-matter-of-life-and-death-2000-r-quad-poster.jpg",
+    "hires": "posters/a-matter-of-life-and-death-2000-r-quad-poster.jpg",
     "price": 94.99,
     "film_summary": "Powell and Pressburger's beautiful 1946 classic A Matter Of Life And Death, starring David Niven and Kim Hunter.",
     "poster_notes": "",
@@ -5320,17 +5235,17 @@
       "41.01"
     ],
     "gallery": [
-      "gallery_images/a-matter-of-life-and-death-quad-poster-1.jpg",
-      "gallery_images/a-matter-of-life-and-death-quad-poster-2.jpg"
+      "gallery_images/a-matter-of-life-and-death-2000-r-quad-poster-1.jpg",
+      "gallery_images/a-matter-of-life-and-death-2000-r-quad-poster-2.jpg"
     ],
     "sort_title": "MATTER OF LIFE AND DEATH",
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2021-11-07",
-    "product_id": "prod_TiiOzkyFxXsWt1"
+    "product_id": "prod_VCqsxrmVMPwBkj"
   },
   {
-    "title": "A MATTER OF LIFE AND DEATH",
+    "title": "A MATTER OF LIFE AND DEATH - Bfi",
     "variant": "Park Circus 4K re-release",
     "originally released": 1946,
     "director": "Powell and Pressburger",
@@ -5677,23 +5592,23 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/moulin-rouge-r-quad-poster-r.jpg",
-    "hires": "posters/moulin-rouge-r-quad-poster-r.jpg",
-    "price": 49.99,
+    "thumbnail": "posters-thumb/moulin-rouge-r-quad-poster.jpg",
+    "hires": "posters/moulin-rouge-r-quad-poster.jpg",
+    "price": 119.99,
     "film_summary": "2013 re-release of Baz Luhrmann's spectacular musical Mouline Rouge, starring Nicole Kidman and Ewan McGregor.",
     "poster_notes": "",
     "tags": [
       "2012"
     ],
     "gallery": [
-      "gallery_images/moulin-rouge-r-quad-poster-r-1.jpg",
-      "gallery_images/moulin-rouge-r-quad-poster-r-2.jpg"
+      "gallery_images/moulin-rouge-r-quad-poster-1.jpg",
+      "gallery_images/moulin-rouge-r-quad-poster-2.jpg"
     ],
     "sort_title": "MOULIN ROUGE",
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TiiOjJYRiy14Ea"
+    "product_id": "prod_VCqsMSXcDVFby5"
   },
   {
     "title": "NAKED",
@@ -5725,8 +5640,8 @@
     "poster_notes": "A rare treat to find a rolled copy of this masterpiece by Mike Leigh. This single-sided version has a gloss finish and suffers some minor edge wear.",
     "tags": null,
     "gallery": [
-      "gallery_images/naked-quad-poster-folded-1.jpg",
-      "gallery_images/naked-quad-poster-folded-2.jpg"
+      "gallery_images/naked-quad-poster-gloss-1.jpg",
+      "gallery_images/naked-quad-poster-gloss-2.jpg"
     ],
     "sort_title": "NAKED",
     "on_sale": false,
@@ -5986,7 +5901,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/nil-by-mouth-25th-quad-poster.jpg",
     "hires": "posters/nil-by-mouth-25th-quad-poster.jpg",
-    "price": 99.99,
+    "price": 59.99,
     "film_summary": "2022 rerelease of Gary Oldman's 1997 hard hitting directing debut Nil By Mouth - starring Ray Winstone, Kathy Burke and Charlie Creed-Miles..",
     "poster_notes": "This striking rerelease design is a worthy alternative to the much rarer original release and is printed on a new tough, plastic coated paper. This poster has a few minor kinks running through the bottom half, but are barely noticeable.",
     "tags": [
@@ -6000,7 +5915,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2022-12-25",
-    "product_id": "prod_TiiO2QbAW5e1y2"
+    "product_id": "prod_VCqsdLcNSVuiQz"
   },
   {
     "title": "9",
@@ -6773,7 +6688,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/raging-bull-quad-poster.jpg",
     "hires": "posters/raging-bull-quad-poster.jpg",
-    "price": 84.99,
+    "price": 64.99,
     "film_summary": "Martin Scorsese's 1980 masterpiece Raging Bull, starring Robert De Niro, Cathy Moriarty, Joe Pesci and Frank Vincent.",
     "poster_notes": "This movie poster has some staining on the buildings in the bottom left corner.",
     "tags": [
@@ -6787,7 +6702,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "",
-    "product_id": "prod_TiiPo6NDu52oXn"
+    "product_id": "prod_VCqsExsqIhEfqL"
   },
   {
     "title": "RAIDERS OF THE LOST ARK",
@@ -6862,7 +6777,7 @@
       "gallery_images/the-raid-2-quad-poster-2.jpg"
     ],
     "sort_title": "RAID 2",
-    "on_sale": true,
+    "on_sale": false,
     "is_new": false,
     "purchase_date": "2020-08-21",
     "product_id": "prod_TiiPuRjlNk19yc"
@@ -7072,7 +6987,7 @@
     "condition": "very fine, once folded but now rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/robin-and-marion-quad-poster.jpg",
+    "thumbnail": "posters-thumb/robin-and-marian-quad-poster.jpg",
     "hires": "posters/robin-and-marian-quad-poster.jpg",
     "price": 76.99,
     "film_summary": "Richard Lester's superbly written 1976 underrated cult classic Robin and Marian, starring Sean Connery, Audrey Hepburn and Robert Shaw.",
@@ -7081,8 +6996,8 @@
       "32.00"
     ],
     "gallery": [
-      "gallery_images/robin-and-marion-quad-poster-1.jpg",
-      "gallery_images/robin-and-marion-quad-poster-2.jpg"
+      "gallery_images/robin-and-marian-quad-poster-1.jpg",
+      "gallery_images/robin-and-marian-quad-poster-2.jpg"
     ],
     "sort_title": "ROBIN AND MARIAN",
     "on_sale": false,
@@ -7334,7 +7249,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/the-running-man-2025-quad-poster.jpg",
     "hires": "posters/the-running-man-2025-quad-poster.jpg",
-    "price": 89.99,
+    "price": 49.99,
     "film_summary": "Edgar Wright's more authentic 2025 film adaptation of Stephen King's novel The Running Man, starring Glen Powell, Alyssa Benn and Sienna Benn.",
     "poster_notes": "This dynamic quad design is much rarer than the other versions and is by far the best (even surpassing Matt Fergerson's poster design).",
     "tags": [
@@ -7348,7 +7263,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2025-11-29",
-    "product_id": "prod_TiiP2032BDlhHo"
+    "product_id": "prod_VCqshFYR3gjWgf"
   },
   {
     "title": "SATURDAY NIGHT FEVER",
@@ -7404,8 +7319,8 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/saturday-night-fever-2013-quad-poster.jpg",
-    "hires": "posters/saturday-night-fever-2013-quad-poster.jpg",
+    "thumbnail": "posters-thumb/saturday-night-fever-pc-2013-quad-poster.jpg",
+    "hires": "posters/saturday-night-fever-pc-2013-quad-poster",
     "price": 114.99,
     "film_summary": "John Badham's 1977 cool classic Saturday Night Fever, starring John Travolta and Karen Lynn Gorney.",
     "poster_notes": "This was a limited re-release and hard to come by.",
@@ -7413,8 +7328,8 @@
       "2013"
     ],
     "gallery": [
-      "gallery_images/saturday-night-fever-2013-quad-poster-1.jpg",
-      "gallery_images/saturday-night-fever-2013-quad-poster-2.jpg"
+      "gallery_images/saturday-night-fever-pc-2013-quad-poster-1.jpg",
+      "gallery_images/saturday-night-fever-pc-2013-quad-poster-2.jpg"
     ],
     "sort_title": "SATURDAY NIGHT FEVER",
     "on_sale": false,
@@ -7823,7 +7738,7 @@
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/something-wicked-this-way-comes-quad-poster.jpg",
-    "hires": "posters/something-wicked-this-way-comes-quad-poster.jpg",
+    "hires": "posters/something-wicked-this-way-comes-quad-poster-m.jpg",
     "price": 124.99,
     "film_summary": "Jack Clayton's highly underrated 1983 film adaptation of Ray Bradbury's classic fantasy Something Wicked This Way Comes  starring Jason Robards, Jonathan Pryce, Diane Ladd, Royal Dano, Vidal Peterson and Shawn Carson.",
     "poster_notes": "This features beautiful film poster artwork by David Grove.",
@@ -7842,7 +7757,7 @@
     "product_id": "prod_TiiPRqadEEH1c8"
   },
   {
-    "title": "SOMETHING WICKED THIS WAY COMES",
+    "title": "SOMETHING WICKED THIS WAY COMES (folded)",
     "variant": null,
     "originally released": 1983,
     "director": "Jack Clayton",
@@ -7863,8 +7778,8 @@
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/something-wicked-this-way-comes-quad-poster.jpg",
-    "hires": "posters/something-wicked-this-way-comes-gloss-quad-poster.jpg",
-    "price": 49.99,
+    "hires": "posters/something-wicked-this-way-comes-quad-poster.jpg",
+    "price": 27.99,
     "film_summary": "Jack Clayton's 1983 film adaptation of Ray Bradbury's classic fantasy Something Wicked This Way Comes, starring Jason Robards, Jonathan Pryce, Diane Ladd, Royal Dano, Vidal Peterson and Shawn Carson.",
     "poster_notes": "This features beautiful film poster artwork by David Grove and comes in a gloss finish with irregular folds.",
     "tags": [
@@ -7872,14 +7787,14 @@
       "24.64"
     ],
     "gallery": [
-      "gallery_images/something-wicked-this-way-comes-gloss-quad-poster-1.jpg",
-      "gallery_images/something-wicked-this-way-comes-gloss-quad-poster-2.jpg"
+      "gallery_images/something-wicked-this-way-comes-gloss-quad-poster-f-1.jpg",
+      "gallery_images/something-wicked-this-way-comes-gloss-quad-poster-f-2.jpg"
     ],
     "sort_title": "SOMETHING WICKED THIS WAY COMES",
     "on_sale": true,
     "is_new": false,
     "purchase_date": "2018-04-09",
-    "product_id": "prod_TiiPRqadEEH1c8"
+    "product_id": "prod_VCqsv9ReBXOG6t"
   },
   {
     "title": "SON OF RAMBOW",
@@ -8335,7 +8250,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/star-trek-iv-the-voyage-home-40th-quad-poster.jpg",
     "hires": "posters/star-trek-iv-the-voyage-home-40th-quad-poster.jpg",
-    "price": 209.99,
+    "price": 109.99,
     "film_summary": "Leonard Nimoy's 1986 Star Trek installment, Star Trek IV - The Voyage Home, starring William Shatner, Leonard Nimoy, DeForest Kelley, James Doohan, Walter Koenig, Nichelle Nichols, George Takei.",
     "poster_notes": "Another fantatic 40th anniversary artwork by the one and only Matt Fergerson, filled with details to please fans, and designed to accomodate the quad size rather than a one sheet.",
     "tags": [
@@ -8350,7 +8265,7 @@
     "on_sale": false,
     "is_new": true,
     "purchase_date": "2026-07-26",
-    "product_id": "prod_VC761fXPPnP3Dz"
+    "product_id": "prod_VCqsxLmNUaGoTa"
   },
   {
     "title": "STAR TREK VI - THE UNDISCOVERED COUNTRY",
@@ -8602,8 +8517,8 @@
       "1997"
     ],
     "gallery": [
-      "gallery_images/star-wars-trilogy-special-edition-quad-poster-1.jpg",
-      "gallery_images/star-wars-trilogy-special-edition-quad-poster-2.jpg"
+      "gallery_images/star-wars-trilogy-special-edition-quad-poster-v2-1.jpg",
+      "gallery_images/star-wars-trilogy-special-edition-quad-poster-v2-2.jpg"
     ],
     "sort_title": "STAR WARS TRILOGY",
     "on_sale": true,
@@ -8992,8 +8907,8 @@
     "condition": "near mint, folded",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/supermanadvance.jpg",
-    "hires": "posters/supermanadvance.jpg",
+    "thumbnail": "posters-thumb/superman-a-quad-poster.jpg",
+    "hires": "posters/superman-a-quad-poster.jpg",
     "price": 327.99,
     "film_summary": "Richard Donner's 1978 blockbuster, superhero spectacle Superman - The Movie, starring Christopher Reeve, Gene Hackman, Margot Kidder and Terence Stamp.",
     "poster_notes": "",
@@ -9001,8 +8916,8 @@
       "1978"
     ],
     "gallery": [
-      "gallery_images/supermanadvance-1.jpg",
-      "gallery_images/supermanadvance-2.jpg"
+      "gallery_images/superman-a-quad-poster-1.jpg",
+      "gallery_images/superman-a-quad-poster-2.jpg"
     ],
     "sort_title": "SUPERMAN",
     "on_sale": false,
@@ -9078,7 +8993,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/superman-the-movie-wb100th-rr-quad-poster.jpg",
     "hires": "posters/superman-the-movie-wb100th-rr-quad-poster.jpg",
-    "price": 89.99,
+    "price": 49.99,
     "film_summary": "2023 re-release of Richard Donner's 1978 classic Superman - The Movie, starring Christopher Reeve, Gene Hackman, Margot Kidder and Terence Stamp.",
     "poster_notes": "This modern dynamic artwork produced for the rerelease of this classic film, to celebrate warner Brother's 100th anniversary, has a row of white kink marks running across the lower half of the poster",
     "tags": [
@@ -9092,7 +9007,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2023-06-05",
-    "product_id": "prod_TiiPbOrMdQOPTV"
+    "product_id": "prod_VCqsSv8EQlVZ6L"
   },
   {
     "title": "SUPERMAN II",
@@ -9155,8 +9070,8 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/sweeney-todd-quad-poster.jpg",
-    "hires": "posters/sweeney-todd-quad-poster.jpg",
+    "thumbnail": "posters-thumb/sweeney-todd-the-demon-barber-of-fleet-street-quad-poster.jpg",
+    "hires": "posters/sweeney-todd-the-demon-barber-of-fleet-street-quad-poster.jpg",
     "price": 49.99,
     "film_summary": "Tim Burton's brilliant 2007 gothic musical horror Sweeney Todd: The Demon Barber Of Fleet Street, starring Johnny Depp, Helena Bonham Carter, Alan Rickman, Timothy Spall and Sacha Baron Cohen.",
     "poster_notes": "",
@@ -9164,8 +9079,8 @@
       "2007"
     ],
     "gallery": [
-      "gallery_images/sweeney-todd-quad-poster-1.jpg",
-      "gallery_images/sweeney-todd-quad-poster-2.jpg"
+      "gallery_images/gallery_images/sweeney-todd-the-demon-barber-of-fleet-street-quad-poster-1.jpg",
+      "gallery_images/sweeney-todd-the-demon-barber-of-fleet-street-quad-poster-2.jpg"
     ],
     "sort_title": "SWEENEY TODD: THE DEMON BARBER OF FLEET STREET",
     "on_sale": false,
@@ -9269,7 +9184,7 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/taxi-driver-quad-poster.jpg",
     "hires": "posters/taxi-driver-quad-poster.jpg",
-    "price": 109.99,
+    "price": 69.99,
     "film_summary": "Martin Scorsese's highly acclaimed 1976 cult classic Taxi Driver, starring Robert De Niro, Jodie Foster, Harvey Keitel and Cybill Shepherd.",
     "poster_notes": "This classic poster has been trimmed to approximately 28 x 39 inches.",
     "tags": [
@@ -9283,7 +9198,7 @@
     "on_sale": false,
     "is_new": false,
     "purchase_date": "2019-06-28",
-    "product_id": "prod_TiiQLR0k7dY4Gb"
+    "product_id": "prod_VCqs8EDVTgTkBE"
   },
   {
     "title": "TELL NO ONE",
@@ -9318,7 +9233,7 @@
       "gallery_images/tell-no-one-quad-poster-2.jpg"
     ],
     "sort_title": "TELL NO ONE (Ne le dis à personne)",
-    "on_sale": true,
+    "on_sale": false,
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TiiQXqjVGCgpuB"
@@ -9458,8 +9373,8 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/texas-chainsaw-massacre.jpg",
-    "hires": "posters/texas-chainsaw-massacre.jpg",
+    "thumbnail": "posters-thumb/the-texas-chainsaw-massacre-r-quad-poster.jpg",
+    "hires": "posters/the-texas-chainsaw-massacre-r-quad-poster-fold.jpg",
     "price": 444.99,
     "film_summary": "Tobe Hooper's classic 1974 horror The Texas Chainsaw Massacre starring Marilyn Burns, Allen Danziger, Paul A. Partain, William Vail, Teri McMinn and Gunnar Hansen.",
     "poster_notes": "This exceptionally rare re-release poster has one horizontal fold line hidden in the lower black frame where it was folded back to be used in a cinema other than Shaftesbury Avenue (most of these were sadly trimmed).",
@@ -9467,8 +9382,8 @@
       "1998"
     ],
     "gallery": [
-      "gallery_images/texas-chainsaw-massacre-1.jpg",
-      "gallery_images/texas-chainsaw-massacre-2.jpg"
+      "gallery_images/the-texas-chainsaw-massacre-r-quad-poster-fold-1.jpg",
+      "gallery_images/the-texas-chainsaw-massacre-r-quad-poster-fold-2.jpg"
     ],
     "sort_title": "TEXAS CHAINSAW MASSACRE",
     "on_sale": false,
@@ -9508,7 +9423,7 @@
     ],
     "sort_title": "TINKER TAYLOR SOLDIER SPY",
     "on_sale": false,
-    "is_new": true,
+    "is_new": false,
     "purchase_date": "2026-01-24",
     "product_id": "prod_TriJw6QsmPgdtU"
   },
@@ -9802,11 +9717,11 @@
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/28-years-later-the-bone-temple-a-quad-poster.jpg",
     "hires": "posters/28-years-later-the-bone-temple-a-quad-poster.jpg",
-    "price": 249.99,
+    "price": 59.99,
     "film_summary": "Nia DaCosta's excellent 2026 zombie apocalyptic sequel 29 Years Later - The Bone Temple, starring Jack O'Connell, Alfie Williams, Connor Newall, Erin Kellyman and Ralph Fiennes.",
     "poster_notes": "This brilliant double-sided film poster captures the sheer madness of this film wonderfully.",
     "tags": [
-      "2002"
+      "12.00"
     ],
     "gallery": [
       "gallery_images/28-years-later-the-bone-temple-a-quad-poster-1.jpg",
@@ -9816,7 +9731,7 @@
     "on_sale": false,
     "is_new": true,
     "purchase_date": "2026-01-26",
-    "product_id": "prod_UQ70BK9rkPwLBx"
+    "product_id": "prod_VCqs0sfbigqux3"
   },
   {
     "title": "UNFORGIVEN",
@@ -10043,7 +9958,7 @@
       "gallery_images/who-framed-roger-rabbit-quad-poster-2.jpg"
     ],
     "sort_title": "WHO FRAMED ROGER RABBIT",
-    "on_sale": true,
+    "on_sale": false,
     "is_new": false,
     "purchase_date": "",
     "product_id": "prod_TriJloOHjxIodi"
@@ -10142,8 +10057,8 @@
     "condition": "near mint, rolled",
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
-    "thumbnail": "posters-thumb/withnail-and-i-quad-poster.jpg",
-    "hires": "posters/withnail-and-i-quad-poster.jpg",
+    "thumbnail": "posters-thumb/withnail-and-i-10th-quad-poster.jpg",
+    "hires": "posters/withnail-and-i-10th-quad-poster.jpg",
     "price": 99.99,
     "film_summary": "1997 re-release of Bruce Robinson's 1987 cult classic Withnail & I, starring Richard E. Grant, Paul McGann and Richard Griffiths.",
     "poster_notes": "This increasingly popular movie poster is a perfect alternative to the much rarer and over-priced original.",
@@ -10151,8 +10066,8 @@
       "1987"
     ],
     "gallery": [
-      "gallery_images/withnail-and-i-quad-poster-1.jpg",
-      "gallery_images/withnail-and-i-quad-poster-2.jpg"
+      "gallery_images/withnail-and-i-10th-quad-poster-1.jpg",
+      "gallery_images/withnail-and-i-10th-quad-poster-2.jpg"
     ],
     "sort_title": "WITHNAIL & I",
     "on_sale": false,
@@ -10181,7 +10096,7 @@
     "poster_type": "British quad",
     "poster_size": "30 x 40 inches",
     "thumbnail": "posters-thumb/witness-quad-poster-style-b.jpg",
-    "hires": "posters/witness-quad-poster-style-b.jpg",
+    "hires": "posters/witness-quad-poster-style-b2.jpg",
     "price": 59.99,
     "film_summary": "Peter Weir's oscar winning 1985 drama Witness, featuring arguable one of Harrison Ford's best performances as detective John Book. Also starring Kelly McGillis, Lukas Haas, Danny Glover and Viggo Mortensen.",
     "poster_notes": "This classic poster has pin holes in the corners.",
@@ -10189,8 +10104,8 @@
       "1985"
     ],
     "gallery": [
-      "gallery_images/witness-quad-poster-style-b-1.jpg",
-      "gallery_images/witness-quad-poster-style-b-2.jpg"
+      "gallery_images/witness-quad-poster-style-b2-1.jpg",
+      "gallery_images/witness-quad-poster-style-b2-2.jpg"
     ],
     "sort_title": "WITNESS",
     "on_sale": false,
@@ -10272,7 +10187,7 @@
     ],
     "sort_title": "ZOMBIELAND",
     "on_sale": false,
-    "is_new": true,
+    "is_new": false,
     "purchase_date": "2026-01-03",
     "product_id": "prod_TriJeAQ6Dm3u6T"
   }

@@ -1,5 +1,12 @@
-const stripe = require('stripe')('sk_test_51SfRLFAn4nVEPNCVk1ZMglfBfKKQvna2AHT850SAEa33ewNZO8nxxCLStpIPLwZ87WqlvfvfMKKUvZ9vkNkUltks00Zmtgl2Ms'); // Replace with your Stripe SECRET key (test mode first!)
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const fs = require('fs');
+
+// Check if the key is set
+if (!process.env.STRIPE_SECRET_KEY) {
+  console.error('❌ ERROR: STRIPE_SECRET_KEY environment variable is not set!');
+  console.error('Please set it first with: export STRIPE_SECRET_KEY=sk_live_yourkey');
+  process.exit(1);
+}
 
 // Load inventory
 let inventory = JSON.parse(fs.readFileSync('inventory.json', 'utf8'));
@@ -13,13 +20,13 @@ async function createProducts() {
         const product = await stripe.products.create({
           name: item.title,
           description: item.film_summary,
-          images: [`https://www.cinemaquadposters.co.uk/${item.thumbnail}`],  // Optional: Full URL to thumbnail
+          images: [`https://www.cinemaquadposters.co.uk/${item.thumbnail}`],
         });
 
         // Create Price (one-time, in pence)
         const price = await stripe.prices.create({
           product: product.id,
-          unit_amount: Math.round(item.price * 100),  // e.g., 89.99 -> 8999
+          unit_amount: Math.round(item.price * 100),
           currency: 'gbp',
         });
 
